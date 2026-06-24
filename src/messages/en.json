@@ -1,0 +1,447 @@
+{
+  "language": {
+    "lang": "EN"
+  },
+  "routes": {
+    "item1": "Home",
+    "item2": "About",
+    "item3": "Faqs",
+    "item4": "Contact Us",
+    "item5": "Pricing",
+    "item6": "dashboard",
+    "item7": "settings",
+    "btn": "Login"
+  },
+  "topBar": {
+    "item1": "Don’t have account?",
+    "item2": "Apply Now",
+    "login": "Login",
+    "register": "Register"
+  },
+  "publicPages": {
+    "home": {
+      "hero-section": {
+        "title": "Turn <alt>Questions</alt> into Clarity and Transform <alt>Responses</alt> into Valuable Insights",
+        "describtion": "Effortlessly build surveys that deliver the answers you need to grow, improve, and connect with your audience.",
+        "create-btn": "Create Your Survey",
+        "how-work-btn": "See How It Works"
+      },
+      "howItWorksSection": {
+        "Heading": {
+          "title": "How It",
+          "highlightText": "Works",
+          "text": "Get started in just 3 simple steps"
+        },
+        "StepCard1": {
+          "title": "Create Your Survey",
+          "text": "Choose a template or start from scratch using our easy-to-use builder"
+        },
+        "StepCard2": {
+          "title": "Share With Your Audience",
+          "text": "Send your survey via email, social media, or embed it in your website"
+        },
+        "StepCard3": {
+          "title": "Analyze Responses",
+          "text": "Get instant insights with clean charts and downloadable reports"
+        }
+      },
+      "popularTemplatesSection": {
+        "title": "Popular",
+        "highlightTitle": "Templates",
+        "topBar": {
+          "number": "1",
+          "title": "Customer Feedback",
+          "highlightText": "Surveys"
+        },
+        "templates": [
+          {
+            "id": 1,
+            "title": "Brand Awareness Survey",
+            "text": "Measures how familiar people are with your brand"
+          },
+          {
+            "id": 2,
+            "title": "Product Pricing Survey",
+            "text": "Gathers feedback on pricing acceptability"
+          },
+          {
+            "id": 3,
+            "title": "Consumer Preferences Survey",
+            "text": "Identifies customer needs and wants"
+          },
+          {
+            "id": 4,
+            "title": "Competitor Analysis Survey",
+            "text": "Compares your brand to competitors"
+          }
+        ],
+        "button": "Use Template"
+      },
+      "eventSection": {
+        "EventFeedback": {
+          "button": "Use Template",
+          "topBar": {
+            "number": 4,
+            "title": "Event",
+            "highlightText": "Feedback"
+          },
+          "templates": [
+            {
+              "id": 1,
+              "title": "Post-Event Satisfaction Survey",
+              "text": "Evaluates overall event experience"
+            },
+            {
+              "id": 2,
+              "title": "Speaker Feedback Survey",
+              "text": "Gathers opinions on presenters or speakers"
+            },
+            {
+              "id": 3,
+              "title": "Venue Feedback Survey",
+              "text": "Assesses event location and facilities"
+            },
+            {
+              "id": 4,
+              "title": "Virtual Event Survey",
+              "text": "Collects feedback on online events"
+            }
+          ]
+        }
+      },
+      "educationSection": {
+        "title": "Education &",
+        "subtitle": "training",
+        "btn": "View all",
+        "cards": {
+          "card1": {
+            "title": "Course Evaluation Survey",
+            "text": "Assesses course content and delivery"
+          },
+          "card3": {
+            "title": "Student Satisfaction Survey",
+            "text": "Measures overall educational experience"
+          },
+          "card2": {
+            "title": "Learning Outcomes Survey ",
+            "text": "Assesses knowledge or skills gained"
+          },
+          "card4": {
+            "title": "Instructor Feedback Survey ",
+            "text": "Evaluates teacher or trainer performance"
+          },
+          "btn": "use Template"
+        }
+      },
+      "plansSection": {
+        "title": "A Plan for Every Team's Journey",
+        "text": "No hidden fees. Choose the plan that fits your needs",
+        "cards": {
+          "card1": {
+            "plan": "Basic",
+            "price": "Free forever",
+            "responses": "100",
+            "btn": "Get Started"
+          },
+          "card2": { "plan": "Plus", "price": "50", "responses": "1,000", "btn": "Choose Plus" },
+          "card3": { "plan": "Basic", "price": "83", "responses": "10,000", "btn": "Go Business" }
+        },
+        "btn": "Not sure? See all pricing options"
+      }
+    },
+    "about": {
+      "leadeship-section": {
+        "join-team": "Join Team",
+        "card5": {
+          "title": "Jay Choi",
+          "text": "Chief Executive Officer"
+        },
+        "card6": {
+          "title": "Jak Normin",
+          "text": "Back End Developer"
+        },
+        "card7": {
+          "title": "Jak Normin",
+          "text": "React Developer"
+        },
+        "card8": {
+          "title": "Jak Normin",
+          "text": "Odoo System Development"
+        }
+      },
+      "heroSection": {
+        "title": {
+          "main": "Simple Smart",
+          "highlight": "Surveys"
+        },
+        "text": "Create surveys, share them easily, and get real feedback. Survey Land lets you build MCQs, comment boxes, and more — all in one simple platform.",
+        "buttontext1": "Explore",
+        "buttontext2": "Create"
+      },
+      "missionSection": {
+        "title": {
+          "firstWord": "Our",
+          "secondWord": "mission"
+        },
+        "text": "   At Typeform, we give forms a better look and feel—so our customers can get more out of them. Historically, forms haven&apos;t been great, but businesses need them and people can&apos;t avoid them.",
+        "btn": "End out Mood"
+      },
+      "teamleaderSection": {
+        "heading": {
+          "title": "Team",
+          "highlightTitle": "Leader"
+        },
+        "title": "Join The Team",
+        "button": "join team",
+        "topBar": {
+          "number": 1,
+          "title": "leader",
+          "highlightText": "ship"
+        },
+        "text": "Founded in 2012, Typeform is now a remote-first company with an  international team of over 250 employees. We offer competitive  compensation, benefits, and career opportunites to support your  professional growth.",
+        "team": [
+          {
+            "id": 1,
+            "title": "Jay Choi",
+            "text": "Chief Executive Officer"
+          },
+          {
+            "id": 2,
+            "title": "Aleks Bass",
+            "text": "Chief Product Officer"
+          },
+          {
+            "id": 3,
+            "title": "Laura Daniels",
+            "text": "Chief People Officer"
+          },
+          {
+            "id": 4,
+            "title": "Jakson Bass",
+            "text": "Front End Development"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "title": "Get in Touch",
+      "header": {
+        "title": "Contact",
+        "highlight": "Us",
+        "text": "Need help? we’d love to hear from you. Get in touch and our team will respond within 24 hours.",
+        "button": "Send Message"
+      },
+      "socials": {
+        "email": { "title": "Email", "text": "Support@surveyland.com" },
+        "phone": { "title": "Phone", "text": "+20100123565" },
+        "location": { "title": "Location", "text": "Mansoura, Egypt" },
+        "hours": { "title": "Working Hours", "text": "9:00 AM - 5:00 PM" }
+      },
+      "form": {
+        "title": "Get in Touch",
+        "fullName": { "label": "Full Name", "placeholder": "Enter Your Full Name" },
+        "email": { "label": "Email Address", "placeholder": "Enter Your Email address" },
+        "subject": { "label": "Subject", "placeholder": "Enter Your subject" },
+        "message": { "label": "Message", "placeholder": "Type your Message here..." },
+        "submit": "Send message"
+      }
+    },
+
+    "faq": {
+      "heading": {
+        "title": "Frequently Asked",
+        "titleHighlight": "Questions",
+        "subtitle": "Browse our FAQ to troubleshoot issues, learn best practices, or get step-by-step instructions."
+      },
+      "items": {
+        "1": {
+          "title": "What is SurveyLand?",
+          "text": "SurveyLand is a powerful online application that allows anyone to quickly create custom online forms. Its intuitive drag-and-drop user interface makes form building incredibly simple, and doesn't require you to write a single line of code. Using SurveyLand, you can create and publish forms, integrate them into your site, and receive responses by email."
+        },
+        "2": {
+          "title": "What can I do with SurveyLand?",
+          "text": "SurveyLand enables you to create online forms, collect responses directly in your email, and create fillable PDF forms. You can put together all types of forms, including:"
+        },
+        "3": {
+          "title": "Why SurveyLand?",
+          "text": "SurveyLand will have your forms up and running in seconds! We're the easiest form builder with the most advanced capabilities, including the industry's top design and customization tools. Don't know where to start? We have thousands of ready-made templates to get your form rockin'. Need your forms to show different questions based on your customers answers? Our conditions tool can show or hide whatever form fields you choose, depending on how people answer previous questions. SurveyLand also lets you add your company logo, custom color schemes, and stunning background images."
+        },
+        "4": {
+          "title": "Do I need coding experience to create a form?",
+          "text": "Not at all! With SurveyLand's drag-and-drop builder, you don't need any coding experience to create the perfect form for your needs. Advanced users can go directly into the HTML code and make adjustments, but it's absolutely not necessary. With our Theme Designer, you can change the style of your form with just a few clicks."
+        },
+        "5": {
+          "title": "Is SurveyLand free?",
+          "text": "SurveyLand has multiple subscription options, including a free plan. Free users have access to all of the same features as paid users, but with lower limits on form counts, form submissions, form views, upload space and submission storage. To check out the different options,",
+          "linkText": "visit our Pricing page"
+        },
+        "6": {
+          "title": "How do I add SurveyLand forms to my website?",
+          "text": "When you publish your online form, you'll have the option to use it as a standalone link, or to embed it directly into your website. Embedding simply requires you to copy and paste the embed code we provide."
+        },
+        "7": {
+          "title": "How secure is my data with SurveyLand?",
+          "text": "SurveyLand takes the security of your data very seriously. All SurveyLand standalone form links and embed codes are secure (SSL) by default, and we give all users the option to encrypt their data. SurveyLand also adheres to strict European data protection laws by allowing users to store their data on secure German servers if they choose."
+        },
+        "8": {
+          "title": "What happens to my data when I downgrade my account?",
+          "text": "If you decide to downgrade your account, your data will still be securely stored like it always has been and as long as it does not go over the total submission storage on free accounts which is 500. Also, your forms will be disabled if you go over the monthly submission limit on your downgraded plan or any other limit, such as the number of forms. You can check your submission and data storage levels by clicking on the account icon on the top right of your page when logged in and reviewing the progress bars."
+        },
+        "9": {
+          "title": "How does SurveyLand work?",
+          "text": "SurveyLand is a powerful online form builder with an intuitive, no-code interface — perfect for those looking for an easy way to create and customize forms. Create your own forms from scratch or pick from 10,000+ different ready-made templates. Use our drag-and-drop builder to craft the perfect form for your business. Integrate with helpful tools and widgets, change fonts and colors, upload branding assets and images, and so much more. When you're done, share your form via email, link, QR code, or by embedding it in your website or social media platforms.|||SurveyLand also offers an entire suite of handy tools that can help you make the most of your data. Browse our tools to learn how to collect e-signatures, generate PDFs, share form reports and charts, create your own online store, and so much more.|||To get started, simply sign up for one of our plans — ranging from our free Starter plan to a variety of paid plans."
+        },
+        "10": {
+          "title": "What can I use SurveyLand for?",
+          "text1": "SurveyLand is an all-in-one platform that helps people and organizations collect and manage data. You can use SurveyLand's drag-and-drop interface to create customized forms and surveys that are tailored to your unique needs — without any coding knowledge. Use SurveyLand to make collecting information a seamless experience, whether you're gathering customer feedback, processing payments securely, or registering event attendees.",
+          "text2": "SurveyLand also offers an entire suite of tools to streamline data management. Organize form data in <tables></tables>, manage responses in <inbox></inbox>, and create fillable PDF forms in <pdfEditor></pdfEditor>. It also offers more advanced data management tools, like <workflows></workflows> to automate workflows, <reportBuilder></reportBuilder> for detailed analytics, and SurveyLand Sign to securely collect e-signatures. SurveyLand is a versatile and comprehensive tool that lets you efficiently collect, manage, and analyze data, all in one place.",
+          "links": {
+            "tables": "SurveyLand Tables",
+            "inbox": "SurveyLand Inbox",
+            "pdfEditor": "SurveyLand's PDF Editor",
+            "workflows": "SurveyLand Workflows",
+            "reportBuilder": "SurveyLand Report Builder"
+          }
+        }
+      },
+      "formTypes": {
+        "1": "Registration Forms",
+        "2": "Application Forms",
+        "3": "Contact Forms",
+        "4": "Request Forms",
+        "5": "Order Forms",
+        "6": "Feedback Forms",
+        "7": "Survey Templates",
+        "8": "Signup Forms",
+        "9": "Evaluation Forms",
+        "10": "Event Registration Forms",
+        "11": "Booking Forms",
+        "12": "Petition Forms",
+        "13": "Report Forms",
+        "14": "Reservation Forms",
+        "15": "Employment Forms",
+        "16": "Tracking Forms",
+        "17": "Membership Forms",
+        "18": "Upload Forms",
+        "19": "Quote Forms",
+        "20": "Appointment Forms",
+        "21": "Enrollment Forms",
+        "22": "Volunteer Forms",
+        "23": "Payment Forms",
+        "24": "Wedding Forms",
+        "25": "Calculation Forms",
+        "26": "Content Forms",
+        "27": "Lead Generation Forms",
+        "28": "Consent Forms",
+        "29": "Award Forms",
+        "30": "Subscription Forms",
+        "31": "Recommendation Forms",
+        "32": "Poll Templates",
+        "33": "Donation Forms",
+        "34": "RSVP Forms",
+        "35": "Sponsorship Forms",
+        "36": "Abstract Forms"
+      }
+    },
+
+    "pricing": {
+      "title": "Plans &",
+      "highlightText": "Pricing",
+      "text": "Looking for advanced features? Check out our latest plans",
+      "plan1": "Monthly",
+      "plan2": "Yearly",
+      "discountsCard1": {
+        "title": "Basic",
+        "text": "Create interactive forms that connect to your workflow",
+        "duration": {
+          "month": {
+            "price": 25
+          },
+          "year": {
+            "price": 2500
+          }
+        },
+        "features": ["100 responses", "1 user", "Unlimited surveyland", "Unlimited questions"],
+        "isPrimary": false
+      },
+      "discountsCard2": {
+        "title": "Plus",
+        "text": "Make your forms more beautiful and on-brand",
+        "duration": {
+          "month": {
+            "price": 50
+          },
+          "year": {
+            "price": 5000
+          }
+        },
+        "features": ["1,000 responses", "3 user", "Everything in Basic", "Drop-off rates"],
+        "isPrimary": true
+      },
+      "discountsCard3": {
+        "title": "Business",
+        "text": "Analyze performance and do more with your data",
+        "duration": {
+          "month": {
+            "price": 83
+          },
+          "year": {
+            "price": 8000
+          }
+        },
+        "features": ["10,000 responses", "5 user", "Everything in Plus", "Conversion tracking"],
+        "isPrimary": false
+      },
+      "btn": "Choose plan"
+    }
+  },
+  "footer": {
+    "subtitle": "Make smarter decisions with better data.Create surveys, gather feedback, and grow.",
+    "placeholder": "Stay informed by entering your email",
+    "btn": "Enter",
+    "footerLists": {
+      "footerList1": {
+        "element1": {
+          "key": "Home"
+        },
+        "element2": {
+          "key": "Templates"
+        },
+        "element3": {
+          "key": "Pricing"
+        },
+        "element4": {
+          "key": "Integrations"
+        }
+      },
+      "footerList2": {
+        "element1": {
+          "key": "Help Center"
+        },
+        "element2": {
+          "key": "Terms of Services"
+        },
+        "element3": {
+          "key": "Privacy Policy"
+        },
+        "element4": {
+          "key": "Refund Policy"
+        },
+        "element5": {
+          "key": "FAQs"
+        }
+      },
+      "footerList3": {
+        "element1": {
+          "key": "E-mail us at"
+        }
+      },
+      "footerList4": {
+        "element1": {
+          "key": "Follow us "
+        }
+      }
+    },
+    "copyRight": "@2026 SurveyLand.All rights reserved"
+  }
+}
