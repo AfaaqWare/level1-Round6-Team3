@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { useTranslations } from "next-intl";
 import Textarea from "@/shared/components/atoms/TextArea";
@@ -15,7 +16,7 @@ const ContactForm = ({ method = "POST", action = "" }: ContactFormProps) => {
     <form
       action={action}
       method={method}
-      className="ds-bg-alt flex w-full flex-col gap-4 rounded-3xl border border-[var(--color-bg-alt)] p-8 md:w-[52%]"
+      className="ds-bg-alt ds-border-card ds-shadow-card flex w-full flex-col gap-4 rounded-3xl p-8 md:w-[52%]"
     >
       <Title size="md" className="mb-2">
         {t("title")}
@@ -26,7 +27,6 @@ const ContactForm = ({ method = "POST", action = "" }: ContactFormProps) => {
         name="fullName"
         label={t("fullName.label")}
         placeholder={t("fullName.placeholder")}
-        border
       />
       <Input
         id="email"
@@ -34,14 +34,12 @@ const ContactForm = ({ method = "POST", action = "" }: ContactFormProps) => {
         type="email"
         label={t("email.label")}
         placeholder={t("email.placeholder")}
-        border
       />
       <Input
         id="subject"
         name="subject"
         label={t("subject.label")}
         placeholder={t("subject.placeholder")}
-        border
       />
       <Textarea
         id="message"
@@ -49,7 +47,6 @@ const ContactForm = ({ method = "POST", action = "" }: ContactFormProps) => {
         label={t("message.label")}
         placeholder={t("message.placeholder")}
         rows={4}
-        border
       />
 
       <ContactButton label={t("submit")} />

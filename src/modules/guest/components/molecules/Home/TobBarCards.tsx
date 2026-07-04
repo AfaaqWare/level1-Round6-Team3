@@ -23,7 +23,7 @@ export default function TopBarCards({
       <div className="flex items-center gap-2">
         {isNumber && <span className="text-lg font-semibold">{number}.</span>}
 
-        <Title variant="primary" size="lg" className="font-semibold">
+        <Title variant="primary" size="lg" className="font-semibold normal-case">
           {title} <span className="ds-text-alt">{highlightText}</span>
         </Title>
       </div>

@@ -1,5 +1,6 @@
+"use client";
 import React from 'react'
-import Heading from '../../molecules/home/Heading'
+import Heading from '../../molecules/Home/Heading'
 import PricingCard from '../../molecules/Home/PricingCard'
 import Button from '@/shared/components/atoms/Button'
 import { useTranslations } from 'next-intl'

@@ -18,19 +18,24 @@ export default function CardImgsContainer({ cards, trans }: Props) {
   const t = useTranslations(trans);
 
   return (
-    <div className="ds-container mt-20">
-      <TopBarCards title={t("title")} highlightText={t("subtitle")} btn={t("btn")} isNumber />
+    <div className="ds-container py-10">
+      <TopBarCards
+        number={t("number")}
+        title={t("title")}
+        highlightText={t("subtitle")}
+        isNumber
+      />
 
       {/* cards container  */}
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-3 lg:grid-cols-4">
+      <div className="mt-7 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-3 lg:grid-cols-4">
         {cards.map(card => (
           <ImageCard
             key={card.id}
             src={card.img}
             title={t(card.title)}
-            titleSize="md"
+            titleSize="base"
             text={t(card.text)}
-            btn={t("btn")}
+            btn={t("cards.btn")}
           />
         ))}
       </div>

@@ -1,3 +1,4 @@
+"use client";
 import { StaticImageData } from "next/image";
 import Button from "../atoms/Button";
 import Images from "../atoms/Images";
@@ -12,9 +13,9 @@ interface Props {
   text: string;
 }
 export default function Cards({ src = card1, alt, title, text }: Props) {
-  const t = useTranslations();
+  const t = useTranslations("publicPages.home.educationSection");
   return (
-    <div className="ds-bg-alt flex flex-col items-center justify-center rounded-lg px-5 py-10">
+    <div className="ds-bg-alt ds-border-card ds-shadow-card flex flex-col items-center justify-center rounded-lg px-5 py-10">
       <Images src={src} alt={alt} className="w-full" />
       <Title size="md" isCenter={true} className="my-5">
         {t(title)}

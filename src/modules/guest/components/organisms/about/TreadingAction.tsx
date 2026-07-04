@@ -2,7 +2,6 @@ import React from "react";
 import Title from "@/shared/components/atoms/Title";
 import StepText from "../../../../../shared/components/molecules/StepText";
 
-
 export default function TreadingAction() {
   return (
     <div className="container mx-auto">

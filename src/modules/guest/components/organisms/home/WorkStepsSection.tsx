@@ -1,5 +1,6 @@
-import Heading from "../../molecules/home/Heading";
-import StepCard from "../../molecules/home/StepCard";
+"use client";
+import Heading from "../../molecules/Home/Heading";
+import StepCard from "../../molecules/Home/StepCard";
 import { useTranslations } from "next-intl";
 
 export default function WorkStepsSection() {
