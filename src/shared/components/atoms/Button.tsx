@@ -2,7 +2,7 @@ import React from "react";
 import { cn } from "@/lib/cn";
 
 interface Props {
-  variant?: "primary" | "secondary" | "outline" | "outline1" | "ghost" | "primary200" | "disabled";
+  variant?: "primary" | "secondary" | "outline" | "ghost" | "primary200" | "disabled";
   size?: "sm" | "md" | "lg";
   className?: string;
   children: React.ReactNode;
@@ -41,8 +41,6 @@ export default function Button({
     secondary: "ds-bg-secondary ds-text-white hover:opacity-90 active:opacity-80 ds-shadow-sm",
     outline:
       "bg-transparent border border-[var(--color-primary)] ds-text-primary hover:ds-bg-primary hover:ds-text-white active:opacity-80",
-    outline1:
-      "bg-transparent border border-[var(--color-primary)] ds-text-white hover:ds-bg-primary active:opacity-80",
     ghost: "bg-transparent ds-text-primary font-semibold hover:opacity-70 active:opacity-50",
     primary200: "ds-primary-200 ds-text-alt hover:opacity-90 active:opacity-80",
     disabled: "ds-bg-primary ds-text-white cursor-not-allowed ds-disabled",
