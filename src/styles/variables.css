@@ -87,9 +87,6 @@
     --text-lg: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
     --text-xl: clamp(2rem, 1.4rem + 3vw, 3rem);
 
-    --font-regular: 400;
-    --font-bold: 700;
-
     /* Line Heights */
     --leading-tight: 1.2;
     --leading-normal: 1.5;
@@ -111,8 +108,10 @@
     --ease-out: ease-out;
 
     /* font-weight */
-    --font-bold: 500;
+    /* --font-bold: 500; */
+    --font-regular: 400;
     --font-extrabold: 600;
+    --font-bold: 700;
   }
 
   /* Dark Variant */

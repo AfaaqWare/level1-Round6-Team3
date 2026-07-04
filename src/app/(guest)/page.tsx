@@ -3,8 +3,8 @@ import { getSeoMetadata } from "@/core/seo/getSeoMetadata";
 import type { Metadata } from "next";
 import PublicLayout from "@/shared/components/Layout/PublicLayout";
 import Text from "@/shared/components/atoms/Text";
-import Title from "@/shared/components/atoms/Title";
 import Box from "@/shared/components/molecules/Box";
+import Logo from "@/shared/components/atoms/Logo";
 export const metadata: Metadata = getSeoMetadata({
   title: "project for team",
   description: "this project for training students ",
@@ -13,6 +13,8 @@ export const metadata: Metadata = getSeoMetadata({
 function page() {
   return (
     <PublicLayout>
+      <Logo />
+
       <Text variant="alt" size="lg">
         home page
       </Text>
