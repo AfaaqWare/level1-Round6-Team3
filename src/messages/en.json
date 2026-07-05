@@ -1,4 +1,38 @@
 {
+  "publicPages": {
+    "home": {
+      "heroSection": {
+        "title": "Turn Questions into Clarity and Transform Responses into Valuable Insights",
+        "titleHighlight": "Valuable Insights",
+        "text": "Effortlessly build surveys that deliver the answers you need to grow, improve, and connect with your audience.",
+        "button1": "Create Your Survey",
+        "button2": "See How It Works"
+      }
+    },
+    "about": {
+      "heroSection": {
+        "title": "Simple Smart Surveys",
+        "titleHighlight": "Surveys",
+        "text": "Create surveys, share them easily, and get real feedback. Survey Land lets you build MCQs, comment boxes, and more — all in one simple platform.",
+        "button1": "Explore",
+        "button2": "Create"
+      },
+      "missionSection": {
+        "title": "Our Mission",
+        "titleHighlight": "Mission",
+        "text": "At Typeform, we give forms a better look and feel—so our customers can get more out of them. Historically, forms haven't been great, but businesses need them and people can't avoid them.",
+        "button": "Find out More"
+      },
+      "teamSection": {
+        "teamTitle": "Team",
+        "teamTitleHighlight": "Leader",
+        "title": "Join The Team",
+        "titleHighlight": "Join The Team",
+        "text": "Founded in 2012, Typeform is now a remote-first company with an international team of over 250 employees. We offer competitive compensation, benefits, and career opportunities to support your professional growth.",
+        "button": "Browse Open Roles"
+      }
+    }
+  },
   "cards": {
     "card1": {
       "title": " Customer Satisfaction ",
