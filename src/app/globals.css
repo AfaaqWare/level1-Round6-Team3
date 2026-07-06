@@ -233,6 +233,11 @@
   .ds-font-regular {
     font-weight: var(--font-regular);
   }
+
+  .ds-font-semibold {
+    font-weight: var(--font-semibold);
+  }
+
   .ds-font-bold {
     font-weight: var(--font-bold);
   }
@@ -261,9 +266,32 @@
   .ds-px-md {
     padding-inline: var(--space-md);
   }
+  .ds-px-3xl {
+    padding-inline: var(--space-3xl);
+  }
+  .ds-px-5xl {
+    padding-inline: var(--space-5xl);
+  }
+
+  .ds-px-2xl {
+    padding-inline: var(--space-2xl);
+  }
 
   .ds-py-lg {
     padding-block: var(--space-lg);
+  }
+  .ds-py-2xl {
+    padding-block: var(--space-2xl);
+  }
+  .ds-py-3xl {
+    padding-block: var(--space-3xl);
+  }
+  .ds-py-4xl {
+    padding-block: var(--space-4xl);
+  }
+
+  .ds-py-5xl {
+    padding-block: var(--space-5xl);
   }
   /* ================= STATES ================= */
   .ds-hover {

@@ -3,13 +3,13 @@ import { getSeoMetadata } from "@/core/seo/getSeoMetadata";
 import type { Metadata } from "next";
 import PublicLayout from "@/shared/components/Layout/PublicLayout";
 import Text from "@/shared/components/atoms/Text";
-import Box from "@/shared/components/molecules/Box";
 import Logo from "@/shared/components/atoms/Logo";
 
-import Herosection from "@/shared/components/organisms/Herosection";
 import HeroSection1 from "@/shared/components/organisms/HeroSection1";
 import ContentHeroection2 from "@/shared/components/molecules/ContentHeroection2";
 import Cardsection from "@/shared/components/organisms/Cardsection";
+import HowWorksSection from "@/shared/components/organisms/HowWorksSection";
+import Herosection from "@/shared/components/organisms/Herosection";
 export const metadata: Metadata = getSeoMetadata({
   title: "project for team",
   description: "this project for training students ",
@@ -26,7 +26,6 @@ function page() {
       <Text variant="secondary" size="sm">
         home page
       </Text>
-      <Box />
       <Herosection
         content={
           <ContentHeroection2
@@ -37,6 +36,8 @@ function page() {
           />
         }
       />
+      <HowWorksSection variant="alt" />
+
       <HeroSection1 />
       <Cardsection />
     </PublicLayout>

@@ -29,3 +29,8 @@ export const dataCards = [
     text: "cards.card4.text",
   },
 ];
+export const DataBoxs = [
+  { id: 1, title: "boxs.box1.title", text: "boxs.box1.text" },
+  { id: 2, title: "boxs.box2.title", text: "boxs.box2.text" },
+  { id: 3, title: "boxs.box3.title", text: "boxs.box3.text" },
+];

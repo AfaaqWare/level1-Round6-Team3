@@ -18,5 +18,37 @@
     },
 
     "btn": "Use Template"
+  },
+  "homePage": {
+    "boxs": {
+      "box1": {
+        "title": " Create Your Survey ",
+        "text": "Choose a template or start from scratch using our easy-to-use builder"
+      },
+      "box2": {
+        "title": "  Share With Your Audience ",
+        "text": "Send your survey via email, social media, or embed it in your website"
+      },
+      "box3": {
+        "title": " Analyze Responses",
+        "text": "Get instant insights with clean charts and downloadable reports"
+      }
+    },
+    "headingBoxs": {
+      "titleHeading": "How It",
+      "titleHighLight": "Works",
+      "textHeading": "Get started in just 3 simple steps"
+    }
+  },
+  "aboutPage": {
+    "treadingBoxs": {
+      "value": "$45,345,654",
+      "text": "ALL TIME TRADE VALUE"
+    },
+    "treadingHeading": {
+      "title": "Treading",
+      "titleHighLight": "Action",
+      "text": ""
+    }
   }
 }

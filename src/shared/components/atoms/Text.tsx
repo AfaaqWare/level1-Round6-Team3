@@ -11,7 +11,7 @@ interface Props {
 export default function Text({
   size = "base",
   variant = "primary",
-  className = "",
+  className,
   children,
   isCenter = false,
 }: Props) {

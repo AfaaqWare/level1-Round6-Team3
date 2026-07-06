@@ -101,6 +101,7 @@
     --space-2xl: 28px;
     --space-3xl: 32px;
     --space-4xl: 36px;
+    --space-5xl: 40px;
 
     /* Motion */
     --motion-fast: 150ms;
@@ -110,7 +111,7 @@
     /* font-weight */
     /* --font-bold: 500; */
     --font-regular: 400;
-    --font-extrabold: 600;
+    --font-semibold: 600;
     --font-bold: 700;
   }
 

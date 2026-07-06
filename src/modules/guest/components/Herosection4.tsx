@@ -1,15 +1,16 @@
 import React from "react";
-import HeroSection from "@/shared/components/organisms/HeroSection";
 import Title from "@/shared/components/atoms/Title";
 import Text from "@/shared/components/atoms/Text";
 import { hero4 } from "@/assets/images/images";
 import Button from "@/shared/components/atoms/Button";
+import Herosection from "@/shared/components/organisms/Herosection";
+// import Herosection from "@/shared/components/organisms/Herosection";
 interface Props {
   className?: string;
 }
 export default function Herosection4({ className = "" }: Props) {
   return (
-    <HeroSection className={className} src={hero4}>
+    <Herosection className={className} src={hero4}>
       <div className="flex flex-col items-center gap-5">
         <Title variant="alt" size="xl">
           Join the team{" "}
@@ -27,6 +28,6 @@ export default function Herosection4({ className = "" }: Props) {
           Browse Open Roles
         </Button>
       </div>
-    </HeroSection>
+    </Herosection>
   );
 }

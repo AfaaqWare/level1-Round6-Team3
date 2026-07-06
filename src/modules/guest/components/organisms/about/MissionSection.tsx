@@ -4,7 +4,7 @@ import Text from "@/shared/components/atoms/Text";
 import { hero3 } from "@/assets/images/images";
 import Button from "@/shared/components/atoms/Button";
 import { useTranslations } from "next-intl";
-import HeroSection from "@/shared/components/organisms/HeroSection";
+import HeroSection from "@/shared/components/organisms/Herosection";
 interface Props {
   className?: string;
 }

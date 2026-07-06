@@ -1,5 +1,5 @@
 "use client";
-import HeroSection from "@/shared/components/organisms/HeroSection";
+import HeroSection from "@/shared/components/organisms/Herosection";
 import { homehero } from "@/assets/images/images";
 import Title from "@/shared/components/atoms/Title";
 import Text from "@/shared/components/atoms/Text";

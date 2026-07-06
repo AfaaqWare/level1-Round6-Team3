@@ -11,10 +11,12 @@ interface Props {
 export default function Title({
   size = "xl",
   variant = "primary",
-  className = "font-bold capitalize",
+  className,
   children,
   isCenter = false,
 }: Props) {
+  const baseStyle = "ds-font-semibold capitalize";
+
   const sizes = {
     sm: "ds-text-sm",
     base: "ds-text-base",
@@ -29,7 +31,15 @@ export default function Title({
     alt: "ds-text-alt ",
   };
   return (
-    <h2 className={cn(variants[variant], sizes[size], isCenter ? "text-center" : "", className)}>
+    <h2
+      className={cn(
+        variants[variant],
+        sizes[size],
+        isCenter ? "text-center" : "",
+        baseStyle,
+        className
+      )}
+    >
       {children}
     </h2>
   );

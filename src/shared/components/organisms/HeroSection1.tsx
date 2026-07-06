@@ -1,6 +1,6 @@
-import Herosection from "./Herosection";
 import { Heroimage2 } from "@/assets/images/images";
 import ContentHeroection2 from "../molecules/ContentHeroection2";
+import Herosection from "./Herosection";
 export default function HeroSection1() {
   return (
     <div>
