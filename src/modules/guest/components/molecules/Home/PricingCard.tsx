@@ -24,7 +24,7 @@ const PricingCard = ({
   const Btn = t(btn);
   // --------------------------//
   const baseClasses =
-    "flex flex-col items-center justify-center gap-3 !p-3   ds-shadow-lg w-[224px]";
+    "flex flex-col items-center justify-center gap-3 !p-3 ds-border-card ds-shadow-lg w-[224px]";
   const Cardvariants = {
     Basic: "ds-bg-card h-[310px] rounded-md",
     الأساسية: "ds-bg-card h-[310px] rounded-md ",
@@ -49,7 +49,7 @@ const PricingCard = ({
     <div className={cn(baseClasses, Cardvariants[Plan], "ds-shadow-card !p-6")}>
       <Title
         className="mb-3"
-        variant={Plan === "Plus" || Plan === "بلس" ? "dark" : "primary"}
+        variant={Plan === "Plus" || Plan === "بلس" ? "alt" : "primary"}
         size="lg"
       >
         {Plan}
@@ -58,10 +58,10 @@ const PricingCard = ({
         <Title size={Plan === "Basic" || Plan === "الأساسية" ? "md":"lg"} variant={Plan === "Plus" || Plan === "بلس" ? "disabled" : "secondary"}>
           {Price}  
         </Title>
-        {Price === "50" || Price === "83" ?<Text variant={Plan === "Plus" || Plan === "بلس" ? "se" : "secondary"}>$ /month</Text> : ""}
+        {Price === "50" || Price === "83" ?<Text variant={Plan === "Plus" || Plan === "بلس" ? "secondary" : "secondary"}>$ /month</Text> : ""}
       
 
-      <Text variant={Plan === "Plus" || Plan === "بلس" ? "dark" : "secondary"}>
+      <Text variant={Plan === "Plus" || Plan === "بلس" ? "alt" : "secondary"}>
         {Responses} responses
       </Text>
       <PricingButton {...buttonVariants[Plan]} className="!mt-4">

@@ -1,8 +1,9 @@
+"use client";
 import React from "react";
 import { useTranslations } from "next-intl";
 import ContactForm from "./ContactForm";
 import Button from "@/shared/components/atoms/Button";
-import Heading from "../../molecules/home/Heading";
+import Heading from "../../molecules/Home/Heading";
 import SocialsCard from "./SocialsCard";
 import Image from "@/shared/components/atoms/Image";
 import { contact2 } from "@/assets/images/images";

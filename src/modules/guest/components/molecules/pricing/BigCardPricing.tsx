@@ -38,8 +38,10 @@ export default function BigCardPricing({
 
   const price = billingPeriod === "year" ? duration.year.price : duration.month.price;
 
+  const borderClass = isPrimary ? "" : "ds-border-card";
+
   return (
-    <div className={`${bgCard} ${position} mt-8 flex w-80 flex-col gap-5 rounded-md p-7`}>
+    <div className={`${bgCard} ${borderClass} ${position} mt-8 flex w-80 flex-col gap-5 rounded-md p-7`}>
       <Title size="lg" className="font-semibold">
         {title}
       </Title>
