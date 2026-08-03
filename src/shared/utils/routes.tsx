@@ -5,8 +5,6 @@ export const Routes = [
   { id: 3, key: "item3", path: "/faqs" },
   { id: 4, key: "item4", path: "/contact" },
   { id: 5, key: "item5", path: "/pricing" },
-  { id: 6, key: "item6", path: "/dashboard" },
-  { id: 7, key: "item7", path: "/settings" },
 ];
 
 export const footerList1 = [

@@ -7,7 +7,10 @@ import {
   X,
   Eye,
   EyeOff,
-
+  ChevronDown,
+  LogOut,
+  User,
+  LayoutDashboard,
 } from "lucide-react";
 
 type IconProps = Omit<ComponentProps<typeof Icon>, "icon">;
@@ -27,5 +30,8 @@ export {
   X,
   Eye,
   EyeOff,
-
+  ChevronDown,
+  LogOut,
+  User,
+  LayoutDashboard,
 };

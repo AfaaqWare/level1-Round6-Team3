@@ -1,22 +1,61 @@
 {
-  "cards": {
-    "card1": {
-      "title": " Customer Satisfaction ",
-      "text": "Evaluates satisfaction with a specific interaction or purchase"
+  "routes": {
+    "item1": "Home",
+    "item2": "About",
+    "item3": "Faqs",
+    "item4": "Contact Us",
+    "item5": "Pricing",
+    "item6": "dashboard",
+    "item7": "settings",
+    "btn": "Login"
+  },
+  "footer": {
+    "subtitle": "Make smarter decisions with better data.Create surveys, gather feedback, and grow.",
+    "placeholder": "Stay informed by entering your email",
+    "btn": "Enter",
+    "footerLists": {
+      "footerList1": {
+        "element1": {
+          "key": "Home"
+        },
+        "element2": {
+          "key": "Templates"
+        },
+        "element3": {
+          "key": "Pricing"
+        },
+        "element4": {
+          "key": "Integrations"
+        }
+      },
+      "footerList2": {
+        "element1": {
+          "key": "Help Center"
+        },
+        "element2": {
+          "key": "Terms of Services"
+        },
+        "element3": {
+          "key": "Privacy Policy"
+        },
+        "element4": {
+          "key": "Refund Policy"
+        },
+        "element5": {
+          "key": "FAQs"
+        }
+      },
+      "footerList3": {
+        "element1": {
+          "key": "E-mail us at"
+        }
+      },
+      "footerList4": {
+        "element1": {
+          "key": "Follow us "
+        }
+      }
     },
-    "card2": {
-      "title": "  Net Promoter Score (NPS) ",
-      "text": "Measures likelihood of customers recommending your brand"
-    },
-    "card3": {
-      "title": " Service Quality Survey",
-      "text": "Assesses customer service interactions"
-    },
-    "card4": {
-      "title": " Post-Purchase Feedback",
-      "text": "Gathers feedback after a transaction"
-    },
-
-    "btn": "Use Template"
+    "copyRight": "@2026 SurveyLand.All rights reserved"
   }
 }
