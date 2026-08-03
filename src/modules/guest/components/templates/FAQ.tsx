@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import QuestionBox from "@/modules/guest/components/molecules/faqs/QuestionBox";
 import ArrowSmallBox from "@/shared/components/molecules/ArrowSmallBox";
 import Heading from "@/shared/components/molecules/Heading";
-import Link from "@/shared/components/atoms/Link";
+import Link from "next/link";
 import { FAQData, FormTypesData } from "@/shared/utils/data";
 import { cn } from "@/lib/cn";
 

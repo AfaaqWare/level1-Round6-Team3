@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Title from "@/shared/components/atoms/Title";
 import Text from "@/shared/components/atoms/Text";
@@ -13,7 +14,7 @@ interface Props {
 export default function TeamleaderSection({ className = "" }: Props) {
   const t = useTranslations("publicPages.about.teamleaderSection");
   return (
-    <section className="py-10 md:my-8 md:py-8">
+    <section className="ds-container py-10 md:my-8 md:py-8">
       <Title variant="primary" size="lg" className="ds-font-sans text-center font-bold">
         {t("heading.title")}
         <span className="ds-text-alt">{t("heading.highlightTitle")}</span>

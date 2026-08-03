@@ -1,3 +1,5 @@
+"use client";
+
 import { useTranslations } from "next-intl";
 import Title from "@/shared/components/atoms/Title";
 import TopBarCards from "../../molecules/Home/TobBarCards";
@@ -23,11 +25,13 @@ export default function SurveyTemplates() {
   const images = [cardImg1, cardImg2, cardImg3, cardImg4];
 
   return (
-    <section className="ds-container">
-      <Title size="lg" className="mt-5 font-semibold">
+    <section className="ds-container py-10">
+
+      <Title size="xl" className="mt-5 font-semibold">
         {t("title")}
-        <span className="ds-text-alt">{t("highlightTitle")}</span>
+        <span className="ds-text-alt"> {t("highlightTitle")}</span>
       </Title>
+
 
       <TopBarCards
         number={t("topBar.number")}
@@ -36,13 +40,14 @@ export default function SurveyTemplates() {
         isNumber
       />
 
-      <div className="mt-7 flex gap-7 overflow-x-auto pb-2">
+
+      <div className="mt-7 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {templates.map((template, index) => (
           <ImgCard
             key={template.id}
             src={images[index % images.length]}
             title={template.title}
-            titleSize="md"
+            titleSize="base"
             text={template.text}
             btn={t("button")}
           />

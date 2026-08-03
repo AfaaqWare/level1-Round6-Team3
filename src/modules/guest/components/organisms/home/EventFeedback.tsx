@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 // import Title from "@/shared/components/atoms/Title";
 import ImgCard from "@/shared/components/molecules/ImgCard";
@@ -24,13 +25,13 @@ export default function EventFeedbackSection() {
         />
       </div>
 
-      <div className="mx-auto grid grid-cols-1 gap-4 md:grid-cols-4 lg:grid-cols-4">
+      <div className="mt-7 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {templates.map((template, index) => (
           <ImgCard
             key={template.id}
             src={EventFeedbackData[index].src}
             title={template.title}
-            titleSize="md"
+            titleSize="base"
             text={template.text}
             btn={t("button")}
           />

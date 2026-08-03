@@ -8,15 +8,15 @@ interface Props {
 
 export default function TradingCard({ value = 2000, text = "text" }: Props) {
   return (
-    <div className="ds-bg-card ds-rounded-md flex flex-col gap-3 py-6">
-      <Title size="md" variant="primary" center className="ds-font-heading mx-auto font-normal">
+    <div className="ds-bg-card ds-border-card ds-shadow-card ds-rounded-md flex flex-col gap-3 py-6">
+      <Title size="md" variant="primary" isCenter className="ds-font-heading mx-auto font-normal">
         ${value}
       </Title>
 
       <Text
         size="base"
         variant="primary"
-        center
+        isCenter
         className="ds-font-heading mx-auto px-4 font-semibold"
       >
         {text}
