@@ -19,6 +19,7 @@
     "register": "Register"
   },
   "publicPages": {
+    "viewAll": "View all",
     "home": {
       "hero-section": {
         "title": "Turn <alt>Questions</alt> into Clarity and Transform <alt>Responses</alt> into Valuable Insights",

@@ -15,7 +15,7 @@ export default function EventFeedbackSection() {
   }[];
 
   return (
-    <section className="ds-container py-10">
+    <div className="pt-6 pb-2">
       <div className="mx-auto mb-2">
         <TopBarCards
           number="4"
@@ -25,7 +25,7 @@ export default function EventFeedbackSection() {
         />
       </div>
 
-      <div className="mt-7 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {templates.map((template, index) => (
           <ImgCard
             key={template.id}
@@ -37,7 +37,6 @@ export default function EventFeedbackSection() {
           />
         ))}
       </div>
-      {/* <Button size="md">{btn}</Button> */}
-    </section>
+    </div>
   );
 }

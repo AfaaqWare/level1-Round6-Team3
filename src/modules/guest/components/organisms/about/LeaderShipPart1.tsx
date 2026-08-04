@@ -19,26 +19,26 @@ export default function LeadershipSection() {
   return (
     <section className="py-10">
       <div className="ds-container">
-        <div className="mb-2 text-center">
-          <Title size="xl" className="ds-text-heading font-semibold normal-case">
+        {/* Section Title: "Our leadership team" */}
+        <div className="mb-2">
+          <Title size="xl" variant="primary" className="font-bold normal-case">
             {t("gridHeading.title")}{" "}
             <span className="ds-text-alt">{t("gridHeading.highlightTitle")}</span>
           </Title>
         </div>
 
-        <div className="mx-auto mb-8">
-          <TopBarCards
-            title={t("topBar.title")}
-            highlightText={t("topBar.highlightText")}
-          />
+        {/* TopBar with "Leadership" + "detail →" */}
+        <div className="mb-6">
+          <TopBarCards title={t("topBar.title")} highlightText={t("topBar.highlightText")} />
         </div>
 
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {/* Cards Grid: 4 columns on large, 2 on medium, 1 on small */}
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {team.map((member, index) => (
             <ImgCard
               key={member.id}
               titleSize="base"
-              titleVariant="alt"
+              titleVariant="primary"
               src={LeadershipData[index]?.src ?? LeadershipData[0].src}
               title={member.title}
               text={member.text}

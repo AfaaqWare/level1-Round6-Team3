@@ -35,7 +35,7 @@ const PricingCard = ({
   };
 
   const buttonVariants = {
-    Basic: { variant: "primary200", size: "sm", },
+    Basic: { variant: "primary200", size: "sm" },
     الأساسية: { variant: "primary200", size: "sm" },
 
     Plus: { variant: "primary", size: "sm" },
@@ -54,12 +54,20 @@ const PricingCard = ({
       >
         {Plan}
       </Title>
-      
-        <Title size={Plan === "Basic" || Plan === "الأساسية" ? "md":"lg"} variant={Plan === "Plus" || Plan === "بلس" ? "disabled" : "secondary"}>
-          {Price}  
-        </Title>
-        {Price === "50" || Price === "83" ?<Text variant={Plan === "Plus" || Plan === "بلس" ? "secondary" : "secondary"}>$ /month</Text> : ""}
-      
+
+      <Title
+        size={Plan === "Basic" || Plan === "الأساسية" ? "md" : "lg"}
+        variant={Plan === "Plus" || Plan === "بلس" ? "disabled" : "secondary"}
+      >
+        {Price}
+      </Title>
+      {Price === "50" || Price === "83" ? (
+        <Text variant={Plan === "Plus" || Plan === "بلس" ? "secondary" : "secondary"}>
+          $ /month
+        </Text>
+      ) : (
+        ""
+      )}
 
       <Text variant={Plan === "Plus" || Plan === "بلس" ? "alt" : "secondary"}>
         {Responses} responses

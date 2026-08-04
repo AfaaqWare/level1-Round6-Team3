@@ -1,36 +1,39 @@
-import { ArrowRight } from "@/assets/icons/icons";
+import { ArrowRight, ArrowLeft } from "@/assets/icons/icons";
 import Icon from "@/shared/components/atoms/Icon";
 import Text from "@/shared/components/atoms/Text";
 import Title from "@/shared/components/atoms/Title";
+import { useTranslations, useLocale } from "next-intl";
 
 interface Props {
   number?: string;
   title?: string;
   highlightText?: string;
   isNumber?: boolean;
-  btn?:string;
 }
 
 export default function TopBarCards({
   number = "3",
   title = "title",
   highlightText = "highlightText",
-  btn,
   isNumber = false,
 }: Props) {
-  return (
-    <div className="mt-7 flex items-center justify-between">
-      <div className="flex items-center gap-2">
-        {isNumber && <span className="text-lg font-semibold">{number}.</span>}
+  const t = useTranslations("publicPages");
+  const locale = useLocale();
+  const isRtl = locale === "ar";
 
-        <Title variant="primary" size="lg" className="font-semibold normal-case">
+  return (
+    <div className="mt-7 flex flex-wrap items-center justify-between gap-2">
+      <div className="flex min-w-0 items-center gap-2">
+        {isNumber && <span className="shrink-0 text-lg font-semibold">{number}.</span>}
+
+        <Title variant="primary" size="lg" className="min-w-0 font-semibold normal-case">
           {title} <span className="ds-text-alt">{highlightText}</span>
         </Title>
       </div>
 
-      <div className="flex cursor-pointer items-center gap-1">
-        <Text size="md">View all</Text>
-        <Icon IconComponent={ArrowRight} />
+      <div className="flex shrink-0 cursor-pointer items-center gap-1">
+        <Text size="md">{t("viewAll")}</Text>
+        <Icon IconComponent={isRtl ? ArrowLeft : ArrowRight} />
       </div>
     </div>
   );

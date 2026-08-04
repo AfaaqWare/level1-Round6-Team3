@@ -12,11 +12,7 @@ const ContactSection = () => {
   return (
     <div className="ds-container flex flex-col items-center gap-40 py-16">
       <div className="flex w-full flex-col items-center justify-center gap-4 text-center">
-        <Heading
-          highlightText={t("highlight")}
-          title={t("title")}
-          text={t("text")}
-        ></Heading>
+        <Heading highlightText={t("highlight")} title={t("title")} text={t("text")}></Heading>
         <Button size="md">{t("button")}</Button>
       </div>
 
@@ -28,7 +24,7 @@ const ContactSection = () => {
           aria-hidden
           width={600}
           height={300}
-          className="pointer-events-none absolute right-0 -top-36 -z-10 w-[55%] select-none"
+          className="pointer-events-none absolute -top-36 right-0 -z-10 w-[55%] select-none"
         />
 
         <SocialsCard />

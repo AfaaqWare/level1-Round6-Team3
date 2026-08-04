@@ -44,6 +44,7 @@ const cardImg4 = card4;
 const homehero = heroImage;
 const hero2 = Heroimage2;
 const hero4 = hero3;
+const contact1 = Heroimage2;
 const contact2 = Heroimage2;
 
 export {
@@ -65,6 +66,7 @@ export {
   leader6,
   leader7,
   leader8,
+  contact1,
   contact2,
   homecard1,
   homecard2,

@@ -15,7 +15,12 @@ interface ButtonGroupProps {
   className?: string;
 }
 
-export default function ButtonGroup({ button1, button2, gap = 4, className = "" }: ButtonGroupProps) {
+export default function ButtonGroup({
+  button1,
+  button2,
+  gap = 4,
+  className = "",
+}: ButtonGroupProps) {
   const gapClasses: Record<number, string> = {
     2: "gap-2",
     4: "gap-4",

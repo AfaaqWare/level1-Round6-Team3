@@ -4,7 +4,7 @@ A modern and scalable frontend application for SurveyLand, a platform that enabl
 
 Built with Next.js, TypeScript, and a modular feature-based architecture, the application focuses on performance, maintainability, accessibility, and a smooth user experience
 
----------
+---
 
 ## Installation
 
@@ -23,6 +23,7 @@ Built with Next.js, TypeScript, and a modular feature-based architecture, the ap
    - Copy `.env.example` to `.env` and update values as needed.
 
 ### Running the App
+
 - Development mode (with hot reload):
   ```sh
   npm run dev
@@ -32,9 +33,11 @@ Built with Next.js, TypeScript, and a modular feature-based architecture, the ap
   npm run build
   npm start
   ```
+
 ---
 
 ## ✨ Features
+
 - Authentication
 - Login & Registration
 - Email Verification (OTP)
@@ -44,6 +47,7 @@ Built with Next.js, TypeScript, and a modular feature-based architecture, the ap
 - Role-Based Access Control
 
 ## Survey Management
+
 - Create Surveys
 - Update Surveys
 - Delete Surveys
@@ -51,29 +55,33 @@ Built with Next.js, TypeScript, and a modular feature-based architecture, the ap
 - Manage Survey Status
 - Generate Shareable Survey Links
 
-
 ## Question Management
+
 - Add Questions
 - Edit Questions
 - Delete Questions
 - Support Multiple Question Typesveys
 
-##  Response Management
+## Response Management
+
 - Submit Survey Responses
 - View Survey Responses
 - Track Survey Participation
 
-##  Response Management
+## Response Management
+
 - Submit Survey Responses
 - View Survey Responses
 - Track Survey Participation
 
 ## User Profile
+
 - Update Profile Information
 - Change Password
 - Upload Profile Image
 
 ## User Experience
+
 - Multi-language Support (i18n)
 - Responsive Design
 - Dark / Light Theme
@@ -81,6 +89,7 @@ Built with Next.js, TypeScript, and a modular feature-based architecture, the ap
 - Loading, Error, and Empty States
 
 ## Architecture
+
 - Feature-Based Modular Structure
 - Reusable UI Components
 - React Query Data Fetching
@@ -91,22 +100,23 @@ Built with Next.js, TypeScript, and a modular feature-based architecture, the ap
 
 ## 🧩 Tech Stack
 
-| Category | Technologies |
-|-----------|---------------|
-| Framework | **Next.js (App Router)** |
-| Language | **TypeScript** |
-| Styling | **Tailwind CSS**, **class-variance-authority**, **clsx** |
-| Animations | **GSAP** |
-| API & State | **React Query**, **Axios**, **Zustand** |
-| Forms | **React Hook Form**, **Zod** |
-| Icons | **Lucide React**, **iconify**, **Tabler Icons** |
-| i18n | **next-intl** , **LanguageDetector** |
-| Auth | **Custom Auth API (JWT tokens)** |
-| Utilities | **js-cookie**, **tailwind-merge** |
+| Category    | Technologies                                             |
+| ----------- | -------------------------------------------------------- |
+| Framework   | **Next.js (App Router)**                                 |
+| Language    | **TypeScript**                                           |
+| Styling     | **Tailwind CSS**, **class-variance-authority**, **clsx** |
+| Animations  | **GSAP**                                                 |
+| API & State | **React Query**, **Axios**, **Zustand**                  |
+| Forms       | **React Hook Form**, **Zod**                             |
+| Icons       | **Lucide React**, **iconify**, **Tabler Icons**          |
+| i18n        | **next-intl** , **LanguageDetector**                     |
+| Auth        | **Custom Auth API (JWT tokens)**                         |
+| Utilities   | **js-cookie**, **tailwind-merge**                        |
 
 ---
 
 ## 🎯 Project Goals
+
 SurveyLand aims to simplify the process of:
 
 - Creating surveys
@@ -120,6 +130,7 @@ through an intuitive and scalable user interface.
 ---
 
 # 👥 Roles
+
 ## User
 
 Can:
@@ -129,6 +140,7 @@ Can:
 - Share survey links
 - View survey responses
 - Update personal profile
+
 ## Admin
 
 Can:
@@ -139,6 +151,7 @@ Can:
 - Monitor platform activity
 
 ---
+
 ## 📌 Survey Lifecycle
 
 Draft → Published → Closed
@@ -155,17 +168,18 @@ Draft → Published → Closed
 - Follows project structure and naming conventions.
 - Uses existing design system components when possible.
 - For major changes, open an issue first to discuss the update.
+
 ---
 
 ## 🧱 Folder Structure
 
-  ```sh
+```sh
 
 src/
 ├─assets /                                 # Static assets
 │  ├─ images/
 │  │  └─ images.tsx                        # import and export all images in this file
-│  ├─ Lottie/                              # all images lottie files 
+│  ├─ Lottie/                              # all images lottie files
 │  │  └─ loading.json
 │  │  └─ No-Data.json
 │  │  └─ network.json
@@ -182,9 +196,9 @@ src/
 │ ├─ not-found.tsx   ├─ (client)
 │                    ├─ (guest)
 │                    ├─ (protected)
-│ ├─ globals.css                    # Global styles take design system and convert to utilites                  
-               
-├─ config/                                   
+│ ├─ globals.css                    # Global styles take design system and convert to utilites
+
+├─ config/
 │  ├─ env.ts                        # PROJECT INFO ,  API CONFIG , AUTH CONFIG
 │  └─ .env                           # some env.ts but for esay imports
 
@@ -194,7 +208,7 @@ src/
 │              ├─ LoadingState.tsx
 │              ├─ NetworkState.tsx
 │              ├─ NotFoundState.tsx
-│            
+│
 ├─ seo         ├─ seo.config.ts
 │              ├─ Seo.tsx
 │              ├─ seo.types.ts
@@ -239,12 +253,12 @@ src/
 │                 ├─ AuthLayout.tsx
 │                 └─ DashboardLayout.tsx
 │                 └─ LandingLayout.tsx
-│  ├─ hooks/ 
+│  ├─ hooks/
 │        ├─ useApiQuery.ts           # hook Query
 │        ├─ useApiMutation.ts        # hook Mutation
 |        ├─ index.ts
 │  ├─ types/
-│        ├─ api.d.ts        # global types in project 
+│        ├─ api.d.ts        # global types in project
 │        ├─ global.d.ts
 │
 │  ├─ utils/                                   # Global utilities
@@ -258,10 +272,10 @@ src/
 ├─ lib/
 │   ├─ cn.ts  # incude tailwind-merge ,  clsx, type ClassValue
 
-├─ styles/                               
+├─ styles/
 │  └─ variables.css                         # file for design system form figma
 
-│                         
+│
 ├─ modules/                               # Feature-based modules (MCV)
 │  ├─ auth/
 │  │  ├─ api/           # EndPoint
@@ -271,31 +285,33 @@ src/
 │  │  │  ├─ LoginForm.tsx
 │  │  │  └─ RegisterForm.tsx
 │  │  ├─ hooks/                 # Hook React Query ( useApiMutation.ts , useApiQuery.ts )
-│  │  │  └─ uselogin.tsx              
-│  │  │  └─ useRegister.tsx                
-│  │  │ 
+│  │  │  └─ uselogin.tsx
+│  │  │  └─ useRegister.tsx
+│  │  │
 │  │  ├─ guards/
-│  │  │  ├─ DoneGuard.tsx   
+│  │  │  ├─ DoneGuard.tsx
 │  │  │  ├─ OTPGuard.tsx
 │  │  │  ├─ ResetGuard.tsx
 │  │  │  ├─ useResetFlow.ts
 │  │  │
 │  │  ├─ utils/
 │  │  │  └─ authValidators.ts
-│  │  ├─ types/            # types for features 
+│  │  ├─ types/            # types for features
 │  │
 │  ├─ Landing/              # landing pages
-│  └─ Dashboard/            # dashboard pages 
+│  └─ Dashboard/            # dashboard pages
 
 ├─ services/                                # API clients layer
 │  ├─ axiosConfig.ts                        # inculde axios , tokens
-│  ├─ apiClient.ts                          # inculde method ( get , post ) and Errors Handling 
+│  ├─ apiClient.ts                          # inculde method ( get , post ) and Errors Handling
 │  ├─ tokenService.ts                       # inculde tokens
 
 ├─ stories/
-                       
+
 ```
+
 ---
+
 ## 📄 License
 
 This project is licensed under the ISC License.

@@ -1,5 +1,5 @@
 import React from "react";
-import HeroSection from "@/shared/components/organisms/HeroSection";
+import HeroSection from "@/shared/components/organisms/Herosection";
 import Title from "@/shared/components/atoms/Title";
 import Text from "@/shared/components/atoms/Text";
 import { hero4 } from "@/assets/images/images";

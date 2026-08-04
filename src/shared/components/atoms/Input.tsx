@@ -3,8 +3,7 @@ import { InputHTMLAttributes, ReactNode, forwardRef, useId } from "react";
 type InputSize = "sm" | "md" | "lg";
 type InputState = "default" | "error" | "success";
 
-export interface InputProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, "size"> {
+export interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, "size"> {
   size?: InputSize;
   state?: InputState;
   label?: string;
@@ -47,10 +46,8 @@ const iconSizeClasses: Record<InputSize, string> = {
 const stateClasses: Record<InputState, string> = {
   default:
     "border-[var(--border-color-muted)] focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20",
-  error:
-    "border-red-400 focus:border-red-500 focus:ring-2 focus:ring-red-400/20",
-  success:
-    "border-green-400 focus:border-green-500 focus:ring-2 focus:ring-green-400/20",
+  error: "border-red-400 focus:border-red-500 focus:ring-2 focus:ring-red-400/20",
+  success: "border-green-400 focus:border-green-500 focus:ring-2 focus:ring-green-400/20",
 };
 
 // Component
@@ -95,14 +92,11 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         {label && (
           <label
             htmlFor={inputId}
-            className="text-sm font-medium text-[var(--color-text-primary)] leading-none"
+            className="text-sm leading-none font-medium text-[var(--color-text-primary)]"
           >
             {label}
             {required && (
-              <span
-                className="ml-1 text-red-500"
-                aria-hidden="true"
-              >
+              <span className="ml-1 text-red-500" aria-hidden="true">
                 *
               </span>
             )}
@@ -114,7 +108,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           {/* Left icon */}
           {leftIcon && (
             <span
-              className={`absolute ${iconSizeClasses[size]} text-[var(--color-text-disabled)] pointer-events-none flex items-center justify-center`}
+              className={`absolute ${iconSizeClasses[size]} pointer-events-none flex items-center justify-center text-[var(--color-text-disabled)]`}
             >
               {leftIcon}
             </span>
@@ -129,8 +123,8 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
               state === "error" && errorMessage
                 ? `${inputId}-error`
                 : hint
-                ? `${inputId}-hint`
-                : undefined
+                  ? `${inputId}-hint`
+                  : undefined
             }
             className={baseInputClasses}
             {...rest}
@@ -146,11 +140,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
 
         {/* Error message */}
         {state === "error" && errorMessage && (
-          <p
-            id={`${inputId}-error`}
-            role="alert"
-            className="text-xs text-red-500 leading-snug"
-          >
+          <p id={`${inputId}-error`} role="alert" className="text-xs leading-snug text-red-500">
             {errorMessage}
           </p>
         )}
@@ -159,7 +149,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         {hint && state !== "error" && (
           <p
             id={`${inputId}-hint`}
-            className="text-xs text-[var(--color-text-secondary)] leading-snug"
+            className="text-xs leading-snug text-[var(--color-text-secondary)]"
           >
             {hint}
           </p>

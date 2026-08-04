@@ -19,6 +19,7 @@
     "register": "انشاء حساب"
   },
   "publicPages": {
+    "viewAll": "عرض الكل",
     "home": {
       "hero-section": {
         "title": "حوّل <alt>الأسئلة</alt> إلى وضوح وبدّل <alt>الإجابات</alt> إلى رؤى قيّمة",

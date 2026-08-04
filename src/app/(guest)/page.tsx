@@ -3,7 +3,7 @@ import { getSeoMetadata } from "@/core/seo/getSeoMetadata";
 import type { Metadata } from "next";
 import PublicLayout from "@/shared/components/Layout/PublicLayout";
 
-import Herosection from "@/shared/components/organisms/HeroSection";
+import Herosection from "@/shared/components/organisms/Herosection";
 import HeroSection1 from "@/shared/components/organisms/HeroSection1";
 import ContentHeroection2 from "@/shared/components/molecules/ContentHeroection2";
 
@@ -35,4 +35,3 @@ function page() {
 }
 
 export default page;
-

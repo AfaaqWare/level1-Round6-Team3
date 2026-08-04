@@ -111,8 +111,10 @@
     --ease-out: ease-out;
 
     /* font-weight */
-    --font-bold: 500;
-    --font-extrabold: 600;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-extrabold: 800;
   }
 
   /* Dark Variant */

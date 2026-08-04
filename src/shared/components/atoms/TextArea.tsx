@@ -2,8 +2,7 @@ import { TextareaHTMLAttributes, forwardRef, useId } from "react";
 
 type TextAreaState = "default" | "error" | "success";
 
-export interface TextAreaProps
-  extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+export interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   state?: TextAreaState;
   label?: string;
   hint?: string;
@@ -14,10 +13,8 @@ export interface TextAreaProps
 const stateClasses: Record<TextAreaState, string> = {
   default:
     "border-[var(--border-color-muted)] focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20",
-  error:
-    "border-red-400 focus:border-red-500 focus:ring-2 focus:ring-red-400/20",
-  success:
-    "border-green-400 focus:border-green-500 focus:ring-2 focus:ring-green-400/20",
+  error: "border-red-400 focus:border-red-500 focus:ring-2 focus:ring-red-400/20",
+  success: "border-green-400 focus:border-green-500 focus:ring-2 focus:ring-green-400/20",
 };
 
 const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
@@ -54,7 +51,7 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
         {label && (
           <label
             htmlFor={textareaId}
-            className="text-sm font-medium text-[var(--color-text-primary)] leading-none"
+            className="text-sm leading-none font-medium text-[var(--color-text-primary)]"
           >
             {label}
             {required && (
@@ -77,11 +74,7 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
 
         {/* Error message */}
         {state === "error" && errorMessage && (
-          <p
-            id={`${textareaId}-error`}
-            role="alert"
-            className="text-xs text-red-500 leading-snug"
-          >
+          <p id={`${textareaId}-error`} role="alert" className="text-xs leading-snug text-red-500">
             {errorMessage}
           </p>
         )}
@@ -90,7 +83,7 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
         {hint && state !== "error" && (
           <p
             id={`${textareaId}-hint`}
-            className="text-xs text-[var(--color-text-secondary)] leading-snug"
+            className="text-xs leading-snug text-[var(--color-text-secondary)]"
           >
             {hint}
           </p>

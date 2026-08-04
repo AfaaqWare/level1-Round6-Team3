@@ -18,9 +18,7 @@ function FAQItemText({
   if (item.id === 10) {
     return (
       <>
-        <span className="block">
-          {t("items.10.text1")}
-        </span>
+        <span className="block">{t("items.10.text1")}</span>
 
         <span className="mt-4 block">
           {t.rich("items.10.text2", {
@@ -61,9 +59,7 @@ function FAQItemText({
   return (
     <>
       {paragraphs.map((paragraph, index) => (
-        <span
-          key={index}
-          className={cn("block", index > 0 && "mt-4")}>
+        <span key={index} className={cn("block", index > 0 && "mt-4")}>
           {paragraph}
         </span>
       ))}
@@ -71,7 +67,10 @@ function FAQItemText({
       {item.hasLink && (
         <>
           {" "}
-          <Link href={item.linkHref || "/pricing"} className="ds-text-primary font-medium underline">
+          <Link
+            href={item.linkHref || "/pricing"}
+            className="ds-text-primary font-medium underline"
+          >
             {t(`items.${item.id}.linkText`)}
           </Link>
         </>
@@ -85,32 +84,31 @@ export default function FAQtemplate() {
 
   return (
     <section className="ds-container mt-10 mb-12">
-        <Heading
-            title={t("heading.title")}
-            highlightText={t("heading.titleHighlight")}
-            text={t("heading.subtitle")}
-            className="mb-16"
-            titleClassName="font-normal"
-            textClassName="font-normal"
-        />
-        <div>
-            {FAQData.map((item) => (
-            <QuestionBox
-                key={item.id}
-                title={t(`items.${item.id}.title`)}
-                text={<FAQItemText item={item} t={t} />}>
-                {item.hasFormTypes && (
-                <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
-                    {FormTypesData.map((form) => (
-                    <ArrowSmallBox
-                        key={form.id}
-                        text={t(`formTypes.${form.id}`)}/>
-                    ))}
-                </div>
-                )}
-            </QuestionBox>
-            ))}
-        </div>
+      <Heading
+        title={t("heading.title")}
+        highlightText={t("heading.titleHighlight")}
+        text={t("heading.subtitle")}
+        className="mb-16"
+        titleClassName="font-normal"
+        textClassName="font-normal"
+      />
+      <div>
+        {FAQData.map(item => (
+          <QuestionBox
+            key={item.id}
+            title={t(`items.${item.id}.title`)}
+            text={<FAQItemText item={item} t={t} />}
+          >
+            {item.hasFormTypes && (
+              <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
+                {FormTypesData.map(form => (
+                  <ArrowSmallBox key={form.id} text={t(`formTypes.${form.id}`)} />
+                ))}
+              </div>
+            )}
+          </QuestionBox>
+        ))}
+      </div>
     </section>
   );
 }

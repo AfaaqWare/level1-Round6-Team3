@@ -3,17 +3,13 @@ import {
   card2,
   card3,
   card4,
-  leader5,
-  leader6,
-  leader7,
-  leader8,
+  homecard4,
   homecard5,
   homecard6,
   homecard7,
   homecard8,
   homecard9,
   homecard10,
-  homecard11,
   homecard12,
   homecard13,
   homecard14,
@@ -62,18 +58,18 @@ export const dataCards = [
 
 // Education & Training cards
 export const educationCardData = [
-  { id: 1, img: homecard9, title: "cards.card1.title", text: "cards.card1.text" },
-  { id: 2, img: homecard10, title: "cards.card2.title", text: "cards.card2.text" },
-  { id: 3, img: homecard11, title: "cards.card3.title", text: "cards.card3.text" },
-  { id: 4, img: homecard12, title: "cards.card4.title", text: "cards.card4.text" },
+  { id: 1, img: homecard8, title: "cards.card1.title", text: "cards.card1.text" },
+  { id: 2, img: homecard12, title: "cards.card2.title", text: "cards.card2.text" },
+  { id: 3, img: homecard9, title: "cards.card3.title", text: "cards.card3.text" },
+  { id: 4, img: homecard10, title: "cards.card4.title", text: "cards.card4.text" },
 ];
 
 // Market Research cards images
 export const marketResearchData = [
-  { id: 1, src: homecard5 },
-  { id: 2, src: homecard6 },
-  { id: 3, src: homecard7 },
-  { id: 4, src: homecard8 },
+  { id: 1, src: homecard4 },
+  { id: 2, src: homecard5 },
+  { id: 3, src: homecard6 },
+  { id: 4, src: homecard7 },
 ];
 
 // Event Feedback cards images
@@ -134,5 +130,3 @@ export const FAQData = [
 
 // Form Types Data
 export const FormTypesData = Array.from({ length: 36 }, (_, i) => ({ id: i + 1 }));
-
-

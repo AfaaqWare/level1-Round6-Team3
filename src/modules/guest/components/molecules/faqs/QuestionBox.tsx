@@ -19,7 +19,7 @@ export default function QuestionBox({
   return (
     <div
       className={cn(
-        "ds-bg-card ds-shadow-card ds-border-card !mx-auto !my-5 flex flex-col gap-2 ds-rounded-xl !px-4 !pt-4 !pb-8",
+        "ds-bg-card ds-shadow-card ds-border-card ds-rounded-xl !mx-auto !my-5 flex flex-col gap-2 !px-4 !pt-4 !pb-8",
         className
       )}
     >

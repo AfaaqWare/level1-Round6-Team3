@@ -24,18 +24,31 @@ export default function AppImage({
   sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
   objectFit = "cover",
 }: Props) {
-  return (
-    <div className={cn("w-full flex justify-center items-center", className)}>
+  if (fill) {
+    return (
       <Image
         src={src}
         alt={alt}
         quality={100}
-        width={fill ? undefined : width}
-        height={fill ? undefined : height}
-        fill={fill}
+        fill
         sizes={sizes}
         priority={priority}
-        className={cn(objectFit && `object-${objectFit}`, !fill && "!relative")}
+        className={cn("object-cover", objectFit && `object-${objectFit}`)}
+      />
+    );
+  }
+
+  return (
+    <div className={cn("flex w-full items-center justify-center", className)}>
+      <Image
+        src={src}
+        alt={alt}
+        quality={100}
+        width={width}
+        height={height}
+        sizes={sizes}
+        priority={priority}
+        className={cn(objectFit && `object-${objectFit}`, "!relative")}
       />
     </div>
   );

@@ -21,12 +21,7 @@ export default function Images({
 }: Props) {
   const baseClasses = "w-full  flex justify-end items-center";
   return (
-    <div
-      className={cn(
-        baseClasses,
-        center ? "flex justify-center items-center" : "",
-      )}
-    >
+    <div className={cn(baseClasses, center ? "flex items-center justify-center" : "")}>
       <Image
         src={src}
         alt={alt}

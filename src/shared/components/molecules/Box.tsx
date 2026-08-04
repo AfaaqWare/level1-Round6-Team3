@@ -10,7 +10,6 @@ export default function Box() {
       <Text isCenter={true}>
         Choose a template or start from scratch using our easy-to-use builder
       </Text>
-     
     </div>
   );
 }

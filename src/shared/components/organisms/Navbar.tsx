@@ -9,7 +9,10 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-[var(--border-color-card)] bg-[var(--color-bg-alt)] shadow-sm backdrop-blur-sm transition-colors duration-300">
       <nav className="ds-container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <span className="text-2xl font-bold tracking-tight" style={{ color: "var(--color-primary)" }}>
+          <span
+            className="text-2xl font-bold tracking-tight"
+            style={{ color: "var(--color-primary)" }}
+          >
             Survey<span style={{ color: "var(--color-text-primary)" }}>App</span>
           </span>
         </Link>
@@ -21,7 +24,7 @@ export default function Navbar() {
             { label: "About", href: "/about" },
             { label: "FAQs", href: "/faqs" },
             { label: "Contact", href: "/contact" },
-          ].map((link) => (
+          ].map(link => (
             <li key={link.href}>
               <Link
                 href={link.href}

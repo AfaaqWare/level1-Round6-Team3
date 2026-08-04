@@ -21,7 +21,9 @@ export default function PricingCard2({
   buttonText = "Choose Plan",
 }: PricingCard2Props) {
   return (
-    <div className={`ds-bg-card ds-border-card ds-rounded-xl ds-shadow-card flex flex-col gap-3 p-8`}>
+    <div
+      className={`ds-bg-card ds-border-card ds-rounded-xl ds-shadow-card flex flex-col gap-3 p-8`}
+    >
       <div>
         <Title size="md" variant="primary" className="ds-font-heading mb-3 font-medium">
           {title}

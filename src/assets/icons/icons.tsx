@@ -1,15 +1,6 @@
 import type { ComponentProps } from "react";
 import { Icon } from "@iconify/react";
-import {
-  Moon,
-  Sun,
-  ListMinus,
-  X,
-  Eye,
-  EyeOff,
-  ArrowRight,
-  Check,
-} from "lucide-react";
+import { Moon, Sun, ListMinus, X, Eye, EyeOff, ArrowRight, ArrowLeft, Check } from "lucide-react";
 
 type IconProps = Omit<ComponentProps<typeof Icon>, "icon">;
 const FaFacebookF = (props: IconProps) => <Icon icon="fa-brands:facebook-f" {...props} />;
@@ -29,5 +20,6 @@ export {
   Eye,
   EyeOff,
   ArrowRight,
+  ArrowLeft,
   Check,
 };
