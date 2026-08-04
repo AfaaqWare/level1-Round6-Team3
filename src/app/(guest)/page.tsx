@@ -1,15 +1,10 @@
+import type { Metadata } from "next";
 import PublicLayout from "@/shared/components/Layout/PublicLayout";
-<<<<<<< HEAD
-export default function page() {
-  return <PublicLayout>home</PublicLayout>;
-}
-=======
-
 import Herosection from "@/shared/components/organisms/HeroSection";
 import HeroSection1 from "@/shared/components/organisms/HeroSection1";
 import ContentHeroection2 from "@/shared/components/molecules/ContentHeroection2";
-
 import PopularTemplates from "@/modules/guest/components/organisms/home/PopularTemplates";
+import { getSeoMetadata } from "@/core/seo/getSeoMetadata";
 
 export const metadata: Metadata = getSeoMetadata({
   title: "project for team",
@@ -37,5 +32,3 @@ function page() {
 }
 
 export default page;
-
->>>>>>> 49ec88b19c7f06f0ba4de05e855813a734d4addf
