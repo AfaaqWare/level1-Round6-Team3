@@ -57,5 +57,415 @@
       }
     },
     "copyRight": "@2026 SurveyLand.All rights reserved"
+  },
+  "publicPages": {
+    "home": {
+      "hero-section": {
+        "title": "Turn questions into <alt>clarity</alt>",
+        "describtion": "Effortlessly build surveys that deliver the answers you need to grow, improve, and connect with your audience.",
+        "create-btn": "Create your survey",
+        "how-work-btn": "See how it works"
+      },
+      "popularTemplatesSection": {
+        "title": "Popular survey",
+        "highlightTitle": "templates",
+        "button": "Use template",
+        "viewAllBtn": "View all templates",
+        "topBar": {
+          "number": "1",
+          "title": "Popular",
+          "highlightText": "templates"
+        },
+        "templates": [
+          {
+            "id": 1,
+            "title": "Customer satisfaction",
+            "text": "Measure how customers feel about your product, service, or support experience."
+          },
+          {
+            "id": 2,
+            "title": "Employee feedback",
+            "text": "Collect honest team input and understand what helps people do their best work."
+          },
+          {
+            "id": 3,
+            "title": "Event registration",
+            "text": "Gather attendee details, preferences, and expectations before your next event."
+          },
+          {
+            "id": 4,
+            "title": "Product research",
+            "text": "Validate ideas, compare features, and learn what your audience needs next."
+          }
+        ]
+      },
+      "marketResearchSection": {
+        "number": "2",
+        "title": "Market",
+        "highlightText": "research",
+        "button": "Use template",
+        "templates": [
+          {
+            "id": 1,
+            "title": "Brand awareness",
+            "text": "Understand how familiar your audience is with your brand and message."
+          },
+          {
+            "id": 2,
+            "title": "Buyer persona",
+            "text": "Learn who your customers are, what they need, and how they make decisions."
+          },
+          {
+            "id": 3,
+            "title": "Competitor analysis",
+            "text": "Compare your offer with alternatives and discover opportunities to stand out."
+          },
+          {
+            "id": 4,
+            "title": "Product demand",
+            "text": "Measure interest, pricing expectations, and readiness before launch."
+          }
+        ]
+      },
+      "educationSection": {
+        "number": "3",
+        "title": "Education",
+        "subtitle": "and training",
+        "cards": {
+          "btn": "Use template",
+          "card1": {
+            "title": "Course evaluation",
+            "text": "Ask learners what worked, what was unclear, and how the course can improve."
+          },
+          "card2": {
+            "title": "Student engagement",
+            "text": "Track participation, confidence, and learning preferences across your class."
+          },
+          "card3": {
+            "title": "Training feedback",
+            "text": "Collect practical feedback after workshops, onboarding, and internal sessions."
+          },
+          "card4": {
+            "title": "Quiz and assessment",
+            "text": "Check understanding with simple questions and quick response collection."
+          }
+        }
+      },
+      "eventSection": {
+        "EventFeedback": {
+          "topBar": {
+            "title": "Event",
+            "highlightText": "feedback"
+          },
+          "button": "Use template",
+          "templates": [
+            {
+              "id": 1,
+              "title": "Post-event survey",
+              "text": "Learn what attendees enjoyed and what should change next time."
+            },
+            {
+              "id": 2,
+              "title": "Speaker feedback",
+              "text": "Measure session quality, clarity, relevance, and audience engagement."
+            },
+            {
+              "id": 3,
+              "title": "Venue experience",
+              "text": "Collect feedback about location, access, comfort, and logistics."
+            },
+            {
+              "id": 4,
+              "title": "Workshop review",
+              "text": "Understand whether hands-on sessions delivered useful outcomes."
+            }
+          ]
+        }
+      },
+      "howItWorksSection": {
+        "Heading": {
+          "title": "How it",
+          "highlightText": "works",
+          "text": "Create, share, and analyze surveys in a simple flow."
+        },
+        "StepCard1": {
+          "title": "Create",
+          "text": "Choose a template or build your survey from scratch."
+        },
+        "StepCard2": {
+          "title": "Share",
+          "text": "Send your survey link to the people you want to hear from."
+        },
+        "StepCard3": {
+          "title": "Analyze",
+          "text": "Review responses and turn feedback into clear decisions."
+        }
+      },
+      "plansSection": {
+        "title": "Plans for every team",
+        "text": "Start simple and upgrade when you need more responses.",
+        "btn": "View all plans",
+        "cards": {
+          "card1": {
+            "plan": "Basic",
+            "price": "0",
+            "responses": "100",
+            "btn": "Start free"
+          },
+          "card2": {
+            "plan": "Plus",
+            "price": "50",
+            "responses": "1000",
+            "btn": "Choose plus"
+          },
+          "card3": {
+            "plan": "Business",
+            "price": "83",
+            "responses": "5000",
+            "btn": "Choose business"
+          }
+        }
+      }
+    },
+    "about": {
+      "heroSection": {
+        "title": {
+          "main": "Build better surveys with",
+          "highlight": "SurveyLand"
+        },
+        "text": "SurveyLand helps teams create surveys, collect responses, and understand feedback with a simple, flexible experience.",
+        "buttontext1": "Get started",
+        "buttontext2": "Learn more"
+      },
+      "missionSection": {
+        "title": {
+          "firstWord": "Our",
+          "secondWord": "mission"
+        },
+        "text": "We make it easier for students, teams, and organizations to turn feedback into practical decisions.",
+        "btn": "Explore our work"
+      },
+      "teamleaderSection": {
+        "heading": {
+          "title": "Meet our",
+          "highlightTitle": " team"
+        },
+        "title": "Join the team",
+        "text": "We are building a thoughtful survey platform with a team focused on clarity, collaboration, and useful insights.",
+        "button": "Browse open roles",
+        "gridHeading": {
+          "title": "Leadership",
+          "highlightTitle": "team"
+        },
+        "topBar": {
+          "title": "Team",
+          "highlightText": "leaders"
+        },
+        "team": [
+          {
+            "id": 1,
+            "title": "Product Lead",
+            "text": "Guides the product direction and keeps the survey experience simple and valuable."
+          },
+          {
+            "id": 2,
+            "title": "Design Lead",
+            "text": "Shapes accessible interfaces and clear user journeys across the platform."
+          },
+          {
+            "id": 3,
+            "title": "Engineering Lead",
+            "text": "Builds reliable systems that support survey creation, sharing, and response analysis."
+          },
+          {
+            "id": 4,
+            "title": "Research Lead",
+            "text": "Connects user feedback with practical insights for better decisions."
+          },
+          {
+            "id": 5,
+            "title": "Operations Lead",
+            "text": "Keeps team processes organized and helps projects move forward smoothly."
+          },
+          {
+            "id": 6,
+            "title": "Growth Lead",
+            "text": "Finds opportunities to reach more teams and improve adoption."
+          },
+          {
+            "id": 7,
+            "title": "Support Lead",
+            "text": "Helps users get unstuck and turns support patterns into product improvements."
+          },
+          {
+            "id": 8,
+            "title": "Content Lead",
+            "text": "Creates helpful templates and guidance for better surveys."
+          }
+        ]
+      },
+      "leadeship-section": {
+        "join-team": "Join team",
+        "card5": {
+          "title": "Strategy Lead",
+          "text": "Plans priorities and aligns the team around meaningful outcomes."
+        },
+        "card6": {
+          "title": "UX Specialist",
+          "text": "Improves flows so survey building feels clear and efficient."
+        },
+        "card7": {
+          "title": "Frontend Engineer",
+          "text": "Implements polished interfaces and responsive survey experiences."
+        },
+        "card8": {
+          "title": "Data Analyst",
+          "text": "Turns responses into patterns that teams can act on."
+        }
+      }
+    },
+    "contact": {
+      "title": "Contact us",
+      "header": {
+        "highlight": "us",
+        "title": "Contact",
+        "text": "Have a question or need help? Send us a message and we will get back to you.",
+        "button": "Start a conversation"
+      },
+      "form": {
+        "title": "Send us a message",
+        "fullName": {
+          "label": "Full name",
+          "placeholder": "Enter your full name"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "Enter your email address"
+        },
+        "subject": {
+          "label": "Subject",
+          "placeholder": "What is this about?"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Write your message"
+        },
+        "submit": "Send message"
+      },
+      "socials": {
+        "email": {
+          "title": "Email",
+          "text": "support@surveyland.com"
+        },
+        "phone": {
+          "title": "Phone",
+          "text": "+1 555 010 2040"
+        },
+        "location": {
+          "title": "Location",
+          "text": "Remote-first team"
+        },
+        "hours": {
+          "title": "Working hours",
+          "text": "Sunday to Thursday, 9:00 AM - 5:00 PM"
+        }
+      }
+    },
+    "faq": {
+      "heading": {
+        "title": "Frequently asked",
+        "titleHighlight": "questions",
+        "subtitle": "Find quick answers about creating surveys, collecting responses, and using templates."
+      },
+      "items": {
+        "1": {
+          "title": "What is SurveyLand?",
+          "text": "SurveyLand is a simple platform for creating surveys, sharing them, and collecting useful feedback."
+        },
+        "2": {
+          "title": "What types of forms can I create?",
+          "text": "You can create surveys, feedback forms, registration forms, quizzes, and research forms."
+        },
+        "3": {
+          "title": "Can I use templates?",
+          "text": "Yes. You can start from ready-made templates and customize the questions for your needs."
+        },
+        "4": {
+          "title": "How do I share a survey?",
+          "text": "After creating a survey, share its link with your audience through email, social media, or messaging apps."
+        },
+        "5": {
+          "title": "Is there a free plan?",
+          "text": "Yes. You can start with a free plan and upgrade when you need more responses or features.",
+          "linkText": "View pricing"
+        },
+        "6": {
+          "title": "Can I collect anonymous responses?",
+          "text": "Yes. You can design surveys that do not ask for personal details when anonymity is important."
+        },
+        "7": {
+          "title": "Can I analyze responses?",
+          "text": "Yes. SurveyLand helps you review responses and understand patterns in the feedback you collect."
+        },
+        "8": {
+          "title": "Can I edit a survey after publishing?",
+          "text": "Yes. You can update questions and content, then continue collecting responses."
+        },
+        "9": {
+          "title": "Does SurveyLand work for teams?",
+          "text": "Yes. Teams can use SurveyLand to collect customer, employee, student, and event feedback."
+        },
+        "10": {
+          "title": "What tools can surveys support?",
+          "text1": "Surveys can support many workflows across teams and projects.",
+          "text2": "Use responses with <tables></tables>, <inbox></inbox>, <pdfEditor></pdfEditor>, <workflows></workflows>, and <reportBuilder></reportBuilder>.",
+          "links": {
+            "tables": "tables",
+            "inbox": "inbox",
+            "pdfEditor": "PDF editor",
+            "workflows": "workflows",
+            "reportBuilder": "report builder"
+          }
+        }
+      },
+      "formTypes": {
+        "1": "Customer satisfaction",
+        "2": "Employee feedback",
+        "3": "Course evaluation",
+        "4": "Event registration",
+        "5": "Market research",
+        "6": "Product feedback",
+        "7": "Contact form",
+        "8": "Lead generation",
+        "9": "Order form",
+        "10": "Newsletter signup",
+        "11": "Bug report",
+        "12": "Feature request",
+        "13": "Job application",
+        "14": "Volunteer signup",
+        "15": "Appointment request",
+        "16": "Training feedback",
+        "17": "Workshop review",
+        "18": "Speaker evaluation",
+        "19": "Website feedback",
+        "20": "Brand awareness",
+        "21": "Buyer persona",
+        "22": "Student survey",
+        "23": "Parent feedback",
+        "24": "Teacher evaluation",
+        "25": "Patient intake",
+        "26": "Service request",
+        "27": "Support ticket",
+        "28": "Community poll",
+        "29": "Registration form",
+        "30": "Quiz",
+        "31": "Assessment",
+        "32": "Exit interview",
+        "33": "Team retrospective",
+        "34": "NPS survey",
+        "35": "Research screener",
+        "36": "Consent form"
+      }
+    }
   }
 }
