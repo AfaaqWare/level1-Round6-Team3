@@ -23,16 +23,16 @@ export const steps = [
   {
     id: 1,
     titleKey: "StepCard1.title",
-    textKey: "StepCard1.text",
+    textKey: "StepCard1.description",
   },
   {
     id: 2,
     titleKey: "StepCard2.title",
-    textKey: "StepCard2.text",
+    textKey: "StepCard2.description",
   },
   {
     id: 3,
     titleKey: "StepCard3.title",
-    textKey: "StepCard3.text",
+    textKey: "StepCard3.description",
   },
 ];
