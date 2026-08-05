@@ -230,6 +230,39 @@
   .ds-text-xl {
     font-size: var(--text-xl);
   }
+  /* ================= CUSTOM SECTION TYPOGRAPHY (Scoped) ================= */
+  /* Section heading used for Popular Templates and Leadership titles */
+  .ds-section-title {
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  @media (min-width: 768px) {
+    .ds-section-title {
+      font-size: 1.5rem; /* 24px */
+    }
+  }
+
+  /* Card title within cards (ImgCard) */
+  .ds-card-title {
+    font-size: 0.9375rem; /* 15px */
+    line-height: 1.35;
+    font-weight: 600;
+  }
+
+  /* Card body text */
+  .ds-card-text {
+    font-size: 0.9375rem; /* 15px */
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  /* Button text for card CTA */
+  .ds-btn-text {
+    font-size: 0.9375rem; /* 15px */
+    font-weight: 600;
+  }
   .ds-font-regular {
     font-weight: var(--font-regular);
   }

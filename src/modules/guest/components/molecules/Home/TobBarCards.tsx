@@ -22,11 +22,11 @@ export default function TopBarCards({
   const isRtl = locale === "ar";
 
   return (
-    <div className="mt-7 flex flex-wrap items-center justify-between gap-2">
+    <div className="mt-1 flex flex-wrap items-center justify-between gap-2">
       <div className="flex min-w-0 items-center gap-2">
-        {isNumber && <span className="shrink-0 text-lg font-semibold">{number}.</span>}
+        {isNumber && <span className="shrink-0 text-base font-semibold">{number}.</span>}
 
-        <Title variant="primary" size="lg" className="min-w-0 font-semibold normal-case">
+        <Title variant="primary" size="md" className="min-w-0 font-semibold normal-case">
           {title} <span className="ds-text-alt">{highlightText}</span>
         </Title>
       </div>

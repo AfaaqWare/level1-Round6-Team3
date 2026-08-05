@@ -28,7 +28,7 @@ export default function Button({
   isRounded = false,
 }: Props) {
   const base =
-    "inline-flex items-center justify-center gap-2 font-medium cursor-pointer transition-all duration-[var(--motion-fast)] ease-out focus:outline-none focus:shadow-[0_0_0_var(--focus-ring-width)_var(--focus-ring-color)]";
+    "inline-flex items-center justify-center gap-2 font-medium cursor-pointer transition-all duration-[var(--motion-fast)] ease-out focus:outline-none focus:shadow-[0_0_0_var(--focus-ring-width)_var(--focus-ring-color)] whitespace-nowrap";
 
   const sizes = {
     sm: "px-[var(--space-md)] py-[var(--space-xs)] ds-text-sm",

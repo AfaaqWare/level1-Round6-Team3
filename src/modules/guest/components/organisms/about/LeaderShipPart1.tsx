@@ -3,7 +3,7 @@
 import React from "react";
 import Title from "@/shared/components/atoms/Title";
 import ImgCard from "@/shared/components/molecules/ImgCard";
-import TopBarCards from "../../molecules/Home/TobBarCards";
+import TopBarCards from "@/modules/guest/components/molecules/Home/TobBarCards";
 import { LeadershipData } from "@/shared/utils/data";
 import { useTranslations } from "next-intl";
 
