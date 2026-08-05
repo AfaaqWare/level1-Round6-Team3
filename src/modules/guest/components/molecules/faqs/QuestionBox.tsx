@@ -19,7 +19,7 @@ export default function QuestionBox({
   return (
     <article
       className={cn(
-        "ds-bg-card ds-border-sm ds-shadow-md ds-rounded-lg mx-auto my-[var(--space-lg)] flex h-auto w-full min-w-0 flex-col gap-[var(--space-xl)] px-[var(--space-md)] py-[var(--space-xl)] text-start dark:shadow-[0_var(--space-sm)_var(--space-sm)_color-mix(in_srgb,var(--color-text-primary)_6%,transparent)]",
+        "ds-bg-card ds-border-sm ds-rounded-lg mx-auto flex h-auto w-full min-w-0 flex-col gap-[var(--space-xl)] px-[var(--space-md)] py-[var(--space-xl)] text-start shadow-[0_var(--space-sm)_var(--space-sm)_rgba(0,0,8,0.08)] dark:shadow-[0_var(--space-sm)_var(--space-sm)_color-mix(in_srgb,var(--color-text-primary)_6%,transparent)]",
         className
       )}
       style={{ borderColor: "var(--border-color-card)" }}
