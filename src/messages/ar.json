@@ -111,7 +111,7 @@
         "EventFeedback": {
           "button": "استخدام القالب",
           "topBar": {
-            "number": 4,
+            "number": "4",
             "title": "تقييم",
             "highlightText": "الفعاليات"
           },
