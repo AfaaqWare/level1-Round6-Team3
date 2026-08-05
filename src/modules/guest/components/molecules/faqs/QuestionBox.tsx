@@ -17,7 +17,7 @@ export default function QuestionBox({
   children,
 }: QuestionBoxProps) {
   return (
-    <div
+    <article
       className={cn(
         "ds-bg-card ds-border-card ds-shadow-card ds-rounded-lg mx-auto my-[var(--space-lg)] flex h-auto w-full min-w-0 flex-col gap-[var(--space-xl)] px-[var(--space-md)] py-[var(--space-xl)] text-start",
         className
@@ -32,6 +32,6 @@ export default function QuestionBox({
       </Text>
 
       {children}
-    </div>
+    </article>
   );
 }

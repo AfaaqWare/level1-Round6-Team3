@@ -1,10 +1,12 @@
 "use client";
 
-import React from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/cn";
 import { FAQData } from "@/shared/utils/data";
+
+const FAQ_LINK_CLASS =
+  "ds-text-primary rounded-[var(--radius-sm)] font-medium underline focus-visible:outline-none focus-visible:shadow-[0_0_0_var(--focus-ring-width)_var(--focus-ring-color)]";
 
 interface FAQItemTextProps {
   item: (typeof FAQData)[number];
@@ -20,50 +22,35 @@ export default function FAQItemText({ item, t }: FAQItemTextProps) {
         <span className="mt-4 block">
           {t.rich("items.10.text2", {
             tables: () => (
-              <Link
-                href="https://www.jotform.com/products/tables/"
-                className="ds-text-primary font-medium underline"
-              >
+              <Link href="https://www.jotform.com/products/tables/" className={FAQ_LINK_CLASS}>
                 {t("items.10.links.tables")}
               </Link>
             ),
             inbox: () => (
-              <Link
-                href="https://www.jotform.com/features/inbox/"
-                className="ds-text-primary font-medium underline"
-              >
+              <Link href="https://www.jotform.com/features/inbox/" className={FAQ_LINK_CLASS}>
                 {t("items.10.links.inbox")}
               </Link>
             ),
             pdfEditor: () => (
-              <Link
-                href="https://www.jotform.com/products/pdf-editor/"
-                className="ds-text-primary font-medium underline"
-              >
+              <Link href="https://www.jotform.com/products/pdf-editor/" className={FAQ_LINK_CLASS}>
                 {t("items.10.links.pdfEditor")}
               </Link>
             ),
             workflows: () => (
-              <Link
-                href="https://www.jotform.com/products/workflows/"
-                className="ds-text-primary font-medium underline"
-              >
+              <Link href="https://www.jotform.com/products/workflows/" className={FAQ_LINK_CLASS}>
                 {t("items.10.links.workflows")}
               </Link>
             ),
             reportBuilder: () => (
               <Link
                 href="https://www.jotform.com/products/report-builder/"
-                className="ds-text-primary font-medium underline"
+                className={FAQ_LINK_CLASS}
               >
                 {t("items.10.links.reportBuilder")}
               </Link>
             ),
             sign: () => (
-              <Link
-                href="https://www.jotform.com/products/sign/"
-                className="ds-text-primary font-medium underline"
-              >
+              <Link href="https://www.jotform.com/products/sign/" className={FAQ_LINK_CLASS}>
                 {t("items.10.links.sign")}
               </Link>
             ),
@@ -87,10 +74,7 @@ export default function FAQItemText({ item, t }: FAQItemTextProps) {
       {item.hasLink && (
         <>
           {" "}
-          <Link
-            href={item.linkHref || "/pricing"}
-            className="ds-text-primary font-medium underline"
-          >
+          <Link href={item.linkHref || "/pricing"} className={FAQ_LINK_CLASS}>
             {t(`items.${item.id}.linkText`)}
           </Link>
         </>

@@ -1,10 +1,8 @@
 "use client";
-import React from "react";
 import { useTranslations } from "next-intl";
 import QuestionBox from "@/modules/guest/components/molecules/faqs/QuestionBox";
 import FAQItemText from "@/modules/guest/components/molecules/faqs/FAQItemText";
 import FAQFormTypes from "@/modules/guest/components/molecules/faqs/FAQFormTypes";
-import Heading from "@/shared/components/molecules/Heading";
 import { FAQData } from "@/shared/utils/data";
 
 export default function FAQtemplate() {
@@ -13,14 +11,12 @@ export default function FAQtemplate() {
   return (
     <section className="ds-bg pt-[calc(var(--space-4xl)*4)] pb-[var(--space-4xl)]">
       <div className="ds-container">
-        <Heading
-          title={t("heading.title")}
-          highlightText={t("heading.titleHighlight")}
-          text={t("heading.subtitle")}
-          className="mb-[calc(var(--space-4xl)*2)]"
-          titleClassName="font-normal"
-          textClassName="font-normal"
-        />
+        <div className="mb-[calc(var(--space-4xl)*2)] flex flex-col gap-0.5 text-center">
+          <h1 className="ds-text-primary ds-text-lg font-normal">
+            {t("heading.title")} <span className="ds-text-alt">{t("heading.titleHighlight")}</span>
+          </h1>
+          <p className="ds-text-disabled ds-text-md font-normal">{t("heading.subtitle")}</p>
+        </div>
         <div className="mx-auto w-full md:w-[90%] lg:w-3/4">
           {FAQData.map(item => (
             <QuestionBox
