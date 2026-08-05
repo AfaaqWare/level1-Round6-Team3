@@ -25,6 +25,10 @@ import homecard13 from "./homecard13.png";
 import homecard14 from "./homecard14.png";
 import homecard15 from "./homecard15.png";
 import homecard16 from "./homecard16.png";
+import responseHeroImage from "./responseHeroImg.jpg";
+
+export {
+  hero3,
 import aboutcard1 from "./aboutcard1.png";
 import aboutcard2 from "./aboutcard2.png";
 import aboutcard3 from "./aboutcard3.png";
@@ -59,6 +63,16 @@ export {
   card2,
   card3,
   card4,
+  leader7,
+  leader8,
+  aboutcard1,
+  aboutcard2,
+  aboutcard3,
+  aboutcard4,
+  aboutcard5,
+  aboutcard6,
+  aboutcard7,
+  aboutcard8,
   cardImg1,
   cardImg2,
   cardImg3,
@@ -85,6 +99,7 @@ export {
   homecard14,
   homecard15,
   homecard16,
+  responseHeroImage,
   aboutcard1,
   aboutcard2,
   aboutcard3,

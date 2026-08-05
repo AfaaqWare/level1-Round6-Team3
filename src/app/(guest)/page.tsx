@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
 import PublicLayout from "@/shared/components/Layout/PublicLayout";
+// <<<<<<< HEAD
+// export default function page() {
+//   return <PublicLayout>home</PublicLayout>;
+// }
+// =======
+
 import Herosection from "@/shared/components/organisms/HeroSection";
 import HeroSection1 from "@/shared/components/organisms/HeroSection1";
 import ContentHeroection2 from "@/shared/components/molecules/ContentHeroection2";
@@ -33,6 +39,9 @@ async function page() {
         button1={t("button1")}
         button2={t("button2")}
       />
+      <HeroSection1 />
+
+      {/* <PopularTemplates /> */}
       <Cardsection />
       <PricingSection />
     </PublicLayout>

@@ -4,12 +4,7 @@ import { useTranslations } from "next-intl";
 import Title from "@/shared/components/atoms/Title";
 import TopBarCards from "../../molecules/Home/TobBarCards";
 import ImgCard from "@/shared/components/molecules/ImgCard";
-import {
-  cardImg1,
-  cardImg2,
-  cardImg3,
-  cardImg4,
-} from "@/assets/images/images";
+import { card1, card2, card3, card4 } from "@/assets/images/images";
 
 interface Template {
   id: number;
@@ -22,16 +17,14 @@ export default function SurveyTemplates() {
 
   const templates = t.raw("templates") as Template[];
 
-  const images = [cardImg1, cardImg2, cardImg3, cardImg4];
+  const images = [card1, card2, card3, card4];
 
   return (
     <section className="ds-container py-10">
-
       <Title size="xl" className="mt-5 font-semibold">
         {t("title")}
         <span className="ds-text-alt"> {t("highlightTitle")}</span>
       </Title>
-
 
       <TopBarCards
         number={t("topBar.number")}
@@ -39,7 +32,6 @@ export default function SurveyTemplates() {
         highlightText={t("topBar.highlightText")}
         isNumber
       />
-
 
       <div className="mt-7 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {templates.map((template, index) => (

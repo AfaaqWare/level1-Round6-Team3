@@ -1,7 +1,7 @@
 import React from "react";
 import { cn } from "@/lib/cn";
 interface Props {
-  size?: "sm" | "base" | "md" | "lg";
+  size?: "xs" | "sm" | "base" | "md" | "lg";
   variant?: "primary" | "disabled" | "secondary" | "alt";
   className?: string;
   children: React.ReactNode;
@@ -16,6 +16,7 @@ export default function Text({
   isCenter = false,
 }: Props) {
   const sizes = {
+    xs: "ds-text-xs",
     sm: "ds-text-sm",
     base: "ds-text-base",
     md: "ds-text-md",

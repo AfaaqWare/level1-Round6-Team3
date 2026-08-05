@@ -58,6 +58,19 @@
     },
     "copyRight": "@2026 SurveyLand.All rights reserved"
   },
+  "surveyResponse": {
+    "SurveyInformation": {
+      "title": "Your Information",
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "confidential": "Your information will be kept confidential."
+    },
+    "SurveySubmission": {
+      "totalQuestions": "Total Questions",
+      "required": "Required",
+      "submit": "Submit Response"
+    },
+    "surveyQuestions": { "title": "Survey Questions" }
   "publicPages": {
     "home": {
       "hero-section": {
