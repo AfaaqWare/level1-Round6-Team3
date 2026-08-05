@@ -8,7 +8,7 @@ export default function WorkStepsSection() {
   const t = useTranslations("publicPages.home.howItWorksSection");
 
   return (
-    <div className="ds-container mt-20">
+    <div className="ds-container my-3 flex min-h-[90vh] flex-col justify-center md:my-1 md:min-h-0 md:justify-center">
       <Heading
         title={t("Heading.title")}
         highlightText={t("Heading.highlightText")}
