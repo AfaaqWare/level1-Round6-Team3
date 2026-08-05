@@ -11,11 +11,6 @@ import {
   LogOut,
   User,
   LayoutDashboard,
-  ArrowRight,
-  FileText,
-  CalendarDays,
-  Send,
-  Clock3,
   Check,
 } from "lucide-react";
 
@@ -40,10 +35,5 @@ export {
   LogOut,
   User,
   LayoutDashboard,
-  ArrowRight,
-  CalendarDays,
-  FileText,
-  Send,
-  Clock3,
   Check,
 };
