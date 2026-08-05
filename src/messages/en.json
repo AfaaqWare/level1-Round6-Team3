@@ -261,6 +261,48 @@
         "5": "Form type 5",
         "6": "Form type 6"
       }
+    },
+
+    "plansSection": {
+      "title": "Plans & Pricing",
+      "text": "Looking for advanced features? Check out our latest plans",
+
+      "billing": {
+        "monthly": "Monthly",
+        "yearly": "Yearly"
+      },
+
+      "cards": {
+        "basic": {
+          "title": "Basic",
+          "description": "Create interactive forms that connect to your workflow",
+          "price": "$25",
+          "period": "/monthly",
+          "featuresTitle": "What's included",
+          "features": ["100 responses", "1 user", "Unlimited SurveyLand", "Unlimited questions"],
+          "button": "Choose plan"
+        },
+
+        "plus": {
+          "title": "Plus",
+          "description": "Make your forms more beautiful and on-brand",
+          "price": "$50",
+          "period": "/monthly",
+          "featuresTitle": "What's included",
+          "features": ["1,000 responses", "3 users", "Everything in Basic", "Drop-off rates"],
+          "button": "Choose plan"
+        },
+
+        "business": {
+          "title": "Business",
+          "description": "Analyze performance and do more with your data",
+          "price": "$83",
+          "period": "/monthly",
+          "featuresTitle": "What's included",
+          "features": ["10,000 responses", "5 users", "Everything in Plus", "Conversion tracking"],
+          "button": "Choose plan"
+        }
+      }
     }
   },
   "footer": {
