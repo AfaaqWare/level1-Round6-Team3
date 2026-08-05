@@ -89,15 +89,15 @@
         },
         "StepCard1": {
           "title": "Create",
-          "text": "Start with a template or build your own survey in minutes."
+          "description": "Start with a template or build your own survey in minutes."
         },
         "StepCard2": {
           "title": "Share",
-          "text": "Send it by link, email, or social channels instantly."
+          "description": "Send it by link, email, or social channels instantly."
         },
         "StepCard3": {
           "title": "Analyze",
-          "text": "Turn responses into clear insights and action plans."
+          "description": "Turn responses into clear insights and action plans."
         }
       },
       "plansSection": {
