@@ -13,18 +13,13 @@ export default function PopularTemplates() {
 
   return (
     <div className="ds-container ds-bg-alt mt-12 py-4">
-
       <SurveyTemplates />
-
 
       <MarketResearch />
 
-
       <Education />
 
-
       <EventFeedbackSection />
-
 
       <div className="ds-container mt-8 flex justify-center pb-10">
         <Button variant="primary" size="md" className="w-[300px]">

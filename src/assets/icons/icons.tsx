@@ -11,7 +11,6 @@ import {
   LogOut,
   User,
   LayoutDashboard,
-  ArrowRight,
   Check,
 } from "lucide-react";
 
@@ -36,6 +35,5 @@ export {
   LogOut,
   User,
   LayoutDashboard,
-  ArrowRight,
   Check,
 };

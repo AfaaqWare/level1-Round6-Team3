@@ -1,16 +1,9 @@
-import { leader5, leader6, leader7, leader8 } from "@/assets/images/images";
 import { Mail } from "lucide-react";
 import { Phone } from "lucide-react";
 import { MapPinned } from "lucide-react";
 import { Clock } from "lucide-react";
 import type { IconProps } from "@/shared/components/atoms/Icon";
 
-export const leadership = [
-  { key: "card5", src: leader5 },
-  { key: "card6", src: leader6 },
-  { key: "card7", src: leader7 },
-  { key: "card8", src: leader8 },
-];
 export const socials: { key: string; icon: IconProps }[] = [
   { key: "email", icon: { IconComponent: Mail, size: 24, color: "alt" } },
   { key: "phone", icon: { IconComponent: Phone, size: 24, color: "alt" } },
@@ -34,5 +27,43 @@ export const steps = [
     id: 3,
     titleKey: "StepCard3.title",
     descriptionKey: "StepCard3.description",
+
+export interface PricingPlan {
+  id: string;
+  name: string;
+  price: string | null;
+  responses: string;
+  cta: string;
+  featured: boolean;
+  href: string;
+}
+
+export const pricingPlans: PricingPlan[] = [
+  {
+    id: "basic",
+    name: "plans.basic.name",
+    price: null,
+    responses: "plans.basic.responses",
+    cta: "plans.basic.cta",
+    featured: false,
+    href: "/pricing",
+  },
+  {
+    id: "plus",
+    name: "plans.plus.name",
+    price: "$50",
+    responses: "plans.plus.responses",
+    cta: "plans.plus.cta",
+    featured: true,
+    href: "/pricing",
+  },
+  {
+    id: "business",
+    name: "plans.business.name",
+    price: "$83",
+    responses: "plans.business.responses",
+    cta: "plans.business.cta",
+    featured: false,
+    href: "/pricing",
   },
 ];
