@@ -17,7 +17,7 @@ export default function WorkStepsSection() {
 
       <div className="mt-12 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
         {steps.map(step => (
-          <StepCard key={step.id} title={t(step.titleKey)} description={t(step.textKey)} />
+          <StepCard key={step.id} title={t(step.titleKey)} description={t(step.descriptionKey)} />
         ))}
       </div>
     </div>
