@@ -14,7 +14,7 @@ import DropdownProfile from "../atoms/navbar/DropdownProfile";
 import { TokenService } from "@/services/tokenService";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [, setDropdownOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [mounted, setMounted] = useState(false);

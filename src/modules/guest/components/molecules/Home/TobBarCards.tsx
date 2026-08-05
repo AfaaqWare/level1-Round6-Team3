@@ -8,14 +8,12 @@ interface Props {
   title?: string;
   highlightText?: string;
   isNumber?: boolean;
-  btn?:string;
 }
 
 export default function TopBarCards({
   number = "3",
   title = "title",
   highlightText = "highlightText",
-  btn,
   isNumber = false,
 }: Props) {
   return (

@@ -1,18 +1,20 @@
 import { useApiMutation } from "@/shared/hooks/useApiMutation";
 import { TokenService } from "@/services/tokenService";
-import { apiProfile } from "../api/apiProfile";
 
 export const useLogoutApi = () => {
-  return useApiMutation({
-    mutationFn: apiProfile,
+  return useApiMutation<undefined, string>({
+    mutationFn: async () => {
+      TokenService.removeToken();
+      localStorage.removeItem("accessToken");
+      localStorage.removeItem("refreshToken");
+      localStorage.removeItem("user");
+
+      return "Logged out successfully";
+    },
 
     options: {
       onSuccess: () => {
-        TokenService.removeToken();
-
-        localStorage.removeItem("accessToken");
-        localStorage.removeItem("refreshToken");
-        localStorage.removeItem("user");
+        // success handling is managed by the caller
       },
     },
   });
