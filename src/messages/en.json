@@ -373,98 +373,99 @@
     },
     "faq": {
       "heading": {
-        "title": "Frequently asked",
-        "titleHighlight": "questions",
-        "subtitle": "Find quick answers about creating surveys, collecting responses, and using templates."
+        "title": "Frequently Asked",
+        "titleHighlight": "Questions",
+        "subtitle": "Browse our FAQ to troubleshoot issues, learn best practices, or get step-by-step instructions."
       },
       "items": {
         "1": {
-          "title": "What is SurveyLand?",
-          "text": "SurveyLand is a simple platform for creating surveys, sharing them, and collecting useful feedback."
+          "title": "What is SurveyLand ?",
+          "text": "SurveyLand is a powerful online application that allows anyone to quickly create custom online forms. Its intuitive drag-and-drop user interface makes form building incredibly simple, and doesn’t require you to write a single line of code. Using Jotform, you can create and publish forms, integrate them into your site, and receive responses by email."
         },
         "2": {
-          "title": "What types of forms can I create?",
-          "text": "You can create surveys, feedback forms, registration forms, quizzes, and research forms."
+          "title": "What can I do with SurveyLand ?",
+          "text": "SurveyLand enables you to create online forms, collect responses directly in your email, and create fillable PDF forms. You can put together all types of forms, including:"
         },
         "3": {
-          "title": "Can I use templates?",
-          "text": "Yes. You can start from ready-made templates and customize the questions for your needs."
+          "title": "Why SurveyLand?",
+          "text": "SurveyLand will have your forms up and running in seconds! We’re the easiest form builder with the most advanced capabilities, including the industry’s top design and customization tools. Don’t know where to start? We have thousands of ready-made templates to get your form rockin’. Need your forms to show different questions based on your customers answers? Our conditions tool can show or hide whatever form fields you choose, depending on how people answer previous questions. SurveyLand also lets you add your company logo, custom color schemes, and stunning background images."
         },
         "4": {
-          "title": "How do I share a survey?",
-          "text": "After creating a survey, share its link with your audience through email, social media, or messaging apps."
+          "title": "Do I need coding experience to create a form ?",
+          "text": "Not at all! WithSurveyLand’s drag-and-drop builder, you don’t need any coding experience to create the perfect form for your needs. Advanced users can go directly into the HTML code and make adjustments, but it’s absolutely not necessary. With our Theme Designer, you can change the style of your form with just a few clicks."
         },
         "5": {
-          "title": "Is there a free plan?",
-          "text": "Yes. You can start with a free plan and upgrade when you need more responses or features.",
-          "linkText": "View pricing"
+          "title": "Is SurveyLand free ?",
+          "text": "SurveyLand has multiple subscription options, including a free plan. Free users have access to all of the same features as paid users, but with lower limits on form counts, form submissions, form views, upload space and submission storage. To check out the different options,",
+          "linkText": "visit our Pricing page"
         },
         "6": {
-          "title": "Can I collect anonymous responses?",
-          "text": "Yes. You can design surveys that do not ask for personal details when anonymity is important."
+          "title": "How do I add SurveyLand forms to my website ?",
+          "text": "When you publish your online form, you’ll have the option to use it as a standalone link, or to embed it directly into your website. Embedding simply requires you to copy and paste the embed code we provide."
         },
         "7": {
-          "title": "Can I analyze responses?",
-          "text": "Yes. SurveyLand helps you review responses and understand patterns in the feedback you collect."
+          "title": "How secure is my data with SurveyLand ?",
+          "text": "SurveyLand takes the security of your data very seriously. All SurveyLand standalone form links and embed codes are secure (SSL) by default, and we give all users the option to encrypt their data. SurveyLand also adheres to strict European data protection laws by allowing users to store their data on secure German servers if they choose."
         },
         "8": {
-          "title": "Can I edit a survey after publishing?",
-          "text": "Yes. You can update questions and content, then continue collecting responses."
+          "title": "What happens to my data when I downgrade my account ?",
+          "text": "If you decide to downgrade your account, your data will still be securely stored like it always has been and as long as it does not go over the total submission storage on free accounts which is 500. Also, your forms will be disabled if you go over the monthly submission limit on your downgraded plan or any other limit, such as the number of forms. You can check your submission and data storage levels by clicking on the account icon on the top right of your page when logged in and reviewing the progress bars."
         },
         "9": {
-          "title": "Does SurveyLand work for teams?",
-          "text": "Yes. Teams can use SurveyLand to collect customer, employee, student, and event feedback."
+          "title": "How does SurveyLand work ?",
+          "text": "SurveyLand is a powerful online form builder with an intuitive, no-code interface — perfect for those looking for an easy way to create and customize forms. Create your own forms from scratch or pick from 10,000+ different ready-made templates. Use our drag-and-drop builder to craft the perfect form for your business. Integrate with helpful tools and widgets, change fonts and colors, upload branding assets and images, and so much more. When you’re done, share your form via email, link, QR code, or by embedding it in your website or social media platforms.|||SurveyLand also offers an entire suite of handy tools that can help you make the most of your data. Browse our tools to learn how to collect e-signatures, generate PDFs, share form reports and charts, create your own online store, and so much more.|||To get started, simply sign up for one of our plans — ranging from our free Starter plan to a variety of paid plans."
         },
         "10": {
-          "title": "What tools can surveys support?",
-          "text1": "Surveys can support many workflows across teams and projects.",
-          "text2": "Use responses with <tables></tables>, <inbox></inbox>, <pdfEditor></pdfEditor>, <workflows></workflows>, and <reportBuilder></reportBuilder>.",
+          "title": "What can I use SurveyLand for ?",
+          "text1": "SurveyLand is an all-in-one platform that helps people and organizations collect and manage data. You can use SurveyLand’s drag-and-drop interface to create customized forms and surveys that are tailored to your unique needs — without any coding knowledge. Use SurveyLand to make collecting information a seamless experience, whether you’re gathering customer feedback, processing payments securely, or registering event attendees.",
+          "text2": "SurveyLand also offers an entire suite of tools to streamline data management. Organize form data in <tables></tables>, manage responses in <inbox></inbox>, and create fillable PDF forms in <pdfEditor></pdfEditor>. It also offers more advanced data management tools, like <workflows></workflows> to automate workflows, <reportBuilder></reportBuilder> for detailed analytics, and <sign></sign> to securely collect e-signatures. SurveyLand is a versatile and comprehensive tool that lets you efficiently collect, manage, and analyze data, all in one place.",
           "links": {
-            "tables": "tables",
-            "inbox": "inbox",
-            "pdfEditor": "PDF editor",
-            "workflows": "workflows",
-            "reportBuilder": "report builder"
+            "tables": "SurveyLand Tables",
+            "inbox": "SurveyLand Inbox",
+            "pdfEditor": "SurveyLand’s PDF Editor",
+            "workflows": "SurveyLand Workflows",
+            "reportBuilder": "SurveyLand Report Builder",
+            "sign": "SurveyLand Sign"
           }
         }
       },
       "formTypes": {
-        "1": "Customer satisfaction",
-        "2": "Employee feedback",
-        "3": "Course evaluation",
-        "4": "Event registration",
-        "5": "Market research",
-        "6": "Product feedback",
-        "7": "Contact form",
-        "8": "Lead generation",
-        "9": "Order form",
-        "10": "Newsletter signup",
-        "11": "Bug report",
-        "12": "Feature request",
-        "13": "Job application",
-        "14": "Volunteer signup",
-        "15": "Appointment request",
-        "16": "Training feedback",
-        "17": "Workshop review",
-        "18": "Speaker evaluation",
-        "19": "Website feedback",
-        "20": "Brand awareness",
-        "21": "Buyer persona",
-        "22": "Student survey",
-        "23": "Parent feedback",
-        "24": "Teacher evaluation",
-        "25": "Patient intake",
-        "26": "Service request",
-        "27": "Support ticket",
-        "28": "Community poll",
-        "29": "Registration form",
-        "30": "Quiz",
-        "31": "Assessment",
-        "32": "Exit interview",
-        "33": "Team retrospective",
-        "34": "NPS survey",
-        "35": "Research screener",
-        "36": "Consent form"
+        "1": "Registration Forms",
+        "2": "Application Forms",
+        "3": "Contact Forms",
+        "4": "Request Forms",
+        "5": "Order Forms",
+        "6": "Feedback Forms",
+        "7": "Survey Templates",
+        "8": "Signup Forms",
+        "9": "Evaluation Forms",
+        "10": "Event Registration Forms",
+        "11": "Booking Forms",
+        "12": "Petition Forms",
+        "13": "Report Forms",
+        "14": "Reservation Forms",
+        "15": "Employment Forms",
+        "16": "Tracking Forms",
+        "17": "Membership Forms",
+        "18": "Upload Forms",
+        "19": "Quote Forms",
+        "20": "Appointment Forms",
+        "21": "Enrollment Forms",
+        "22": "Volunteer Forms",
+        "23": "Payment Forms",
+        "24": "Wedding Forms",
+        "25": "Calculation Forms",
+        "26": "Consent Forms",
+        "27": "Lead Generation Forms",
+        "28": "Contract Forms",
+        "29": "Request Forms",
+        "30": "Subscription Forms",
+        "31": "Recommendation Forms",
+        "32": "Poll Templates",
+        "33": "Donation Forms",
+        "34": "HIPAA Forms",
+        "35": "Sponsorship Forms",
+        "36": "Admission Forms"
       }
     }
   }
