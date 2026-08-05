@@ -12,6 +12,7 @@ interface Props {
   className?: string;
   children?: React.ReactNode;
   content?: React.ReactNode;
+  imagePosition?: "left" | "right";
 }
 
 export default function HeroSection({
@@ -22,12 +23,21 @@ export default function HeroSection({
   className = "",
   children,
   content,
+  imagePosition = "right",
 }: Props) {
   const innerContent = children || content;
+
   return (
-    <div className={cn("ds-container flex h-[90vh] flex-col items-center justify-between md:flex-row gap-8", className)}>
-      <div className="w-full md:w-[50%]">{innerContent}</div>
-      <div className="w-full md:w-[50%] flex justify-center">
+    <div
+      className={cn(
+        "ds-container flex flex-col items-center justify-between gap-8 md:h-[90vh]",
+        imagePosition === "left" ? "md:flex-row-reverse" : "md:flex-row",
+        className
+      )}
+    >
+      <div className="w-full md:w-1/2">{innerContent}</div>
+
+      <div className="flex w-full justify-center md:w-1/2">
         <Images src={src} alt={alt} width={imgWidth} height={imgHeight} />
       </div>
     </div>

@@ -2,7 +2,7 @@
 import React from "react";
 import Title from "@/shared/components/atoms/Title";
 import Text from "@/shared/components/atoms/Text";
-import { hero3 } from "@/assets/images/images";
+import { heroImage3 } from "@/assets/images/images";
 import Button from "@/shared/components/atoms/Button";
 import { useTranslations } from "next-intl";
 import HeroSection from "@/shared/components/organisms/HeroSection";
@@ -13,7 +13,13 @@ export default function Herosection3({ className = "" }: Props) {
   const t = useTranslations("publicPages.about.missionSection");
   return (
     <div className="ds-container !mx-auto">
-      <HeroSection className={className} src={hero3} imgWidth={700} imgHeight={700}>
+      <HeroSection
+        imagePosition="left"
+        className={className}
+        src={heroImage3}
+        imgWidth={700}
+        imgHeight={700}
+      >
         <div className="!my-8 flex flex-col items-center gap-8">
           <Title variant="primary" size="lg">
             {t("title.firstWord")} <span className="ds-text-alt"> {t("title.secondWord")}</span>
@@ -26,7 +32,7 @@ export default function Herosection3({ className = "" }: Props) {
             {t("text")}
           </Text>
           <Button variant="primary" size="md">
-            {t("btn")}{" "}
+            {t("btn")}
           </Button>
         </div>
       </HeroSection>

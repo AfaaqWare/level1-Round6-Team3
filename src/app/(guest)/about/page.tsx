@@ -12,10 +12,10 @@ export default function AboutPage() {
     <PublicLayout>
       <div className="flex flex-col gap-16 py-10">
         <AboutHeroSection />
+        <TreadingAction />
         <MissionSection />
         <TeamleaderSection />
-        <LeaderShipPart1 />
-        <TreadingAction />
+        {/* <LeaderShipPart1 /> */}
       </div>
     </PublicLayout>
   );

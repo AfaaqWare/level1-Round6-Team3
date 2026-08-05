@@ -4,12 +4,32 @@ import Title from "@/shared/components/atoms/Title";
 import Text from "@/shared/components/atoms/Text";
 import Button from "@/shared/components/atoms/Button";
 import Buttons from "@/shared/components/molecules/Buttons";
+import TextHighlight from "@/shared/components/atoms/TextHighlight";
 export default function Herosection1() {
   return (
+    // <HeroSection>
+    //   <Title size="lg" variant="primary">
+    //     Turn <span className="ds-text-alt">Questions</span> into Clarity and Transform
+    //     <span className="ds-text-alt">Responses</span> into Valuable Insights
+    //   </Title>
+    //   <Text size="md" variant="disabled">
+    //     Effortlessly build surveys that deliver the answers you need to grow, improve, and connect
+    //     with your audience.
+    //   </Text>
+    //   <Buttons>
+    //     <Button size="md" variant="primary">
+    //       Create Your Survey{" "}
+    //     </Button>
+    //     <Button variant="outline1" size="md">
+    //       See How It Works{" "}
+    //     </Button>
+    //   </Buttons>
+    // </HeroSection>
+
     <HeroSection>
       <Title size="lg" variant="primary">
-        Turn <span className="ds-text-alt">Questions</span> into Clarity and Transform{" "}
-        <span className="ds-text-alt">Responses</span> into Valuable Insights{" "}
+        Turn <TextHighlight>Questions</TextHighlight> into Clarity and Transform
+        <TextHighlight>Responses</TextHighlight> into Valuable Insights
       </Title>
       <Text size="md" variant="disabled">
         Effortlessly build surveys that deliver the answers you need to grow, improve, and connect
@@ -20,7 +40,7 @@ export default function Herosection1() {
           Create Your Survey{" "}
         </Button>
         <Button variant="outline1" size="md">
-          See How It Works{" "}
+          See How It Works
         </Button>
       </Buttons>
     </HeroSection>

@@ -3,7 +3,7 @@ import Title from "../atoms/Title";
 import Text from "../atoms/Text";
 import Buttons from "./Buttons";
 interface Props {
-  title: string;
+  title: string | React.ReactNode;
   text: string;
   btn1: string;
   btn2: string;

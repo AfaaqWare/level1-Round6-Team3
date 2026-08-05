@@ -1,15 +1,15 @@
 import PublicLayout from "@/shared/components/Layout/PublicLayout";
-<<<<<<< HEAD
-export default function page() {
-  return <PublicLayout>home</PublicLayout>;
-}
-=======
 
 import Herosection from "@/shared/components/organisms/HeroSection";
 import HeroSection1 from "@/shared/components/organisms/HeroSection1";
 import ContentHeroection2 from "@/shared/components/molecules/ContentHeroection2";
 
 import PopularTemplates from "@/modules/guest/components/organisms/home/PopularTemplates";
+import { Metadata } from "next";
+import { getSeoMetadata } from "@/core/seo/getSeoMetadata";
+import TextHighlight from "@/shared/components/atoms/TextHighlight";
+import HomeHeroSection from "@/modules/guest/components/organisms/home/HomeHeroSection";
+import AboutHeroSection from "@/modules/guest/components/organisms/about/AboutHeroSection";
 
 export const metadata: Metadata = getSeoMetadata({
   title: "project for team",
@@ -19,23 +19,11 @@ export const metadata: Metadata = getSeoMetadata({
 function page() {
   return (
     <PublicLayout>
-      <Herosection
-        content={
-          <ContentHeroection2
-            title="Turn Questions into Clarity and Transform Responses into Valuable Insights"
-            text="Effortlessly build surveys that deliver the answers you need to grow, improve, and connect with your audience."
-            btn1="Create Your Survey"
-            btn2="See How It Works"
-          />
-        }
-      />
-      <HeroSection1 />
+      <HomeHeroSection />
 
-      <PopularTemplates />
+      {/* <PopularTemplates /> */}
     </PublicLayout>
   );
 }
 
 export default page;
-
->>>>>>> 49ec88b19c7f06f0ba4de05e855813a734d4addf

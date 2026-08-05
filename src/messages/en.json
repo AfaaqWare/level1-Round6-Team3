@@ -57,5 +57,40 @@
       }
     },
     "copyRight": "@2026 SurveyLand.All rights reserved"
+  },
+  "publicPages": {
+    "home": {
+      "heroSection": {
+        "title": "Turn <alt>Questions</alt> into Clarity and Transform <alt>Responses</alt> into Valuable Insights",
+        "describtion": "Effortlessly build surveys that deliver the answers you need to grow, improve, and connect with your audience.",
+        "create-btn": "Create Your Survey",
+        "how-work-btn": "See How It Works"
+      }
+    },
+    "about": {
+      "heroSection": {
+        "title": {
+          "main": "Simple Smart",
+          "highlight": "Surveys"
+        },
+        "text": "Create surveys, share them easily, and get real feedback. Survey Land lets you build MCQs, comment boxes, and more — all in one simple platform.",
+        "buttontext1": "Explore",
+        "buttontext2": "Create"
+      },
+      "missionSection": {
+        "title": { "firstWord": "Our", "secondWord": "Mission" },
+        "text": "At Typeform, we give forms a better look and feel so our customers can get more out of them. Historically, forms haven't been great, but businesses need them and people can't avoid them.",
+        "btn": "End Our Mood"
+      },
+      "teamleaderSection": {
+        "heading": {
+          "title": "Team ",
+          "highlightTitle": "Leader"
+        },
+        "title": "Join the Team",
+        "text": "Founded in 2012, Typeform is now a remote-first company with an international team of over 250 employees. We offer competitive compensation, benefits, and career opportunities to support your professional growth.",
+        "button": "Browse Open Roles"
+      }
+    }
   }
 }
