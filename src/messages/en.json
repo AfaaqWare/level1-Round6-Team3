@@ -83,21 +83,21 @@
       },
       "howItWorksSection": {
         "Heading": {
-          "title": "How it works",
-          "highlightText": "In three easy steps",
-          "text": "Build, share, and learn from every response in less time."
+          "title": "How it",
+          "highlightText": "works",
+          "text": "Get started in just 3 simple steps"
         },
         "StepCard1": {
-          "title": "Create",
-          "description": "Start with a template or build your own survey in minutes."
+          "title": "Create your survey",
+          "description": "Choose a template or start from scratch using our easy-to-use builder"
         },
         "StepCard2": {
-          "title": "Share",
-          "description": "Send it by link, email, or social channels instantly."
+          "title": "Share with your audience",
+          "description": "Send your survey via email, social media, or embed it in your website"
         },
         "StepCard3": {
-          "title": "Analyze",
-          "description": "Turn responses into clear insights and action plans."
+          "title": "Analyze responses",
+          "description": "Get instant insights with clean charts and downloadable reports"
         }
       },
       "plansSection": {
