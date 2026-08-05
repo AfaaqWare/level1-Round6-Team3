@@ -19,7 +19,7 @@ export default function QuestionBox({
   return (
     <article
       className={cn(
-        "ds-bg-card ds-border-card ds-shadow-card ds-rounded-lg mx-auto my-[var(--space-lg)] flex h-auto w-full min-w-0 flex-col gap-[var(--space-xl)] px-[var(--space-md)] py-[var(--space-xl)] text-start",
+        "ds-bg-card ds-border-sm ds-shadow-md ds-rounded-lg mx-auto my-[var(--space-lg)] flex h-auto w-full min-w-0 flex-col gap-[var(--space-xl)] px-[var(--space-md)] py-[var(--space-xl)] text-start",
         className
       )}
     >

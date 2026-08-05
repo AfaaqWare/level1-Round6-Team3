@@ -15,7 +15,7 @@ export default function FAQtemplate() {
           <h1 className="ds-text-primary ds-text-lg font-normal">
             {t("heading.title")} <span className="ds-text-alt">{t("heading.titleHighlight")}</span>
           </h1>
-          <p className="ds-text-disabled ds-text-md font-normal">{t("heading.subtitle")}</p>
+          <p className="ds-text-secondary ds-text-md font-normal">{t("heading.subtitle")}</p>
         </div>
         <div className="mx-auto w-full md:w-[90%] lg:w-3/4">
           {FAQData.map(item => (
