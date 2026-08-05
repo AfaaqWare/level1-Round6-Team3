@@ -57,5 +57,19 @@
       }
     },
     "copyRight": " SurveyLand © 2026 . جميع الحقوق محفوظة."
+  },
+  "surveyResponse": {
+    "SurveyInformation": {
+      "title": "بياناتك",
+      "fullName": "الاسم بالكامل",
+      "email": "البريد الإلكتروني",
+      "confidential": "سيتم الحفاظ على سرية بياناتك."
+    },
+    "SurveySubmission": {
+      "totalQuestions": "إجمالي الأسئلة",
+      "required": "الأسئلة المطلوبة",
+      "submit": "إرسال الرد"
+    },
+    "surveyQuestions": { "title": "أسئلة الاستبيان" }
   }
 }

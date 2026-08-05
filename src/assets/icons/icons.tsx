@@ -11,6 +11,12 @@ import {
   LogOut,
   User,
   LayoutDashboard,
+  ArrowRight,
+  FileText,
+  CalendarDays,
+  Send,
+  Clock3,
+  Check,
 } from "lucide-react";
 
 type IconProps = Omit<ComponentProps<typeof Icon>, "icon">;
@@ -34,4 +40,10 @@ export {
   LogOut,
   User,
   LayoutDashboard,
+  ArrowRight,
+  CalendarDays,
+  FileText,
+  Send,
+  Clock3,
+  Check,
 };

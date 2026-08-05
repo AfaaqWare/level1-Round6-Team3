@@ -2,7 +2,7 @@ import React from "react";
 import HeroSection from "@/shared/components/organisms/HeroSection";
 import Title from "@/shared/components/atoms/Title";
 import Text from "@/shared/components/atoms/Text";
-import { hero2 } from "@/assets/images/images";
+import { Heroimage2 } from "@/assets/images/images";
 import Buttons from "@/shared/components/molecules/Buttons";
 import Button from "@/shared/components/atoms/Button";
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
 }
 export default function Herosection2({ className = "" }: Props) {
   return (
-    <HeroSection className={className} src={hero2}>
+    <HeroSection className={className} src={Heroimage2}>
       <Title variant="primary" size="lg">
         Simple Smart <span className="ds-text-alt">Surveys</span>
       </Title>
