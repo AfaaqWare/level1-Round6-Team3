@@ -17,23 +17,28 @@ export default function LeadershipSection() {
   }[];
 
   return (
-    <section className="py-10">
+    <section className="py-14 md:py-20">
       <div className="ds-container">
         {/* Section Title: "Our leadership team" */}
-        <div className="mb-2">
-          <Title size="xl" variant="primary" className="font-bold normal-case">
+        <div className="mb-4">
+          <Title
+            size="lg"
+            variant="primary"
+            isCenter
+            className="pb-6 text-[17px] leading-tight font-semibold normal-case md:pb-8 md:text-[20px]"
+          >
             {t("gridHeading.title")}{" "}
             <span className="ds-text-alt">{t("gridHeading.highlightTitle")}</span>
           </Title>
         </div>
 
         {/* TopBar with "Leadership" + "detail →" */}
-        <div className="mb-6">
+        <div className="mb-10">
           <TopBarCards title={t("topBar.title")} highlightText={t("topBar.highlightText")} />
         </div>
 
         {/* Cards Grid: 4 columns on large, 2 on medium, 1 on small */}
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {team.map((member, index) => (
             <ImgCard
               key={member.id}
