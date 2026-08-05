@@ -9,6 +9,260 @@
     "item7": "settings",
     "btn": "Login"
   },
+  "publicPages": {
+    "home": {
+      "hero-section": {
+        "title": "Turn <alt>questions</alt> into clarity",
+        "describtion": "Create surveys, collect feedback, and turn responses into decisions that help your business grow.",
+        "create-btn": "Create your survey",
+        "how-work-btn": "See how it works"
+      },
+      "popularTemplatesSection": {
+        "title": "Popular Templates",
+        "highlightTitle": "Made for every use case",
+        "viewAllBtn": "View all",
+        "topBar": {
+          "number": "1",
+          "title": "Survey Templates",
+          "highlightText": "Build better feedback loops"
+        },
+        "button": "Use template",
+        "templates": [
+          {
+            "id": 1,
+            "title": "Customer Feedback",
+            "text": "Understand what your customers really think."
+          },
+          {
+            "id": 2,
+            "title": "Market Research",
+            "text": "Collect fast insights from your target audience."
+          },
+          { "id": 3, "title": "Employee Pulse", "text": "Capture team sentiment and act on it." },
+          {
+            "id": 4,
+            "title": "Event Feedback",
+            "text": "Measure satisfaction and improve every event."
+          }
+        ]
+      },
+      "marketResearchSection": {
+        "number": "2",
+        "title": "Market Research",
+        "highlightText": "See what matters most",
+        "button": "Explore",
+        "templates": [
+          { "id": 1, "title": "Audience Insights", "text": "Learn what your customers want." },
+          { "id": 2, "title": "Feature Testing", "text": "Validate new ideas before launch." },
+          { "id": 3, "title": "Brand Feedback", "text": "Measure perception and trust." },
+          { "id": 4, "title": "Campaign Research", "text": "Make smarter marketing decisions." }
+        ]
+      },
+      "educationSection": {
+        "number": "3",
+        "title": "Education & Training",
+        "subtitle": "Learning that sticks",
+        "cards": {
+          "btn": "Learn more"
+        }
+      },
+      "eventSection": {
+        "EventFeedback": {
+          "topBar": {
+            "title": "Event Feedback",
+            "highlightText": "Capture moments that matter"
+          },
+          "button": "Review results",
+          "templates": [
+            { "id": 1, "title": "Post Event Survey", "text": "Find what worked best." },
+            { "id": 2, "title": "Session Rating", "text": "Measure attendance experience." },
+            { "id": 3, "title": "Speaker Feedback", "text": "Understand what resonated." },
+            { "id": 4, "title": "Organizer Check-In", "text": "Track improvement opportunities." }
+          ]
+        }
+      },
+      "howItWorksSection": {
+        "Heading": {
+          "title": "How it",
+          "highlightText": "works",
+          "text": "Get started in just 3 simple steps"
+        },
+        "StepCard1": {
+          "title": "Create your survey",
+          "description": "Choose a template or start from scratch using our easy-to-use builder"
+        },
+        "StepCard2": {
+          "title": "Share with your audience",
+          "description": "Send your survey via email, social media, or embed it in your website"
+        },
+        "StepCard3": {
+          "title": "Analyze responses",
+          "description": "Get instant insights with clean charts and downloadable reports"
+        }
+      },
+      "plansSection": {
+        "title": "Simple pricing",
+        "text": "Flexible plans that grow with your team.",
+        "btn": "See plans",
+        "cards": {
+          "card1": {
+            "plan": "Basic",
+            "price": "$50",
+            "responses": "100 responses",
+            "btn": "Choose plan"
+          },
+          "card2": {
+            "plan": "Plus",
+            "price": "$83",
+            "responses": "250 responses",
+            "btn": "Get started"
+          },
+          "card3": {
+            "plan": "Business",
+            "price": "$140",
+            "responses": "500 responses",
+            "btn": "Talk to sales"
+          }
+        }
+      }
+    },
+    "about": {
+      "heroSection": {
+        "title": {
+          "main": "Bring people together",
+          "highlight": "with smarter feedback"
+        },
+        "text": "Collect meaningful opinions and keep improving every experience with confidence.",
+        "buttontext1": "Get started",
+        "buttontext2": "Learn more"
+      },
+      "missionSection": {
+        "title": "Our mission",
+        "highlightText": "To simplify decision-making",
+        "text": "We help teams create better surveys, capture stronger insights, and turn conversations into action.",
+        "button": "See our process"
+      },
+      "teamleaderSection": {
+        "heading": {
+          "title": "Leadership",
+          "highlightTitle": "driven by insight"
+        },
+        "title": "Meet the people behind the platform",
+        "text": "Our team brings together strategy, product thinking, and user empathy to build a better experience for everyone.",
+        "button": "Meet the team"
+      },
+      "leadeship-section": {
+        "title": "Why teams choose us",
+        "highlightText": "Because insights matter"
+      }
+    },
+    "contact": {
+      "header": {
+        "title": "Let's talk",
+        "highlight": "about your next project",
+        "text": "We’d love to hear from you and help you find the right solution.",
+        "button": "Book a call"
+      },
+      "socials": {
+        "email": {
+          "title": "Email",
+          "text": "support@surveyland.com"
+        },
+        "phone": {
+          "title": "Phone",
+          "text": "+966 500 000 000"
+        },
+        "location": {
+          "title": "Location",
+          "text": "Riyadh, Saudi Arabia"
+        },
+        "hours": {
+          "title": "Hours",
+          "text": "Sun - Thu, 9:00 AM - 6:00 PM"
+        }
+      },
+      "title": "Contact us",
+      "form": {
+        "title": "Send us a message",
+        "fullName": {
+          "label": "Full name",
+          "placeholder": "Enter your name"
+        },
+        "email": {
+          "label": "Email address",
+          "placeholder": "Enter your email"
+        },
+        "subject": {
+          "label": "Subject",
+          "placeholder": "How can we help?"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Write your message here"
+        },
+        "submit": "Send message"
+      }
+    },
+    "faq": {
+      "heading": {
+        "title": "Frequently asked questions",
+        "titleHighlight": "Questions answered",
+        "subtitle": "Everything you need to know about building and managing surveys."
+      },
+      "items": {
+        "1": {
+          "title": "What is SurveyLand?",
+          "text": "SurveyLand is a survey and feedback platform designed to help teams collect opinions, understand trends, and take action faster."
+        },
+        "2": {
+          "title": "Can I create custom surveys?",
+          "text": "Yes. You can build custom surveys with multiple question types, logic, and design options."
+        },
+        "3": {
+          "title": "Is it easy to share surveys?",
+          "text": "Absolutely. Share by link, email, or embed surveys directly in your workflow."
+        },
+        "4": {
+          "title": "Can I track responses?",
+          "text": "Yes. Each response is tracked in real time, with dashboards and reporting for your team."
+        },
+        "5": {
+          "title": "Do you support team collaboration?",
+          "text": "Yes. Teams can review responses and collaborate on decisions in one place."
+        },
+        "6": {
+          "title": "Can I use templates?",
+          "text": "You can start with ready-made templates and customize them to fit your needs."
+        },
+        "7": {
+          "title": "What kind of questions can I use?",
+          "text": "You can use multiple-choice, short answer, long answer, ranking, and other survey formats."
+        },
+        "8": {
+          "title": "Is there a pricing plan?",
+          "text": "Yes. We offer flexible plans for individuals, teams, and growing businesses."
+        },
+        "9": {
+          "title": "Do you offer customer support?",
+          "text": "Yes. Our support team helps you get started and resolve issues quickly."
+        },
+        "10": {
+          "title": "Need more help?",
+          "text1": "You can reach our support team or explore our pricing options.",
+          "text2": "Browse our <tables>tables</tables>, check your <inbox>inbox</inbox>, use the <pdfEditor>PDF editor</pdfEditor>, automate <workflows>workflows</workflows>, or build custom <reportBuilder>reports</reportBuilder>.",
+          "linkText": "Learn more"
+        }
+      },
+      "formTypes": {
+        "1": "Form type 1",
+        "2": "Form type 2",
+        "3": "Form type 3",
+        "4": "Form type 4",
+        "5": "Form type 5",
+        "6": "Form type 6"
+      }
+    }
+  },
   "footer": {
     "subtitle": "Make smarter decisions with better data.Create surveys, gather feedback, and grow.",
     "placeholder": "Stay informed by entering your email",

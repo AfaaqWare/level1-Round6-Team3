@@ -10,6 +10,23 @@ export const socials: { key: string; icon: IconProps }[] = [
   { key: "location", icon: { IconComponent: MapPinned, size: 24, color: "alt" } },
   { key: "hours", icon: { IconComponent: Clock, size: 24, color: "alt" } },
 ];
+// data.ts
+
+export const steps = [
+  {
+    id: 1,
+    titleKey: "StepCard1.title",
+    descriptionKey: "StepCard1.description",
+  },
+  {
+    id: 2,
+    titleKey: "StepCard2.title",
+    descriptionKey: "StepCard2.description",
+  },
+  {
+    id: 3,
+    titleKey: "StepCard3.title",
+    descriptionKey: "StepCard3.description",
 
 export interface PricingPlan {
   id: string;

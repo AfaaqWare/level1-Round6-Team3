@@ -6,6 +6,7 @@ import TeamleaderSection from "@/modules/guest/components/organisms/about/Teamle
 import LeaderShipPart1 from "@/modules/guest/components/organisms/about/LeaderShipPart1";
 
 import TreadingAction from "@/modules/guest/components/organisms/about/TreadingAction";
+import WorkStepsSection from "@/modules/guest/components/organisms/home/WorkStepsSection";
 
 export default function AboutPage() {
   return (
@@ -15,6 +16,7 @@ export default function AboutPage() {
         <MissionSection />
         <TeamleaderSection />
         <LeaderShipPart1 />
+        <WorkStepsSection />
         <TreadingAction />
       </div>
     </PublicLayout>

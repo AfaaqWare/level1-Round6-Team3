@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PublicLayout from "@/shared/components/Layout/PublicLayout";
+import Herosection from "@/shared/components/organisms/Herosection";
 // <<<<<<< HEAD
 // export default function page() {
 //   return <PublicLayout>home</PublicLayout>;
@@ -11,6 +12,7 @@ import HeroSection1 from "@/shared/components/organisms/HeroSection1";
 import ContentHeroection2 from "@/shared/components/molecules/ContentHeroection2";
 import PopularTemplates from "@/modules/guest/components/organisms/home/PopularTemplates";
 import { getSeoMetadata } from "@/core/seo/getSeoMetadata";
+import WorkStepsSection from "@/modules/guest/components/organisms/home/WorkStepsSection";
 import React from "react";
 import { getSeoMetadata } from "@/core/seo/getSeoMetadata";
 import type { Metadata } from "next";
@@ -26,6 +28,8 @@ export const metadata: Metadata = getSeoMetadata({
   description: "this project for training students ",
   keywords: ["project ", "team", "smart project"],
 });
+
+export default function Page() {
 async function page() {
   const t = await getTranslations("publicPages.home.heroSection");
   return (
@@ -39,6 +43,12 @@ async function page() {
         button1={t("button1")}
         button2={t("button2")}
       />
+      {/* <HeroSection1 /> */}
+      <WorkStepsSection />
+      <PopularTemplates />
+    </PublicLayout>
+  );
+}
       <HeroSection1 />
 
       {/* <PopularTemplates /> */}

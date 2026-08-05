@@ -3,10 +3,6 @@ import {
   card2,
   card3,
   card4,
-  leader5,
-  leader6,
-  leader7,
-  leader8,
   homecard5,
   homecard6,
   homecard7,
@@ -134,5 +130,3 @@ export const FAQData = [
 
 // Form Types Data
 export const FormTypesData = Array.from({ length: 36 }, (_, i) => ({ id: i + 1 }));
-
-
