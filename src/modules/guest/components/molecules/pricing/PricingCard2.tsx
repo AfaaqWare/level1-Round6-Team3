@@ -2,6 +2,8 @@ import Title from "@/shared/components/atoms/Title";
 import Text from "@/shared/components/atoms/Text";
 import Button from "@/shared/components/atoms/Button";
 import { Check } from "@/assets/icons/icons";
+import { useTranslations } from "next-intl";
+
 
 interface PricingCard2Props {
   title?: string;
@@ -20,6 +22,9 @@ export default function PricingCard2({
   features = ["feature1", "feature2"],
   buttonText = "Choose Plan",
 }: PricingCard2Props) {
+  
+  
+
   return (
     <div className={`ds-bg-card ds-border-card ds-rounded-xl ds-shadow-card flex flex-col gap-3 p-8`}>
       <div>
