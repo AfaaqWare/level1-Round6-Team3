@@ -33,6 +33,24 @@ import aboutcard5 from "./aboutcard5.png";
 import aboutcard6 from "./aboutcard6.png";
 import aboutcard7 from "./aboutcard7.png";
 import aboutcard8 from "./aboutcard8.png";
+
+const hero2 = Heroimage2;
+const hero4 = hero3;
+const homehero = heroImage;
+const contact1 = homecard1;
+const contact2 = homecard2;
+const cardImg1 = homecard1;
+const cardImg2 = homecard2;
+const cardImg3 = homecard3;
+const cardImg4 = homecard4;
+
+export {
+  hero3,
+  hero2,
+  hero4,
+  heroImage,
+  Heroimage2,
+  homehero,
 export {
   hero3,
   heroImage,
@@ -41,10 +59,16 @@ export {
   card2,
   card3,
   card4,
+  cardImg1,
+  cardImg2,
+  cardImg3,
+  cardImg4,
   leader5,
   leader6,
   leader7,
   leader8,
+  contact1,
+  contact2,
   homecard1,
   homecard2,
   homecard3,

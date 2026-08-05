@@ -11,6 +11,7 @@ import {
   LogOut,
   User,
   LayoutDashboard,
+  Check,
 } from "lucide-react";
 
 type IconProps = Omit<ComponentProps<typeof Icon>, "icon">;
@@ -34,4 +35,5 @@ export {
   LogOut,
   User,
   LayoutDashboard,
+  Check,
 };

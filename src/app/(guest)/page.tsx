@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+import PublicLayout from "@/shared/components/Layout/PublicLayout";
+import Herosection from "@/shared/components/organisms/HeroSection";
+import HeroSection1 from "@/shared/components/organisms/HeroSection1";
+import ContentHeroection2 from "@/shared/components/molecules/ContentHeroection2";
+import PopularTemplates from "@/modules/guest/components/organisms/home/PopularTemplates";
+import { getSeoMetadata } from "@/core/seo/getSeoMetadata";
 import React from "react";
 import { getSeoMetadata } from "@/core/seo/getSeoMetadata";
 import type { Metadata } from "next";

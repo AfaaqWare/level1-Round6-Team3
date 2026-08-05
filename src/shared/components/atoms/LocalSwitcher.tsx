@@ -1,7 +1,8 @@
 // app/components/LocaleSwitcher.tsx
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Locale, useLocale } from "next-intl";
+import { useRouter } from "next/navigation";
 import { cn } from "@/lib/cn";
 
 type Props = {
@@ -10,6 +11,9 @@ type Props = {
 
 export default function LocaleSwitcher({ changeLocaleAction }: Props) {
   const locale = useLocale();
+  const router = useRouter();
+  const [isPending, setIsPending] = useState(false);
+
   useEffect(() => {
     const dir = locale === "ar" ? "rtl" : "ltr";
     document.documentElement.setAttribute("dir", dir);
@@ -17,6 +21,19 @@ export default function LocaleSwitcher({ changeLocaleAction }: Props) {
   }, [locale]);
 
   const nextLocale = locale === "en" ? "ar" : "en";
+  const label = locale.toUpperCase();
+  const nextLabel = nextLocale.toUpperCase();
+
+  const handleLocaleChange = async () => {
+    setIsPending(true);
+    try {
+      await changeLocaleAction(nextLocale);
+      router.refresh();
+    } finally {
+      setIsPending(false);
+    }
+  };
+
   const baseClasses = `
     fixed
     bottom-4
@@ -35,10 +52,19 @@ export default function LocaleSwitcher({ changeLocaleAction }: Props) {
     transition
     cursor-pointer
     z-50
+    disabled:cursor-not-allowed
+    disabled:opacity-70
   `;
   return (
-    <button onClick={() => changeLocaleAction(nextLocale)} className={cn(baseClasses)}>
-      {locale === "en" ? "AR" : "EN"}
+    <button
+      type="button"
+      onClick={handleLocaleChange}
+      disabled={isPending}
+      className={cn(baseClasses)}
+      aria-label={`Switch language to ${nextLabel}`}
+      title={`Current language: ${label}. Switch to ${nextLabel}`}
+    >
+      {label}
     </button>
   );
 }
