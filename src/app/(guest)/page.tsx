@@ -26,7 +26,7 @@ export default function Page() {
           />
         }
       />
-      <HeroSection1 />
+      {/* <HeroSection1 /> */}
       <WorkStepsSection />
       <PopularTemplates />
     </PublicLayout>
