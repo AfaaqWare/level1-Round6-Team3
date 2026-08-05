@@ -5,6 +5,7 @@ import HeroSection1 from "@/shared/components/organisms/HeroSection1";
 import ContentHeroection2 from "@/shared/components/molecules/ContentHeroection2";
 import PopularTemplates from "@/modules/guest/components/organisms/home/PopularTemplates";
 import { getSeoMetadata } from "@/core/seo/getSeoMetadata";
+import WorkStepsSection from "@/modules/guest/components/organisms/home/WorkStepsSection";
 
 export const metadata: Metadata = getSeoMetadata({
   title: "project for team",
@@ -26,6 +27,7 @@ export default function Page() {
         }
       />
       <HeroSection1 />
+      <WorkStepsSection />
       <PopularTemplates />
     </PublicLayout>
   );
