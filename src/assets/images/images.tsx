@@ -51,6 +51,10 @@ export {
   heroImage,
   Heroimage2,
   homehero,
+export {
+  hero3,
+  heroImage,
+  Heroimage2,
   card1,
   card2,
   card3,
