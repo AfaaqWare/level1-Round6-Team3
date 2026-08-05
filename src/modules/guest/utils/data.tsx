@@ -17,20 +17,22 @@ export const socials: { key: string; icon: IconProps }[] = [
   { key: "location", icon: { IconComponent: MapPinned, size: 24, color: "alt" } },
   { key: "hours", icon: { IconComponent: Clock, size: 24, color: "alt" } },
 ];
+// data.ts
+
 export const steps = [
   {
     id: 1,
-    title: "Create Your Survey",
-    description: "Choose a template or start from scratch using our easy-to-use builder.",
+    titleKey: "StepCard1.title",
+    textKey: "StepCard1.text",
   },
   {
     id: 2,
-    title: "Share With Your Audience",
-    description: "Send your survey via email, social media, or embed it in your website.",
+    titleKey: "StepCard2.title",
+    textKey: "StepCard2.text",
   },
   {
     id: 3,
-    title: "Analyze Responses",
-    description: "Get instant insights with clean charts and downloadable reports.",
+    titleKey: "StepCard3.title",
+    textKey: "StepCard3.text",
   },
 ];
