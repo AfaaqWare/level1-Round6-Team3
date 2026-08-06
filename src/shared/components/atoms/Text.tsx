@@ -2,7 +2,7 @@ import React from "react";
 import { cn } from "@/lib/cn";
 interface Props {
   size?: "xs" | "sm" | "base" | "md" | "lg";
-  variant?: "primary" | "disabled" | "secondary" | "alt";
+  variant?: "primary" | "disabled" | "secondary" | "alt" | "white";
   className?: string;
   children: React.ReactNode;
   isCenter?: boolean;
@@ -24,9 +24,10 @@ export default function Text({
   };
   const variants = {
     primary: "ds-text-primary",
-    disabled: "ds-text-disabled ",
+    disabled: "ds-text-disabled",
     secondary: "ds-text-secondary",
-    alt: "ds-text-alt ",
+    alt: "ds-text-alt",
+    white: "ds-text-white",
   };
   return (
     <p className={cn(variants[variant], sizes[size], isCenter ? "text-center" : "", className)}>
