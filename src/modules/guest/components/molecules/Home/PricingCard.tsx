@@ -1,74 +1,73 @@
+"use client";
 import React from "react";
-import PricingButton from "../../../components/atoms/Home/PricingButton";
-import { cn } from "@/lib/cn";
+import Link from "next/link";
+import Button from "@/shared/components/atoms/Button";
 import Title from "@/shared/components/atoms/Title";
 import Text from "@/shared/components/atoms/Text";
 import { useTranslations } from "next-intl";
-export interface PricingCardProps {
-  plan?: string;
-  price?: string;
-  responses?: string;
-  btn?: string;
-}
-const PricingCard = ({
-  plan = "basic",
-  price = "0",
-  responses = "100",
-  btn = "click",
-}: PricingCardProps) => {
-  const t = useTranslations("publicPages.home.plansSection.cards");
-  // git each card data from translations according to their keys
-  const Plan = t(plan) as "Basic" | "Plus" | "Business" | "الأساسية" | "بلس" | "الأعمال";
-  const Price = t(price);
-  const Responses = t(responses);
-  const Btn = t(btn);
-  // --------------------------//
-  const baseClasses =
-    "flex flex-col items-center justify-center gap-3 !p-3 ds-border-card ds-shadow-lg w-[224px]";
-  const Cardvariants = {
-    Basic: "ds-bg-card h-[310px] rounded-md",
-    الأساسية: "ds-bg-card h-[310px] rounded-md ",
-    Plus: "ds-primary-200 h-[350px] rounded-md ",
-    بلس: "ds-primary-200 h-[350px] rounded-md",
-    Business: "ds-bg-card h-[310px] rounded-md ",
-    الأعمال: "ds-bg-card  h-[310px] rounded-md ",
-  };
+import { cn } from "@/lib/cn";
+import type { PricingPlan } from "@/modules/guest/utils/data";
 
-  const buttonVariants = {
-    Basic: { variant: "primary200", size: "sm", },
-    الأساسية: { variant: "primary200", size: "sm" },
+export type PricingCardProps = PricingPlan;
 
-    Plus: { variant: "primary", size: "sm" },
-    بلس: { variant: "primary", size: "sm" },
-
-    Business: { variant: "primary200", size: "sm" },
-    الأعمال: { variant: "primary200", size: "sm" },
-  } as const;
+export default function PricingCard({ name, price, responses, cta, featured, href }: PricingCardProps) {
+  const t = useTranslations("publicPages.home.pricing");
 
   return (
-    <div className={cn(baseClasses, Cardvariants[Plan], "ds-shadow-card !p-6")}>
-      <Title
-        className="mb-3"
-        variant={Plan === "Plus" || Plan === "بلس" ? "alt" : "primary"}
-        size="lg"
-      >
-        {Plan}
-      </Title>
-      
-        <Title size={Plan === "Basic" || Plan === "الأساسية" ? "md":"lg"} variant={Plan === "Plus" || Plan === "بلس" ? "disabled" : "secondary"}>
-          {Price}  
+    <div
+      className={cn(
+        "flex w-full max-w-sm flex-col rounded-md px-6 py-12",
+        featured ? "ds-primary-200 dark:bg-(--color-primary-200-dark) ds-shadow-lg" : "ds-bg-card ds-shadow-card",
+        featured ? "min-h-86" : "min-h-78"
+      )}
+    >
+      <div className="flex flex-1 flex-col gap-3 text-center">
+        <Title
+          size="lg"
+          variant="primary"
+          className={`ds-font-heading font-semibold ${featured && "text-black!"}`}
+        >
+          {t(name)}
         </Title>
-        {Price === "50" || Price === "83" ?<Text variant={Plan === "Plus" || Plan === "بلس" ? "secondary" : "secondary"}>$ /month</Text> : ""}
-      
 
-      <Text variant={Plan === "Plus" || Plan === "بلس" ? "alt" : "secondary"}>
-        {Responses} responses
-      </Text>
-      <PricingButton {...buttonVariants[Plan]} className="!mt-4">
-        {Btn}
-      </PricingButton>
+        {price ? (
+          <Title
+            size="lg"
+            variant={featured ? "alt" : "secondary"}
+            className={cn("text-black!", !featured && "dark:text-white!")}
+          >
+            <span className="text-[32px] font-bold pr-1.5">{price}</span>
+            <span className={cn("ds-text-base ds-font-regular")}> {t("period")}</span>
+          </Title>
+        ) : (
+          <Title
+            size="md"
+            variant={featured ? "alt" : "secondary"}
+          >
+            {t("free")}
+          </Title>
+        )}
+
+        <Text
+          size="base"
+          variant={featured ? "secondary" : "disabled"}
+          className={`${featured && "text-black!"}`}
+        >
+          {t(responses)}
+        </Text>
+      </div>
+
+      <Link href={href} className="mt-auto w-full">
+        <Button
+          size="lg"
+          variant={featured ? "primary" : "primary200"}
+          isRounded
+          isFullWidth
+          className={`${featured ? "text-white!" : "text-black! dark:text-white! dark:bg-(--color-primary)!"} mt-3 font-bold py-1.5!`}
+        >
+          {t(cta)}
+        </Button>
+      </Link>
     </div>
   );
-};
-
-export default PricingCard;
+}

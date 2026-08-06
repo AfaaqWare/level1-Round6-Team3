@@ -2,14 +2,14 @@ import React from "react";
 import HeroSection from "@/shared/components/organisms/Herosection";
 import Title from "@/shared/components/atoms/Title";
 import Text from "@/shared/components/atoms/Text";
-import { hero4 } from "@/assets/images/images";
+import { hero3 } from "@/assets/images/images";
 import Button from "@/shared/components/atoms/Button";
 interface Props {
   className?: string;
 }
 export default function Herosection4({ className = "" }: Props) {
   return (
-    <HeroSection className={className} src={hero4}>
+    <HeroSection className={className} src={hero3}>
       <div className="flex flex-col items-center gap-5">
         <Title variant="alt" size="xl">
           Join the team{" "}
