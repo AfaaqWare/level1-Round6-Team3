@@ -3,6 +3,7 @@ import { Phone } from "lucide-react";
 import { MapPinned } from "lucide-react";
 import { Clock } from "lucide-react";
 import type { IconProps } from "@/shared/components/atoms/Icon";
+import { aboutcard5, aboutcard6, aboutcard7, aboutcard8 } from "@/assets/images/images";
 
 export const socials: { key: string; icon: IconProps }[] = [
   { key: "email", icon: { IconComponent: Mail, size: 24, color: "alt" } },
@@ -10,7 +11,6 @@ export const socials: { key: string; icon: IconProps }[] = [
   { key: "location", icon: { IconComponent: MapPinned, size: 24, color: "alt" } },
   { key: "hours", icon: { IconComponent: Clock, size: 24, color: "alt" } },
 ];
-// data.ts
 
 export const steps = [
   {
@@ -27,6 +27,15 @@ export const steps = [
     id: 3,
     titleKey: "StepCard3.title",
     descriptionKey: "StepCard3.description",
+  }
+]
+
+export const leadership = [
+  { key: "card5", src: aboutcard5 },
+  { key: "card6", src: aboutcard6 },
+  { key: "card7", src: aboutcard7 },
+  { key: "card8", src: aboutcard8 },
+];
 
 export interface PricingPlan {
   id: string;

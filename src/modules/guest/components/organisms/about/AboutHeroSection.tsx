@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import HeroSection from "@/shared/components/organisms/Herosection";
+import HeroSection from "@/shared/components/organisms/HeroSection";
 import Title from "@/shared/components/atoms/Title";
 import Text from "@/shared/components/atoms/Text";
 import Buttons from "@/shared/components/molecules/Buttons";
