@@ -18,7 +18,7 @@ const HomeHeroSection = () => {
         </Title>
 
         <Text size="md" variant="secondary" className="text-justify md:w-[60%]">
-          {t("describtion")}
+          {t("description")}
         </Text>
 
         <ButtonGroup
