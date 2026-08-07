@@ -36,7 +36,11 @@
       "emailLabel": "Email address",
       "emailPlaceholder": "Enter your email",
       "submit": "Reset Password",
-      "backToSignIn": "Back to sign in"
+      "backToSignIn": "Back to sign in",
+      "validation": {
+        "emailRequired": "Email address is required",
+        "emailInvalid": "Enter a valid email address"
+      }
     },
     "verify": {},
     "new-password": {},

@@ -1,40 +1,46 @@
-import { Mail } from "@/assets/icons/icons";
+"use client";
+
+import { useForgetPasswordForm } from "@/modules/auth/hooks/useForgetPasswordForm";
+import type {
+  ForgetPasswordFormValues,
+  ForgetPasswordValidationMessages,
+} from "@/modules/auth/validations/forgetPassword.schema";
 import Button from "@/shared/components/atoms/Button";
-import IconInput from "@/shared/components/molecules/IconInput";
+import ForgetPasswordEmailField from "./ForgetPasswordEmailField";
 
 type ForgetPasswordFormProps = {
   emailLabel: string;
   emailPlaceholder: string;
   submitLabel: string;
+  validationMessages: ForgetPasswordValidationMessages;
+  onSubmit?: (values: ForgetPasswordFormValues) => void | Promise<void>;
 };
 
 function ForgetPasswordForm({
   emailLabel,
   emailPlaceholder,
   submitLabel,
+  validationMessages,
+  onSubmit,
 }: ForgetPasswordFormProps) {
+  const {
+    register,
+    handleSubmit,
+    handleValidSubmit,
+    emailError,
+  } = useForgetPasswordForm({ validationMessages, onSubmit });
+
   return (
     <form
-      className="flex w-full max-w-[408px] flex-col gap-6"
-      onSubmit={event => event.preventDefault()}
+      className="flex w-full max-w-[408px] flex-col gap-[var(--space-sm)] text-start"
+      onSubmit={handleSubmit(handleValidSubmit)}
+      noValidate
     >
-      <label htmlFor="forgot-password-email" className="sr-only">
-        {emailLabel}
-      </label>
-      <IconInput
-        id="forgot-password-email"
-        type="email"
-        autoComplete="email"
-        placeholder={emailPlaceholder}
-        aria-label={emailLabel}
-        icon={
-          <Mail
-            aria-hidden="true"
-            className="h-[18px] w-6"
-            strokeWidth={1.5}
-          />
-        }
-        className="h-10 rounded-[8px] border-0 ps-12 text-xs shadow-none"
+      <ForgetPasswordEmailField
+        emailLabel={emailLabel}
+        emailPlaceholder={emailPlaceholder}
+        emailError={emailError}
+        register={register}
       />
       <Button
         type="submit"

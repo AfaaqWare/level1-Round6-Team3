@@ -16,6 +16,10 @@ function ForgetPasswordSection() {
           emailLabel={t("emailLabel")}
           emailPlaceholder={t("emailPlaceholder")}
           submitLabel={t("submit")}
+          validationMessages={{
+            emailRequired: t("validation.emailRequired"),
+            emailInvalid: t("validation.emailInvalid"),
+          }}
         />
       </div>
 
