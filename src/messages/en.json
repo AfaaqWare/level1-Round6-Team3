@@ -1,4 +1,40 @@
 {
+  "auth": {
+    "header": {
+      "signIn": {
+        "prefix": "Don't have an account?",
+        "apply": "Apply Now"
+      },
+      "signUp": {
+        "prefix": "Already have an account?",
+        "apply": "Log in now"
+      }
+    },
+    "sheets": {
+      "signIn": {
+        "title": "New to SurveyLand? Sign up here!",
+        "subtitle": "Become part of our community",
+        "cta": "SIGN UP"
+      },
+      "signUp": {
+        "title": "Already have an account?",
+        "subtitle": "Stay in the loop — log in now!",
+        "cta": "SIGN IN"
+      }
+    },
+    "password": {
+      "show": "Show password",
+      "hide": "Hide password"
+    },
+    "otp": {
+      "digits": "6-digit verification code",
+      "digit": "Digit {position} of {total}"
+    },
+    "forget-password": {},
+    "verify": {},
+    "new-password": {},
+    "done": {}
+  },
   "routes": {
     "item1": "Home",
     "item2": "About",
@@ -150,31 +186,6 @@
         "StepCard3": {
           "title": "Analyze responses",
           "description": "Get instant insights with clean charts and downloadable reports"
-        }
-      },
-      "plansSection": {
-        "title": "Simple pricing",
-        "text": "Flexible plans that grow with your team.",
-        "btn": "See plans",
-        "cards": {
-          "card1": {
-            "plan": "Basic",
-            "price": "$50",
-            "responses": "100 responses",
-            "btn": "Choose plan"
-          },
-          "card2": {
-            "plan": "Plus",
-            "price": "$83",
-            "responses": "250 responses",
-            "btn": "Get started"
-          },
-          "card3": {
-            "plan": "Business",
-            "price": "$140",
-            "responses": "500 responses",
-            "btn": "Talk to sales"
-          }
         }
       },
       "heroSection": {
