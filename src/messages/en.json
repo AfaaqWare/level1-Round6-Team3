@@ -30,7 +30,14 @@
       "digits": "6-digit verification code",
       "digit": "Digit {position} of {total}"
     },
-    "forget-password": {},
+    "forget-password": {
+      "title": "Forgot Password?",
+      "subtitle": "Don't worry, we'll help you reset it.",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "Enter your email",
+      "submit": "Reset Password",
+      "backToSignIn": "Back to sign in"
+    },
     "verify": {},
     "new-password": {},
     "done": {}

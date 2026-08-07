@@ -30,7 +30,14 @@
       "digits": "رمز التحقق المكوّن من 6 أرقام",
       "digit": "الرقم {position} من {total}"
     },
-    "forget-password": {},
+    "forget-password": {
+      "title": "نسيت كلمة المرور؟",
+      "subtitle": "لا تقلق، سنساعدك على إعادة تعيينها.",
+      "emailLabel": "البريد الإلكتروني",
+      "emailPlaceholder": "أدخل بريدك الإلكتروني",
+      "submit": "إعادة تعيين كلمة المرور",
+      "backToSignIn": "العودة لتسجيل الدخول"
+    },
     "verify": {},
     "new-password": {},
     "done": {}
