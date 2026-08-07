@@ -50,6 +50,7 @@ import leader7 from "./leader7.png";
 import leader8 from "./leader8.png";
 
 import responseHeroImage from "./responseHeroImg.jpg";
+import FlyingPaperPlane from "./FlyingPaperPlane.png";
 
 export {
   hero2,
@@ -97,4 +98,5 @@ export {
   leader7,
   leader8,
   responseHeroImage,
+  FlyingPaperPlane 
 };
