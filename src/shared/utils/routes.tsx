@@ -21,7 +21,6 @@ type AuthRoute = {
 export const authSheetRoutes: AuthRoute[] = [
   { path: "/sign-in", i18nKey: "signIn", ctaPath: "/sign-up", sheetFirst: false },
   { path: "/sign-up", i18nKey: "signUp", ctaPath: "/sign-in", sheetFirst: true },
-  { path: "/otp-verify" },
 ];
 
 export const footerList1 = [
