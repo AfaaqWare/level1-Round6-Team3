@@ -8,7 +8,7 @@ export default function ResetGuard({ children }: { children: React.ReactNode }) 
     const otpVerified = sessionStorage.getItem("otpVerified");
 
     if (!email) return router.replace("/forget-password");
-    if (!otpVerified) return router.replace("/otp");
+    if (!otpVerified) return router.replace("/otp-verify");
   }, [router]);
 
   return <>{children}</>;
