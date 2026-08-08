@@ -23,6 +23,7 @@
     --color-text-secondary: #62636c;
     --color-text-disabled: #80828d;
     --color-text-faqcard: #1e1f24;
+    --color-error: #ef4444;
 
     /* Dark Mode */
     --color-bg-dark: #1e2021;
@@ -32,7 +33,9 @@
     --color-text-primary-dark: #eeeef0;
     --color-text-secondary-dark: #b2b3bd;
     --color-text-disabled-dark: #a2a4b0;
+    --color-error-dark: #f87171;
     --color-primary-200-dark: #a0e4ef;
+    --color-primary-button-dark: #00d1dc;
     --color-text-faqcard-dark: #b2b3bd;
     --border-color-dark: #2b3c3f;
     --border-color-card-dark: #2e2e2e;
@@ -129,6 +132,7 @@
     --color-text-primary: var(--color-text-primary-dark);
     --color-text-secondary: var(--color-text-secondary-dark);
     --color-text-disabled: var(--color-text-disabled-dark);
+    --color-error: var(--color-error-dark);
     --color-primary-200: var(--color-primary-200-dark);
     --color-text-faqcard: var(--color-text-faqcard-dark);
     --shadow-sm: 0 1px 3px rgba(233, 227, 227, 0.12);

@@ -83,7 +83,22 @@
       "digits": "6-digit verification code",
       "digit": "Digit {position} of {total}"
     },
-    "forget-password": {},
+    "forget-password": {
+      "title": "Forgot Password?",
+      "subtitle": "Don't worry, we'll help you reset it.",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "Enter your email",
+      "submit": "Reset Password",
+      "backToSignIn": "Back to sign in",
+      "validation": {
+        "emailRequired": "Email address is required",
+        "emailInvalid": "Enter a valid email address"
+      },
+      "apiError": {
+        "title": "Request Failed",
+        "message": "We couldn't send the reset code. Please try again."
+      }
+    },
     "verify": {},
     "done": {
       "title": "DONE",

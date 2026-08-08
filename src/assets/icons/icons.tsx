@@ -17,6 +17,7 @@ import {
   Clock3,
   FileText,
   Send,
+  LoaderCircle,
 } from "lucide-react";
 
 type IconProps = Omit<ComponentProps<typeof Icon>, "icon">;
@@ -46,4 +47,5 @@ export {
   Clock3,
   FileText,
   Send,
+  LoaderCircle,
 };

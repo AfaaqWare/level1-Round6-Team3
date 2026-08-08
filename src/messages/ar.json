@@ -83,7 +83,22 @@
       "digits": "رمز التحقق المكوّن من 6 أرقام",
       "digit": "الرقم {position} من {total}"
     },
-    "forget-password": {},
+    "forget-password": {
+      "title": "نسيت كلمة المرور؟",
+      "subtitle": "لا تقلق، سنساعدك على إعادة تعيينها.",
+      "emailLabel": "البريد الإلكتروني",
+      "emailPlaceholder": "أدخل بريدك الإلكتروني",
+      "submit": "إعادة تعيين كلمة المرور",
+      "backToSignIn": "العودة لتسجيل الدخول",
+      "validation": {
+        "emailRequired": "البريد الإلكتروني مطلوب",
+        "emailInvalid": "أدخل بريدًا إلكترونيًا صحيحًا"
+      },
+      "apiError": {
+        "title": "تعذر إرسال الطلب",
+        "message": "لم نتمكن من إرسال رمز إعادة التعيين. حاول مرة أخرى."
+      }
+    },
     "verify": {},
     "done": {
       "title": "أكتمل",
