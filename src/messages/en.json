@@ -40,6 +40,10 @@
       "validation": {
         "emailRequired": "Email address is required",
         "emailInvalid": "Enter a valid email address"
+      },
+      "apiError": {
+        "title": "Request Failed",
+        "message": "We couldn't send the reset code. Please try again."
       }
     },
     "verify": {},

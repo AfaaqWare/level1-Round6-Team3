@@ -5,6 +5,7 @@ import type {
   ForgetPasswordFormValues,
   ForgetPasswordValidationMessages,
 } from "@/modules/auth/validations/forgetPassword.schema";
+import { LoaderCircle } from "@/assets/icons/icons";
 import Button from "@/shared/components/atoms/Button";
 import ForgetPasswordEmailField from "./ForgetPasswordEmailField";
 
@@ -13,6 +14,7 @@ type ForgetPasswordFormProps = {
   emailPlaceholder: string;
   submitLabel: string;
   validationMessages: ForgetPasswordValidationMessages;
+  isPending?: boolean;
   onSubmit?: (values: ForgetPasswordFormValues) => void | Promise<void>;
 };
 
@@ -21,6 +23,7 @@ function ForgetPasswordForm({
   emailPlaceholder,
   submitLabel,
   validationMessages,
+  isPending = false,
   onSubmit,
 }: ForgetPasswordFormProps) {
   const {
@@ -40,13 +43,21 @@ function ForgetPasswordForm({
         emailLabel={emailLabel}
         emailPlaceholder={emailPlaceholder}
         emailError={emailError}
+        disabled={isPending}
         register={register}
       />
       <Button
         type="submit"
         isFullWidth
+        disabled={isPending}
         className="h-10 rounded-[8px] py-0 font-semibold shadow-none"
       >
+        {isPending && (
+          <LoaderCircle
+            aria-hidden="true"
+            className="h-4 w-4 animate-spin"
+          />
+        )}
         {submitLabel}
       </Button>
     </form>

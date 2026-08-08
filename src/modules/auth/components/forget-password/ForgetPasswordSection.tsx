@@ -1,12 +1,14 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { useForgetPasswordSubmit } from "@/modules/auth/hooks/useForgetPasswordSubmit";
 import BackToSignInLink from "./BackToSignInLink";
 import ForgetPasswordForm from "./ForgetPasswordForm";
 import ForgetPasswordHeader from "./ForgetPasswordHeader";
 
 function ForgetPasswordSection() {
   const t = useTranslations("auth.forget-password");
+  const { submitForgetPassword, isPending } = useForgetPasswordSubmit();
 
   return (
     <section className="mx-auto flex w-full max-w-[496px] flex-col items-center gap-10 text-center">
@@ -16,6 +18,8 @@ function ForgetPasswordSection() {
           emailLabel={t("emailLabel")}
           emailPlaceholder={t("emailPlaceholder")}
           submitLabel={t("submit")}
+          isPending={isPending}
+          onSubmit={submitForgetPassword}
           validationMessages={{
             emailRequired: t("validation.emailRequired"),
             emailInvalid: t("validation.emailInvalid"),

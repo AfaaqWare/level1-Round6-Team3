@@ -7,6 +7,7 @@ type ForgetPasswordEmailFieldProps = {
   emailLabel: string;
   emailPlaceholder: string;
   emailError?: string;
+  disabled?: boolean;
   register: UseFormRegister<ForgetPasswordFormValues>;
 };
 
@@ -14,6 +15,7 @@ function ForgetPasswordEmailField({
   emailLabel,
   emailPlaceholder,
   emailError,
+  disabled = false,
   register,
 }: ForgetPasswordEmailFieldProps) {
   return (
@@ -26,6 +28,7 @@ function ForgetPasswordEmailField({
           {...register("email")}
           id="forgot-password-email"
           type="email"
+          disabled={disabled}
           autoComplete="email"
           placeholder={emailPlaceholder}
           aria-label={emailLabel}
