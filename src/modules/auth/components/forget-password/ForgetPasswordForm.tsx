@@ -50,7 +50,7 @@ function ForgetPasswordForm({
         type="submit"
         isFullWidth
         disabled={isPending}
-        className="h-10 rounded-[8px] py-0 font-semibold shadow-none"
+        className="h-10 rounded-[8px] py-0 font-semibold shadow-none dark:bg-[var(--color-primary-button-dark)]"
       >
         {isPending && (
           <LoaderCircle

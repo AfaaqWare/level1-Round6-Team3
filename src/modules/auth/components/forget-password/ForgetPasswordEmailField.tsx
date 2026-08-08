@@ -41,12 +41,12 @@ function ForgetPasswordEmailField({
               strokeWidth={1.5}
             />
           }
-          className="h-10 rounded-[8px] border-0 ps-12 text-xs shadow-none"
+          className="h-10 rounded-[8px] border-0 ps-12 text-xs shadow-none dark:ds-bg-card"
         />
         <p
           id="forgot-password-email-error"
           role={emailError ? "alert" : undefined}
-          className="ds-text-xs min-h-[calc(var(--text-xs)*var(--leading-normal))] text-red-500"
+          className="ds-text-xs min-h-[calc(var(--text-xs)*var(--leading-normal))] text-[var(--color-error)]"
         >
           {emailError}
         </p>
