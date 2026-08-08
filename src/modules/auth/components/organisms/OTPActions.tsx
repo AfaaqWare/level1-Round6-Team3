@@ -2,6 +2,7 @@
 
 import { Dispatch, SetStateAction, useState } from "react";
 import { useRouter } from "next/navigation";
+
 import { resendOtp, verifyOtp } from "../../api/apiOTP";
 import Button from "@/shared/components/atoms/Button";
 
@@ -51,6 +52,10 @@ export default function OTPActions({ otp, setOtp, resetTimer, email, timer }: OT
   };
 
   const handleResend = async () => {
+    // Reset OTP inputs and timer immediately
+    setOtp(["", "", "", "", "", ""]);
+    resetTimer();
+
     try {
       setResending(true);
 
@@ -59,25 +64,22 @@ export default function OTPActions({ otp, setOtp, resetTimer, email, timer }: OT
       });
 
       console.log("OTP resent:", response);
-
-      setOtp(["", "", "", "", "", ""]);
-      resetTimer();
     } catch (error) {
       console.error("Resend OTP failed:", error);
     } finally {
       setResending(false);
     }
   };
+
   return (
-    <div className="flex flex-col items-center gap-6">
+    <div>
       <Button
         type="button"
         onClick={handleVerify}
         disabled={loading || timer === 0}
-        isFullWidth
-        size="lg"
+        size="md"
         variant="primary"
-        className="h-[40px] w-[480px]"
+        className="h-[40px] w-full max-w-[480px]"
       >
         {loading ? "Verifying..." : "Verify"}
       </Button>
@@ -86,10 +88,9 @@ export default function OTPActions({ otp, setOtp, resetTimer, email, timer }: OT
         type="button"
         onClick={handleResend}
         disabled={resending}
-        isFullWidth
-        size="lg"
+        size="md"
         variant="outline"
-        className="h-[40px] w-[480px]"
+        className="mt-4 h-[40px] w-full max-w-[480px]"
       >
         {resending ? "Sending..." : "Send again"}
       </Button>
