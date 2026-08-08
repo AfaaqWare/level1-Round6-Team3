@@ -1,10 +1,12 @@
 import React from "react";
 import OTPGuard from "@/modules/auth/guards/OTPGuard";
 import FormOTP from "@/modules/auth/components/FormOTP";
-function page() {
+function page({ searchParams }: { searchParams: { email: string } }) {
+  const { email } = searchParams;
+
   return (
     <OTPGuard>
-      <FormOTP />
+      <FormOTP email={email} />
     </OTPGuard>
   );
 }

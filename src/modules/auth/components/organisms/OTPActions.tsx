@@ -1,47 +1,94 @@
 "use client";
 
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
+import { useRouter } from "next/navigation";
+import { resendOtp, verifyOtp } from "../../api/apiOTP";
 
 interface OTPActionsProps {
   otp: string[];
   setOtp: Dispatch<SetStateAction<string[]>>;
   resetTimer: () => void;
+  email: string;
+  timer: number;
 }
 
-export default function OTPActions({ otp, setOtp, resetTimer }: OTPActionsProps) {
-  const handleVerify = () => {
+export default function OTPActions({ otp, setOtp, resetTimer, email, timer }: OTPActionsProps) {
+  const router = useRouter();
+
+  const [loading, setLoading] = useState(false);
+  const [resending, setResending] = useState(false);
+
+  const handleVerify = async () => {
+    // OTP expired
+    if (timer === 0) {
+      return;
+    }
+
     const code = otp.join("");
 
+    // OTP must be 6 digits
     if (code.length !== 6) {
       return;
     }
 
-    console.log("OTP:", code);
+    try {
+      setLoading(true);
+
+      const response = await verifyOtp({
+        email,
+        otp: code,
+      });
+
+      console.log("OTP verified:", response);
+
+      router.push("/done");
+    } catch (error) {
+      console.error("OTP verification failed:", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
-  const handleResend = () => {
-    setOtp(["", "", "", "", "", ""]);
-    resetTimer();
+  const handleResend = async () => {
+    try {
+      setResending(true);
 
-    console.log("Resend OTP");
+      const response = await resendOtp({
+        email,
+      });
+
+      console.log("OTP resent:", response);
+
+      // Clear old OTP
+      setOtp(["", "", "", "", "", ""]);
+
+      // Restart timer
+      resetTimer();
+    } catch (error) {
+      console.error("Resend OTP failed:", error);
+    } finally {
+      setResending(false);
+    }
   };
 
   return (
-    <div className="w-full">
+    <div>
       <button
         type="button"
         onClick={handleVerify}
-        className="mt-8 h-12 w-full rounded-lg bg-[#08b3bd] font-medium text-white transition hover:bg-[#079faa]"
+        disabled={loading || timer === 0}
+        className="h-12 w-full rounded-lg bg-[#08b3bd] font-medium text-white transition hover:bg-[#08b3bd]/90 disabled:cursor-not-allowed disabled:opacity-50"
       >
-        Verify
+        {loading ? "Verifying..." : "Verify"}
       </button>
 
       <button
         type="button"
         onClick={handleResend}
-        className="mt-4 h-12 w-full rounded-lg border border-[#08b3bd] bg-white font-medium text-[#08b3bd] transition hover:bg-[#08b3bd]/5"
+        disabled={resending}
+        className="mt-4 h-12 w-full rounded-lg border border-[#08b3bd] bg-white font-medium text-[#08b3bd] transition hover:bg-[#08b3bd]/5 disabled:cursor-not-allowed disabled:opacity-50"
       >
-        Send again
+        {resending ? "Sending..." : "Send again"}
       </button>
     </div>
   );

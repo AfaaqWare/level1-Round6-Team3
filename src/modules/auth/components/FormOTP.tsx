@@ -8,8 +8,10 @@ import OTPTimer from "./molecules/OTPTimer";
 import OTPActions from "./organisms/OTPActions";
 
 import useOTPTimer from "../hooks/useOTPTimer";
-
-export default function FormOTP() {
+interface FormOTPProps {
+  email: string;
+}
+export default function FormOTP({ email }: FormOTPProps) {
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
 
   const { timer, resetTimer } = useOTPTimer();
@@ -22,7 +24,7 @@ export default function FormOTP() {
 
       <OTPTimer timer={timer} />
 
-      <OTPActions otp={otp} setOtp={setOtp} resetTimer={resetTimer} />
+      <OTPActions email={email} otp={otp} setOtp={setOtp} resetTimer={resetTimer} timer={timer} />
     </div>
   );
 }
