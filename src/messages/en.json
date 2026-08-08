@@ -22,9 +22,62 @@
         "cta": "SIGN IN"
       }
     },
+    "signup": {
+      "heading": "Create Account",
+      "socialGoogle": "Google",
+      "socialGithub": "GitHub",
+      "divider": "Or register using your email address",
+      "namePlaceholder": "Name",
+      "emailPlaceholder": "E-mail",
+      "passwordPlaceholder": "Password",
+      "confirmPasswordPlaceholder": "Confirm Password",
+      "termsPrefix": "Agree with",
+      "termsLink": "Terms & Condition",
+      "submit": "SIGN UP",
+      "submitting": "SIGNING UP...",
+      "success": {
+        "title": "Account created",
+        "message": "A verification code has been sent to your email"
+      },
+      "errors": {
+        "title": "Sign up failed",
+        "general": "Something went wrong. Please try again."
+      },
+      "validation": {
+        "nameRequired": "Name is required",
+        "emailRequired": "E-mail is required",
+        "emailInvalid": "Enter a valid e-mail address",
+        "emailExists": "This e-mail is already registered",
+        "passwordRequired": "Password is required",
+        "passwordMinLength": "Password must be at least 8 characters",
+        "passwordUppercase": "Password must contain at least one uppercase letter",
+        "passwordLowercase": "Password must contain at least one lowercase letter",
+        "passwordNumber": "Password must contain at least one number",
+        "confirmPasswordRequired": "Confirm Password is required",
+        "passwordsMustMatch": "Passwords must match",
+        "termsRequired": "You must agree to the Terms & Condition"
+      }
+    },
     "password": {
       "show": "Show password",
       "hide": "Hide password"
+    },
+    "new-password": {
+      "title": "Create New Password",
+      "description": "Please enter your new password below. Make sure it's strong and secure",
+      "passwordLabel": "Password",
+      "confirmPasswordLabel": "Confirm Password",
+      "requirements": "Password must be at least 8 characters, include an uppercase letter and a number",
+      "submit": "Reset Password",
+      "validation": {
+        "passwordRequired": "Password is required",
+        "passwordMinLength": "Password must be at least 8 characters",
+        "passwordUppercase": "Password must contain at least one uppercase letter",
+        "passwordLowercase": "Password must contain at least one lowercase letter",
+        "passwordNumber": "Password must contain at least one number",
+        "confirmPasswordRequired": "Confirm Password is required",
+        "passwordsMustMatch": "Passwords must match"
+      }
     },
     "otp": {
       "digits": "6-digit verification code",
@@ -32,8 +85,11 @@
     },
     "forget-password": {},
     "verify": {},
-    "new-password": {},
-    "done": {}
+    "done": {
+      "title": "DONE",
+      "description": "Password reset complete! Use the button below to log in",
+      "submit": "Return to Login"
+    }
   },
   "routes": {
     "item1": "Home",
