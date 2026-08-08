@@ -30,7 +30,7 @@ export default function OTPInput({ otp, setOtp }: OTPInputProps) {
   };
 
   return (
-    <div className="mt-9 flex justify-center gap-3">
+    <div className="flex justify-center gap-3">
       {otp.map((digit, index) => (
         <input
           key={index}

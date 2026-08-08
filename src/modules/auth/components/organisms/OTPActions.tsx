@@ -3,6 +3,7 @@
 import { Dispatch, SetStateAction, useState } from "react";
 import { useRouter } from "next/navigation";
 import { resendOtp, verifyOtp } from "../../api/apiOTP";
+import Button from "@/shared/components/atoms/Button";
 
 interface OTPActionsProps {
   otp: string[];
@@ -59,10 +60,7 @@ export default function OTPActions({ otp, setOtp, resetTimer, email, timer }: OT
 
       console.log("OTP resent:", response);
 
-      // Clear old OTP
       setOtp(["", "", "", "", "", ""]);
-
-      // Restart timer
       resetTimer();
     } catch (error) {
       console.error("Resend OTP failed:", error);
@@ -70,26 +68,31 @@ export default function OTPActions({ otp, setOtp, resetTimer, email, timer }: OT
       setResending(false);
     }
   };
-
   return (
-    <div>
-      <button
+    <div className="flex flex-col items-center gap-6">
+      <Button
         type="button"
         onClick={handleVerify}
         disabled={loading || timer === 0}
-        className="h-12 w-full rounded-lg bg-[#08b3bd] font-medium text-white transition hover:bg-[#08b3bd]/90 disabled:cursor-not-allowed disabled:opacity-50"
+        isFullWidth
+        size="lg"
+        variant="primary"
+        className="h-[40px] w-[480px]"
       >
         {loading ? "Verifying..." : "Verify"}
-      </button>
+      </Button>
 
-      <button
+      <Button
         type="button"
         onClick={handleResend}
         disabled={resending}
-        className="mt-4 h-12 w-full rounded-lg border border-[#08b3bd] bg-white font-medium text-[#08b3bd] transition hover:bg-[#08b3bd]/5 disabled:cursor-not-allowed disabled:opacity-50"
+        isFullWidth
+        size="lg"
+        variant="outline"
+        className="h-[40px] w-[480px]"
       >
         {resending ? "Sending..." : "Send again"}
-      </button>
+      </Button>
     </div>
   );
 }

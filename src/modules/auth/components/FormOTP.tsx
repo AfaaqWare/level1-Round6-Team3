@@ -17,7 +17,7 @@ export default function FormOTP({ email }: FormOTPProps) {
   const { timer, resetTimer } = useOTPTimer();
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center justify-between gap-6">
       <OTPHeader />
 
       <OTPInput otp={otp} setOtp={setOtp} />
