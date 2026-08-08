@@ -4,7 +4,7 @@ import { isAxiosError } from "axios";
 import { useTranslations } from "next-intl";
 import Swal from "sweetalert2";
 import { useResetFlow } from "@/modules/auth/guards/useResetFlow";
-import type { ForgetPasswordFormValues } from "@/modules/auth/validations/forgetPassword.schema";
+import type { ForgetPasswordFormValues } from "@/modules/auth/schemas/forgetPassword.schema";
 import type { ApiErrorResponse } from "@/shared/types/api-error-response";
 import { useForgetPasswordMutation } from "./useForgetPasswordMutation";
 

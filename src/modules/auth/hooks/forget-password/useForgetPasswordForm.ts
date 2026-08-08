@@ -7,7 +7,7 @@ import {
   createForgetPasswordSchema,
   type ForgetPasswordFormValues,
   type ForgetPasswordValidationMessages,
-} from "@/modules/auth/validations/forgetPassword.schema";
+} from "@/modules/auth/schemas/forgetPassword.schema";
 
 type UseForgetPasswordFormParams = {
   validationMessages: ForgetPasswordValidationMessages;

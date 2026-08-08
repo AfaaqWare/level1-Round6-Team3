@@ -1,7 +1,7 @@
 import type { UseFormRegister } from "react-hook-form";
 import { Mail } from "@/assets/icons/icons";
 import IconInput from "@/shared/components/molecules/IconInput";
-import type { ForgetPasswordFormValues } from "@/modules/auth/validations/forgetPassword.schema";
+import type { ForgetPasswordFormValues } from "@/modules/auth/schemas/forgetPassword.schema";
 
 type ForgetPasswordEmailFieldProps = {
   emailLabel: string;

@@ -4,7 +4,7 @@ import { useForgetPasswordForm } from "@/modules/auth/hooks/forget-password/useF
 import type {
   ForgetPasswordFormValues,
   ForgetPasswordValidationMessages,
-} from "@/modules/auth/validations/forgetPassword.schema";
+} from "@/modules/auth/schemas/forgetPassword.schema";
 import { LoaderCircle } from "@/assets/icons/icons";
 import Button from "@/shared/components/atoms/Button";
 import ForgetPasswordEmailField from "./ForgetPasswordEmailField";
