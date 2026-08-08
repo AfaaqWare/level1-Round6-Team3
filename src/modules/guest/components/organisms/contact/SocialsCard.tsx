@@ -4,7 +4,7 @@ import SocialInfoBox from "../../molecules/contact/SocialInfoBox";
 import React from "react";
 import { useTranslations } from "next-intl";
 import Title from "@/shared/components/atoms/Title";
-import { contact1 } from "@/assets/images/images";
+import { FlyingPaperPlane } from "@/assets/images/images";
 import Image from "@/shared/components/atoms/Image";
 
 const SocialsCard = () => {
@@ -28,12 +28,12 @@ const SocialsCard = () => {
       </div>
 
       <Image
-        width={400}
-        height={110}
-        src={contact1}
+        width={437}
+        height={127}
+        src={FlyingPaperPlane}
         alt=""
         aria-hidden
-        className="pointer-events-none mt-auto w-full select-none"
+        className="pointer-events-none mt-auto w-full select-none "
       />
     </div>
   );
