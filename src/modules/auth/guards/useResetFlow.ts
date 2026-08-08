@@ -20,8 +20,12 @@ export const useResetFlow = () => {
     router.push("/done");
   };
 
-  const isEmailEntered = Boolean(sessionStorage.getItem("resetEmail"));
-  const isOtpVerified = Boolean(sessionStorage.getItem("otpVerified"));
+  const isEmailEntered =
+    typeof window !== "undefined" &&
+    Boolean(sessionStorage.getItem("resetEmail"));
+  const isOtpVerified =
+    typeof window !== "undefined" &&
+    Boolean(sessionStorage.getItem("otpVerified"));
 
   return { start, verifyOTP, finish, isEmailEntered, isOtpVerified };
 };

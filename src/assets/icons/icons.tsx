@@ -18,6 +18,7 @@ import {
   FileText,
   Send,
   Lock,
+  LoaderCircle,
 } from "lucide-react";
 
 type IconProps = Omit<ComponentProps<typeof Icon>, "icon">;
@@ -55,4 +56,5 @@ export {
   FaGithub,
   FcGoogle,
   Lock,
+  LoaderCircle,
 };

@@ -22,18 +22,84 @@
         "cta": "SIGN IN"
       }
     },
+    "signup": {
+      "heading": "Create Account",
+      "socialGoogle": "Google",
+      "socialGithub": "GitHub",
+      "divider": "Or register using your email address",
+      "namePlaceholder": "Name",
+      "emailPlaceholder": "E-mail",
+      "passwordPlaceholder": "Password",
+      "confirmPasswordPlaceholder": "Confirm Password",
+      "termsPrefix": "Agree with",
+      "termsLink": "Terms & Condition",
+      "submit": "SIGN UP",
+      "submitting": "SIGNING UP...",
+      "success": {
+        "title": "Account created",
+        "message": "A verification code has been sent to your email"
+      },
+      "errors": {
+        "title": "Sign up failed",
+        "general": "Something went wrong. Please try again."
+      },
+      "validation": {
+        "nameRequired": "Name is required",
+        "emailRequired": "E-mail is required",
+        "emailInvalid": "Enter a valid e-mail address",
+        "emailExists": "This e-mail is already registered",
+        "passwordRequired": "Password is required",
+        "passwordMinLength": "Password must be at least 8 characters",
+        "passwordUppercase": "Password must contain at least one uppercase letter",
+        "passwordLowercase": "Password must contain at least one lowercase letter",
+        "passwordNumber": "Password must contain at least one number",
+        "confirmPasswordRequired": "Confirm Password is required",
+        "passwordsMustMatch": "Passwords must match",
+        "termsRequired": "You must agree to the Terms & Condition"
+      }
+    },
     "password": {
       "show": "Show password",
       "hide": "Hide password"
+    },
+    "new-password": {
+      "title": "Create New Password",
+      "description": "Please enter your new password below. Make sure it's strong and secure",
+      "passwordLabel": "Password",
+      "confirmPasswordLabel": "Confirm Password",
+      "requirements": "Password must be at least 8 characters, include an uppercase letter and a number",
+      "submit": "Reset Password",
+      "validation": {
+        "passwordRequired": "Password is required",
+        "passwordMinLength": "Password must be at least 8 characters",
+        "passwordUppercase": "Password must contain at least one uppercase letter",
+        "passwordLowercase": "Password must contain at least one lowercase letter",
+        "passwordNumber": "Password must contain at least one number",
+        "confirmPasswordRequired": "Confirm Password is required",
+        "passwordsMustMatch": "Passwords must match"
+      }
     },
     "otp": {
       "digits": "6-digit verification code",
       "digit": "Digit {position} of {total}"
     },
-    "forget-password": {},
+    "forget-password": {
+      "title": "Forgot Password?",
+      "subtitle": "Don't worry, we'll help you reset it.",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "Enter your email",
+      "submit": "Reset Password",
+      "backToSignIn": "Back to sign in",
+      "validation": {
+        "emailRequired": "Email address is required",
+        "emailInvalid": "Enter a valid email address"
+      },
+      "apiError": {
+        "title": "Request Failed",
+        "message": "We couldn't send the reset code. Please try again."
+      }
+    },
     "verify": {},
-    "new-password": {},
-    "done": {},
     "forms": {
       "signIn": {
         "title": "SIGN IN",
@@ -52,6 +118,10 @@
           "passwordRequired": "Password is required"
         }
       }
+    "done": {
+      "title": "DONE",
+      "description": "Password reset complete! Use the button below to log in",
+      "submit": "Return to Login"
     }
   },
   "routes": {
@@ -339,10 +409,10 @@
     },
     "contact": {
       "header": {
-        "title": "Let's talk",
-        "highlight": "about your next project",
-        "text": "We’d love to hear from you and help you find the right solution.",
-        "button": "Book a call"
+        "title": "Contact",
+        "highlight": "Us",
+        "text": "Need help? we’d love to hear from you. Get in touch and our team will respond within 24 hours..",
+        "button": "Send Message"
       },
       "socials": {
         "email": {
@@ -351,20 +421,20 @@
         },
         "phone": {
           "title": "Phone",
-          "text": "+966 500 000 000"
+          "text": "+20100123565"
         },
         "location": {
           "title": "Location",
-          "text": "Riyadh, Saudi Arabia"
+          "text": "Mansoura, Egypt"
         },
         "hours": {
           "title": "Hours",
-          "text": "Sun - Thu, 9:00 AM - 6:00 PM"
+          "text": "Sun - Thu, 9:00 AM - 5:00 PM"
         }
       },
-      "title": "Contact us",
+      "title": "Get In Touch",
       "form": {
-        "title": "Send us a message",
+        "title": "Get In Touch",
         "fullName": {
           "label": "Full name",
           "placeholder": "Enter your name"
@@ -375,7 +445,7 @@
         },
         "subject": {
           "label": "Subject",
-          "placeholder": "How can we help?"
+          "placeholder": "Enter your subject"
         },
         "message": {
           "label": "Message",
