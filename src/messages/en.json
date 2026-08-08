@@ -8,7 +8,9 @@
       "signUp": {
         "prefix": "Already have an account?",
         "apply": "Log in now"
-      }
+      },
+      "loginBtn": "Login",
+      "signUpBtn": "Sign Up"
     },
     "sheets": {
       "signIn": {

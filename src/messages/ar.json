@@ -8,7 +8,9 @@
       "signUp": {
         "prefix": "هل لديك حساب بالفعل؟",
         "apply": "سجّل الدخول الآن"
-      }
+      },
+      "loginBtn": "تسجيل الدخول",
+      "signUpBtn": "إنشاء حساب"
     },
     "sheets": {
       "signIn": {
