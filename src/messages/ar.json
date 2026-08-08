@@ -85,8 +85,41 @@
       "digits": "رمز التحقق المكوّن من 6 أرقام",
       "digit": "الرقم {position} من {total}"
     },
-    "forget-password": {},
+    "forget-password": {
+      "title": "نسيت كلمة المرور؟",
+      "subtitle": "لا تقلق، سنساعدك على إعادة تعيينها.",
+      "emailLabel": "البريد الإلكتروني",
+      "emailPlaceholder": "أدخل بريدك الإلكتروني",
+      "submit": "إعادة تعيين كلمة المرور",
+      "backToSignIn": "العودة لتسجيل الدخول",
+      "validation": {
+        "emailRequired": "البريد الإلكتروني مطلوب",
+        "emailInvalid": "أدخل بريدًا إلكترونيًا صحيحًا"
+      },
+      "apiError": {
+        "title": "تعذر إرسال الطلب",
+        "message": "لم نتمكن من إرسال رمز إعادة التعيين. حاول مرة أخرى."
+      }
+    },
     "verify": {},
+    "forms": {
+      "signIn": {
+        "title": "تسجيل الدخول",
+        "description": "أو سجّل باستخدام بريدك الإلكتروني",
+        "placeholderEmail": "ايميل",
+        "placeholderPass": "كلمة السر",
+        "rememberMe": "تذكرني",
+        "forgotPassword": "هل نسيت كلمه المرور؟",
+        "cta": "تسجيل الدخول",
+        "pendingSignIn": "جارٍ تسجيل الدخول...",
+        "invalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة",
+        "toast": { "loginSuccess": "تم تسجيل الدخول بنجاح", "loginFailed": "فشل تسجيل الدخول" },
+        "schema": {
+          "emailRequired": "البريد الإلكتروني مطلوب",
+          "invalidEmail": "يرجى إدخال بريد إلكتروني صالح",
+          "passwordRequired": "كلمة المرور مطلوبة"
+        }
+      }
     "done": {
       "title": "أكتمل",
       "description": "تم إعادة تعيين كلمة المرور! استخدم الزر أدناه لتسجيل الدخول.",
@@ -406,19 +439,23 @@
         "title": "تواصل معنا",
         "fullName": {
           "label": "الاسم الكامل",
-          "placeholder": "أدخل اسمك"
+          "placeholder": "أدخل اسمك",
+          "error": "الاسم بالكامل مطلوب"
         },
         "email": {
           "label": "البريد الإلكتروني",
-          "placeholder": "أدخل بريدك الإلكتروني"
+          "placeholder": "أدخل بريدك الإلكتروني",
+          "error": "البريد الإلكتروني غير صحيح"
         },
         "subject": {
           "label": "الموضوع",
-          "placeholder": "أدخل موضوع الرسالة"
+          "placeholder": "أدخل موضوع الرسالة",
+          "error": "الموضوع مطلوب"
         },
         "message": {
           "label": "الرسالة",
-          "placeholder": "اكتب رسالتك هنا"
+          "placeholder": "اكتب رسالتك هنا",
+          "error": "الرسالة مطلوبة"
         },
         "submit": "إرسال الرسالة"
       }
