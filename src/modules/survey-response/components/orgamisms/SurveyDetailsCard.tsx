@@ -31,7 +31,7 @@ export default function SurveyDetailsCard({
             width={1162}
             height={351}
             priority
-            className="size-full [&_img]:size-full [&_img]:object-cover"
+            className="w-full [&_img]:h-auto [&_img]:w-full [&_img]:object-cover"
           />
         </div>
 

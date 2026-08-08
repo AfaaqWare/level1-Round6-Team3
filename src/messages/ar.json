@@ -33,7 +33,26 @@
     "forget-password": {},
     "verify": {},
     "new-password": {},
-    "done": {}
+    "done": {},
+    "forms": {
+      "signIn": {
+        "title": "تسجيل الدخول",
+        "description": "أو سجّل باستخدام بريدك الإلكتروني",
+        "placeholderEmail": "ايميل",
+        "placeholderPass": "كلمة السر",
+        "rememberMe": "تذكرني",
+        "forgotPassword": "هل نسيت كلمه المرور؟",
+        "cta": "تسجيل الدخول",
+        "pendingSignIn": "جارٍ تسجيل الدخول...",
+        "invalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة",
+        "toast": { "loginSuccess": "تم تسجيل الدخول بنجاح", "loginFailed": "فشل تسجيل الدخول" },
+        "schema": {
+          "emailRequired": "البريد الإلكتروني مطلوب",
+          "invalidEmail": "يرجى إدخال بريد إلكتروني صالح",
+          "passwordRequired": "كلمة المرور مطلوبة"
+        }
+      }
+    }
   },
   "routes": {
     "item1": "الرئيسية",

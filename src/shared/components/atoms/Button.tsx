@@ -2,7 +2,17 @@ import React from "react";
 import { cn } from "@/lib/cn";
 
 interface Props {
-  variant?: "primary" | "secondary" | "outline" | "outline1" | "ghost" | "primary200" | "disabled" | "white" ;
+  variant?:
+    | "primary"
+    | "secondary"
+    | "outline"
+    | "outline1"
+    | "ghost"
+    | "primary200"
+    | "disabled"
+    | "white"
+    | "panel";
+
   size?: "sm" | "md" | "lg";
   className?: string;
   children: React.ReactNode;
@@ -47,6 +57,7 @@ export default function Button({
     primary200: "ds-primary-200 ds-text-alt hover:opacity-90 active:opacity-80",
     disabled: "ds-bg-primary ds-text-white cursor-not-allowed ds-disabled",
     white: "ds-primary-300 ds-text-alt hover:opacity-90 active:opacity-80 ds-shadow-sm",
+    panel: "ds-bg sm:px-15 ds-text-alt font-semibold hover:opacity-90",
   };
 
   const resolvedFullWidth = isFullWidth || fullWidth;

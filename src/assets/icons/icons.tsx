@@ -17,6 +17,7 @@ import {
   Clock3,
   FileText,
   Send,
+  Lock,
 } from "lucide-react";
 
 type IconProps = Omit<ComponentProps<typeof Icon>, "icon">;
@@ -24,6 +25,11 @@ const FaFacebookF = (props: IconProps) => <Icon icon="fa-brands:facebook-f" {...
 const FaLinkedinIn = (props: IconProps) => <Icon icon="mdi:linkedin" {...props} />;
 const FaWhatsapp = (props: IconProps) => <Icon icon="fa-brands:whatsapp" {...props} />;
 const FaTwitter = (props: IconProps) => <Icon icon="fa-brands:twitter" {...props} />;
+const FaGithub = (props: IconProps) => <Icon icon="logos:github-icon" {...props} />;
+const FcGoogle = (props: IconProps) => <Icon icon="flat-color-icons:google" {...props} />;
+
+// import { FcGoogle } from "react-icons/fc";
+// import { FaGithub } from "react-icons/fa";
 
 export {
   Sun,
@@ -46,4 +52,7 @@ export {
   Clock3,
   FileText,
   Send,
+  FaGithub,
+  FcGoogle,
+  Lock,
 };

@@ -28,7 +28,10 @@ export default function SurveyStatisticCard({
 }: SurveyStatisticCardProps) {
   return (
     <article
-      className={cn("ds-bg-card ds-rounded-xl flex items-center gap-6 px-3 py-4", className)}
+      className={cn(
+        "ds-bg-card ds-rounded-xl flex items-center gap-2 px-1 py-2 md:gap-6 md:px-3 md:py-4",
+        className
+      )}
     >
       <Icon IconComponent={icon} size="sm" variant="alt" className={variantClasses[variant]} />
 

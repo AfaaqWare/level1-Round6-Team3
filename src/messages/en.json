@@ -33,7 +33,26 @@
     "forget-password": {},
     "verify": {},
     "new-password": {},
-    "done": {}
+    "done": {},
+    "forms": {
+      "signIn": {
+        "title": "SIGN IN",
+        "description": "Or register using your email address",
+        "placeholderEmail": "E-mail",
+        "placeholderPass": "Password",
+        "rememberMe": "Remember me",
+        "forgotPassword": "Forgot password?",
+        "cta": "SIGN IN",
+        "pendingSignIn": "Signing in...",
+        "invalidCredentials": "Invalid email or password",
+        "toast": { "loginSuccess": "Login successful", "loginFailed": "Login failed" },
+        "schema": {
+          "emailRequired": "Email is required",
+          "invalidEmail": "Please enter a valid email",
+          "passwordRequired": "Password is required"
+        }
+      }
+    }
   },
   "routes": {
     "item1": "Home",
