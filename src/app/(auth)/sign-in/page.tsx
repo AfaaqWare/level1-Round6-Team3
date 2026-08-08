@@ -1,7 +1,5 @@
-import React from "react";
+import SignInFormContainer from "@/modules/auth/components/organisms/SignInFormContainer";
 
-function page() {
-  return <div>sign in </div>;
+export default function SignInPage() {
+  return <SignInFormContainer />;
 }
-
-export default page;

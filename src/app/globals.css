@@ -295,3 +295,6 @@
     pointer-events: none;
   }
 }
+input[type="password"]::-ms-reveal {
+  display: none;
+}
