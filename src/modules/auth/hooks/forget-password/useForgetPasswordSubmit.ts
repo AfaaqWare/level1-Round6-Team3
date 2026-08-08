@@ -2,6 +2,7 @@
 
 import { isAxiosError } from "axios";
 import { useTranslations } from "next-intl";
+import { useState } from "react";
 import Swal from "sweetalert2";
 import { useResetFlow } from "@/modules/auth/guards/useResetFlow";
 import type { ForgetPasswordFormValues } from "@/modules/auth/schemas/forgetPassword.schema";
@@ -12,10 +13,14 @@ export function useForgetPasswordSubmit() {
   const t = useTranslations("auth.forget-password");
   const { start } = useResetFlow();
   const { mutate, isPending } = useForgetPasswordMutation();
+  const [isNavigating, setIsNavigating] = useState(false);
 
   const submitForgetPassword = (values: ForgetPasswordFormValues) => {
     mutate(values, {
-      onSuccess: () => start(values.email),
+      onSuccess: () => {
+        setIsNavigating(true);
+        start(values.email);
+      },
       onError: error => {
         const apiMessage = isAxiosError<ApiErrorResponse>(error)
           ? error.response?.data.message ?? error.response?.data.error
@@ -32,6 +37,6 @@ export function useForgetPasswordSubmit() {
 
   return {
     submitForgetPassword,
-    isPending,
+    isPending: isPending || isNavigating,
   };
 }
