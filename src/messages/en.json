@@ -437,19 +437,23 @@
         "title": "Get In Touch",
         "fullName": {
           "label": "Full name",
-          "placeholder": "Enter your name"
+          "placeholder": "Enter your name",
+          "error": "Full name is required"
         },
         "email": {
           "label": "Email address",
-          "placeholder": "Enter your email"
+          "placeholder": "Enter your email",
+          "error": "Invalid email address"
         },
         "subject": {
           "label": "Subject",
-          "placeholder": "Enter your subject"
+          "placeholder": "Enter your subject",
+          "error": "Subject is required"
         },
         "message": {
           "label": "Message",
-          "placeholder": "Write your message here"
+          "placeholder": "Write your message here",
+          "error": "Message is required"
         },
         "submit": "Send message"
       }
