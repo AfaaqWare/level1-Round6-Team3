@@ -79,7 +79,7 @@ export default function OTPActions({ otp, setOtp, resetTimer, email, timer }: OT
         disabled={loading || timer === 0}
         size="md"
         variant="primary"
-        className="h-[40px] w-full max-w-[480px]"
+        className="h-[40px] w-full max-w-[408px]"
       >
         {loading ? "Verifying..." : "Verify"}
       </Button>
@@ -90,7 +90,7 @@ export default function OTPActions({ otp, setOtp, resetTimer, email, timer }: OT
         disabled={resending}
         size="md"
         variant="outline"
-        className="mt-4 h-[40px] w-full max-w-[480px]"
+        className="mt-4 h-[40px] w-full max-w-[408px]"
       >
         {resending ? "Sending..." : "Send again"}
       </Button>
