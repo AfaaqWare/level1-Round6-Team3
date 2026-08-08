@@ -1,6 +1,6 @@
 "use client";
 
-import { useForgetPasswordForm } from "@/modules/auth/hooks/useForgetPasswordForm";
+import { useForgetPasswordForm } from "@/modules/auth/hooks/forget-password/useForgetPasswordForm";
 import type {
   ForgetPasswordFormValues,
   ForgetPasswordValidationMessages,

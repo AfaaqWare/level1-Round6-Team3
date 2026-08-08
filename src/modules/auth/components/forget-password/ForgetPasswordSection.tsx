@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useForgetPasswordSubmit } from "@/modules/auth/hooks/useForgetPasswordSubmit";
+import { useForgetPasswordSubmit } from "@/modules/auth/hooks/forget-password/useForgetPasswordSubmit";
 import BackToSignInLink from "./BackToSignInLink";
 import ForgetPasswordForm from "./ForgetPasswordForm";
 import ForgetPasswordHeader from "./ForgetPasswordHeader";
