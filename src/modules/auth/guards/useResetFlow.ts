@@ -5,23 +5,35 @@ export const useResetFlow = () => {
   const router = useRouter();
 
   const start = (email: string) => {
-    sessionStorage.setItem("resetEmail", email);
+    if (typeof window !== "undefined") {
+      sessionStorage.setItem("resetEmail", email);
+    }
     router.push("/otp-verify");
   };
 
-  const verifyOTP = () => {
-    sessionStorage.setItem("otpVerified", "true");
+  const verifyOTP = (otp?: string) => {
+    if (typeof window !== "undefined") {
+      sessionStorage.setItem("otpVerified", "true");
+      if (otp) {
+        sessionStorage.setItem("resetOtp", otp);
+      }
+    }
     router.push("/reset-password");
   };
 
   const finish = () => {
-    sessionStorage.removeItem("resetEmail");
-    sessionStorage.removeItem("otpVerified");
+    if (typeof window !== "undefined") {
+      sessionStorage.removeItem("resetEmail");
+      sessionStorage.removeItem("otpVerified");
+      sessionStorage.removeItem("resetOtp");
+    }
     router.push("/done");
   };
 
-  const isEmailEntered = Boolean(sessionStorage.getItem("resetEmail"));
-  const isOtpVerified = Boolean(sessionStorage.getItem("otpVerified"));
+  const isEmailEntered = typeof window !== "undefined" ? Boolean(sessionStorage.getItem("resetEmail")) : false;
+  const isOtpVerified = typeof window !== "undefined" ? Boolean(sessionStorage.getItem("otpVerified")) : false;
+  const email = typeof window !== "undefined" ? sessionStorage.getItem("resetEmail") || "" : "";
+  const otp = typeof window !== "undefined" ? sessionStorage.getItem("resetOtp") || "" : "";
 
-  return { start, verifyOTP, finish, isEmailEntered, isOtpVerified };
+  return { start, verifyOTP, finish, isEmailEntered, isOtpVerified, email, otp };
 };
