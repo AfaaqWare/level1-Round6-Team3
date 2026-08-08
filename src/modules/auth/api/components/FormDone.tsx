@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import Card from "../../../../../components/ui/Card";
 import Button from "../../../../../components/ui/Button";
+import { TokenService } from "@/services/tokenService";
 
 export default function FormDone() {
   const router = useRouter();
@@ -15,6 +16,7 @@ export default function FormDone() {
     // Clear reset password flow markers
     sessionStorage.removeItem("resetEmail");
     sessionStorage.removeItem("otpVerified");
+    TokenService.removeToken();
     
     // Redirect to login page
     router.push("/sign-in");
