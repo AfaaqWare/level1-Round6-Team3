@@ -8,7 +8,9 @@
       "signUp": {
         "prefix": "هل لديك حساب بالفعل؟",
         "apply": "سجّل الدخول الآن"
-      }
+      },
+      "login": "تسجيل الدخول",
+      "signUpButton": "إنشاء حساب"
     },
     "sheets": {
       "signIn": {
@@ -32,8 +34,28 @@
     },
     "forget-password": {},
     "verify": {},
-    "new-password": {},
-    "done": {}
+    "new-password": {
+      "title": "إنشاء كلمة مرور جديدة",
+      "description": "يرجى إدخال كلمة المرور الجديدة أدناه. تأكد من أنها قوية وآمنة",
+      "passwordLabel": "كلمة المرور",
+      "confirmPasswordLabel": "تأكيد كلمة المرور",
+      "requirements": "يجب أن تكون كلمة المرور 8 أحرف على الأقل، وتحتوي على حرف كبير ورقم",
+      "submit": "إعادة تعيين كلمة المرور",
+      "validation": {
+        "passwordRequired": "كلمة المرور مطلوبة",
+        "passwordMinLength": "يجب أن تكون كلمة المرور 8 أحرف على الأقل",
+        "passwordUppercase": "يجب أن تحتوي كلمة المرور على حرف كبير واحد على الأقل",
+        "passwordLowercase": "يجب أن تحتوي كلمة المرور على حرف صغير واحد على الأقل",
+        "passwordNumber": "يجب أن تحتوي كلمة المرور على رقم واحد على الأقل",
+        "confirmPasswordRequired": "تأكيد كلمة المرور مطلوب",
+        "passwordsMustMatch": "يجب أن تتطابق كلمتا المرور"
+      }
+    },
+    "done": {
+      "title": "أكتمل",
+      "description": "تم إعادة تعيين كلمة المرور! استخدم الزر أدناه لتسجيل الدخول.",
+      "submit": "العودة الي تسجيل الدخول"
+    }
   },
   "routes": {
     "item1": "الرئيسية",

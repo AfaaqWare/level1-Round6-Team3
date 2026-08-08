@@ -52,7 +52,7 @@ export default function AuthLayout({
       ) : (
         // Single-centered-column mode: used when there is no sheet.
         <main className="flex flex-1 items-center justify-center px-6 py-16">
-          <div className="w-full max-w-md">{children}</div>
+          <div className="w-full max-w-lg">{children}</div>
         </main>
       )}
     </div>

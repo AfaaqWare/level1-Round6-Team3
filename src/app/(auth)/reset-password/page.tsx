@@ -1,10 +1,10 @@
 import React from "react";
 import ResetGuard from "@/modules/auth/guards/ResetGuard";
-import FormResetPassword from "@/modules/auth/components/FormResetPassword";
+import CompResetPassword from "@/modules/auth/api/components/CompResetPassword";
 function page() {
   return (
     <ResetGuard>
-      <FormResetPassword />
+      <CompResetPassword />
     </ResetGuard>
   );
 }
