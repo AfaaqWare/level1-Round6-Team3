@@ -119,12 +119,62 @@
           "invalidEmail": "Please enter a valid email",
           "passwordRequired": "Password is required"
         }
+      },
+      "done": {
+        "title": "DONE",
+        "description": "Password reset complete! Use the button below to log in",
+        "submit": "Return to Login"
       }
-    "done": {
-      "title": "DONE",
-      "description": "Password reset complete! Use the button below to log in",
-      "submit": "Return to Login"
     }
+  },
+  "footer": {
+    "subtitle": "Make smarter decisions with better data.Create surveys, gather feedback, and grow.",
+    "placeholder": "Stay informed by entering your email",
+    "btn": "Enter",
+    "footerLists": {
+      "footerList1": {
+        "element1": {
+          "key": "Home"
+        },
+        "element2": {
+          "key": "Templates"
+        },
+        "element3": {
+          "key": "Pricing"
+        },
+        "element4": {
+          "key": "Integrations"
+        }
+      },
+      "footerList2": {
+        "element1": {
+          "key": "Help Center"
+        },
+        "element2": {
+          "key": "Terms of Services"
+        },
+        "element3": {
+          "key": "Privacy Policy"
+        },
+        "element4": {
+          "key": "Refund Policy"
+        },
+        "element5": {
+          "key": "FAQs"
+        }
+      },
+      "footerList3": {
+        "element1": {
+          "key": "E-mail us at"
+        }
+      },
+      "footerList4": {
+        "element1": {
+          "key": "Follow us "
+        }
+      }
+    },
+    "copyRight": "@2026 SurveyLand.All rights reserved"
   },
   "routes": {
     "item1": "Home",
@@ -604,55 +654,7 @@
       ]
     }
   },
-  "footer": {
-    "subtitle": "Make smarter decisions with better data.Create surveys, gather feedback, and grow.",
-    "placeholder": "Stay informed by entering your email",
-    "btn": "Enter",
-    "footerLists": {
-      "footerList1": {
-        "element1": {
-          "key": "Home"
-        },
-        "element2": {
-          "key": "Templates"
-        },
-        "element3": {
-          "key": "Pricing"
-        },
-        "element4": {
-          "key": "Integrations"
-        }
-      },
-      "footerList2": {
-        "element1": {
-          "key": "Help Center"
-        },
-        "element2": {
-          "key": "Terms of Services"
-        },
-        "element3": {
-          "key": "Privacy Policy"
-        },
-        "element4": {
-          "key": "Refund Policy"
-        },
-        "element5": {
-          "key": "FAQs"
-        }
-      },
-      "footerList3": {
-        "element1": {
-          "key": "E-mail us at"
-        }
-      },
-      "footerList4": {
-        "element1": {
-          "key": "Follow us "
-        }
-      }
-    },
-    "copyRight": "@2026 SurveyLand.All rights reserved"
-  },
+
   "surveyResponse": {
     "SurveyInformation": {
       "title": "Your Information",
