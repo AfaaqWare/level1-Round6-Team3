@@ -10,7 +10,7 @@ export function useResetPasswordSubmit() {
 
   const onSubmit = (data: ResetPasswordSchema) => {
     mutate(
-      { email, otp, password: data.password },
+      { email, otp, newPassword: data.password },
       {
         onSuccess: () => {
           finish();

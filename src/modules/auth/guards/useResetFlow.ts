@@ -22,12 +22,15 @@ export const useResetFlow = () => {
   };
 
   const finish = () => {
+    router.push("/done");
+  };
+
+  const cleanup = () => {
     if (typeof window !== "undefined") {
       sessionStorage.removeItem("resetEmail");
       sessionStorage.removeItem("otpVerified");
       sessionStorage.removeItem("resetOtp");
     }
-    router.push("/done");
   };
 
   const isEmailEntered =
@@ -37,5 +40,5 @@ export const useResetFlow = () => {
   const email = typeof window !== "undefined" ? sessionStorage.getItem("resetEmail") || "" : "";
   const otp = typeof window !== "undefined" ? sessionStorage.getItem("resetOtp") || "" : "";
 
-  return { start, verifyOTP, finish, isEmailEntered, isOtpVerified, email, otp };
+  return { start, verifyOTP, finish, cleanup, isEmailEntered, isOtpVerified, email, otp };
 };

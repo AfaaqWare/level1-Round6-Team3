@@ -3,7 +3,7 @@ import apiClient from "@/services/ApiClient";
 export interface ResetPasswordPayload {
   email: string;
   otp: string;
-  password: string;
+  newPassword: string;
 }
 
 export interface ResetPasswordResponse {

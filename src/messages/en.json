@@ -119,12 +119,12 @@
           "invalidEmail": "Please enter a valid email",
           "passwordRequired": "Password is required"
         }
-      },
-      "done": {
-        "title": "DONE",
-        "description": "Password reset complete! Use the button below to log in",
-        "submit": "Return to Login"
       }
+    },
+    "done": {
+      "title": "DONE",
+      "description": "Password reset complete! Use the button below to log in",
+      "submit": "Return to Login"
     }
   },
   "footer": {
