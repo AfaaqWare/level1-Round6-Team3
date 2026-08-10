@@ -27,7 +27,7 @@ export default function Title({
     disabled: "ds-text-disabled ",
     secondary: "ds-text-secondary",
     alt: "ds-text-alt ",
-    white: "ds-text-white",
+    white: "text-white",
 
   };
   return (

@@ -1,27 +1,42 @@
-import { useTranslations } from 'next-intl';
-import React from 'react'
+import { useTranslations } from "next-intl";
+import React from "react";
 
-function BillingButtons() {
+interface BillingButtonsProps {
+  billingCycle: "monthly" | "yearly";
+  onBillingChange: (cycle: "monthly" | "yearly") => void;
+}
+function BillingButtons({
+  billingCycle,
+  onBillingChange,
+}: BillingButtonsProps) {
   const t = useTranslations("publicPages.pricingPlans.billing");
   return (
-         <div className="flex justify-center px-4">
-      <div className="inline-flex items-center rounded-full bg-white mt-[45px]">
+    <div className="flex justify-center px-4">
+      <div className="mt-[45px] inline-flex items-center rounded-full bg-white">
         <button
+        onClick={() => onBillingChange("monthly")}
           type="button"
-          className="ds-bg-primary rounded-full px-6 py-3 text-sm font-medium text-white transition-all sm:px-8"
-        >
+className={`rounded-full px-6 py-3 text-sm font-medium transition-all sm:px-8 ${
+  billingCycle === "monthly"
+    ? "ds-bg-primary text-white"
+    : "text-gray-500 hover:text-black"
+}`}        >
           {t("monthly")}
         </button>
 
         <button
+        onClick={() => onBillingChange("yearly")}
           type="button"
-          className="rounded-full px-6 py-3 text-sm font-medium text-gray-500 transition-all hover:text-black sm:px-8"
-        >
+className={`rounded-full px-6 py-3 text-sm font-medium transition-all sm:px-8 ${
+  billingCycle === "yearly"
+    ? "ds-bg-primary text-white"
+    : "text-gray-500 hover:text-black"
+}`}        >
           {t("yearly")}
         </button>
       </div>
     </div>
-  )
+  );
 }
 
-export default BillingButtons
+export default BillingButtons;
