@@ -4,11 +4,13 @@ import { Send } from "lucide-react";
 import Icon from "@/shared/components/atoms/Icon";
 interface ContactButtonProps {
   label?: string;
+ 
 }
 const ContactButton = ({ label = "Send Message" }: ContactButtonProps) => {
   return (
-    <Button type="submit" variant="primary" isRounded={true} size="md" fullWidth={true}>
-      <Icon color="white" IconComponent={Send} size={32} /> {label}
+    <Button type="submit" variant="primaryWhite" isRounded={true} size="md" fullWidth={true} >
+      <Icon color="primaryWhite" IconComponent={Send} size={32} /> 
+      {label}
     </Button>
   );
 };

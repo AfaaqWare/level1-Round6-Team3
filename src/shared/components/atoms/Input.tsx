@@ -26,6 +26,12 @@ const sizeClasses: Record<InputSize, string> = {
   lg: "h-[46px] px-4 text-base",
 };
 
+// const inputMargin: Record<InputSize, string> ={
+//   sm: "mt-[5px]",
+//   md: "mt-[7px]",
+//   lg: "mt-[10px]",
+// }
+
 const sizeWithLeftIcon: Record<InputSize, string> = {
   sm: "pl-8",
   md: "pl-9",
