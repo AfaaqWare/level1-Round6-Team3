@@ -26,7 +26,7 @@ export default function PricingCard2({
 }: PricingCard2Props) {
   const baseClasses =
     "ds-rounded-xl ds-shadow-card flex flex-col gap-3 p-8 relative transition-transform";
-  const highlightedClasses = "ds-bg-primary -translate-y-10 z-10 ";
+  const highlightedClasses = "ds-bg-primary lg:-translate-y-10 z-10 ";
   const defaultClasses = "ds-bg-card ds-border-card";
   const variantClasses = highlighted ? highlightedClasses : defaultClasses;
 
@@ -57,7 +57,7 @@ export default function PricingCard2({
         >
           {price}
         </Title>
-        <Text size="base" variant="disabled" className="ds-font-sans mb-1 font-medium">
+        <Text size="base" variant={highlighted ? "white" : "disabled"} className="ds-font-sans mb-1 font-medium">
           {period}
         </Text>
       </div>
@@ -78,7 +78,7 @@ export default function PricingCard2({
                   highlighted ? "bg-white" : "ds-bg-primary"
                 }`}
               >
-                <Check size={14} className={highlighted ? "text-primary" : "text-white"} />
+                <Check size={14} className={highlighted ? "text-blue-300" : "text-white"} />
               </div>
               <Text
                 size="base"
