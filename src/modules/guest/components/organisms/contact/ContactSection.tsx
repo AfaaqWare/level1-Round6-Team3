@@ -14,7 +14,7 @@ const ContactSection = () => {
     <div className="ds-container flex flex-col items-center gap-40 py-16">
       <div className="flex w-full flex-col items-center justify-center gap-4 text-center">
         <Heading highlightText={t("highlight")} title={t("title")} text={t("text") }></Heading>
-        <Button size="md" variant="primaryWhite" >{t("button")}</Button>
+        <Button size="xlg" variant="primaryWhite" className="mt-[45px]" >{t("button")}</Button>
       </div>
 
       <div className="relative flex w-full flex-col items-stretch justify-center gap-6 md:flex-row">

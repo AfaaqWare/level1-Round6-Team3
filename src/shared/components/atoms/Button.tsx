@@ -3,7 +3,7 @@ import { cn } from "@/lib/cn";
 
 interface Props {
   variant?: "primary" | "secondary" | "outline" | "outline1" | "ghost" | "primary200" | "disabled" | "white" | "primaryWhite" ;
-  size?: "sm" | "md" | "lg";
+  size?: "sm" | "md" | "lg" | "xlg";
   className?: string;
   children: React.ReactNode;
   onClick?: () => void;
@@ -34,6 +34,7 @@ export default function Button({
     sm: "px-[var(--space-md)] py-[var(--space-xs)] ds-text-sm",
     md: "px-[var(--space-xl)] py-[var(--space-sm)] ds-text-base",
     lg: "px-[var(--space-3xl)] py-[var(--space-md)] ds-text-md",
+    xlg :"px-[111px] py-[11px]"
   };
 
   const variants = {
