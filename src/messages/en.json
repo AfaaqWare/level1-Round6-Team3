@@ -125,12 +125,12 @@
           "tooManyRequests": "Too many login attempts. Please try again later.",
           "genericError": "An unexpected error occurred. Please try again."
         }
-      },
-      "done": {
-        "title": "DONE",
-        "description": "Password reset complete! Use the button below to log in",
-        "submit": "Return to Login"
       }
+    },
+    "done": {
+      "title": "DONE",
+      "description": "Password reset complete! Use the button below to log in",
+      "submit": "Return to Login"
     }
   },
   "footer": {

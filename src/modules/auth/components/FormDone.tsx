@@ -1,12 +1,22 @@
 "use client";
 
+import { useEffect } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Check } from "@/assets/icons/icons";
 import Button from "@/shared/components/atoms/Button";
+import { useResetFlow } from "../guards/useResetFlow";
 
 export default function FormDone() {
   const t = useTranslations("auth.done");
+  const { cleanup } = useResetFlow();
+
+  useEffect(() => {
+    return () => {
+      cleanup();
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="flex items-center justify-center w-full">
@@ -33,3 +43,4 @@ export default function FormDone() {
     </div>
   );
 }
+
