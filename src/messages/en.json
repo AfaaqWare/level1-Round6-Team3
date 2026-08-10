@@ -8,7 +8,9 @@
       "signUp": {
         "prefix": "Already have an account?",
         "apply": "Log in now"
-      }
+      },
+      "loginBtn": "Login",
+      "signUpBtn": "Sign Up"
     },
     "sheets": {
       "signIn": {
@@ -22,18 +24,163 @@
         "cta": "SIGN IN"
       }
     },
+    "signup": {
+      "heading": "Create Account",
+      "socialGoogle": "Google",
+      "socialGithub": "GitHub",
+      "divider": "Or register using your email address",
+      "namePlaceholder": "Name",
+      "emailPlaceholder": "E-mail",
+      "passwordPlaceholder": "Password",
+      "confirmPasswordPlaceholder": "Confirm Password",
+      "termsPrefix": "Agree with",
+      "termsLink": "Terms & Condition",
+      "submit": "SIGN UP",
+      "submitting": "SIGNING UP...",
+      "success": {
+        "title": "Account created",
+        "message": "A verification code has been sent to your email"
+      },
+      "errors": {
+        "title": "Sign up failed",
+        "general": "Something went wrong. Please try again."
+      },
+      "validation": {
+        "nameRequired": "Name is required",
+        "emailRequired": "E-mail is required",
+        "emailInvalid": "Enter a valid e-mail address",
+        "emailExists": "This e-mail is already registered",
+        "passwordRequired": "Password is required",
+        "passwordMinLength": "Password must be at least 8 characters",
+        "passwordUppercase": "Password must contain at least one uppercase letter",
+        "passwordLowercase": "Password must contain at least one lowercase letter",
+        "passwordNumber": "Password must contain at least one number",
+        "confirmPasswordRequired": "Confirm Password is required",
+        "passwordsMustMatch": "Passwords must match",
+        "termsRequired": "You must agree to the Terms & Condition"
+      }
+    },
     "password": {
       "show": "Show password",
       "hide": "Hide password"
+    },
+    "new-password": {
+      "title": "Create New Password",
+      "description": "Please enter your new password below. Make sure it's strong and secure",
+      "passwordLabel": "Password",
+      "confirmPasswordLabel": "Confirm Password",
+      "requirements": "Password must be at least 8 characters, include an uppercase letter and a number",
+      "submit": "Reset Password",
+      "validation": {
+        "passwordRequired": "Password is required",
+        "passwordMinLength": "Password must be at least 8 characters",
+        "passwordUppercase": "Password must contain at least one uppercase letter",
+        "passwordLowercase": "Password must contain at least one lowercase letter",
+        "passwordNumber": "Password must contain at least one number",
+        "confirmPasswordRequired": "Confirm Password is required",
+        "passwordsMustMatch": "Passwords must match"
+      }
     },
     "otp": {
       "digits": "6-digit verification code",
       "digit": "Digit {position} of {total}"
     },
-    "forget-password": {},
+    "forget-password": {
+      "title": "Forgot Password?",
+      "subtitle": "Don't worry, we'll help you reset it.",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "Enter your email",
+      "submit": "Reset Password",
+      "backToSignIn": "Back to sign in",
+      "validation": {
+        "emailRequired": "Email address is required",
+        "emailInvalid": "Enter a valid email address"
+      },
+      "apiError": {
+        "title": "Request Failed",
+        "message": "We couldn't send the reset code. Please try again."
+      }
+    },
     "verify": {},
-    "new-password": {},
-    "done": {}
+    "forms": {
+      "signIn": {
+        "title": "SIGN IN",
+        "description": "Or register using your email address",
+        "placeholderEmail": "E-mail",
+        "placeholderPass": "Password",
+        "rememberMe": "Remember me",
+        "forgotPassword": "Forgot password?",
+        "cta": "SIGN IN",
+        "pendingSignIn": "Signing in...",
+        "toast": { "loginSuccess": "Login successful", "loginFailed": "Login failed" },
+        "schema": {
+          "emailRequired": "Email is required",
+          "invalidEmail": "Please enter a valid email",
+          "passwordRequired": "Password is required"
+        },
+        "errors": {
+          "invalidCredentials": "Invalid email or password.",
+          "serverError": "Something went wrong on the server. Please try again later.",
+          "networkError": "Unable to connect to the server. Please check your internet connection and try again.",
+          "tooManyRequests": "Too many login attempts. Please try again later.",
+          "genericError": "An unexpected error occurred. Please try again."
+        }
+      },
+      "done": {
+        "title": "DONE",
+        "description": "Password reset complete! Use the button below to log in",
+        "submit": "Return to Login"
+      }
+    }
+  },
+  "footer": {
+    "subtitle": "Make smarter decisions with better data.Create surveys, gather feedback, and grow.",
+    "placeholder": "Stay informed by entering your email",
+    "btn": "Enter",
+    "footerLists": {
+      "footerList1": {
+        "element1": {
+          "key": "Home"
+        },
+        "element2": {
+          "key": "Templates"
+        },
+        "element3": {
+          "key": "Pricing"
+        },
+        "element4": {
+          "key": "Integrations"
+        }
+      },
+      "footerList2": {
+        "element1": {
+          "key": "Help Center"
+        },
+        "element2": {
+          "key": "Terms of Services"
+        },
+        "element3": {
+          "key": "Privacy Policy"
+        },
+        "element4": {
+          "key": "Refund Policy"
+        },
+        "element5": {
+          "key": "FAQs"
+        }
+      },
+      "footerList3": {
+        "element1": {
+          "key": "E-mail us at"
+        }
+      },
+      "footerList4": {
+        "element1": {
+          "key": "Follow us "
+        }
+      }
+    },
+    "copyRight": "@2026 SurveyLand.All rights reserved"
   },
   "routes": {
     "item1": "Home",
@@ -513,55 +660,7 @@
       ]
     }
   },
-  "footer": {
-    "subtitle": "Make smarter decisions with better data.Create surveys, gather feedback, and grow.",
-    "placeholder": "Stay informed by entering your email",
-    "btn": "Enter",
-    "footerLists": {
-      "footerList1": {
-        "element1": {
-          "key": "Home"
-        },
-        "element2": {
-          "key": "Templates"
-        },
-        "element3": {
-          "key": "Pricing"
-        },
-        "element4": {
-          "key": "Integrations"
-        }
-      },
-      "footerList2": {
-        "element1": {
-          "key": "Help Center"
-        },
-        "element2": {
-          "key": "Terms of Services"
-        },
-        "element3": {
-          "key": "Privacy Policy"
-        },
-        "element4": {
-          "key": "Refund Policy"
-        },
-        "element5": {
-          "key": "FAQs"
-        }
-      },
-      "footerList3": {
-        "element1": {
-          "key": "E-mail us at"
-        }
-      },
-      "footerList4": {
-        "element1": {
-          "key": "Follow us "
-        }
-      }
-    },
-    "copyRight": "@2026 SurveyLand.All rights reserved"
-  },
+
   "surveyResponse": {
     "SurveyInformation": {
       "title": "Your Information",

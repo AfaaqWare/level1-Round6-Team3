@@ -45,7 +45,7 @@ const IconInput = forwardRef<HTMLInputElement, IconInputProps>(
             id={inputId}
             aria-invalid={Boolean(errorMessage)}
             className={cn(
-              "h-12 w-full rounded-lg border ds-border-muted ds-bg-form",
+              "h-12 w-full rounded-lg border ds-border-input ds-bg-form",
               "text-start text-base ds-text-primary",
               "placeholder:text-[var(--color-text-disabled)]",
               "outline-none transition-colors duration-[var(--motion-fast)]",

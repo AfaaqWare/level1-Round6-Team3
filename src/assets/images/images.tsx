@@ -51,6 +51,11 @@ import leader8 from "./leader8.png";
 
 import responseHeroImage from "./responseHeroImg.jpg";
 import FlyingPaperPlane from "./FlyingPaperPlane.png";
+import googleIcon from "./google-icon.png";
+import githubIcon from "./github-icon.png";
+import penIcon from "./pen.png";
+import emailIcon from "./email.png";
+import lockIcon from "./lock.png";
 
 export {
   hero2,
@@ -98,5 +103,10 @@ export {
   leader7,
   leader8,
   responseHeroImage,
-  FlyingPaperPlane 
+  FlyingPaperPlane,
+  googleIcon,
+  githubIcon,
+  penIcon,
+  emailIcon,
+  lockIcon,
 };
