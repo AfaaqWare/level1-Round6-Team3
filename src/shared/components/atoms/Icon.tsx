@@ -5,7 +5,7 @@ import { Icon as IconifyIcon } from "@iconify/react";
 export interface BaseIconProps {
   size?: "xs" | "sm" | "md" | "lg" | "xl" | number;
   variant?: "primary" | "secondary" | "alt" | "disabled" | "white";
-  color?: "primary" | "secondary" | "alt" | "disabled" | "white" | string;
+  color?: "primary" | "secondary" | "alt" | "disabled" | "white" | string | "primaryWhite";
   className?: string;
   onClick?: () => void;
   style?: React.CSSProperties;
@@ -37,6 +37,7 @@ const variants: Record<string, string> = {
   alt: "ds-text-alt",
   disabled: "ds-text-disabled",
   white: "ds-text-white",
+  primaryWhite:"text-white"
 };
 
 export default function Icon({

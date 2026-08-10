@@ -65,6 +65,7 @@ if(!result.success){
       </Title>
 
       <Input
+      className="mt-[10px] rounded-md"
         id="fullName"
         name="fullName"
         label={t("fullName.label")}
@@ -73,6 +74,8 @@ if(!result.success){
       errorMessage={errors.fullName}
       />
       <Input
+            className="mt-[10px] rounded-md"
+
         id="email"
         name="email"
         type="email"
@@ -82,6 +85,8 @@ if(!result.success){
       errorMessage={errors.email}
       />
       <Input
+            className="mt-[10px] rounded-md"
+
         id="subject"
         name="subject"
         label={t("subject.label")}
@@ -90,6 +95,8 @@ if(!result.success){
       errorMessage={errors.subject}
       />
       <Textarea
+            className="mt-[10px] rounded-md"
+
         id="message"
         name="message"
         label={t("message.label")}
@@ -99,7 +106,7 @@ if(!result.success){
       errorMessage={errors.message}
       />
 
-      <ContactButton label={t("submit")} />
+      <ContactButton label={t("submit")}  />
     </form>
   );
 };
