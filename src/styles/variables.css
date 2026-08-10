@@ -4,6 +4,10 @@
 
 @layer theme {
   :root {
+    /* buttons */
+    --button-form-width: 480px;
+    --button-form-height: 40px;
+
     /* Brand Colors */
     --color-primary: #00b7c1;
     --color-primary-200: #dbf8fa;
@@ -16,25 +20,35 @@
     --color-bg-alt: #ffffff;
     --color-bg-card: #ffffff;
     --color-form: #eff0f3;
+    --color-bg-survyForm: #f6fbfc;
+    --color-text-panel: #ffffff;
+    --color-bg-disabled: #eff0f3;
 
     /* Text Colors */
     --color-text-primary: #1e1f24;
     --color-text-secondary: #62636c;
     --color-text-disabled: #80828d;
     --color-text-faqcard: #1e1f24;
+    --color-error: #ef4444;
 
     /* Dark Mode */
     --color-bg-dark: #1e2021;
     --color-bg-alt-dark: #161819;
     --color-form-dark: #222325;
     --color-bg-card-dark: #181a1b;
+    --color-bg-disabled-dark: #161819;
     --color-text-primary-dark: #eeeef0;
     --color-text-secondary-dark: #b2b3bd;
     --color-text-disabled-dark: #a2a4b0;
+    --color-error-dark: #f87171;
     --color-primary-200-dark: #a0e4ef;
+    --color-text-panel-dark: #000;
+    --color-primary-button-dark: #00d1dc;
     --color-text-faqcard-dark: #b2b3bd;
+    --border-color-dark: #2b3c3f;
     --border-color-card-dark: #2e2e2e;
     --color-primary-300-dark: #1e2021;
+    --color-bg-survyForm-dark: #2b3c3f;
 
     /* Borders */
     --border-width-sm: 1px;
@@ -81,14 +95,12 @@
     --title-md: clamp(1.5rem, 1.2rem + 1.5vw, 2rem); /* 24 → 32px */
     --title-sm: clamp(1.25rem, 1.1rem + 0.7vw, 1.5rem);
 
+    --text-xs: 0.75rem;
     --text-sm: 0.875rem;
     --text-base: 1rem;
     --text-md: clamp(1rem, 0.95rem + 0.3vw, 1.2rem);
     --text-lg: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
     --text-xl: clamp(2rem, 1.4rem + 3vw, 3rem);
-
-    --font-regular: 400;
-    --font-bold: 700;
 
     /* Line Heights */
     --leading-tight: 1.2;
@@ -111,8 +123,9 @@
     --ease-out: ease-out;
 
     /* font-weight */
-    --font-bold: 500;
-    --font-extrabold: 600;
+    --font-regular: 400;
+    --font-bold: 700;
+    --font-extrabold: 900;
   }
 
   /* Dark Variant */
@@ -120,11 +133,14 @@
     --color-bg: var(--color-bg-dark);
     --color-bg-alt: var(--color-bg-alt-dark);
     --color-bg-card: var(--color-bg-card-dark);
+    --color-bg-disabled: var(--color-bg-disabled-dark);
     --color-text: var(--color-text-dark);
     --color-form: var(--color-form-dark);
     --color-text-primary: var(--color-text-primary-dark);
     --color-text-secondary: var(--color-text-secondary-dark);
     --color-text-disabled: var(--color-text-disabled-dark);
+    --color-text-panel: var(--color-text-panel-dark);
+    --color-error: var(--color-error-dark);
     --color-primary-200: var(--color-primary-200-dark);
     --color-text-faqcard: var(--color-text-faqcard-dark);
     --shadow-sm: 0 1px 3px rgba(233, 227, 227, 0.12);
@@ -132,7 +148,9 @@
     --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.2);
     --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.25);
     --border-color-card: var(--border-color-card-dark);
+    --border-color: var(--border-color-dark);
     --border-color-alt: var(--border-color-alt-dark);
     --color-primary-200: #a0e4ef;
+    --color-bg-survyForm: var(--color-bg-survyForm-dark);
   }
 }

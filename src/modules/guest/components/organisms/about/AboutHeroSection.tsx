@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
-import HeroSection from "@/shared/components/organisms/Herosection";
+import HeroSection from "@/shared/components/organisms/HeroSection";
 import Title from "@/shared/components/atoms/Title";
 import Text from "@/shared/components/atoms/Text";
 import Buttons from "@/shared/components/molecules/Buttons";
 import Button from "@/shared/components/atoms/Button";
-import { hero2 } from "@/assets/images/images";
+import { Heroimage2 } from "@/assets/images/images";
 import { useTranslations } from "next-intl";
 
 interface Props {
@@ -15,7 +15,7 @@ interface Props {
 export default function Herosection2({ className = "" }: Props) {
   const t = useTranslations("publicPages.about.heroSection");
   return (
-    <HeroSection className={className} src={hero2} imgHeight={600} imgWidth={600}>
+    <HeroSection className={className} src={Heroimage2} imgHeight={600} imgWidth={600}>
       <div className="flex flex-col gap-5">
         <Title
           variant="primary"

@@ -1,7 +1,7 @@
-import React from "react";
+import ForgetPasswordSection from "@/modules/auth/components/forget-password/ForgetPasswordSection";
 
-function page() {
-  return <div>forget password</div>;
+function ForgetPasswordPage() {
+  return <ForgetPasswordSection />;
 }
 
-export default page;
+export default ForgetPasswordPage;

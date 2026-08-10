@@ -133,6 +133,13 @@
     border-color: var(--border-color-muted);
   }
 
+  .ds-border-input {
+    border-color: var(--border-color-muted);
+  }
+  .dark .ds-border-input {
+    border-color: transparent;
+  }
+
   .ds-border-focus {
     border-color: var(--border-color-focus);
   }
@@ -211,6 +218,11 @@
     font-weight: var(--font-extrabold);
   }
 
+  .ds-text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--leading-normal);
+  }
+
   .ds-text-sm {
     font-size: var(--text-sm);
     line-height: var(--leading-normal);
@@ -282,4 +294,7 @@
     opacity: var(--opacity-disabled);
     pointer-events: none;
   }
+}
+input[type="password"]::-ms-reveal {
+  display: none;
 }

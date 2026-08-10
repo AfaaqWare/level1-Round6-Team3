@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import PublicLayout from "@/shared/components/Layout/PublicLayout";
-import Herosection from "@/shared/components/organisms/Herosection";
-import HeroSection1 from "@/shared/components/organisms/HeroSection1";
-import ContentHeroection2 from "@/shared/components/molecules/ContentHeroection2";
+import HomeHeroSection from "@/modules/guest/components/organisms/home/HomeHeroSection";
+import WorkStepsSection from "@/modules/guest/components/organisms/home/WorkStepsSection";
 import PopularTemplates from "@/modules/guest/components/organisms/home/PopularTemplates";
+import HeroSection1 from "@/shared/components/organisms/HeroSection1";
+import Cardsection from "@/shared/components/organisms/Cardsection";
+import PricingSection from "@/modules/guest/components/organisms/home/PricingSection";
 import { getSeoMetadata } from "@/core/seo/getSeoMetadata";
 
 export const metadata: Metadata = getSeoMetadata({
@@ -15,18 +17,11 @@ export const metadata: Metadata = getSeoMetadata({
 export default function Page() {
   return (
     <PublicLayout>
-      <Herosection
-        content={
-          <ContentHeroection2
-            title="Turn Questions into Clarity and Transform Responses into Valuable Insights"
-            text="Effortlessly build surveys that deliver the answers you need to grow, improve, and connect with your audience."
-            btn1="Create Your Survey"
-            btn2="See How It Works"
-          />
-        }
-      />
-      <HeroSection1 />
+      <HomeHeroSection />
+      <WorkStepsSection />
       <PopularTemplates />
+      <Cardsection />
+      <PricingSection />
     </PublicLayout>
   );
 }

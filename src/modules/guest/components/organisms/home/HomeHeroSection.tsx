@@ -1,5 +1,5 @@
 "use client";
-import HeroSection from "@/shared/components/organisms/Herosection";
+import HeroSection from "@/shared/components/organisms/HeroSection";
 import { homehero } from "@/assets/images/images";
 import Title from "@/shared/components/atoms/Title";
 import Text from "@/shared/components/atoms/Text";
@@ -18,7 +18,7 @@ const HomeHeroSection = () => {
         </Title>
 
         <Text size="md" variant="secondary" className="text-justify md:w-[60%]">
-          {t("describtion")}
+          {t("description")}
         </Text>
 
         <ButtonGroup

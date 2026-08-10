@@ -1,4 +1,4 @@
-import { ArrowRight } from "@/assets/icons/icons";
+import { ArrowRight } from "lucide-react";
 import Icon from "@/shared/components/atoms/Icon";
 import Text from "@/shared/components/atoms/Text";
 import Title from "@/shared/components/atoms/Title";

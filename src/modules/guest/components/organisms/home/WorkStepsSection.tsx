@@ -2,12 +2,13 @@
 import Heading from "../../molecules/Home/Heading";
 import StepCard from "../../molecules/Home/StepCard";
 import { useTranslations } from "next-intl";
+import { steps } from "../../../utils/data";
 
 export default function WorkStepsSection() {
   const t = useTranslations("publicPages.home.howItWorksSection");
 
   return (
-    <div className="ds-container mt-20">
+    <div className="ds-container my-3 flex min-h-[90vh] flex-col justify-center md:my-1 md:min-h-0 md:justify-center">
       <Heading
         title={t("Heading.title")}
         highlightText={t("Heading.highlightText")}
@@ -15,11 +16,9 @@ export default function WorkStepsSection() {
       />
 
       <div className="mt-12 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
-        <StepCard title={t("StepCard1.title")} text={t("StepCard1.text")} />
-
-        <StepCard title={t("StepCard2.title")} text={t("StepCard2.text")} />
-
-        <StepCard title={t("StepCard3.title")} text={t("StepCard3.text")} />
+        {steps.map(step => (
+          <StepCard key={step.id} title={t(step.titleKey)} description={t(step.descriptionKey)} />
+        ))}
       </div>
     </div>
   );

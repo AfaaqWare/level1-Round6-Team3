@@ -1,14 +1,14 @@
 "use client";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { useLocale } from "next-intl";
+import { authGuardsDisabled } from "./authGuards";
 export default function OTPGuard({ children }: { children: React.ReactNode }) {
   const router = useRouter();
-  const Locale = useLocale();
   useEffect(() => {
+    if (authGuardsDisabled) return;
     const email = sessionStorage.getItem("resetEmail");
-    if (!email) router.replace(`/${Locale}/forget-password`);
-  }, [router, Locale]);
+    if (!email) router.replace("/forget-password");
+  }, [router]);
 
   return <>{children}</>;
 }

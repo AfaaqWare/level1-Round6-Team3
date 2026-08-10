@@ -17,21 +17,22 @@ export default function QuestionBox({
   children,
 }: QuestionBoxProps) {
   return (
-    <div
+    <article
       className={cn(
-        "ds-bg-card ds-shadow-card ds-border-card !mx-auto !my-5 flex flex-col gap-2 ds-rounded-xl !px-4 !pt-4 !pb-8",
+        "ds-bg-card ds-border-sm ds-rounded-lg mx-auto flex h-auto w-full min-w-0 flex-col gap-[var(--space-xl)] px-[var(--space-md)] py-[var(--space-xl)] text-start shadow-[0_var(--space-sm)_var(--space-sm)_rgba(0,0,8,0.08)] dark:shadow-[0_var(--space-sm)_var(--space-sm)_color-mix(in_srgb,var(--color-text-primary)_6%,transparent)]",
         className
       )}
+      style={{ borderColor: "var(--border-color-card)" }}
     >
-      <Title variant="alt" size="md" className="ds-text-heading font-medium">
+      <Title variant="alt" size="md" className="font-medium">
         {title}
       </Title>
 
-      <Text size="base" className="ds-text-faqcard ds-text-heading font-normal">
+      <Text size="md" className="ds-text-faqcard font-normal">
         {text}
       </Text>
 
       {children}
-    </div>
+    </article>
   );
 }
