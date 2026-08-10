@@ -2,8 +2,16 @@ import React from "react";
 import { cn } from "@/lib/cn";
 
 interface Props {
-  variant?: "primary" | "secondary" | "outline" | "outline1" | "ghost" | "primary200" | "disabled" | "white" ;
-  size?: "sm" | "md" | "lg";
+  variant?:
+    | "primary"
+    | "secondary"
+    | "outline"
+    | "outline1"
+    | "ghost"
+    | "primary200"
+    | "disabled"
+    | "white";
+  size?: "sm" | "md" | "lg" | "form";
   className?: string;
   children: React.ReactNode;
   onClick?: () => void;
@@ -34,6 +42,7 @@ export default function Button({
     sm: "px-[var(--space-md)] py-[var(--space-xs)] ds-text-sm",
     md: "px-[var(--space-xl)] py-[var(--space-sm)] ds-text-base",
     lg: "px-[var(--space-3xl)] py-[var(--space-md)] ds-text-md",
+    form: "h-[40px] md:w-[395px] ds-text-base",
   };
 
   const variants = {

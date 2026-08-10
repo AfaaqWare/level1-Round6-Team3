@@ -77,9 +77,8 @@ export default function OTPActions({ otp, setOtp, resetTimer, email, timer }: OT
         type="button"
         onClick={handleVerify}
         disabled={loading || timer === 0}
-        size="md"
+        size="form"
         variant="primary"
-        className="h-[40px] w-full max-w-[408px]"
       >
         {loading ? "Verifying..." : "Verify"}
       </Button>
@@ -88,9 +87,9 @@ export default function OTPActions({ otp, setOtp, resetTimer, email, timer }: OT
         type="button"
         onClick={handleResend}
         disabled={resending}
-        size="md"
+        size="form"
         variant="outline"
-        className="mt-4 h-[40px] w-full max-w-[408px]"
+        className="mt-4"
       >
         {resending ? "Sending..." : "Send again"}
       </Button>
