@@ -133,6 +133,13 @@
     border-color: var(--border-color-muted);
   }
 
+  .ds-border-input {
+    border-color: var(--border-color-muted);
+  }
+  .dark .ds-border-input {
+    border-color: transparent;
+  }
+
   .ds-border-focus {
     border-color: var(--border-color-focus);
   }
@@ -287,4 +294,7 @@
     opacity: var(--opacity-disabled);
     pointer-events: none;
   }
+}
+input[type="password"]::-ms-reveal {
+  display: none;
 }
