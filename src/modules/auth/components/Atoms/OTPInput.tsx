@@ -30,7 +30,7 @@ export default function OTPInput({ otp, setOtp }: OTPInputProps) {
   };
 
   return (
-    <div className="flex justify-center gap-3">
+    <div className="mx-auto grid grid-cols-6 gap-[var(--space-sm)]">
       {otp.map((digit, index) => (
         <input
           key={index}
@@ -42,7 +42,8 @@ export default function OTPInput({ otp, setOtp }: OTPInputProps) {
           onKeyDown={e => handleKeyDown(e, index)}
           maxLength={1}
           inputMode="numeric"
-          className="h-14 w-14 rounded-lg border border-gray-200 bg-white text-center text-3xl text-gray-800 shadow-sm transition outline-none focus:border-[#08b3bd] focus:ring-2 focus:ring-[#08b3bd]/20"
+          aria-label={`OTP digit ${index + 1}`}
+          className="aspect-square min-w-0 rounded-lg border border-gray-200 bg-white text-center text-3xl text-gray-800 shadow-sm transition outline-none focus:border-[#08b3bd] focus:ring-2 focus:ring-[#08b3bd]/20"
         />
       ))}
     </div>

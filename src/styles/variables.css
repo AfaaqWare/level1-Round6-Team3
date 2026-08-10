@@ -4,6 +4,10 @@
 
 @layer theme {
   :root {
+    /* buttons */
+    --button-form-width: 480px;
+    --button-form-height: 40px;
+
     /* Brand Colors */
     --color-primary: #00b7c1;
     --color-primary-200: #dbf8fa;

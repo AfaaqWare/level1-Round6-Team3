@@ -4,7 +4,7 @@ import Title from "@/shared/components/atoms/Title";
 export default function OTPHeader() {
   return (
     <div className="text-center">
-      <Title size="xl" isCenter className="w-full text-center whitespace-nowrap">
+      <Title size="xl" isCenter className="text-center md:whitespace-nowrap">
         Verify Your OTP for Register
       </Title>
 
