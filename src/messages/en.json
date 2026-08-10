@@ -112,12 +112,18 @@
         "forgotPassword": "Forgot password?",
         "cta": "SIGN IN",
         "pendingSignIn": "Signing in...",
-        "invalidCredentials": "Invalid email or password",
         "toast": { "loginSuccess": "Login successful", "loginFailed": "Login failed" },
         "schema": {
           "emailRequired": "Email is required",
           "invalidEmail": "Please enter a valid email",
           "passwordRequired": "Password is required"
+        },
+        "errors": {
+          "invalidCredentials": "Invalid email or password.",
+          "serverError": "Something went wrong on the server. Please try again later.",
+          "networkError": "Unable to connect to the server. Please check your internet connection and try again.",
+          "tooManyRequests": "Too many login attempts. Please try again later.",
+          "genericError": "An unexpected error occurred. Please try again."
         }
       },
       "done": {

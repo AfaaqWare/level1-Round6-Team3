@@ -77,8 +77,9 @@ export default function SignInForm({
         <Button
           type="submit"
           isRounded
-          className="mx-auto mt-5 w-fit font-semibold text-nowrap sm:px-16"
+          className="mx-auto mt-5 font-semibold text-nowrap sm:px-16 md:w-fit"
           disabled={isPending}
+          isFullWidth
         >
           {isPending ? t("pendingSignIn") : t("cta")}
         </Button>

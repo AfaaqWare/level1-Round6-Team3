@@ -3,11 +3,12 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useLocale, useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
-import { toast } from "sonner";
 import SignInForm from "./SignInForm";
 import { useSignIn } from "@/modules/auth/hooks/useSignIn";
 import { signInSchema, type SignInFormData } from "@/validator/authValidation";
 import { useEffect } from "react";
+import { showToast } from "@/shared/utils/toast";
+import { useSignInError } from "@/modules/auth/hooks/useSignInError";
 
 export default function SignInFormContainer() {
   const t = useTranslations("auth.forms.signIn");
@@ -34,17 +35,25 @@ export default function SignInFormContainer() {
   }, [locale]);
 
   const signInMutation = useSignIn();
+  const errorMessage = useSignInError(signInMutation.error);
 
   const onSubmit = (data: SignInFormData) => {
     signInMutation.reset();
 
     signInMutation.mutate(data, {
       onSuccess: () => {
-        toast.success(t("toast.loginSuccess"));
-        signInMutation.reset();
+        showToast({
+          type: "success",
+          message: t("toast.loginSuccess"),
+          locale,
+        });
       },
       onError: () => {
-        toast.error(t("toast.loginFailed"));
+        showToast({
+          type: "error",
+          message: t("toast.loginFailed"),
+          locale,
+        });
       },
     });
   };
@@ -57,7 +66,7 @@ export default function SignInFormContainer() {
       password={watch("password")}
       onSubmit={handleSubmit(onSubmit)}
       isPending={signInMutation.isPending}
-      errorMessage={signInMutation.isError ? t("invalidCredentials") : undefined}
+      errorMessage={errorMessage}
     />
   );
 }

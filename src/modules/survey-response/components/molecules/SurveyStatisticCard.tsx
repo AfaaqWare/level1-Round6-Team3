@@ -15,7 +15,7 @@ type SurveyStatisticCardProps = {
 };
 
 const variantClasses: Record<StatisticVariant, string> = {
-  primary: "ds-text-alt",
+  primary: "!text-[var(--color-primary)]",
   secondary: "!text-[#D28913]",
 };
 
@@ -29,7 +29,7 @@ export default function SurveyStatisticCard({
   return (
     <article
       className={cn(
-        "ds-bg-card ds-rounded-xl flex items-center gap-2 px-1 py-2 md:gap-6 md:px-3 md:py-4",
+        "ds-bg-card ds-rounded-lg flex items-center gap-2 px-2 py-2 md:gap-6 md:px-3 md:py-4",
         className
       )}
     >

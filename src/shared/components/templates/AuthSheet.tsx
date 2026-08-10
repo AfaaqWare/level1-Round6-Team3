@@ -21,8 +21,8 @@ export default function AuthSheet({ title, subtitle, ctaLabel, ctaHref }: AuthSh
             {subtitle}
           </Text>
         )}
-        <Link href={ctaHref}>
-          <Button variant="panel" isRounded>
+        <Link className="w-full md:w-fit" href={ctaHref}>
+          <Button isFullWidth variant="panel" isRounded>
             {ctaLabel}
           </Button>
         </Link>
