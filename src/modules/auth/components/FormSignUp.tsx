@@ -57,14 +57,7 @@ export default function FormSignUp() {
       { email: data.email, password: data.password, name: data.name },
       {
         onSuccess: () => {
-          Swal.fire({
-            icon: "success",
-            title: t("success.title"),
-            text: t("success.message"),
-            confirmButtonColor: "#3085d6",
-          }).then(() => {
-            resetFlow.start(data.email);
-          });
+          resetFlow.start(data.email);
         },
         onError: (err) => {
           const msg =
