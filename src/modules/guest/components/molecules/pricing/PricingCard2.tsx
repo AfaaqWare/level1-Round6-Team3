@@ -92,7 +92,7 @@ export default function PricingCard2({
         </ul>
       </div>
 
-      <Button size="md" fullWidth isRounded variant={highlighted ? "white" : "primary"}>
+      <Button size="md" isFullWidth isRounded variant={highlighted ? "white" : "primary"}>
         {buttonText}
       </Button>
     </div>

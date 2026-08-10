@@ -11,9 +11,10 @@ export const signUpSchema = z
     password: z
       .string()
       .min(1, { message: "passwordRequired" })
-      .min(8, { message: "passwordMinLength" })
-      .refine((value) => /[A-Z]/.test(value), { message: "passwordUppercase" })
-      .refine((value) => /[a-z]/.test(value), { message: "passwordLowercase" })
+      .min(8, { message: "passwordLength" })
+      .max(14, { message: "passwordLength" })
+      .refine((value) => /^[A-Za-z0-9]+$/.test(value), { message: "passwordAlphanumeric" })
+      .refine((value) => /[A-Za-z]/.test(value), { message: "passwordLetter" })
       .refine((value) => /\d/.test(value), { message: "passwordNumber" }),
     confirmPassword: z.string().min(1, { message: "confirmPasswordRequired" }),
     terms: z.boolean().refine((value) => value === true, { message: "termsRequired" }),
