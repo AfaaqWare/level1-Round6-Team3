@@ -57,7 +57,7 @@ export default function FormSignUp() {
       { email: data.email, password: data.password, name: data.name },
       {
         onSuccess: () => {
-          resetFlow.start(data.email);
+          resetFlow.start(data.email, "register");
         },
         onError: (err) => {
           const msg =

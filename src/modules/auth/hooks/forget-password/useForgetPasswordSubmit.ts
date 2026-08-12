@@ -19,7 +19,7 @@ export function useForgetPasswordSubmit() {
     mutate(values, {
       onSuccess: () => {
         setIsNavigating(true);
-        start(values.email);
+        start(values.email, "reset");
       },
       onError: error => {
         const apiMessage = isAxiosError<ApiErrorResponse>(error)

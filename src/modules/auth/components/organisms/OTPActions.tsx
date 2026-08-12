@@ -1,10 +1,11 @@
 "use client";
 
 import { Dispatch, SetStateAction, useState } from "react";
-import { useRouter } from "next/navigation";
+import Swal from "sweetalert2";
 
 import { resendOtp, verifyOtp } from "../../api/apiOTP";
 import Button from "@/shared/components/atoms/Button";
+import { useResetFlow } from "../../guards/useResetFlow";
 
 interface OTPActionsProps {
   otp: string[];
@@ -15,7 +16,7 @@ interface OTPActionsProps {
 }
 
 export default function OTPActions({ otp, setOtp, resetTimer, email, timer }: OTPActionsProps) {
-  const router = useRouter();
+  const { flow, verifyOTP, finish } = useResetFlow();
 
   const [loading, setLoading] = useState(false);
   const [resending, setResending] = useState(false);
@@ -33,6 +34,12 @@ export default function OTPActions({ otp, setOtp, resetTimer, email, timer }: OT
       return;
     }
 
+    // Reset flow: OTP is validated when submitting the new password
+    if (flow === "reset") {
+      verifyOTP(code);
+      return;
+    }
+
     try {
       setLoading(true);
 
@@ -43,9 +50,20 @@ export default function OTPActions({ otp, setOtp, resetTimer, email, timer }: OT
 
       console.log("OTP verified:", response);
 
-      router.push("/done");
+      if (typeof window !== "undefined") {
+        sessionStorage.setItem("otpVerified", "true");
+      }
+      finish();
     } catch (error) {
       console.error("OTP verification failed:", error);
+      const msg =
+        (error as { response?: { data?: { message?: string } } })?.response?.data?.message ||
+        "Verification failed. Please try again.";
+      Swal.fire({
+        icon: "error",
+        title: "Verification failed",
+        text: msg,
+      });
     } finally {
       setLoading(false);
     }

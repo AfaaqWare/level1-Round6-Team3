@@ -1,12 +1,15 @@
 "use client";
 import { useRouter } from "next/navigation";
 
+export type ResetFlowType = "register" | "reset";
+
 export const useResetFlow = () => {
   const router = useRouter();
 
-  const start = (email: string) => {
+  const start = (email: string, flow: ResetFlowType = "reset") => {
     if (typeof window !== "undefined") {
       sessionStorage.setItem("resetEmail", email);
+      sessionStorage.setItem("resetFlow", flow);
     }
     router.push(`/otp-verify?email=${encodeURIComponent(email)}`);
   };
@@ -30,6 +33,7 @@ export const useResetFlow = () => {
       sessionStorage.removeItem("resetEmail");
       sessionStorage.removeItem("otpVerified");
       sessionStorage.removeItem("resetOtp");
+      sessionStorage.removeItem("resetFlow");
     }
   };
 
@@ -39,6 +43,10 @@ export const useResetFlow = () => {
     typeof window !== "undefined" && Boolean(sessionStorage.getItem("otpVerified"));
   const email = typeof window !== "undefined" ? sessionStorage.getItem("resetEmail") || "" : "";
   const otp = typeof window !== "undefined" ? sessionStorage.getItem("resetOtp") || "" : "";
+  const flow: ResetFlowType =
+    typeof window !== "undefined"
+      ? (sessionStorage.getItem("resetFlow") as ResetFlowType) || "reset"
+      : "reset";
 
-  return { start, verifyOTP, finish, cleanup, isEmailEntered, isOtpVerified, email, otp };
+  return { start, verifyOTP, finish, cleanup, isEmailEntered, isOtpVerified, email, otp, flow };
 };
