@@ -26,8 +26,9 @@ export default function Text({
     primary: "ds-text-primary",
     disabled: "ds-text-disabled",
     secondary: "ds-text-secondary",
-    alt: "ds-text-alt",
-    white: "ds-text-white",
+    alt: "ds-text-alt ",
+    white: "text-white",
+    
   };
   return (
     <p className={cn(variants[variant], sizes[size], isCenter ? "text-center" : "", className)}>

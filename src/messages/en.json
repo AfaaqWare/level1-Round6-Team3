@@ -51,9 +51,9 @@
         "emailInvalid": "Enter a valid e-mail address",
         "emailExists": "This e-mail is already registered",
         "passwordRequired": "Password is required",
-        "passwordMinLength": "Password must be at least 8 characters",
-        "passwordUppercase": "Password must contain at least one uppercase letter",
-        "passwordLowercase": "Password must contain at least one lowercase letter",
+        "passwordLength": "Password must be 8 to 14 characters",
+        "passwordAlphanumeric": "Password may only contain letters and numbers",
+        "passwordLetter": "Password must contain at least one letter",
         "passwordNumber": "Password must contain at least one number",
         "confirmPasswordRequired": "Confirm Password is required",
         "passwordsMustMatch": "Passwords must match",
@@ -633,8 +633,14 @@
           "id": "basic",
           "title": "Basic",
           "description": "Create interactive forms that connect to your workflow",
-          "price": "$25",
-          "period": "/monthly",
+          "monthly": {
+            "price": "$25",
+            "period": "/monthly"
+          },
+          "yearly": {
+            "price": "$250",
+            "period": "/yearly"
+          },
           "featuresTitle": "What's included",
           "features": ["100 responses", "1 user", "Unlimited SurveyLand", "Unlimited questions"],
           "button": "Choose plan",
@@ -644,8 +650,14 @@
           "id": "plus",
           "title": "Plus",
           "description": "Make your forms more beautiful and on-brand",
-          "price": "$50",
-          "period": "/monthly",
+          "monthly": {
+            "price": "$50",
+            "period": "/monthly"
+          },
+          "yearly": {
+            "price": "$500",
+            "period": "/yearly"
+          },
           "featuresTitle": "What's included",
           "features": ["1,000 responses", "3 users", "Everything in Basic", "Drop-off rates"],
           "button": "Choose plan",
@@ -655,8 +667,14 @@
           "id": "business",
           "title": "Business",
           "description": "Analyze performance and get more out of your data",
-          "price": "$83",
-          "period": "/monthly",
+          "monthly": {
+            "price": "$83",
+            "period": "/monthly"
+          },
+          "yearly": {
+            "price": "$700",
+            "period": "/yearly"
+          },
           "featuresTitle": "What's included",
           "features": ["10,000 responses", "5 users", "Everything in Plus", "Conversion tracking"],
           "button": "Choose plan",

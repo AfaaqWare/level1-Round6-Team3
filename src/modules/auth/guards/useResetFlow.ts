@@ -8,7 +8,7 @@ export const useResetFlow = () => {
     if (typeof window !== "undefined") {
       sessionStorage.setItem("resetEmail", email);
     }
-    router.push("/otp-verify");
+    router.push(`/otp-verify?email=${encodeURIComponent(email)}`);
   };
 
   const verifyOTP = (otp?: string) => {

@@ -12,6 +12,9 @@ import useOtpEmail from "../hooks/otp-verify/useOtpEmail";
 export default function FormOTP() {
   const { email } = useOtpEmail();
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
+  const emailFallback =
+    typeof window !== "undefined" ? sessionStorage.getItem("resetEmail") || "" : "";
+  const email = emailProp || emailFallback;
 
   const { timer, resetTimer } = useOTPTimer();
 
