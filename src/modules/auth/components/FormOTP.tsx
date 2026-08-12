@@ -2,19 +2,18 @@
 
 import { useState } from "react";
 
+// Components
 import OTPHeader from "./molecules/OTPHeader";
 import OTPInput from "./Atoms/OTPInput";
 import OTPTimer from "./molecules/OTPTimer";
 import OTPActions from "./organisms/OTPActions";
-
+// Hooks
 import useOTPTimer from "../hooks/useOTPTimer";
 import useOtpEmail from "../hooks/otp-verify/useOtpEmail";
+
 export default function FormOTP() {
   const { email } = useOtpEmail();
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
-  const emailFallback =
-    typeof window !== "undefined" ? sessionStorage.getItem("resetEmail") || "" : "";
-  const email = emailProp || emailFallback;
 
   const { timer, resetTimer } = useOTPTimer();
 

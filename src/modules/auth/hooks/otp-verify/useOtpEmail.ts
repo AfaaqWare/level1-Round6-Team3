@@ -4,7 +4,7 @@ export default function useOtpEmail() {
   const [email, setEmail] = useState("");
 
   useEffect(() => {
-    const storedEmail = sessionStorage.getItem("email");
+    const storedEmail = sessionStorage.getItem("resetEmail");
 
     if (storedEmail) {
       setEmail(storedEmail);
