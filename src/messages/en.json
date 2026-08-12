@@ -83,14 +83,14 @@
     },
     "otp": {
       "digits": "6-digit verification code",
-      "digit": "Digit {position} of {total}"
+      "digit": "Digit {position} of {total}",
+      "verify": "Verify Your OTP for Register",
+      "description": "We’ve sent a 6-digit code to your email, Please enter it below to verify your account"
     },
     "verify": {
       "title": "Verify Your OTP",
       "description": "We’ve sent a 6-digit code to your email, Please enter it below to verify your account"
     },
-    "new-password": {},
-    "done": {},
     "forget-password": {
       "title": "Forgot Password?",
       "subtitle": "Don't worry, we'll help you reset it.",
