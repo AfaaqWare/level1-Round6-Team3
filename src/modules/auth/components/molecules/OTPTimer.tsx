@@ -1,5 +1,4 @@
 import Text from "@/shared/components/atoms/Text";
-
 interface OTPTimerProps {
   timer: number;
 }
