@@ -20,7 +20,6 @@ export default function Page() {
       <HomeHeroSection />
       <WorkStepsSection />
       <PopularTemplates />
-      <HeroSection1 />
       <Cardsection />
       <PricingSection />
     </PublicLayout>

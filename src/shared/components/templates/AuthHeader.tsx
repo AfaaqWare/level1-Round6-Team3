@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import Logo from "@/shared/components/atoms/Logo";
+import Button from "@/shared/components/atoms/Button";
 import { authSheetRoutes } from "@/shared/utils/routes";
 
 interface Props {
@@ -31,7 +32,18 @@ export default function AuthHeader({ showCta = true }: Props) {
             </Link>
           </p>
         )}
+        {!route && (
+          <div className="hidden md:flex items-center gap-3">
+            <Link href="/sign-in" className="ds-text-primary font-medium ds-text-base hover:opacity-80 transition-opacity">
+              {t("loginBtn")}
+            </Link>
+            <Link href="/sign-up">
+              <Button size="md">{t("signUpBtn")}</Button>
+            </Link>
+          </div>
+        )}
       </div>
     </header>
   );
 }
+

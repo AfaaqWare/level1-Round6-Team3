@@ -16,7 +16,7 @@ export default function SurveySubmissionPanel({
   const t = useTranslations("surveyResponse.SurveySubmission");
 
   return (
-    <div className="flex flex-wrap items-center justify-between gap-3 rounded-b-xl border border-[var(--border-color)] bg-[var(--color-bg-survyForm)] px-5 py-7">
+    <div className="flex flex-col flex-wrap items-center justify-between gap-4 rounded-b-xl border border-[var(--border-color)] bg-[var(--color-bg-survyForm)] px-4 py-7 sm:flex-row">
       <div className="grid grid-cols-2 gap-3">
         <SurveyStatisticCard
           icon={CalendarDays}
