@@ -31,7 +31,10 @@
       "digit": "Digit {position} of {total}"
     },
     "forget-password": {},
-    "verify": {},
+    "verify": {
+      "title": "Verify Your OTP",
+      "description": "We’ve sent a 6-digit code to your email, Please enter it below to verify your account"
+    },
     "new-password": {},
     "done": {}
   },
