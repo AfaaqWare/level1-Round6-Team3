@@ -8,12 +8,9 @@ import OTPTimer from "./molecules/OTPTimer";
 import OTPActions from "./organisms/OTPActions";
 
 import useOTPTimer from "../hooks/useOTPTimer";
-
-interface FormOTPProps {
-  email: string;
-}
-
-export default function FormOTP({ email: emailProp }: FormOTPProps) {
+import useOtpEmail from "../hooks/otp-verify/useOtpEmail";
+export default function FormOTP() {
+  const { email } = useOtpEmail();
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
   const emailFallback =
     typeof window !== "undefined" ? sessionStorage.getItem("resetEmail") || "" : "";
