@@ -19,6 +19,8 @@ import {
   Send,
   Lock,
   LoaderCircle,
+  Bell
+  
 } from "lucide-react";
 
 type IconProps = Omit<ComponentProps<typeof Icon>, "icon">;
@@ -57,4 +59,5 @@ export {
   FcGoogle,
   Lock,
   LoaderCircle,
+ Bell
 };
