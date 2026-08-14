@@ -19,8 +19,16 @@ import {
   Send,
   Lock,
   LoaderCircle,
-  Bell
-  
+  Bell,
+  BarChart3,
+  ClipboardList,
+  SquarePlus,
+  FolderOpen,
+  Upload,
+  Trash2,
+  Phone,
+  Globe,
+  Languages,
 } from "lucide-react";
 
 type IconProps = Omit<ComponentProps<typeof Icon>, "icon">;
@@ -59,5 +67,14 @@ export {
   FcGoogle,
   Lock,
   LoaderCircle,
- Bell
+  Bell,
+  BarChart3,
+  ClipboardList,
+  SquarePlus,
+  FolderOpen,
+  Upload,
+  Trash2,
+  Phone,
+  Globe,
+  Languages,
 };
