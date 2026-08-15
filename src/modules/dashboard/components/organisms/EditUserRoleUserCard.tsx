@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl";
+
 import type { DashboardUser } from "@/modules/dashboard/utils/users";
 import EditUserRoleInfoRow from "@/modules/dashboard/components/molecules/EditUserRoleInfoRow";
 import AppImage from "@/shared/components/atoms/Image";
@@ -8,6 +10,8 @@ type EditUserRoleUserCardProps = {
 };
 
 export default function EditUserRoleUserCard({ user }: EditUserRoleUserCardProps) {
+  const t = useTranslations("dashboard.editUserRole");
+
   return (
     <section className="ds-bg-card ds-border-card w-full max-w-[680px] rounded-[var(--radius-lg)] p-[var(--space-xl)] shadow-sm">
       <div className="flex flex-col gap-[var(--space-lg)] sm:flex-row sm:items-center">
@@ -30,8 +34,8 @@ export default function EditUserRoleUserCard({ user }: EditUserRoleUserCardProps
           </Text>
 
           <div className="mt-[var(--space-lg)] grid gap-[var(--space-md)] sm:grid-cols-2">
-            <EditUserRoleInfoRow label="Email" value={user.email} />
-            <EditUserRoleInfoRow label="Role" value={user.role} />
+            <EditUserRoleInfoRow label={t("fields.email")} value={user.email} />
+            <EditUserRoleInfoRow label={t("fields.role")} value={user.role} />
           </div>
         </div>
       </div>

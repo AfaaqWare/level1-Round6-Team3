@@ -700,6 +700,32 @@
       "title": "Survey Questions"
     }
   },
+  "dashboard": {
+    "editUserRole": {
+      "fields": {
+        "email": "Email",
+        "role": "Role"
+      },
+      "roleManagement": {
+        "title": "Role Management"
+      },
+      "roles": {
+        "user": "User",
+        "editor": "Editor",
+        "admin": "Admin"
+      },
+      "actions": {
+        "cancel": "Cancel",
+        "save": "Save"
+      },
+      "states": {
+        "loading": "Loading user data...",
+        "error": "We couldn't load this user. Please try again.",
+        "retry": "Retry",
+        "notFound": "User not found."
+      }
+    }
+  },
   "users": {
     "meta": {
       "title": "Get All Users - Afaaq Ware",
