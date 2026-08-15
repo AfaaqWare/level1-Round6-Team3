@@ -700,6 +700,55 @@
       "title": "Survey Questions"
     }
   },
+  "users": {
+    "meta": {
+      "title": "Get All Users - Afaaq Ware",
+      "description": "See all registered users in Survey Land"
+    },
+    "title": "Get All Users",
+    "subtitle": "See all registered users in Survey Land",
+    "columns": {
+      "id": "ID",
+      "user": "User",
+      "emailVerification": "Email Verification",
+      "role": "Role",
+      "createdAt": "Created At",
+      "actions": "Actions"
+    },
+    "verified": "Verified",
+    "notVerified": "Not Verified",
+    "roles": {
+      "ADMIN": "Admin",
+      "USER": "User"
+    },
+    "pagination": {
+      "nav": "Pagination",
+      "showing": "Showing {start} to {end} of {total}",
+      "users": "Users",
+      "page": "Page {current} of {totalPages}",
+      "first": "First page",
+      "previous": "Previous page",
+      "next": "Next page",
+      "last": "Last page"
+    },
+    "delete": {
+      "label": "Delete",
+      "aria": "Delete user",
+      "confirmTitle": "Delete user?",
+      "confirmText": "You are about to permanently delete {name} ({email}). This action cannot be undone.",
+      "confirm": "Delete",
+      "cancel": "Cancel"
+    },
+    "empty": {
+      "title": "No users found",
+      "text": "There are no registered users yet."
+    },
+    "error": {
+      "title": "Could not load users",
+      "text": "Something went wrong while fetching the user list.",
+      "retry": "Try again"
+    }
+  },
   "cards": {
     "card1": {
       "title": " Customer Satisfaction ",
