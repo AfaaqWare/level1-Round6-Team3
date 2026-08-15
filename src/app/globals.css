@@ -55,9 +55,6 @@
   .ds-bg-primary {
     background-color: var(--color-primary);
   }
-  .ds-primary-200 {
-    background-color: var(--color-primary-200);
-  }
   .ds-primary-300 {
     background-color: var(--color-primary-300);
   }
@@ -70,9 +67,6 @@
   /* ================= Background ================= */
   .ds-bg {
     background-color: var(--color-bg);
-  }
-  .ds-bg-alt {
-    background-color: var(--color-bg-alt);
   }
   .ds-bg-secondary-alt {
     background-color: var(--color-text-secondary);
@@ -285,16 +279,57 @@
   .ds-hover:hover {
     opacity: var(--state-hover-opacity);
   }
-  .ds-focus {
-    outline: none;
-    box-shadow: 0 0 0 var(--focus-ring-width) var(--focus-ring-color);
-  }
 
   .ds-disabled {
     opacity: var(--opacity-disabled);
     pointer-events: none;
   }
+  /* ================= STATUS ================= */
+  .ds-text-success {
+    color: var(--color-success);
+  }
+  .ds-text-danger {
+    color: var(--color-error);
+  }
+  .ds-text-role {
+    color: var(--color-role);
+  }
+  .ds-bg-success {
+    background-color: var(--color-success-bg);
+  }
+  .ds-bg-role {
+    background-color: var(--color-role-bg);
+  }
 }
+
+/* ========== @utility tokens (variant-capable) ========== */
+@utility ds-bg-alt {
+  background-color: var(--color-bg-alt);
+}
+@utility ds-primary-200 {
+  background-color: var(--color-primary-200);
+}
+@utility ds-bg-danger-soft {
+  background-color: var(--color-danger-bg);
+}
+@utility ds-focus {
+  outline: none;
+  box-shadow: 0 0 0 var(--focus-ring-width) var(--focus-ring-color);
+}
+@utility ds-border-color {
+  border-color: var(--border-color);
+}
+@utility ds-border-danger {
+  border-width: var(--border-width-md);
+  border-style: solid;
+  border-color: var(--color-error);
+}
+@utility ds-divide-color {
+  & > :not(:last-child) {
+    border-color: var(--border-color);
+  }
+}
+
 input[type="password"]::-ms-reveal {
   display: none;
 }

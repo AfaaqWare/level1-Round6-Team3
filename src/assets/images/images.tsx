@@ -56,6 +56,7 @@ import githubIcon from "./github-icon.png";
 import penIcon from "./pen.png";
 import emailIcon from "./email.png";
 import lockIcon from "./lock.png";
+import trashIcon from "./trash.png";
 
 export {
   hero2,
@@ -109,4 +110,5 @@ export {
   penIcon,
   emailIcon,
   lockIcon,
+  trashIcon,
 };

@@ -708,6 +708,55 @@
       "title": "أسئلة الاستبيان"
     }
   },
+  "users": {
+    "meta": {
+      "title": "عرض جميع المستخدمين - Afaaq Ware",
+      "description": "شاهد جميع المستخدمين المسجلين في Survey Land"
+    },
+    "title": "عرض جميع المستخدمين",
+    "subtitle": "شاهد جميع المستخدمين المسجلين في Survey Land",
+    "columns": {
+      "id": "ID",
+      "user": "المستخدم",
+      "emailVerification": "التحقق من البريد",
+      "role": "الدور",
+      "createdAt": "تاريخ الإنشاء",
+      "actions": "إجراءات"
+    },
+    "verified": "موثّق",
+    "notVerified": "غير موثّق",
+    "roles": {
+      "ADMIN": "مدير",
+      "USER": "مستخدم"
+    },
+    "pagination": {
+      "nav": "ترقيم الصفحات",
+      "showing": "عرض {start} إلى {end} من أصل {total}",
+      "users": "مستخدم",
+      "page": "الصفحة {current} من {totalPages}",
+      "first": "الصفحة الأولى",
+      "previous": "الصفحة السابقة",
+      "next": "الصفحة التالية",
+      "last": "الصفحة الأخيرة"
+    },
+    "delete": {
+      "label": "حذف",
+      "aria": "حذف المستخدم",
+      "confirmTitle": "حذف المستخدم؟",
+      "confirmText": "أنت على وشك حذف {name} ({email}) نهائيًا. لا يمكن التراجع عن هذا الإجراء.",
+      "confirm": "حذف",
+      "cancel": "إلغاء"
+    },
+    "empty": {
+      "title": "لا يوجد مستخدمون",
+      "text": "لا يوجد مستخدمون مسجلون حتى الآن."
+    },
+    "error": {
+      "title": "تعذر تحميل المستخدمين",
+      "text": "حدث خطأ أثناء جلب قائمة المستخدمين.",
+      "retry": "إعادة المحاولة"
+    }
+  },
   "cards": {
     "card1": {
       "title": "رضا العملاء",
