@@ -5,7 +5,7 @@ import useGetProfile from "@/modules/auth/hooks/useGetProfile";
 import ProfileForm from "@/modules/auth/components/organisms/ProfileForm";
 import ProfilePhotoSection from "@/modules/auth/components/organisms/ProfilePhotoSection";
 import Sidebar from "@/shared/components/organisms/Sidebar";
-import "@/modules/auth/components/profile.css";
+import "@/styles/profile.css";
 
 function Page() {
   const { data, refetch } = useGetProfile();
