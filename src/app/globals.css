@@ -298,3 +298,20 @@
 input[type="password"]::-ms-reveal {
   display: none;
 }
+
+/* -------------------------------------------------- */
+/* SweetAlert2 Theming (follows app theme tokens)      */
+/* -------------------------------------------------- */
+html:root {
+  --swal2-background: var(--color-bg-card);
+  --swal2-color: var(--color-text-primary);
+  --swal2-backdrop: rgba(0, 0, 0, 0.6);
+  --swal2-input-background: var(--color-form);
+  --swal2-input-border: 1px solid var(--border-color);
+  --swal2-footer-color: var(--color-text-secondary);
+  --swal2-footer-border-color: var(--border-color);
+  --swal2-validation-message-background: var(--color-form);
+  --swal2-validation-message-color: var(--color-error);
+  --swal2-close-button-color: var(--color-text-secondary);
+  --swal2-timer-progress-bar-background: var(--color-primary);
+}
