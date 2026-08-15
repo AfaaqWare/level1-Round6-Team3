@@ -24,6 +24,13 @@
     --color-text-panel: #ffffff;
     --color-bg-disabled: #eff0f3;
 
+    /* Status Colors */
+    --color-success: #16a34a;
+    --color-success-bg: #d1fae5;
+    --color-danger-bg: #fee2e2;
+    --color-role: #b45309;
+    --color-role-bg: #ffedd5;
+
     /* Text Colors */
     --color-text-primary: #1e1f24;
     --color-text-secondary: #62636c;
@@ -143,6 +150,14 @@
     --color-error: var(--color-error-dark);
     --color-primary-200: var(--color-primary-200-dark);
     --color-text-faqcard: var(--color-text-faqcard-dark);
+
+    /* Status Colors (Dark) */
+    --color-success: #4ade80;
+    --color-success-bg: rgba(74, 222, 128, 0.14);
+    --color-danger-bg: rgba(248, 113, 113, 0.14);
+    --color-role: #fbbf24;
+    --color-role-bg: rgba(251, 191, 36, 0.14);
+
     --shadow-sm: 0 1px 3px rgba(233, 227, 227, 0.12);
     --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.15);
     --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.2);
