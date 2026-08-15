@@ -2,7 +2,7 @@
 
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
-import type { AdminUser } from "@/modules/dashboard/types/user";
+import type { AdminUser } from "@/modules/dashboard/types/AdminUser";
 import { formatCreatedAt } from "@/modules/dashboard/utils/formatters";
 import VerificationBadge from "./VerificationBadge";
 import RoleSelect from "./RoleSelect";

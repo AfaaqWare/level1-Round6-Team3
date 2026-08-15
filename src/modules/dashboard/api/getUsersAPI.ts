@@ -1,5 +1,5 @@
 import apiClient from "@/services/ApiClient";
-import type { AdminUser } from "../types/user";
+import type { AdminUser } from "../types/AdminUser";
 
 interface AdminUserRaw extends Omit<AdminUser, "image"> {
   password: string;
