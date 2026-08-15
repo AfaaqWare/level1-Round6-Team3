@@ -702,17 +702,28 @@
   },
   "dashboard": {
     "editUserRole": {
+      "title": "Edit User Role",
+      "subtitle": "Update the role and permissions for this user.",
+      "userInformation": "User Information",
       "fields": {
+        "fullName": "Full Name",
         "email": "Email",
-        "role": "Role"
+        "role": "Role",
+        "id": "ID"
       },
       "roleManagement": {
-        "title": "Role Management"
+        "title": "Role Management",
+        "currentRole": "Current Role"
       },
       "roles": {
         "user": "User",
         "editor": "Editor",
         "admin": "Admin"
+      },
+      "roleDescriptions": {
+        "user": "Can view and answer surveys",
+        "editor": "Can create and edit surveys",
+        "admin": "Full dashboard access"
       },
       "actions": {
         "cancel": "Cancel",

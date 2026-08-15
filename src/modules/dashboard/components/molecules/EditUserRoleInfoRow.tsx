@@ -1,5 +1,3 @@
-import Text from "@/shared/components/atoms/Text";
-
 type EditUserRoleInfoRowProps = {
   label: string;
   value: string;
@@ -7,13 +5,22 @@ type EditUserRoleInfoRowProps = {
 
 export default function EditUserRoleInfoRow({ label, value }: EditUserRoleInfoRowProps) {
   return (
-    <div className="min-w-0">
-      <Text size="xs" variant="secondary" className="font-semibold uppercase">
+    <div className="flex min-w-0 items-start">
+      <p
+        className={[
+          "shrink-0 leading-[var(--leading-normal)] font-[var(--font-heading)] font-[var(--font-medium)] text-[var(--color-text-primary)] text-[var(--text-sm)]",
+          "w-[calc(var(--space-2xl)*4)]",
+        ].join(" ")}
+      >
         {label}
-      </Text>
-      <Text size="sm" className="mt-[var(--space-xs)] truncate font-semibold">
+      </p>
+      <p
+        className={[
+          "min-w-0 flex-1 leading-[var(--leading-normal)] font-[var(--font-heading)] font-[var(--font-medium)] break-words text-[var(--color-text-primary)] text-[var(--text-sm)]",
+        ].join(" ")}
+      >
         {value}
-      </Text>
+      </p>
     </div>
   );
 }

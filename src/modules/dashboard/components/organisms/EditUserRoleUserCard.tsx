@@ -3,7 +3,6 @@ import { useTranslations } from "next-intl";
 import type { DashboardUser } from "@/modules/dashboard/utils/users";
 import EditUserRoleInfoRow from "@/modules/dashboard/components/molecules/EditUserRoleInfoRow";
 import AppImage from "@/shared/components/atoms/Image";
-import Text from "@/shared/components/atoms/Text";
 
 type EditUserRoleUserCardProps = {
   user: DashboardUser;
@@ -13,30 +12,30 @@ export default function EditUserRoleUserCard({ user }: EditUserRoleUserCardProps
   const t = useTranslations("dashboard.editUserRole");
 
   return (
-    <section className="ds-bg-card ds-border-card w-full max-w-[680px] rounded-[var(--radius-lg)] p-[var(--space-xl)] shadow-sm">
-      <div className="flex flex-col gap-[var(--space-lg)] sm:flex-row sm:items-center">
+    <section className="w-full max-w-full rounded-[var(--radius-xl)] border border-[var(--border-color-alt)] bg-[var(--color-bg-card)] px-[calc(var(--space-lg)+var(--space-xs)-var(--space-xs)/4)] py-[calc(var(--space-lg)+var(--space-xs)/4)] text-[var(--color-text-primary)] shadow-[var(--shadow-faq-card)] lg:h-[314px]">
+      <h2 className="leading-[var(--leading-normal)] font-[var(--font-heading)] font-[var(--font-medium)] text-[var(--color-text-primary)] text-[var(--space-lg)]">
+        {t("userInformation")}
+      </h2>
+
+      <div className="mt-[calc(var(--space-2xl)-var(--space-xs)/2)] flex flex-col gap-[calc(var(--space-xl)+var(--space-xs)/4)] sm:flex-row sm:items-start">
         {user.image ? (
-          <div className="h-[96px] w-[96px] shrink-0 overflow-hidden rounded-full border border-[var(--border-color)]">
+          <div className="size-[calc(var(--space-lg)*4)] shrink-0 overflow-hidden rounded-full">
             <AppImage
               src={user.image}
               alt={user.name}
-              width={96}
-              height={96}
+              width={80}
+              height={80}
               className="h-full w-full"
               objectFit="cover"
             />
           </div>
         ) : null}
 
-        <div className="min-w-0 flex-1">
-          <Text size="lg" className="truncate font-semibold">
-            {user.name}
-          </Text>
-
-          <div className="mt-[var(--space-lg)] grid gap-[var(--space-md)] sm:grid-cols-2">
-            <EditUserRoleInfoRow label={t("fields.email")} value={user.email} />
-            <EditUserRoleInfoRow label={t("fields.role")} value={user.role} />
-          </div>
+        <div className="flex min-w-0 flex-1 flex-col gap-[calc(var(--space-md)-var(--space-xs)/2)]">
+          <EditUserRoleInfoRow label={t("fields.fullName")} value={user.name} />
+          <EditUserRoleInfoRow label={t("fields.email")} value={user.email} />
+          <EditUserRoleInfoRow label={t("fields.role")} value={user.role} />
+          <EditUserRoleInfoRow label={t("fields.id")} value={user.id} />
         </div>
       </div>
     </section>
