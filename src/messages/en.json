@@ -718,5 +718,62 @@
       "text": "Gathers feedback after a transaction"
     },
     "btn": "Use Template"
+  },
+  "dashboard": {
+    "heading": {
+      "title": "Dashboard",
+      "welcomeMessage": "Welcome back, {name}! Here's what's happening with your surveys."
+    },
+    "recentSurveys": {
+      "table": {
+        "surveyTitle": "Survey Title",
+        "status": "Status",
+        "responses": "Responses",
+        "updatedAt": "Updated At"
+      }
+    },
+    "responses": {
+      "table": {
+        "surveyTitle": "Survey Title",
+        "respondent": "Respondent",
+        "responsePreview": "Response Preview",
+        "submittedAt": "Submitted At"
+      }
+    },
+    "stats": {
+      "totalSurveys": "Total Surveys",
+      "draftSurveys": "Draft Surveys",
+      "publishedSurveys": "Published Surveys",
+      "responsesSurveys": "Responses Surveys",
+      "totalUsers": "Total Users"
+    },
+    "quickActions": {
+      "title": "Quick Actions",
+      "createSurvey": {
+        "title": "Create New Survey",
+        "description": "Build a New Survey"
+      },
+      "manageUsers": {
+        "title": "Manage Users",
+        "description": "View and manage users"
+      },
+      "viewResponses": {
+        "title": "View Responses",
+        "description": "Browse all responses"
+      },
+      "exportReports": {
+        "title": "Export Reports",
+        "description": "Download survey reports"
+      }
+    },
+    "sections": {
+      "recentSurveys": "Recent Surveys",
+      "recentResponses": "Recent Responses",
+      "viewAll": "View All",
+      "surveyStatusOverview": "Survey Status Overview"
+    },
+    "chart": {
+      "total": "Total"
+    }
   }
 }

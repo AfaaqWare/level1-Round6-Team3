@@ -19,6 +19,13 @@ import {
   Send,
   Lock,
   LoaderCircle,
+  ClipboardList,
+  ChartNoAxesCombined,
+  Users,
+  CircleHelp,
+  Plus,
+  Download,
+  PieChart,
 } from "lucide-react";
 
 type IconProps = Omit<ComponentProps<typeof Icon>, "icon">;
@@ -28,9 +35,6 @@ const FaWhatsapp = (props: IconProps) => <Icon icon="fa-brands:whatsapp" {...pro
 const FaTwitter = (props: IconProps) => <Icon icon="fa-brands:twitter" {...props} />;
 const FaGithub = (props: IconProps) => <Icon icon="logos:github-icon" {...props} />;
 const FcGoogle = (props: IconProps) => <Icon icon="flat-color-icons:google" {...props} />;
-
-// import { FcGoogle } from "react-icons/fc";
-// import { FaGithub } from "react-icons/fa";
 
 export {
   Sun,
@@ -57,4 +61,11 @@ export {
   FcGoogle,
   Lock,
   LoaderCircle,
+  ClipboardList,
+  ChartNoAxesCombined,
+  Users,
+  CircleHelp,
+  Download,
+  Plus,
+  PieChart,
 };

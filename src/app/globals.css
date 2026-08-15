@@ -83,7 +83,28 @@
   .ds-bg-form {
     background-color: var(--color-form);
   }
+  /* DASHBOARD */
+  .ds-bg-teal-soft {
+    background-color: var(--color-stats-teal-bg);
+  }
 
+  .ds-bg-orange-soft {
+    background-color: var(--color-stats-orange-bg);
+  }
+
+  .ds-bg-green-soft {
+    background-color: var(--color-stats-green-bg);
+  }
+
+  .ds-bg-purple-soft {
+    background-color: var(--color-stats-purple-bg);
+  }
+  .ds-bg-blue-soft {
+    background-color: var(--color-stats-blue-bg);
+  }
+  .ds-bg-gray-soft {
+    background-color: var(--color-stats-gray-bg);
+  }
   /* ================= COLORS ================= */
   .ds-text-alt {
     color: var(--color-primary);
@@ -102,6 +123,31 @@
   }
   .ds-text-faqcard {
     color: var(--color-text-faqcard);
+  }
+  .ds-text-dash {
+    color: var(--color-text-dash);
+  }
+  /* DASHBOARD */
+  .ds-text-teal {
+    color: var(--color-stats-teal);
+  }
+
+  .ds-text-orange {
+    color: var(--color-stats-orange);
+  }
+
+  .ds-text-green {
+    color: var(--color-stats-green);
+  }
+
+  .ds-text-purple {
+    color: var(--color-stats-purple);
+  }
+  .ds-text-blue {
+    color: var(--color-stats-blue);
+  }
+  .ds-text-gray {
+    color: var(--color-stats-gray);
   }
   /* ================= HEADING ================= */
   .ds-h1 {
