@@ -1,5 +1,6 @@
 {
   "auth": {
+    
     "header": {
       "signIn": {
         "prefix": "Don't have an account?",
@@ -12,6 +13,7 @@
       "loginBtn": "Login",
       "signUpBtn": "Sign Up"
     },
+    
     "sheets": {
       "signIn": {
         "title": "New to SurveyLand? Sign up here!",
@@ -24,6 +26,7 @@
         "cta": "SIGN IN"
       }
     },
+    
     "signup": {
       "heading": "Create Account",
       "socialGoogle": "Google",
@@ -60,10 +63,12 @@
         "termsRequired": "You must agree to the Terms & Condition"
       }
     },
+    
     "password": {
       "show": "Show password",
       "hide": "Hide password"
     },
+    
     "new-password": {
       "title": "Create New Password",
       "description": "Please enter your new password below. Make sure it's strong and secure",
@@ -81,16 +86,19 @@
         "passwordsMustMatch": "Passwords must match"
       }
     },
+    
     "otp": {
       "digits": "6-digit verification code",
       "digit": "Digit {position} of {total}",
       "verify": "Verify Your OTP",
       "description": "We’ve sent a 6-digit code to your email, Please enter it below to verify your account"
     },
+    
     "verify": {
       "title": "Verify Your OTP",
       "description": "We’ve sent a 6-digit code to your email, Please enter it below to verify your account"
     },
+    
     "forget-password": {
       "title": "Forgot Password?",
       "subtitle": "Don't worry, we'll help you reset it.",
@@ -107,6 +115,7 @@
         "message": "We couldn't send the reset code. Please try again."
       }
     },
+    
     "forms": {
       "signIn": {
         "title": "SIGN IN",
@@ -132,12 +141,14 @@
         }
       }
     },
+    
     "done": {
       "title": "DONE",
       "description": "Password reset complete! Use the button below to log in",
       "submit": "Return to Login"
     }
   },
+  
   "footer": {
     "subtitle": "Make smarter decisions with better data.Create surveys, gather feedback, and grow.",
     "placeholder": "Stay informed by entering your email",
@@ -187,6 +198,7 @@
     },
     "copyRight": "@2026 SurveyLand.All rights reserved"
   },
+  
   "routes": {
     "item1": "Home",
     "item2": "About",
@@ -197,6 +209,7 @@
     "item7": "settings",
     "btn": "Login"
   },
+  
   "publicPages": {
     "home": {
       "hero-section": {
@@ -238,6 +251,7 @@
           }
         ]
       },
+      
       "marketResearchSection": {
         "number": "2",
         "title": "Market Research",
@@ -266,6 +280,7 @@
           }
         ]
       },
+      
       "educationSection": {
         "number": "3",
         "title": "Education & Training",
@@ -290,6 +305,7 @@
           }
         }
       },
+      
       "eventSection": {
         "EventFeedback": {
           "topBar": {
@@ -321,6 +337,7 @@
           ]
         }
       },
+      
       "howItWorksSection": {
         "Heading": {
           "title": "How it",
@@ -340,6 +357,7 @@
           "description": "Get instant insights with clean charts and downloadable reports"
         }
       },
+      
       "heroSection": {
         "title": "Turn Questions into Clarity and Transform Responses into Valuable Insights",
         "titleHighlight": "Valuable Insights",
@@ -347,6 +365,7 @@
         "button1": "Create Your Survey",
         "button2": "See How It Works"
       },
+      
       "pricing": {
         "title": "A Plan for Every Team's Journey",
         "highlight": "",
@@ -373,6 +392,7 @@
         }
       }
     },
+    
     "about": {
       "heroSection": {
         "title": {
@@ -383,6 +403,7 @@
         "buttontext1": "Get started",
         "buttontext2": "Learn more"
       },
+      
       "missionSection": {
         "title": {
           "firstWord": "Our",
@@ -391,6 +412,7 @@
         "text": "We make it easier for students, teams, and organizations to turn feedback into practical decisions.",
         "btn": "Explore our work"
       },
+      
       "teamleaderSection": {
         "heading": {
           "title": "Meet our",
@@ -450,6 +472,7 @@
           }
         ]
       },
+      
       "leadeship-section": {
         "join-team": "Join team",
         "card5": {
@@ -470,6 +493,7 @@
         }
       }
     },
+    
     "contact": {
       "header": {
         "title": "Contact",
@@ -521,6 +545,7 @@
         "submit": "Send message"
       }
     },
+    
     "faq": {
       "heading": {
         "title": "Frequently Asked",
@@ -618,6 +643,7 @@
         "36": "Admission Forms"
       }
     },
+    
     "pricingPlans": {
       "title": {
         "plans": "Plans &",
@@ -700,53 +726,91 @@
       "title": "Survey Questions"
     }
   },
-  "users": {
-    "meta": {
-      "title": "Get All Users - Afaaq Ware",
-      "description": "See all registered users in Survey Land"
+  
+  "dashboard": {
+    "editUserRole": {
+      "title": "Edit User Role",
+      "subtitle": "Update the role and permissions for this user.",
+      "userInformation": "User Information",
+      "fields": {
+        "fullName": "Full Name",
+        "email": "Email",
+        "role": "Role",
+        "id": "ID"
+      },
+      "roleManagement": {
+        "title": "Role Management",
+        "currentRole": "Current Role"
+      },
+      "roles": {
+        "user": "User",
+        "editor": "Editor",
+        "admin": "Admin"
+      },
+      "roleDescriptions": {
+        "user": "Can view and answer surveys",
+        "editor": "Can create and edit surveys",
+        "admin": "Full dashboard access"
+      },
+      "actions": {
+        "cancel": "Cancel",
+        "save": "Save"
+      },
+      "states": {
+        "loading": "Loading user data...",
+        "error": "We couldn't load this user. Please try again.",
+        "retry": "Retry",
+        "notFound": "User not found."
+      }
     },
-    "title": "Get All Users",
-    "subtitle": "See all registered users in Survey Land",
-    "columns": {
-      "id": "ID",
-      "user": "User",
-      "emailVerification": "Email Verification",
-      "role": "Role",
-      "createdAt": "Created At",
-      "actions": "Actions"
-    },
-    "verified": "Verified",
-    "notVerified": "Not Verified",
-    "roles": {
-      "ADMIN": "Admin",
-      "USER": "User"
-    },
-    "pagination": {
-      "nav": "Pagination",
-      "showing": "Showing {start} to {end} of {total}",
-      "users": "Users",
-      "page": "Page {current} of {totalPages}",
-      "first": "First page",
-      "previous": "Previous page",
-      "next": "Next page",
-      "last": "Last page"
-    },
-    "delete": {
-      "label": "Delete",
-      "aria": "Delete user",
-      "confirmTitle": "Delete user?",
-      "confirmText": "You are about to permanently delete {name} ({email}). This action cannot be undone.",
-      "confirm": "Delete",
-      "cancel": "Cancel"
-    },
-    "empty": {
-      "title": "No users found",
-      "text": "There are no registered users yet."
-    },
-    "error": {
-      "title": "Could not load users",
-      "text": "Something went wrong while fetching the user list.",
-      "retry": "Try again"
+    "users": {
+      "meta": {
+        "title": "Get All Users - Afaaq Ware",
+        "description": "See all registered users in Survey Land"
+      },
+      "title": "Get All Users",
+      "subtitle": "See all registered users in Survey Land",
+      "columns": {
+        "id": "ID",
+        "user": "User",
+        "emailVerification": "Email Verification",
+        "role": "Role",
+        "createdAt": "Created At",
+        "actions": "Actions"
+      },
+      "verified": "Verified",
+      "notVerified": "Not Verified",
+      "roles": {
+        "ADMIN": "Admin",
+        "USER": "User"
+      },
+      "pagination": {
+        "nav": "Pagination",
+        "showing": "Showing {start} to {end} of {total}",
+        "users": "Users",
+        "page": "Page {current} of {totalPages}",
+        "first": "First page",
+        "previous": "Previous page",
+        "next": "Next page",
+        "last": "Last page"
+      },
+      "delete": {
+        "label": "Delete",
+        "aria": "Delete user",
+        "confirmTitle": "Delete user?",
+        "confirmText": "You are about to permanently delete {name} ({email}). This action cannot be undone.",
+        "confirm": "Delete",
+        "cancel": "Cancel"
+      },
+      "empty": {
+        "title": "No users found",
+        "text": "There are no registered users yet."
+      },
+      "error": {
+        "title": "Could not load users",
+        "text": "Something went wrong while fetching the user list.",
+        "retry": "Try again"
+      }
     }
   },
   "cards": {
