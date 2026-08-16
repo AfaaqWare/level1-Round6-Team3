@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { cn } from "@/lib/cn";
 
 export default function QuickActionsSection() {
-  const t = useTranslations("dashboard.quickActions");
+  const t = useTranslations("dashboard.home.quickActions");
 
   return (
     <section className="ds-rounded-lg ds-bg-card w-full p-10">

@@ -10,7 +10,7 @@ interface HeadingProps {
 }
 
 const Heading = ({ name }: HeadingProps) => {
-  const t = useTranslations("dashboard.heading");
+  const t = useTranslations("dashboard.home.heading");
 
   return (
     <div className="mb-11 md:mt-6">

@@ -17,7 +17,7 @@ interface SectionHeaderProps {
 }
 
 export default function SectionHeader({ title, buttonLabel, href, className }: SectionHeaderProps) {
-  const t = useTranslations("dashboard.sections");
+  const t = useTranslations("dashboard.home.sections");
 
   return (
     <div className={cn("flex items-center justify-between", className)}>

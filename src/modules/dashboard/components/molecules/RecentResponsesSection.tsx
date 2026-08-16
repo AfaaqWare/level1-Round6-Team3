@@ -38,7 +38,7 @@ export default function RecentResponsesSection({
       <div className="hidden overflow-x-auto md:block">
         <Table className="min-w-[700px]">
           <DataTableHeader
-            namespace="dashboard.responses.table"
+            namespace="dashboard.home.responses.table"
             columns={["surveyTitle", "respondent", "responsePreview", "submittedAt"]}
           />
           <TableBody>

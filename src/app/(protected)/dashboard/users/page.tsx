@@ -4,7 +4,7 @@ import { buildSeo } from "@/core/seo/Seo";
 import UsersPage from "@/modules/dashboard/components/users/UsersPage";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("users.meta");
+  const t = await getTranslations("dashboard.users.meta");
 
   return buildSeo({
     title: t("title"),

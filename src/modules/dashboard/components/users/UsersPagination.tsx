@@ -62,7 +62,7 @@ function PageButton({ onClick, disabled, active, bordered, ariaLabel, children }
 }
 
 export default function UsersPagination({ page, totalPages, start, end, total, onPageChange }: Props) {
-  const t = useTranslations("users");
+  const t = useTranslations("dashboard.users");
   const items = getPageItems(page, totalPages);
 
   return (

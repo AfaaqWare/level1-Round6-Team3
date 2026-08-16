@@ -9,7 +9,7 @@ interface Props {
 }
 
 export default function VerificationBadge({ verified }: Props) {
-  const t = useTranslations("users");
+  const t = useTranslations("dashboard.users");
 
   return (
     <span

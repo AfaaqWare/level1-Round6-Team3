@@ -33,7 +33,7 @@ export default function RecentSurveysSection({ surveys, className }: RecentSurve
       <div className="hidden overflow-x-auto md:block">
         <Table className="min-w-[650px]">
           <DataTableHeader
-            namespace="dashboard.recentSurveys.table"
+            namespace="dashboard.home.recentSurveys.table"
             columns={["surveyTitle", "status", "responses", "updatedAt"]}
           />
           <TableBody>

@@ -744,6 +744,7 @@
         "notFound": "لم يتم العثور على المستخدم."
       }
     },
+
     "users": {
       "meta": {
         "title": "عرض جميع المستخدمين - Afaaq Ware",
@@ -792,6 +793,64 @@
         "text": "حدث خطأ أثناء جلب قائمة المستخدمين.",
         "retry": "إعادة المحاولة"
       }
+    },
+
+    "home": {
+      "heading": {
+        "title": "لوحة التحكم",
+        "welcomeMessage": "مرحبًا بعودتك، {name}! إليك ما يحدث مع استبياناتك."
+      },
+      "recentSurveys": {
+        "table": {
+          "surveyTitle": "عنوان الاستبيان",
+          "status": "الحالة",
+          "responses": "الاستجابات",
+          "updatedAt": "آخر تحديث"
+        }
+      },
+      "responses": {
+        "table": {
+          "surveyTitle": "عنوان الاستبيان",
+          "respondent": "المستجيب",
+          "responsePreview": "معاينة الاستجابة",
+          "submittedAt": "تاريخ الإرسال"
+        }
+      },
+      "stats": {
+        "totalSurveys": "إجمالي الاستبيانات",
+        "draftSurveys": "الاستبيانات المسودة",
+        "publishedSurveys": "الاستبيانات المنشورة",
+        "responsesSurveys": "استجابات الاستبيانات",
+        "totalUsers": "إجمالي المستخدمين"
+      },
+      "quickActions": {
+        "title": "الإجراءات السريعة",
+        "createSurvey": {
+          "title": "إنشاء استبيان جديد",
+          "description": "إنشاء استبيان جديد"
+        },
+        "manageUsers": {
+          "title": "إدارة المستخدمين",
+          "description": "عرض وإدارة المستخدمين"
+        },
+        "viewResponses": {
+          "title": "عرض الاستجابات",
+          "description": "تصفح جميع الاستجابات"
+        },
+        "exportReports": {
+          "title": "تصدير التقارير",
+          "description": "تحميل تقارير الاستبيانات"
+        }
+      },
+      "sections": {
+        "recentSurveys": "أحدث الاستبيانات",
+        "recentResponses": "أحدث الاستجابات",
+        "viewAll": "عرض الكل",
+        "surveyStatusOverview": "نظرة عامة على حالة الاستبيانات"
+      },
+      "chart": {
+        "total": "الاجمالي"
+      }
     }
   },
   "cards": {
@@ -812,62 +871,5 @@
       "text": "يجمع آراء العملاء وملاحظاتهم بعد إتمام عملية الشراء"
     },
     "btn": "استخدام القالب"
-  },
-  "dashboard": {
-    "heading": {
-      "title": "لوحة التحكم",
-      "welcomeMessage": "مرحبًا بعودتك، {name}! إليك ما يحدث مع استبياناتك."
-    },
-    "recentSurveys": {
-      "table": {
-        "surveyTitle": "عنوان الاستبيان",
-        "status": "الحالة",
-        "responses": "الاستجابات",
-        "updatedAt": "آخر تحديث"
-      }
-    },
-    "responses": {
-      "table": {
-        "surveyTitle": "عنوان الاستبيان",
-        "respondent": "المستجيب",
-        "responsePreview": "معاينة الاستجابة",
-        "submittedAt": "تاريخ الإرسال"
-      }
-    },
-    "stats": {
-      "totalSurveys": "إجمالي الاستبيانات",
-      "draftSurveys": "الاستبيانات المسودة",
-      "publishedSurveys": "الاستبيانات المنشورة",
-      "responsesSurveys": "استجابات الاستبيانات",
-      "totalUsers": "إجمالي المستخدمين"
-    },
-    "quickActions": {
-      "title": "الإجراءات السريعة",
-      "createSurvey": {
-        "title": "إنشاء استبيان جديد",
-        "description": "إنشاء استبيان جديد"
-      },
-      "manageUsers": {
-        "title": "إدارة المستخدمين",
-        "description": "عرض وإدارة المستخدمين"
-      },
-      "viewResponses": {
-        "title": "عرض الاستجابات",
-        "description": "تصفح جميع الاستجابات"
-      },
-      "exportReports": {
-        "title": "تصدير التقارير",
-        "description": "تحميل تقارير الاستبيانات"
-      }
-    },
-    "sections": {
-      "recentSurveys": "أحدث الاستبيانات",
-      "recentResponses": "أحدث الاستجابات",
-      "viewAll": "عرض الكل",
-      "surveyStatusOverview": "نظرة عامة على حالة الاستبيانات"
-    },
-    "chart": {
-      "total": "الاجمالي"
-    }
   }
 }

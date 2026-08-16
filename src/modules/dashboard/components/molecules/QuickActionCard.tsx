@@ -62,7 +62,7 @@ export default function QuickActionCard({
   variant = "teal",
   className,
 }: QuickActionCardProps) {
-  const t = useTranslations("dashboard.quickActions");
+  const t = useTranslations("dashboard.home.quickActions");
   const colors = theme[variant];
 
   return (

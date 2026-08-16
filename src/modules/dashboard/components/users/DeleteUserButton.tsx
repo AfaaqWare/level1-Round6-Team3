@@ -11,7 +11,7 @@ interface Props {
 }
 
 export default function DeleteUserButton({ userName, userEmail }: Props) {
-  const t = useTranslations("users");
+  const t = useTranslations("dashboard.users");
 
   const handleDelete = () => {
     void Swal.fire({

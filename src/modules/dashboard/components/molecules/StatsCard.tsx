@@ -65,7 +65,7 @@ export default function StatsCard({
   variant = "teal",
   className,
 }: StatsCardProps) {
-  const t = useTranslations("dashboard.stats");
+  const t = useTranslations("dashboard.home.stats");
   const colors = theme[variant];
 
   return (

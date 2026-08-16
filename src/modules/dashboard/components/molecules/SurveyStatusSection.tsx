@@ -68,7 +68,7 @@ export default function SurveyStatusSection({
   className,
 }: SurveyStatusSectionProps) {
   const calculatedTotal = total ?? data.reduce((sum, item) => sum + item.value, 0);
-  const t = useTranslations("dashboard");
+  const t = useTranslations("dashboard.home");
   return (
     <section className={cn("ds-bg-card ds-rounded-2xl p-7", "w-full", className)}>
       {/* Header */}
