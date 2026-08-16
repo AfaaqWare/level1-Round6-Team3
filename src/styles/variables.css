@@ -39,7 +39,31 @@
     --color-text-secondary: #62636c;
     --color-text-disabled: #80828d;
     --color-text-faqcard: #1e1f24;
+    --color-text-dash: #000;
+    --color-text-dash-secondary: #000;
+
     --color-error: #ef4444;
+    /* Dashboard */
+    --color-stats-teal: #00b7c1;
+    --color-stats-teal-bg: #dbf8fa;
+
+    --color-stats-orange: #eda321;
+    --color-stats-orange-bg: #fff3d9;
+
+    --color-stats-green: #359e63;
+    --color-stats-green-bg: #e2f3eb;
+
+    --color-stats-purple: #8260dc;
+    --color-stats-purple-bg: #eee9ff;
+    --color-stats-blue: #3679e9;
+    --color-stats-blue-bg: #dff6f7;
+    --color-stats-gray: #454d56;
+    --color-stats-gray-bg: #f4f5f7;
+    /* ================= Survey Status Colors ================= */
+
+    --color-status-draft: #269fbb;
+    --color-status-published: #69aa88;
+    --color-status-closed: #dda77f;
 
     /* Dark Mode */
     --color-bg-dark: #1e2021;
@@ -55,10 +79,34 @@
     --color-text-panel-dark: #000;
     --color-primary-button-dark: #00d1dc;
     --color-text-faqcard-dark: #b2b3bd;
+    --color-text-dash-dark: #aeaebc;
+    --color-text-dash-secondary-dark: #dbdbdb;
+
     --border-color-dark: #2b3c3f;
     --border-color-card-dark: #2e2e2e;
     --color-primary-300-dark: #1e2021;
     --color-bg-survyForm-dark: #2b3c3f;
+
+    --color-stats-teal-dark: #00b7c1;
+    --color-stats-teal-bg-dark: #1f3a3b;
+
+    --color-stats-orange-dark: #eda321;
+    --color-stats-orange-bg-dark: #4c4029;
+
+    --color-stats-green-dark: #359e63;
+    --color-stats-green-bg-dark: #2b5240;
+
+    --color-stats-purple-dark: #8260dc;
+    --color-stats-purple-bg-dark: #3a2f52;
+
+    --color-stats-blue-dark: #3679e9;
+    --color-stats-blue-bg-dark: #282f45;
+    --color-stats-gray-dark: #99a9bb;
+    --color-stats-gray-bg-dark: #2c3039;
+    /* ================= Survey Status Colors ================= */
+    --color-status-draft-dark: #36b4cf;
+    --color-status-published-dark: #78bc99;
+    --color-status-closed-dark: #e5b18a;
 
     /* Borders */
     --border-width-sm: 1px;
@@ -94,7 +142,7 @@
     /* Opacity */
     --opacity-disabled: 0.5;
     --opacity-muted: 0.7;
-
+    --quick-action-bg-opacity: 6%;
     /* Focus */
     --focus-ring-color: var(--color-primary);
     --focus-ring-width: 2px;
@@ -164,6 +212,8 @@
     --color-primary-200: var(--color-primary-200-dark);
     --color-primary: var(--color-primary-button-dark);
     --color-text-faqcard: var(--color-text-faqcard-dark);
+    --color-text-dash: var(--color-text-dash-dark);
+    --color-text-dash-secondary: var(--color-text-dash-secondary-dark);
     --color-dashboard-control-active-border: var(--color-primary-button-dark);
     --color-dashboard-role-selected-bg: var(--color-bg-survyForm-dark);
     --color-dashboard-role-icon-bg: var(--color-form-dark);
@@ -186,5 +236,25 @@
     --border-color-alt: var(--border-color-dark);
     --color-primary-200: #a0e4ef;
     --color-bg-survyForm: var(--color-bg-survyForm-dark);
+    --color-status-draft: var(--color-status-draft-dark);
+    --color-status-published: var(--color-status-published-dark);
+    --color-status-closed: var(--color-status-closed-dark);
+
+    --color-stats-teal: var(--color-stats-teal-dark);
+    --color-stats-teal-bg: var(--color-stats-teal-bg-dark);
+
+    --color-stats-orange: var(--color-stats-orange-dark);
+    --color-stats-orange-bg: var(--color-stats-orange-bg-dark);
+
+    --color-stats-green: var(--color-stats-green-dark);
+    --color-stats-green-bg: var(--color-stats-green-bg-dark);
+
+    --color-stats-purple: var(--color-stats-purple-dark);
+    --color-stats-purple-bg: var(--color-stats-purple-bg-dark);
+    --color-stats-blue: var(--color-stats-blue-dark);
+    --color-stats-blue-bg: var(--color-stats-blue-bg-dark);
+    --color-stats-gray: var(--color-stats-gray-dark);
+    --color-stats-gray-bg: var(--color-stats-gray-bg-dark);
+    --quick-action-bg-opacity: 18%;
   }
 }
