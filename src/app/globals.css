@@ -55,9 +55,6 @@
   .ds-bg-primary {
     background-color: var(--color-primary);
   }
-  .ds-primary-200 {
-    background-color: var(--color-primary-200);
-  }
   .ds-primary-300 {
     background-color: var(--color-primary-300);
   }
@@ -70,9 +67,6 @@
   /* ================= Background ================= */
   .ds-bg {
     background-color: var(--color-bg);
-  }
-  .ds-bg-alt {
-    background-color: var(--color-bg-alt);
   }
   .ds-bg-secondary-alt {
     background-color: var(--color-text-secondary);
@@ -269,6 +263,16 @@
     line-height: var(--leading-normal);
   }
 
+  .ds-text-2xs {
+    font-size: var(--text-2xs);
+    line-height: var(--leading-dashboard-option);
+  }
+
+  .ds-text-dashboard-label {
+    font-size: var(--text-dashboard-label);
+    line-height: var(--leading-normal);
+  }
+
   .ds-text-sm {
     font-size: var(--text-sm);
     line-height: var(--leading-normal);
@@ -331,16 +335,74 @@
   .ds-hover:hover {
     opacity: var(--state-hover-opacity);
   }
-  .ds-focus {
-    outline: none;
-    box-shadow: 0 0 0 var(--focus-ring-width) var(--focus-ring-color);
-  }
 
   .ds-disabled {
     opacity: var(--opacity-disabled);
     pointer-events: none;
   }
+  /* ================= STATUS ================= */
+  .ds-text-success {
+    color: var(--color-success);
+  }
+  .ds-text-danger {
+    color: var(--color-error);
+  }
+  .ds-text-role {
+    color: var(--color-role);
+  }
+  .ds-bg-success {
+    background-color: var(--color-success-bg);
+  }
+  .ds-bg-role {
+    background-color: var(--color-role-bg);
+  }
 }
+
+/* ========== @utility tokens (variant-capable) ========== */
+@utility ds-bg-alt {
+  background-color: var(--color-bg-alt);
+}
+@utility ds-primary-200 {
+  background-color: var(--color-primary-200);
+}
+@utility ds-bg-danger-soft {
+  background-color: var(--color-danger-bg);
+}
+@utility ds-focus {
+  outline: none;
+  box-shadow: 0 0 0 var(--focus-ring-width) var(--focus-ring-color);
+}
+@utility ds-border-color {
+  border-color: var(--border-color);
+}
+@utility ds-border-danger {
+  border-width: var(--border-width-md);
+  border-style: solid;
+  border-color: var(--color-error);
+}
+@utility ds-divide-color {
+  & > :not(:last-child) {
+    border-color: var(--border-color);
+  }
+}
+
 input[type="password"]::-ms-reveal {
   display: none;
+}
+
+/* -------------------------------------------------- */
+/* SweetAlert2 Theming (follows app theme tokens)      */
+/* -------------------------------------------------- */
+html:root {
+  --swal2-background: var(--color-bg-card);
+  --swal2-color: var(--color-text-primary);
+  --swal2-backdrop: rgba(0, 0, 0, 0.6);
+  --swal2-input-background: var(--color-form);
+  --swal2-input-border: 1px solid var(--border-color);
+  --swal2-footer-color: var(--color-text-secondary);
+  --swal2-footer-border-color: var(--border-color);
+  --swal2-validation-message-background: var(--color-form);
+  --swal2-validation-message-color: var(--color-error);
+  --swal2-close-button-color: var(--color-text-secondary);
+  --swal2-timer-progress-bar-background: var(--color-primary);
 }
