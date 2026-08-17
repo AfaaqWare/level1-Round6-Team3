@@ -1,5 +1,4 @@
-import ApiClient from "@/services/ApiClient";
-interface SurveyResponse {
+export interface SurveyResponse {
   id: string;
   surveyId: string;
   respondentName: string;
@@ -7,11 +6,11 @@ interface SurveyResponse {
   answers: Record<string, string>;
   submittedAt: string;
 }
-interface GetAllResponsesResponse {
+export interface GetAllResponses {
   success: boolean;
   message: string;
   data: SurveyResponse[];
 }
-export function getAllResponses() {
-  return ApiClient.get<GetAllResponsesResponse>("/responses");
+export interface RecentSurveyResponse extends SurveyResponse {
+  surveyTitle: string;
 }

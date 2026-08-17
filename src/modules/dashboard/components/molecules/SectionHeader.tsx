@@ -3,9 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-
 import { cn } from "@/lib/cn";
-
 import Title from "@/shared/components/atoms/Title";
 import Button from "@/shared/components/atoms/Button";
 
@@ -20,7 +18,7 @@ export default function SectionHeader({ title, buttonLabel, href, className }: S
   const t = useTranslations("dashboard.home.sections");
 
   return (
-    <div className={cn("flex items-center justify-between", className)}>
+    <div className={cn("mb-6 flex items-center justify-between", className)}>
       <Title size="sm" className="font-bold !text-[var(--color-text-dash-secondary)]">
         {t(title)}
       </Title>

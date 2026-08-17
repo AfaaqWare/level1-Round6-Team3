@@ -1,15 +1,18 @@
-import { StaticImageData } from "next/image";
 import { SurveyQuestion } from "./question";
-
-export type Survey = {
+export interface Survey {
   id: string;
+  userId: string;
   title: string;
   description: string;
-  coverImage: string | StaticImageData;
   deadline: string;
-  duration: string;
+  cover: string;
+  status: "draft" | "published" | "closed";
+  link: string | null;
+  createdAt: string;
+  updatedAt: string;
+  lastMilestone: number;
   questions: SurveyQuestion[];
-};
+}
 export interface SubmitSurveyPayload {
   surveyId: string;
   fullName: string;
@@ -19,3 +22,4 @@ export interface SubmitSurveyPayload {
     answer: string | string[];
   }[];
 }
+export type GetAllSurveys = Survey[];

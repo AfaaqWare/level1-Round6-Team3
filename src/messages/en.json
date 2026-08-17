@@ -136,7 +136,8 @@
           "serverError": "Something went wrong on the server. Please try again later.",
           "networkError": "Unable to connect to the server. Please check your internet connection and try again.",
           "tooManyRequests": "Too many login attempts. Please try again later.",
-          "genericError": "An unexpected error occurred. Please try again."
+          "genericError": "An unexpected error occurred. Please try again.",
+          "verifyEmailBeforeLogin": "Please verify your email before logging in"
         }
       }
     },
@@ -816,7 +817,7 @@
     "home": {
       "heading": {
         "title": "Dashboard",
-        "welcomeMessage": "Welcome back, {name}! Here's what's happening with your surveys."
+        "welcomeMessage": "Welcome back, {name} ! Here's what's happening with your surveys."
       },
       "recentSurveys": {
         "table": {
@@ -839,7 +840,13 @@
         "draftSurveys": "Draft Surveys",
         "publishedSurveys": "Published Surveys",
         "responsesSurveys": "Responses Surveys",
-        "totalUsers": "Total Users"
+        "totalUsers": "Total Users",
+        "fromLastMonth": "from last month",
+        "chart": {
+          "draft": "Draft",
+          "published": "Published",
+          "closed": "Closed"
+        }
       },
       "quickActions": {
         "title": "Quick Actions",
@@ -889,5 +896,20 @@
       "text": "Gathers feedback after a transaction"
     },
     "btn": "Use Template"
+  },
+  "ui-state": {
+    "loading": "Loading...",
+    "notFound": {
+      "title": "404 - Page Not Found",
+      "description": "It looks like you entered a route that does not exist.",
+      "backToHome": "Back to Home"
+    },
+    "error": {
+      "default": "An unexpected error occurred.",
+      "retry": "Try Again"
+    },
+    "empty": {
+      "default": "No data available to display."
+    }
   }
 }

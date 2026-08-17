@@ -8,7 +8,7 @@ export default function QuickActionsSection() {
   const t = useTranslations("dashboard.home.quickActions");
 
   return (
-    <section className="ds-rounded-lg ds-bg-card w-full p-10">
+    <section className="ds-rounded-lg ds-bg-card w-full p-4 md:p-6 lg:p-10">
       <Title size="sm" className="font-bold !text-[var(--color-text-dash-secondary)]">
         {t("title")}
       </Title>
