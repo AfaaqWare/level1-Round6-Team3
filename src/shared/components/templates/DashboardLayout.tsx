@@ -12,9 +12,6 @@
 
 // export default function DashboardLayout({ children }: Props) {
 
-
-
-  
 //   return (
 //     <div className="min-h-screen">
 
@@ -42,7 +39,6 @@
 //     </div>
 //   );
 // }
-
 
 "use client";
 
@@ -85,11 +81,7 @@ export default function DashboardLayout({ children }: Props) {
 
               <ThemeToggle />
 
-              <Icon
-                IconComponent={Bell}
-                size="lg"
-                className="ms-[24px] mt-[5px]"
-              />
+              <Icon IconComponent={Bell} size="lg" className="ms-[24px] mt-[5px]" />
             </div>
 
             {/* Mobile Button */}
@@ -124,9 +116,7 @@ export default function DashboardLayout({ children }: Props) {
         </div>
       </div>
 
-      <main className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-        {children}
-      </main>
+      <main className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">{children}</main>
     </div>
   );
 }
