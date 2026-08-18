@@ -1,4 +1,5 @@
 "use client";
+import { useTranslations } from "next-intl";
 import "../../app/globals.css";
 import dynamic from "next/dynamic";
 
@@ -19,6 +20,10 @@ export default function ErrorState({
   onRetry,
   retryLabel = "إعادة المحاولة",
 }: Props) {
+  const t = useTranslations("ui-state.error");
+  message = t("default");
+  retryLabel = t("retry");
+
   return (
     <div className={`flex min-h-[60vh] flex-col items-center justify-center ${className || ""}`}>
       <Player autoplay loop src="/assets/lottie/error.json" className="h-48 w-48" />

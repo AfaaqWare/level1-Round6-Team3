@@ -3,11 +3,11 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 import { ChartNoAxesCombined, ClipboardList, Send, Users } from "@/assets/icons/icons";
-
 import { cn } from "@/lib/cn";
 import Icon from "@/shared/components/atoms/Icon";
 import Text from "@/shared/components/atoms/Text";
 import Title from "@/shared/components/atoms/Title";
+import { theme } from "../../utils/data";
 
 type StatsCardVariant = "teal" | "orange" | "green" | "purple" | "blue";
 
@@ -28,34 +28,6 @@ const icons = {
   chart: ChartNoAxesCombined,
   users: Users,
 };
-
-const theme = {
-  teal: {
-    icon: "teal",
-    background: "ds-bg-teal-soft",
-    description: "teal",
-  },
-  orange: {
-    icon: "orange",
-    background: "ds-bg-orange-soft",
-    description: "orange",
-  },
-  green: {
-    icon: "green",
-    background: "ds-bg-green-soft",
-    description: "green",
-  },
-  purple: {
-    icon: "purple",
-    background: "ds-bg-purple-soft",
-    description: "purple",
-  },
-  blue: {
-    icon: "blue",
-    background: "ds-bg-blue-soft",
-    description: "blue",
-  },
-} as const;
 
 export default function StatsCard({
   icon,
