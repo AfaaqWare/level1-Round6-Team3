@@ -57,7 +57,7 @@ import penIcon from "./pen.png";
 import emailIcon from "./email.png";
 import lockIcon from "./lock.png";
 import trashIcon from "./trash.png";
-
+import group from "./Group.png";
 export {
   hero2,
   hero3,
@@ -111,4 +111,5 @@ export {
   emailIcon,
   lockIcon,
   trashIcon,
+  group,
 };
