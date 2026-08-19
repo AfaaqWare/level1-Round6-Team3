@@ -858,6 +858,38 @@
       "chart": {
         "total": "الاجمالي"
       }
+    },
+
+    "dashboard": {
+      "menu": {
+        "dashboard": "لوحة التحكم",
+
+        "userManagement": {
+          "title": "إدارة المستخدمين",
+          "allUsers": "جميع المستخدمين",
+          "rolesPermission": "الأدوار والصلاحيات"
+        },
+
+        "surveyManagement": {
+          "title": "إدارة الاستبيانات",
+          "allSurveys": "جميع الاستبيانات",
+          "draftSurveys": "الاستبيانات المسودة",
+          "publishedSurveys": "الاستبيانات المنشورة",
+          "closedSurveys": "الاستبيانات المغلقة"
+        },
+
+        "responseManagement": {
+          "title": "إدارة الردود",
+          "responses": "الردود",
+          "analytics": "التحليلات"
+        },
+
+        "others": {
+          "title": "أخرى",
+          "profile": "الملف الشخصي",
+          "logout": "تسجيل الخروج"
+        }
+      }
     }
   },
   "cards": {

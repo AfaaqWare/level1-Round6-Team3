@@ -14,25 +14,29 @@ import {
 import { group } from "@/assets/images/images";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+
 export default function DashboardMenu() {
   const t = useTranslations("dashboard.menu");
+
   return (
     <nav className="my-6 flex w-full flex-1 flex-col gap-6 text-left">
-      <div className="flex w-full gap-3 rounded-xl bg-[var(--color-primary-200)] py-3 pl-6 text-[var(--color-primary)]">
+      <div className="flex w-full items-center gap-3 rounded-xl bg-[var(--color-primary-200)] py-3 pl-6 text-[var(--color-primary)]">
         <Image src={group} alt="Dashboard" width={20} height={20} />
-        <h4 className="font-semibold">Dashboard</h4>
+        <h4 className="font-semibold">{t("dashboard")}</h4>
       </div>
+
       <hr className="border-0 border-t border-[var(--border-color)]" />
+
       <SidebarSection
-        title="User Management"
+        title={t("userManagement.title")}
         items={[
           {
-            label: "All Users",
+            label: t("userManagement.allUsers"),
             icon: <Users size={22} />,
             href: "/dashboard/users",
           },
           {
-            label: "Roles & Permission",
+            label: t("userManagement.rolesPermission"),
             icon: <ShieldCheck size={22} />,
             href: "/dashboard/roles",
           },
@@ -40,25 +44,25 @@ export default function DashboardMenu() {
       />
 
       <SidebarSection
-        title="Survey Management"
+        title={t("surveyManagement.title")}
         items={[
           {
-            label: "All Surveys",
+            label: t("surveyManagement.allSurveys"),
             icon: <ClipboardList size={22} />,
             href: "/dashboard/surveys",
           },
           {
-            label: "Draft Surveys",
+            label: t("surveyManagement.draftSurveys"),
             icon: <FilePenLine size={22} />,
             href: "/dashboard/surveys/drafts",
           },
           {
-            label: "Published Surveys",
+            label: t("surveyManagement.publishedSurveys"),
             icon: <Send size={22} />,
             href: "/dashboard/surveys/published",
           },
           {
-            label: "Closed Surveys",
+            label: t("surveyManagement.closedSurveys"),
             icon: <LockKeyhole size={22} />,
             href: "/dashboard/surveys/closed",
           },
@@ -66,32 +70,32 @@ export default function DashboardMenu() {
       />
 
       <SidebarSection
-        title="Response Management"
+        title={t("responseManagement.title")}
         items={[
           {
-            label: "Responses",
+            label: t("responseManagement.responses"),
             icon: <PieChart size={22} />,
             href: "/dashboard/responses",
           },
           {
-            label: "Analytics",
+            label: t("responseManagement.analytics"),
             icon: <ChartNoAxesCombined size={22} />,
             href: "/dashboard/analytics",
           },
         ]}
       />
-      {/* <hr className="border-0 border-t border-[var(--border-color)]" /> */}
+
       <div className="border-t border-[var(--border-color)] pt-6">
         <SidebarSection
-          title="Others"
+          title={t("others.title")}
           items={[
             {
-              label: "Profile",
+              label: t("others.profile"),
               icon: <User size={22} />,
               href: "/dashboard/profile",
             },
             {
-              label: "Log out",
+              label: t("others.logout"),
               icon: <LogOut size={22} />,
               href: "#",
               danger: true,

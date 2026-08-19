@@ -876,6 +876,38 @@
       "chart": {
         "total": "Total"
       }
+    },
+
+    "dashboard": {
+      "menu": {
+        "dashboard": "Dashboard",
+
+        "userManagement": {
+          "title": "User Management",
+          "allUsers": "All Users",
+          "rolesPermission": "Roles & Permission"
+        },
+
+        "surveyManagement": {
+          "title": "Survey Management",
+          "allSurveys": "All Surveys",
+          "draftSurveys": "Draft Surveys",
+          "publishedSurveys": "Published Surveys",
+          "closedSurveys": "Closed Surveys"
+        },
+
+        "responseManagement": {
+          "title": "Response Management",
+          "responses": "Responses",
+          "analytics": "Analytics"
+        },
+
+        "others": {
+          "title": "Others",
+          "profile": "Profile",
+          "logout": "Log out"
+        }
+      }
     }
   },
   "cards": {
