@@ -18,7 +18,7 @@ export default function DashboardMenu() {
   const t = useTranslations("dashboard.menu");
   return (
     <nav className="my-6 flex w-full flex-1 flex-col gap-6 text-left">
-      <div className="text- flex w-full gap-3 rounded-xl bg-[var(--color-primary-200)] py-3 pl-6 text-[var(--color-primary)] md:w-fit">
+      <div className="text- flex w-full gap-3 rounded-xl bg-[var(--color-primary-200)] py-3 pl-6 text-[var(--color-primary)]">
         <Image src={group} alt="Dashboard" width={20} height={20} />
         <h4 className="font-semibold">Dashboard</h4>
       </div>
