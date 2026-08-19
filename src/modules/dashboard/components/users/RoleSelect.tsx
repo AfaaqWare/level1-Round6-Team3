@@ -13,7 +13,7 @@ interface Props {
 }
 
 export default function RoleSelect({ role, userId }: Props) {
-  const t = useTranslations("users");
+  const t = useTranslations("dashboard.users");
   const [value, setValue] = useState(role);
 
   const roleLabels: Record<string, string> = {

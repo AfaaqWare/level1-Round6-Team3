@@ -1,0 +1,16 @@
+export interface SurveyResponse {
+  id: string;
+  surveyId: string;
+  respondentName: string;
+  respondentEmail: string;
+  answers: Record<string, string>;
+  submittedAt: string;
+}
+export interface GetAllResponses {
+  success: boolean;
+  message: string;
+  data: SurveyResponse[];
+}
+export interface RecentSurveyResponse extends SurveyResponse {
+  surveyTitle: string;
+}

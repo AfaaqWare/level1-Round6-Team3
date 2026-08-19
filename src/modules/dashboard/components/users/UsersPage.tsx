@@ -32,7 +32,7 @@ function TableSkeleton() {
 }
 
 export default function UsersPage() {
-  const t = useTranslations("users");
+  const t = useTranslations("dashboard.users");
   const { data, isLoading, isError, refetch } = useGetUsers();
   const [page, setPage] = useState(1);
 

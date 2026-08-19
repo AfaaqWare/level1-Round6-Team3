@@ -11,7 +11,9 @@ export const useSignInError = (error: unknown) => {
   if (error.status === 400) {
     return t("errors.invalidCredentials");
   }
-
+  if (error.status === 403) {
+    return t("errors.verifyEmailBeforeLogin");
+  }
   if (error.status === 429) {
     return t("errors.tooManyRequests");
   }

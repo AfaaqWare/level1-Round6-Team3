@@ -1,45 +1,3 @@
-// import React from "react";
-// import NavLogo from "../atoms/navbar/NavLogo";
-// import { ThemeToggle } from "../atoms/ThemeButton";
-// import HeaderList from "../atoms/List";
-// import { Routes } from "../../utils/routes";
-// import Icon from "@/shared/components/atoms/Icon";
-// import { Bell } from "@/assets/icons/icons";
-
-// interface Props {
-//   children: React.ReactNode;
-// }
-
-// export default function DashboardLayout({ children }: Props) {
-
-//   return (
-//     <div className="min-h-screen">
-
-//       <nav className="shadow-sm">
-//         <div className="ds-container mx-auto px-4 sm:px-6 lg:px-8">
-//           <div className="flex h-16 items-center justify-between">
-//             <NavLogo />
-
-//             <HeaderList
-//               trans="routes"
-//               routes={Routes}
-//               className="flex w-2/3 flex-row items-center justify-center gap-3"
-//             />
-
-//             <div className="flex w-[120px]">
-//               <ThemeToggle />
-
-//               <Icon IconComponent={Bell} size="lg" className="ms-[24px] mt-[5px]" />
-//             </div>
-//           </div>
-//         </div>
-//       </nav>
-
-//       <main className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">{children}</main>
-//     </div>
-//   );
-// }
-
 "use client";
 
 import React, { useState } from "react";
@@ -81,7 +39,11 @@ export default function DashboardLayout({ children }: Props) {
 
               <ThemeToggle />
 
-              <Icon IconComponent={Bell} size="lg" className="ms-[24px] mt-[5px]" />
+              <Icon
+                IconComponent={Bell}
+                size="lg"
+                className="ms-[24px] mt-[5px]"
+              />
             </div>
 
             {/* Mobile Button */}
@@ -116,7 +78,9 @@ export default function DashboardLayout({ children }: Props) {
         </div>
       </div>
 
-      <main className="w-full">{children}</main>
+      <main className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+        {children}
+      </main>
     </div>
   );
 }

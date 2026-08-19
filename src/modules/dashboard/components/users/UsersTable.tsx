@@ -42,7 +42,7 @@ function UserAvatar({ user }: { user: AdminUser }) {
 }
 
 export default function UsersTable({ users, firstRowNumber }: Props) {
-  const t = useTranslations("users");
+  const t = useTranslations("dashboard.users");
   const locale = useLocale();
 
   return (
