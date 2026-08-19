@@ -116,7 +116,7 @@ export default function DashboardLayout({ children }: Props) {
         </div>
       </div>
 
-      <main className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">{children}</main>
+      <main className="w-full">{children}</main>
     </div>
   );
 }

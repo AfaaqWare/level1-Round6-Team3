@@ -11,11 +11,18 @@ import {
   User,
   LogOut,
 } from "lucide-react";
-
+import { group } from "@/assets/images/images";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
 export default function DashboardMenu() {
+  const t = useTranslations("dashboard.menu");
   return (
-    <nav className="my-6 flex flex-1 flex-col gap-6 px-4">
-      <h4 className="text-lg font-semibold"> Dashboard </h4>
+    <nav className="my-6 flex w-full flex-1 flex-col gap-6 text-left">
+      <div className="text- flex w-full gap-3 rounded-xl bg-[var(--color-primary-200)] py-3 pl-6 text-[var(--color-primary)] md:w-fit">
+        <Image src={group} alt="Dashboard" width={20} height={20} />
+        <h4 className="font-semibold">Dashboard</h4>
+      </div>
+      <hr className="border-0 border-t border-[var(--border-color)]" />
       <SidebarSection
         title="User Management"
         items={[
@@ -73,7 +80,7 @@ export default function DashboardMenu() {
           },
         ]}
       />
-
+      {/* <hr className="border-0 border-t border-[var(--border-color)]" /> */}
       <div className="border-t border-[var(--border-color)] pt-6">
         <SidebarSection
           title="Others"

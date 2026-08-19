@@ -10,8 +10,8 @@ export const metadata = buildSeo({
 
 export default function DashboardPage() {
   return (
-    <div>
+    <>
       <DashboardSidebar />
-    </div>
+    </>
   );
 }
