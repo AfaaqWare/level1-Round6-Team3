@@ -9,11 +9,17 @@ import { signInSchema, type SignInFormData } from "@/validator/authValidation";
 import { useEffect } from "react";
 import { showToast } from "@/shared/utils/toast";
 import { useSignInError } from "@/modules/auth/hooks/useSignInError";
+import { useRouter } from "next/navigation";
+import { useResetFlow } from "../../guards/useResetFlow";
+import { TokenService } from "@/services/tokenService";
+import { useResendOtp } from "../../hooks/useResendOtp";
 
 export default function SignInFormContainer() {
   const t = useTranslations("auth.forms.signIn");
   const locale = useLocale();
-
+  const resetFlow = useResetFlow();
+  const router = useRouter();
+  const resendMutation = useResendOtp();
   const {
     register,
     handleSubmit,
@@ -33,22 +39,30 @@ export default function SignInFormContainer() {
       trigger();
     }
   }, [locale]);
-
   const signInMutation = useSignIn();
   const errorMessage = useSignInError(signInMutation.error);
-
   const onSubmit = (data: SignInFormData) => {
     signInMutation.reset();
 
     signInMutation.mutate(data, {
-      onSuccess: () => {
+      onSuccess: data => {
+        TokenService.setToken(data.accessToken);
+        router.push("/");
         showToast({
           type: "success",
           message: t("toast.loginSuccess"),
           locale,
         });
       },
-      onError: () => {
+      onError: error => {
+        console.log(error.status);
+        if (error.status === 403) {
+          setTimeout(() => {
+            resetFlow.start(data.email, "register");
+            resendMutation.mutate({ email: data.email });
+          }, 2000);
+          return;
+        }
         showToast({
           type: "error",
           message: t("toast.loginFailed"),

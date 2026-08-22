@@ -14,8 +14,7 @@ import { useTranslations } from "next-intl";
 export default function ContainerDashboardPage() {
   const t = useTranslations("dashboard.home.stats.chart");
   const { data: profile } = useGetProfile();
-  const name = profile?.name;
-
+  const name = profile?.name?.trim().split(/\s+/)[0];
   const {
     recentSurveys,
     recentResponses,
