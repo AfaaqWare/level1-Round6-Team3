@@ -2,6 +2,8 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { authGuardsDisabled } from "./authGuards";
+import { TokenService } from "@/services/tokenService";
+
 export default function DoneGuard({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   useEffect(() => {
@@ -10,7 +12,7 @@ export default function DoneGuard({ children }: { children: React.ReactNode }) {
     const otpVerified = sessionStorage.getItem("otpVerified");
 
     if (!email || !otpVerified) {
-      router.replace("/forget-password");
+      router.replace(TokenService.getToken() ? "/" : "/forget-password");
     }
   }, [router]);
 

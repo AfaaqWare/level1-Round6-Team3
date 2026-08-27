@@ -10,7 +10,8 @@
         "apply": "Log in now"
       },
       "loginBtn": "Login",
-      "signUpBtn": "Sign Up"
+      "signUpBtn": "Sign Up",
+      "home": "Home"
     },
 
     "sheets": {
@@ -105,6 +106,7 @@
       "emailPlaceholder": "Enter your email",
       "submit": "Reset Password",
       "backToSignIn": "Back to sign in",
+      "backToHome": "Back to home",
       "validation": {
         "emailRequired": "Email address is required",
         "emailInvalid": "Enter a valid email address"
