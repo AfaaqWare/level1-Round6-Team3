@@ -20,7 +20,8 @@
         "apply": "سجّل الدخول الآن"
       },
       "loginBtn": "تسجيل الدخول",
-      "signUpBtn": "إنشاء حساب"
+      "signUpBtn": "إنشاء حساب",
+      "home": "الرئيسية"
     },
     "sheets": {
       "signIn": {
@@ -104,6 +105,7 @@
       "emailPlaceholder": "أدخل بريدك الإلكتروني",
       "submit": "إعادة تعيين كلمة المرور",
       "backToSignIn": "العودة لتسجيل الدخول",
+      "backToHome": "العودة للرئيسية",
       "validation": {
         "emailRequired": "البريد الإلكتروني مطلوب",
         "emailInvalid": "أدخل بريدًا إلكترونيًا صحيحًا"
