@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const INITIAL_TIME = 60;
+const INITIAL_TIME = 300;
 
 export default function useOTPTimer() {
   const [timer, setTimer] = useState(INITIAL_TIME);
