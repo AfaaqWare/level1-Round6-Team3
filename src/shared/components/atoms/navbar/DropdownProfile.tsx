@@ -7,41 +7,14 @@ import Icon from "../Icon";
 import Image from "../Image";
 import Text from "../Text";
 
-import { useRouter } from "next/navigation";
 import Link from "next/link";
-import Swal from "sweetalert2";
 
-import { useLogoutApi } from "@/modules/auth/hooks/useLogout";
+import { useLogoutHandler } from "@/modules/auth/hooks/useLogoutHandler";
 import useGetProfile from "@/modules/auth/hooks/useGetProfile";
 
 export default function DropdownProfile() {
-  const router = useRouter();
-
-  const { mutate: logout, isPending } = useLogoutApi();
+  const { handleLogout, isPending } = useLogoutHandler();
   const { data, isLoading } = useGetProfile();
-
-  const handleLogout = () => {
-    logout(undefined, {
-      onSuccess: message => {
-        Swal.fire({
-          icon: "success",
-          title: "Success",
-          text: message,
-          confirmButtonColor: "#3085d6",
-        }).then(() => {
-          router.replace("/sign-in");
-        });
-      },
-
-      onError: () => {
-        Swal.fire({
-          icon: "error",
-          title: "Logout Failed",
-          text: "Something went wrong.",
-        });
-      },
-    });
-  };
 
   const imag = data?.image || leader7;
   const alt = data?.name || "User";
