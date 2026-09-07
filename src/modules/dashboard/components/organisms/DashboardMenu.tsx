@@ -1,3 +1,5 @@
+"use client";
+
 import SidebarSection from "../molecules/SidebarSection";
 import {
   Users,
@@ -12,16 +14,31 @@ import {
   LogOut,
 } from "lucide-react";
 import { group } from "@/assets/images/images";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useLogoutHandler } from "@/modules/auth/hooks/useLogoutHandler";
+import { cn } from "@/lib/cn";
+
 export default function DashboardMenu() {
-  const t = useTranslations("dashboard.menu");
+  const { handleLogout, isPending } = useLogoutHandler();
+  const pathname = usePathname();
+  const isDashboardActive = pathname === "/dashboard";
+
   return (
-    <nav className="my-6 flex w-full flex-1 flex-col gap-6 text-left">
-      <div className="flex w-full gap-3 rounded-xl bg-[var(--color-primary-200)] py-3 pl-6 text-[var(--color-primary)]">
+    <nav className="my-6 flex h-full w-full flex-1 flex-col gap-6 text-left">
+      <Link
+        href="/dashboard"
+        className={cn(
+          "flex w-full items-center gap-3 rounded-xl py-3 pl-6 transition-colors",
+          isDashboardActive
+            ? "bg-[var(--color-primary-200)] text-[var(--color-primary)] dark:bg-[color-mix(in_srgb,var(--color-primary-200)_40%,transparent)]"
+            : "ds-text-primary hover:bg-[var(--color-primary-200)] hover:text-[var(--color-primary)] dark:hover:bg-[color-mix(in_srgb,var(--color-primary-200)_25%,transparent)]"
+        )}
+      >
         <Image src={group} alt="Dashboard" width={20} height={20} />
         <h4 className="font-semibold">Dashboard</h4>
-      </div>
+      </Link>
       <hr className="border-0 border-t border-[var(--border-color)]" />
       <SidebarSection
         title="User Management"
@@ -80,21 +97,20 @@ export default function DashboardMenu() {
           },
         ]}
       />
-      {/* <hr className="border-0 border-t border-[var(--border-color)]" /> */}
-      <div className="border-t border-[var(--border-color)] pt-6">
+      <div className="mt-auto border-t border-[var(--border-color)] pt-6">
         <SidebarSection
           title="Others"
           items={[
             {
               label: "Profile",
               icon: <User size={22} />,
-              href: "/dashboard/profile",
+              href: "/edit-profile",
             },
             {
-              label: "Log out",
+              label: isPending ? "Logging out..." : "Log out",
               icon: <LogOut size={22} />,
-              href: "#",
               danger: true,
+              onClick: handleLogout,
             },
           ]}
         />
