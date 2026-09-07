@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import type { AdminUser } from "@/modules/dashboard/types/AdminUser";
@@ -44,6 +45,7 @@ function UserAvatar({ user }: { user: AdminUser }) {
 export default function UsersTable({ users, firstRowNumber }: Props) {
   const t = useTranslations("dashboard.users");
   const locale = useLocale();
+  const router = useRouter();
 
   return (
     <div className="overflow-x-auto">
@@ -60,7 +62,11 @@ export default function UsersTable({ users, firstRowNumber }: Props) {
         </thead>
         <tbody className="divide-y ds-divide-color">
           {users.map((user, index) => (
-            <tr key={user.id} className="ds-hover">
+            <tr
+              key={user.id}
+              className="ds-hover cursor-pointer"
+              onClick={() => router.push(`/dashboard/users/${user.id}/edit-role`)}
+            >
               <td className="relative px-6 py-4 ds-text-sm ds-text-secondary">
                 {firstRowNumber + index}
                 <span

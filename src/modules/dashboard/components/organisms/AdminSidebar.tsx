@@ -3,12 +3,12 @@
 import DashboardProfileData from "../DashboardProfileData";
 import DashboardMenu from "./DashboardMenu";
 
-export default function DashboardSidebar() {
+export default function AdminSidebar() {
   return (
-    <aside className="flex h-full w-27/100 flex-col px-7 pt-6 pl-9">
+    <div className="flex h-full w-full flex-col px-4">
       <DashboardProfileData />
 
       <DashboardMenu />
-    </aside>
+    </div>
   );
 }

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import useGetProfile from "@/modules/auth/hooks/useGetProfile";
 import ProfileForm from "@/modules/auth/components/organisms/ProfileForm";
 import ProfilePhotoSection from "@/modules/auth/components/organisms/ProfilePhotoSection";
-import Sidebar from "@/shared/components/organisms/Sidebar";
+import UserSidebar from "@/modules/dashboard/components/organisms/UserSidebar";
 import "@/styles/profile.css";
 
 function Page() {
@@ -33,7 +33,9 @@ function Page() {
 
   return (
     <div className="profile-settings-wrapper">
-      <Sidebar />
+      <aside className="profile-sidebar">
+        <UserSidebar />
+      </aside>
       <main className="profile-main-content">
         <div className="account-info-card">
           <h1 className="account-info-title">Account Information</h1>

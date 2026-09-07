@@ -6,6 +6,7 @@ interface SidebarItem {
   href?: string;
   isActive?: boolean;
   danger?: boolean;
+  onClick?: () => void;
 }
 
 interface SidebarSectionProps {
@@ -24,7 +25,9 @@ export default function SidebarSection({ title, items }: SidebarSectionProps) {
             key={item.label}
             label={item.label}
             icon={item.icon}
+            href={item.href}
             danger={item.danger}
+            onClick={item.onClick}
           />
         ))}
       </div>
