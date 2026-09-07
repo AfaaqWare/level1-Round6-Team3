@@ -2,13 +2,13 @@
 /*  Profile / Account Information Page Styles        */
 /* ================================================ */
 
-/* ---------- Layout ---------- */
+/* ---------- Sidebar ---------- */
 .profile-settings-wrapper {
   display: flex;
+  align-items: stretch;
   min-height: calc(100vh - 64px);
 }
 
-/* ---------- Sidebar ---------- */
 .profile-sidebar {
   width: 250px;
   min-height: calc(100vh - 64px);
@@ -16,131 +16,11 @@
   border-right: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
-  padding-top: 24px;
   position: sticky;
   top: 64px;
-  flex-shrink: 0;
+  height: calc(100vh - 64px);
   overflow-y: auto;
-}
-
-.sidebar-profile-section {
-  display: flex;
-  align-items: center;
-  padding: 0 20px 24px 20px;
-  gap: 12px;
-}
-
-.sidebar-profile-avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  overflow: hidden;
   flex-shrink: 0;
-}
-
-.sidebar-profile-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.sidebar-profile-info {
-  flex: 1;
-  min-width: 0;
-}
-
-.sidebar-profile-name {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--color-text-primary);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.sidebar-profile-role {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--color-primary);
-}
-
-.sidebar-chevron {
-  color: var(--color-text-secondary);
-  flex-shrink: 0;
-}
-
-.sidebar-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  padding: 0 0 8px 0;
-}
-
-.sidebar-nav-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 20px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--color-text-primary);
-  text-decoration: none;
-  transition: all 0.2s ease;
-  border-left: 3px solid transparent;
-  cursor: pointer;
-  background: none;
-  border-top: none;
-  border-right: none;
-  border-bottom: none;
-  width: 100%;
-  text-align: left;
-}
-
-.sidebar-nav-item:hover {
-  background-color: var(--color-form);
-}
-
-.sidebar-nav-item.active {
-  background-color: var(--color-primary);
-  color: #fff;
-  border-left-color: var(--color-primary);
-  border-radius: 8px;
-  margin: 0 8px;
-  padding-left: 12px;
-  width: calc(100% - 16px);
-}
-
-.sidebar-nav-item.active .sidebar-nav-icon {
-  color: #fff;
-}
-
-.sidebar-nav-icon {
-  width: 20px;
-  height: 20px;
-  color: var(--color-text-secondary);
-  flex-shrink: 0;
-}
-
-.sidebar-divider {
-  height: 1px;
-  background-color: var(--border-color);
-  margin: 8px 20px;
-}
-
-.sidebar-section-label {
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--color-text-secondary);
-  padding: 8px 20px 4px 20px;
-  text-transform: capitalize;
-}
-
-.sidebar-logout {
-  color: #ef4444 !important;
-}
-
-.sidebar-logout:hover {
-  background-color: rgba(239, 68, 68, 0.08) !important;
 }
 
 /* ---------- Main Content ---------- */
@@ -400,18 +280,6 @@
   border-right-color: var(--border-color-dark);
 }
 
-.dark .sidebar-nav-item:hover {
-  background-color: var(--color-form-dark);
-}
-
-.dark .sidebar-nav-item.active {
-  background-color: var(--color-primary);
-}
-
-.dark .sidebar-divider {
-  background-color: var(--border-color-dark);
-}
-
 .dark .account-info-card {
   background-color: var(--color-bg-alt-dark);
 }
@@ -444,27 +312,15 @@
   }
 
   .profile-sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 40;
-    width: 260px;
-    height: 100vh;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-    padding-top: 20px;
-  }
-
-  .profile-sidebar.mobile-open {
-    transform: translateX(0);
-  }
-
-  .sidebar-mobile-toggle {
-    display: flex;
-  }
-
-  .sidebar-mobile-overlay.visible {
-    display: block;
+    position: static;
+    width: 100%;
+    min-height: auto;
+    height: auto;
+    top: auto;
+    overflow: visible;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding-top: 12px;
   }
 
   .profile-main-content {
