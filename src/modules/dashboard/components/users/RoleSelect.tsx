@@ -36,7 +36,10 @@ export default function RoleSelect({ role, userId }: Props) {
     <div className="relative inline-flex items-center">
       <select
         value={value}
-        onChange={event => handleChange(event.target.value)}
+        onChange={event => {
+          event.stopPropagation();
+          handleChange(event.target.value);
+        }}
         aria-label={t("columns.role")}
         className="ds-bg-role ds-text-role cursor-pointer appearance-none ds-rounded-md ds-text-sm ds-font-bold ps-3 pe-8 py-1.5 outline-none focus:ds-focus"
       >

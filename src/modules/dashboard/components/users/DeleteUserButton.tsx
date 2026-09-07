@@ -34,7 +34,10 @@ export default function DeleteUserButton({ userName, userEmail }: Props) {
   return (
     <button
       type="button"
-      onClick={handleDelete}
+      onClick={event => {
+        event.stopPropagation();
+        handleDelete();
+      }}
       aria-label={t("delete.aria")}
       title={t("delete.aria")}
       className="inline-flex h-9 cursor-pointer items-center gap-2 whitespace-nowrap ds-rounded-md ds-border-danger px-3 ds-text-danger ds-text-sm transition-colors hover:ds-bg-danger-soft focus:ds-focus"
