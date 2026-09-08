@@ -1,14 +1,11 @@
 import React from "react";
 import { cn } from "@/lib/cn";
 
-interface Props {
+interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "outline" | "outline1" | "ghost" | "primary200" | "disabled" | "white" | "primaryWhite" | "panel" ;
   size?: "sm" | "md" | "lg" | "xlg" | "form";
   className?: string;
   children: React.ReactNode;
-  onClick?: () => void;
-  type?: "button" | "submit" | "reset";
-  disabled?: boolean;
   isFullWidth?: boolean;
   isRounded?: boolean;
 }
@@ -23,6 +20,8 @@ export default function Button({
   disabled = false,
   isFullWidth = false,
   isRounded = false,
+  id,
+  ...props
 }: Props) {
   const base =
     "inline-flex items-center justify-center gap-2 font-medium cursor-pointer transition-all duration-[var(--motion-fast)] ease-out focus:outline-none focus:shadow-[0_0_0_var(--focus-ring-width)_var(--focus-ring-color)]";
@@ -56,6 +55,7 @@ export default function Button({
 
   return (
     <button
+      id={id}
       type={type}
       onClick={onClick}
       disabled={isDisabled}
@@ -69,6 +69,7 @@ export default function Button({
         isDisabled && variant !== "disabled" ? "ds-disabled" : "",
         className
       )}
+      {...props}
     >
       {children}
     </button>
