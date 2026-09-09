@@ -6,10 +6,11 @@ interface StatusBadgeProps {
   status: StatusBadgeVariant;
   className?: string;
 }
+
 const statusStyles: Record<StatusBadgeVariant, string> = {
-  draft: " ds-bg-orange-soft ds-px-md ds-text-orange",
-  published: "ds-text-green ds-bg-green-soft",
-  closed: "ds-text-gray ds-bg-gray-soft",
+  draft: "bg-[#fff3d9] text-[#eda321]",
+  published: "bg-[#e2f3eb] text-[#359e63]",
+  closed: "ds-text-disabled bg-[#F0F2F6]",
 };
 
 const statusLabels: Record<StatusBadgeVariant, string> = {
@@ -22,7 +23,7 @@ export default function StatusBadge({ status, className }: StatusBadgeProps) {
     <span
       className={cn(
         "inline-flex w-fit items-center justify-center",
-        "ds-rounded-xl px-3 py-1",
+        "ds-rounded-sm px-3 py-1",
         "ds-text-xs ds-font-bold",
         statusStyles[status],
         className

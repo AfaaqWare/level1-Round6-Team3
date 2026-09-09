@@ -4,10 +4,12 @@ import useGetAllSurveys from "@/modules/survey-response/hooks/useGetAllSurveys";
 
 export default function useDashboardStats() {
   const {
-    data: surveys,
+    data: surveysResponse,
     isLoading: loadingRecentSurveys,
     isError: errorRecentSurveys,
-  } = useGetAllSurveys();
+  } = useGetAllSurveys(1, 100);
+
+  const surveys = surveysResponse?.data;
 
   const { data: users } = useGetUsers();
 
