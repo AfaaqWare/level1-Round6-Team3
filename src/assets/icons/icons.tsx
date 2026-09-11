@@ -39,6 +39,14 @@ import {
   Phone,
   Globe,
   Languages,
+  Pencil,
+  Info,
+  Search,
+  Image as ImageIcon,
+  PanelLeftOpen,
+  MoreVertical,
+  Link2,
+  Share2,
 } from "lucide-react";
 
 type IconProps = Omit<ComponentProps<typeof Icon>, "icon">;
@@ -94,4 +102,12 @@ export {
   Phone,
   Globe,
   Languages,
+  Pencil,
+  Info,
+  ImageIcon,
+  Search,
+  PanelLeftOpen,
+  MoreVertical,
+  Link2,
+  Share2,
 };

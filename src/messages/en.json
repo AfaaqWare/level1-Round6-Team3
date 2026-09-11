@@ -878,6 +878,72 @@
       "chart": {
         "total": "Total"
       }
+    },
+    "surveys": {
+      "meta": {
+        "title": "My Surveys - Afaaq Ware",
+        "description": "Manage, edit and track all your surveys in Survey Land"
+      },
+      "header": {
+        "title": "My Surveys",
+        "subtitle": "Manage, Edit And Track All Your Survey",
+        "createButton": "Create Survey"
+      },
+      "filters": {
+        "tabs": {
+          "all": "All",
+          "draft": "Draft",
+          "published": "Published",
+          "closed": "Closed"
+        },
+        "searchPlaceholder": "Search Surveys",
+        "sort": {
+          "label": "Sort surveys",
+          "newest": "Newest First",
+          "oldest": "Oldest First"
+        }
+      },
+      "card": {
+        "noCover": "No cover image",
+        "questionsCount": "{count} Questions",
+        "responses": "{count} Responses",
+        "updated": "Updated {time}",
+        "deadline": "Deadline: {date}",
+        "preview": "Preview",
+        "edit": "Edit",
+        "share": "Share",
+        "menu": {
+          "label": "Survey options",
+          "preview": "Preview",
+          "edit": "Edit",
+          "publish": "Publish",
+          "copyLink": "Copy Link",
+          "delete": "Delete",
+          "ok": "OK",
+          "cancel": "Cancel",
+          "operationSuccess": "Operation completed successfully",
+          "errorTitle": "Something went wrong",
+          "deleteConfirmTitle": "Delete this survey?",
+          "deleteConfirmText": "This can't be undone.",
+          "deleteSuccessTitle": "Survey deleted successfully",
+          "deleteErrorText": "Couldn't delete the survey. Please try again.",
+          "publishSuccessTitle": "Link published successfully",
+          "publishErrorText": "Couldn't publish the survey link. Please try again.",
+          "copyLinkSuccessTitle": "Link copied successfully",
+          "copyLinkErrorText": "Couldn't copy the link. Please try again."
+        }
+      },
+      "pagination": {
+        "nav": "Pagination",
+        "showing": "Showing {start} to {end} of {total}",
+        "surveys": "Surveys",
+        "first": "First page",
+        "previous": "Previous page",
+        "next": "Next page",
+        "last": "Last page",
+        "loadingMore": "Loading more surveys...",
+        "endReached": "You've reached the end"
+      }
     }
   },
   "cards": {

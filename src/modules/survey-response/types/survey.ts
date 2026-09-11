@@ -12,6 +12,7 @@ export interface Survey {
   updatedAt: string;
   lastMilestone: number;
   questions: SurveyQuestion[];
+  responsesCount?: number;
 }
 export interface SubmitSurveyPayload {
   surveyId: string;
@@ -23,3 +24,9 @@ export interface SubmitSurveyPayload {
   }[];
 }
 export type GetAllSurveys = Survey[];
+export interface PaginatedSurveys {
+  data: Survey[];
+  total: number;
+  page: number;
+  pageSize: number;
+}

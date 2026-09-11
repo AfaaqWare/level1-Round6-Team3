@@ -1,7 +1,7 @@
 import { cn } from "@/lib/cn";
 import Title from "@/shared/components/atoms/Title";
 import Text from "@/shared/components/atoms/Text";
-import StatusBadge from "../atoms/StatusBadge";
+import StatusBadge from "@/shared/components/atoms/StatusBadge";
 import DataTableHeader from "../molecules/DataTableHeader";
 import { Table, TableBody, TableCell, TableRow } from "@/shared/components/molecules/Table";
 import SectionHeader from "../molecules/SectionHeader";

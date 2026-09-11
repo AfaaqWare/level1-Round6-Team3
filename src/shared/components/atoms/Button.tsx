@@ -30,7 +30,7 @@ export default function Button({
     sm: "px-[var(--space-md)] py-[var(--space-xs)] ds-text-sm",
     md: "px-[var(--space-xl)] py-[var(--space-sm)] ds-text-base",
     lg: "px-[var(--space-3xl)] py-[var(--space-md)] ds-text-md",
-    xlg :"px-[111px] py-[11px]",
+    xlg: "px-[111px] py-[11px]",
     form: "h-[40px] md:w-[395px] ds-text-base",
   };
 
@@ -38,7 +38,7 @@ export default function Button({
     primary: "ds-bg-primary ds-text-white hover:opacity-90 active:opacity-80 ds-shadow-sm",
     secondary: "ds-bg-secondary ds-text-white hover:opacity-90 active:opacity-80 ds-shadow-sm",
     outline:
-      "bg-transparent border border-[var(--color-primary)] ds-text-primary hover:ds-bg-primary hover:ds-text-white active:opacity-80",
+      "bg-transparent border border-[var(--color-primary)] text-[var(--color-primary)] hover:ds-bg-primary hover:ds-text-white active:opacity-80",
     outline1:
       "bg-transparent border border-[var(--color-primary)] ds-text-primary hover:ds-bg-primary hover:ds-text-white active:opacity-80",
     ghost: "bg-transparent ds-text-primary font-semibold hover:opacity-70 active:opacity-50",

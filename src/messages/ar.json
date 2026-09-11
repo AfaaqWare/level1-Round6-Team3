@@ -860,6 +860,72 @@
       "chart": {
         "total": "الاجمالي"
       }
+    },
+    "surveys": {
+      "meta": {
+        "title": "استطلاعاتي - Afaaq Ware",
+        "description": "أدر وعدّل وتابع جميع استبياناتك في Survey Land"
+      },
+      "header": {
+        "title": "استطلاعاتي",
+        "subtitle": "إدارة وتعديل وتتبع جميع استطلاعاتك",
+        "createButton": "إنشاء استطلاع"
+      },
+      "filters": {
+        "tabs": {
+          "all": "الكل",
+          "draft": "مسودة",
+          "published": "منشور",
+          "closed": "مغلق"
+        },
+        "searchPlaceholder": "بحث عن استبيان",
+        "sort": {
+          "label": "ترتيب الاستبيانات",
+          "newest": "الأحدث أولا",
+          "oldest": "الأقدم أولا"
+        }
+      },
+      "card": {
+        "noCover": "لا توجد صورة غلاف",
+        "questionsCount": "{count} أسئلة",
+        "responses": "{count} ردود",
+        "updated": "تم التحديث {time}",
+        "deadline": "الموعد النهائي: {date}",
+        "preview": "معاينة",
+        "edit": "تعديل",
+        "share": "مشاركة",
+        "menu": {
+          "label": "خيارات الاستبيان",
+          "preview": "معاينة",
+          "edit": "تعديل",
+          "publish": "نشر",
+          "copyLink": "نسخ الرابط",
+          "delete": "حذف",
+          "ok": "أوك",
+          "cancel": "إلغاء",
+          "operationSuccess": "تمت العملية بنجاح",
+          "errorTitle": "حدث خطأ ما",
+          "deleteConfirmTitle": "هل تريد حذف هذا الاستبيان؟",
+          "deleteConfirmText": "لا يمكن التراجع عن هذا الإجراء.",
+          "deleteSuccessTitle": "تم حذف الاستبيان بنجاح",
+          "deleteErrorText": "تعذر حذف الاستبيان، حاول مرة أخرى.",
+          "publishSuccessTitle": "تم نشر الرابط بنجاح",
+          "publishErrorText": "تعذر نشر رابط الاستبيان، حاول مرة أخرى.",
+          "copyLinkSuccessTitle": "تم نسخ الرابط بنجاح",
+          "copyLinkErrorText": "تعذر نسخ الرابط، حاول مرة أخرى."
+        }
+      },
+      "pagination": {
+        "nav": "ترقيم الصفحات",
+        "showing": "عرض {start} إلى {end} من أصل {total}",
+        "surveys": "استبيان",
+        "first": "الصفحة الأولى",
+        "previous": "الصفحة السابقة",
+        "next": "الصفحة التالية",
+        "last": "الصفحة الأخيرة",
+        "loadingMore": "جاري تحميل المزيد من الاستبيانات...",
+        "endReached": "وصلت إلى النهاية"
+      }
     }
   },
   "cards": {
