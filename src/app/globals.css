@@ -539,3 +539,194 @@ html:root {
   --swal2-close-button-color: var(--color-text-secondary);
   --swal2-timer-progress-bar-background: var(--color-primary);
 }
+
+/* -------------------------------------------------- */
+/* Create Survey Page Styles                           */
+/* -------------------------------------------------- */
+.create-survey-page {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 8px 0 32px 0;
+}
+
+.create-survey-header {
+  margin-bottom: 24px;
+}
+
+.create-survey-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 6px;
+}
+
+.create-survey-subtitle {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+}
+
+.create-survey-card {
+  background-color: var(--color-bg-card);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+.dark .create-survey-card {
+  background-color: var(--color-bg-card-dark);
+  border-color: var(--border-color-dark);
+}
+
+.create-survey-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.create-survey-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-survey-date-input {
+  width: 100%;
+  height: 46px;
+  padding-left: 40px;
+  padding-right: 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color-muted);
+  background-color: var(--color-form);
+  color: var(--color-text-primary);
+  font-size: 0.875rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.create-survey-date-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(0, 183, 193, 0.2);
+}
+
+.create-survey-date-input.has-error {
+  border-color: #ef4444;
+}
+
+.dark .create-survey-date-input {
+  background-color: var(--color-form-dark);
+  border-color: var(--border-color-dark);
+  color-scheme: dark;
+}
+
+/* Image DropZone */
+.create-survey-dropzone {
+  background-color: #bce4e6;
+  border-radius: 16px;
+  padding: 36px 24px;
+  text-align: center;
+  transition: all 0.2s ease;
+  border: 2px dashed transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark .create-survey-dropzone {
+  background-color: #a4d9dc;
+}
+
+.create-survey-dropzone.dragging {
+  border-color: var(--color-primary);
+  background-color: #a0dbde;
+}
+
+.create-survey-dropzone.has-error {
+  border-color: #ef4444;
+}
+
+.create-survey-dropzone-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.create-survey-dropzone-icon {
+  width: 42px;
+  height: 42px;
+  color: #00878e;
+  margin-bottom: 4px;
+}
+
+.create-survey-dropzone-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a2729;
+}
+
+.create-survey-dropzone-or {
+  font-size: 0.8rem;
+  color: #3b5256;
+}
+
+.create-survey-dropzone-btn {
+  background-color: transparent;
+  border: 1.5px solid #00878e;
+  color: #00777e;
+  border-radius: 8px;
+  padding: 6px 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 4px 0;
+}
+
+.create-survey-dropzone-btn:hover {
+  background-color: rgba(0, 135, 142, 0.1);
+}
+
+.create-survey-dropzone-hint {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #4b666a;
+}
+
+.create-survey-dropzone-preview {
+  position: relative;
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.create-survey-dropzone-preview img {
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.create-survey-dropzone-remove {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.create-survey-submit {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
