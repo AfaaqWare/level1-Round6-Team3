@@ -934,6 +934,16 @@
         "subtitle": "Manage, Edit And Track All Your Survey",
         "createButton": "Create Survey"
       },
+      "noSurveyHeader": {
+        "title": "Welcome",
+        "subtitlePart1": "Welcome back, ",
+        "subtitlePart2": "Here's what's happening with your surveys.",
+        "createButton": "Create Survey"
+      },
+      "noSurveyFooter": {
+        "text": "No surveys have been created. To create surveys, click \"Create Survey\"",
+        "createButton": "Create Survey"
+      },
       "filters": {
         "tabs": {
           "all": "All",
