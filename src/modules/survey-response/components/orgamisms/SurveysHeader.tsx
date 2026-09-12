@@ -20,7 +20,7 @@ export default function SurveysHeader() {
         </Text>
       </div>
 
-      <Link href="/dashboard/my-surveys/create">
+      <Link href="/dashboard/create-survey">
         <Button variant="primaryWhite" size="md">
           <Icon IconComponent={Plus} size="xs" color="primaryWhite" className="!font-medium" />
           {t("createButton")}

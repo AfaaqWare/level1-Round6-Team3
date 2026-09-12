@@ -1001,6 +1001,13 @@
       }
     },
 
+    "adminSurveys": {
+      "meta": {
+        "title": "All Surveys - Afaaq Ware",
+        "description": "View and manage all surveys in Survey Land"
+      }
+    },
+
     "surveyEdit": {
       "meta": {
         "title": "Edit Survey - Afaaq Ware",
