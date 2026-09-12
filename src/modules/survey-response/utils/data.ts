@@ -1,5 +1,19 @@
 import { Survey } from "../types/survey";
 import { responseHeroImage } from "@/assets/images/images";
+import {
+  Eye,
+  Pencil,
+  Send,
+  Link2,
+  Trash2,
+  Share2,
+  ClipboardList,
+  PieChart,
+  Clock3,
+  CalendarDays,
+} from "@/assets/icons/icons";
+import { formatDate } from "@/shared/utils/formatDate";
+import { formatRelativeTime } from "@/shared/utils/formatRelativeTime";
 export const mockSurvey: Survey = {
   id: "survey-1",
 
@@ -42,3 +56,80 @@ export const mockSurvey: Survey = {
     },
   ],
 };
+
+interface SurveyCardAction {
+  id: string;
+  labelKey: string;
+  icon: typeof Eye;
+  hrefSuffix?: string;
+  muted: boolean;
+  variant: "outline" | "primary";
+}
+
+export const surveyCardActions: SurveyCardAction[] = [
+  {
+    id: "preview",
+    labelKey: "preview",
+    icon: Eye,
+    hrefSuffix: "/preview",
+    muted: true,
+    variant: "outline",
+  },
+  {
+    id: "edit",
+    labelKey: "edit",
+    icon: Pencil,
+    hrefSuffix: "/edit",
+    muted: false,
+    variant: "outline",
+  },
+  { id: "share", labelKey: "share", icon: Share2, muted: false, variant: "primary" },
+];
+
+interface SurveyCardMenuItem {
+  id: "preview" | "edit" | "publish" | "copyLink" | "delete";
+  labelKey: string;
+  icon: typeof Eye;
+  kind: "link" | "action";
+  hrefSuffix?: string;
+  danger?: boolean;
+}
+
+export const surveyCardMenuItems: SurveyCardMenuItem[] = [
+  { id: "preview", labelKey: "preview", icon: Eye, kind: "link", hrefSuffix: "/preview" },
+  { id: "edit", labelKey: "edit", icon: Pencil, kind: "link", hrefSuffix: "/edit" },
+  { id: "publish", labelKey: "publish", icon: Send, kind: "action" },
+  { id: "copyLink", labelKey: "copyLink", icon: Link2, kind: "action" },
+  { id: "delete", labelKey: "delete", icon: Trash2, kind: "action", danger: true },
+];
+
+export const surveyCardMetaFields = [
+  {
+    id: "questions",
+    icon: ClipboardList,
+    labelKey: "questionsCount",
+    getValues: (survey: Survey) => ({ count: survey.questions?.length ?? 0 }),
+  },
+  {
+    id: "responses",
+    icon: PieChart,
+    labelKey: "responses",
+    getValues: (survey: Survey) => ({ count: survey.responsesCount ?? 0 }),
+  },
+  {
+    id: "deadline",
+    icon: CalendarDays,
+    labelKey: "deadline",
+    getValues: (survey: Survey, locale: string) => ({
+      date: formatDate(survey.deadline, locale),
+    }),
+  },
+  {
+    id: "updated",
+    icon: Clock3,
+    labelKey: "updated",
+    getValues: (survey: Survey, locale: string) => ({
+      time: formatRelativeTime(survey.updatedAt, locale),
+    }),
+  },
+] as const;

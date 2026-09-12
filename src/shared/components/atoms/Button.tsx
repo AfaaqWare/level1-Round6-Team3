@@ -1,14 +1,11 @@
 import React from "react";
 import { cn } from "@/lib/cn";
 
-interface Props {
+interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "outline" | "outline1" | "ghost" | "primary200" | "disabled" | "white" | "primaryWhite" | "panel" ;
   size?: "sm" | "md" | "lg" | "xlg" | "form";
   className?: string;
   children: React.ReactNode;
-  onClick?: () => void;
-  type?: "button" | "submit" | "reset";
-  disabled?: boolean;
   isFullWidth?: boolean;
   isRounded?: boolean;
 }
@@ -23,6 +20,8 @@ export default function Button({
   disabled = false,
   isFullWidth = false,
   isRounded = false,
+  id,
+  ...props
 }: Props) {
   const base =
     "inline-flex items-center justify-center gap-2 font-medium cursor-pointer transition-all duration-[var(--motion-fast)] ease-out focus:outline-none focus:shadow-[0_0_0_var(--focus-ring-width)_var(--focus-ring-color)]";
@@ -31,7 +30,7 @@ export default function Button({
     sm: "px-[var(--space-md)] py-[var(--space-xs)] ds-text-sm",
     md: "px-[var(--space-xl)] py-[var(--space-sm)] ds-text-base",
     lg: "px-[var(--space-3xl)] py-[var(--space-md)] ds-text-md",
-    xlg :"px-[111px] py-[11px]",
+    xlg: "px-[111px] py-[11px]",
     form: "h-[40px] md:w-[395px] ds-text-base",
   };
 
@@ -39,7 +38,7 @@ export default function Button({
     primary: "ds-bg-primary ds-text-white hover:opacity-90 active:opacity-80 ds-shadow-sm",
     secondary: "ds-bg-secondary ds-text-white hover:opacity-90 active:opacity-80 ds-shadow-sm",
     outline:
-      "bg-transparent border border-[var(--color-primary)] ds-text-primary hover:ds-bg-primary hover:ds-text-white active:opacity-80",
+      "bg-transparent border border-[var(--color-primary)] text-[var(--color-primary)] hover:ds-bg-primary hover:ds-text-white active:opacity-80",
     outline1:
       "bg-transparent border border-[var(--color-primary)] ds-text-primary hover:ds-bg-primary hover:ds-text-white active:opacity-80",
     ghost: "bg-transparent ds-text-primary font-semibold hover:opacity-70 active:opacity-50",
@@ -56,6 +55,7 @@ export default function Button({
 
   return (
     <button
+      id={id}
       type={type}
       onClick={onClick}
       disabled={isDisabled}
@@ -69,6 +69,7 @@ export default function Button({
         isDisabled && variant !== "disabled" ? "ds-disabled" : "",
         className
       )}
+      {...props}
     >
       {children}
     </button>
