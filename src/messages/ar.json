@@ -973,6 +973,13 @@
       }
     },
 
+    "adminSurveys": {
+      "meta": {
+        "title": "جميع الاستبيانات - Afaaq Ware",
+        "description": "اعرض وأدر جميع الاستبيانات في Survey Land"
+      }
+    },
+
     "surveyEdit": {
       "meta": {
         "title": "تعديل الاستبيان - أفاق وير",

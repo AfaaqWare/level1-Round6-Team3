@@ -7,8 +7,12 @@ import SurveysGrid from "../orgamisms/SurveysGrid";
 import type { SurveyStatusFilter } from "../molecules/SurveyStatusTabs";
 import type { SurveysSortOrder } from "../molecules/SurveySortSelect";
 
-export default function SurveysPage() {
-  const [status, setStatus] = useState<SurveyStatusFilter>("all");
+interface SurveysPageProps {
+  initialStatus?: SurveyStatusFilter;
+}
+
+export default function SurveysPage({ initialStatus = "all" }: SurveysPageProps) {
+  const [status, setStatus] = useState<SurveyStatusFilter>(initialStatus);
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState<SurveysSortOrder>("newest");
 
