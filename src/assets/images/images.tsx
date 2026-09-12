@@ -55,6 +55,7 @@ import googleIcon from "./google-icon.png";
 import githubIcon from "./github-icon.png";
 import penIcon from "./pen.png";
 import emailIcon from "./email.png";
+import empty1 from "./empty1.png";
 import lockIcon from "./lock.png";
 import trashIcon from "./trash.png";
 import group from "./Group.png";
@@ -112,4 +113,5 @@ export {
   lockIcon,
   trashIcon,
   group,
+  empty1,
 };
