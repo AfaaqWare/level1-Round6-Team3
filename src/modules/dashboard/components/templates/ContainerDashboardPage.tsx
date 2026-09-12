@@ -48,7 +48,7 @@ export default function ContainerDashboardPage() {
     },
   ];
   return (
-    <main className="px-4">
+    <main className="flex-1 px-4">
       <Heading name={String(name ?? "")} />
 
       <SurveyStatsSection stats={surveyStats} />
