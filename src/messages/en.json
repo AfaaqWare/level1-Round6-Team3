@@ -921,6 +921,9 @@
 
       "quickActions": {
         "title": "Quick Actions"
+      }
+    },
+
     "surveys": {
       "meta": {
         "title": "My Surveys - Afaaq Ware",
@@ -985,6 +988,81 @@
         "last": "Last page",
         "loadingMore": "Loading more surveys...",
         "endReached": "You've reached the end"
+      }
+    },
+
+    "surveyEdit": {
+      "meta": {
+        "title": "Edit Survey - Afaaq Ware",
+        "description": "Update the details of your survey and save your changes"
+      },
+      "title": "Edit Survey",
+      "subtitle": "Update the details of your survey and save your changes.",
+      "fields": {
+        "title": {
+          "label": "Survey Title",
+          "helper": "Give your survey a clear and descriptive title.",
+          "placeholder": "e.g. Customer Satisfaction Survey"
+        },
+        "description": {
+          "label": "Description",
+          "helper": "Describe the purpose of this survey and what respondents should know before they begin.",
+          "placeholder": "e.g. Help us improve by sharing your experience"
+        },
+        "deadline": {
+          "label": "Deadline",
+          "helper": "Choose the last date and time for receiving responses.",
+          "placeholder": "Choose a date and time",
+          "clear": "Clear deadline"
+        },
+        "status": {
+          "label": "Status",
+          "helper": "Control how respondents see and access this survey."
+        }
+      },
+      "statuses": {
+        "draft": "Draft",
+        "published": "Published",
+        "closed": "Closed"
+      },
+      "cover": {
+        "label": "Cover Image",
+        "helper": "This image will be displayed on your survey page.",
+        "dragAndDrop": "Drag and drop an image here",
+        "or": "Or",
+        "chooseFile": "Choose file",
+        "hint": "PNG, JPG or WEBP (Max. 1MB)",
+        "remove": "Remove image",
+        "previewAlt": "Survey cover preview",
+        "errorType": "Only PNG, JPG, or WEBP files are allowed.",
+        "errorSize": "File size must be under 1MB."
+      },
+      "actions": {
+        "cancel": "Cancel",
+        "save": "Save Changes",
+        "saving": "Saving...",
+        "discardTitle": "Discard changes?",
+        "discardText": "You have unsaved changes. Leaving now will discard them.",
+        "discardConfirm": "Leave",
+        "discardCancel": "Keep Editing"
+      },
+      "validation": {
+        "titleRequired": "Title is required",
+        "titleMax": "Title must be at most 100 characters",
+        "descriptionRequired": "Description is required",
+        "descriptionMax": "Description must be at most 500 characters",
+        "deadlineRequired": "Deadline is required",
+        "statusRequired": "Status is required"
+      },
+      "toast": {
+        "saveSuccess": "Survey updated successfully!",
+        "saveError": "Failed to update the survey. Please try again."
+      },
+      "states": {
+        "loading": "Loading survey...",
+        "error": "We couldn't load this survey. Please try again.",
+        "retry": "Retry",
+        "notFound": "Survey not found."
       }
     }
   },
