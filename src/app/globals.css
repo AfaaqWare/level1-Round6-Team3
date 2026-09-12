@@ -730,3 +730,28 @@ html:root {
   margin-top: 8px;
 }
 
+/* -------------------------------------------------- */
+/* Edit Survey Page Styles                            */
+/* -------------------------------------------------- */
+.edit-survey-page {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 8px 0 32px 0;
+}
+
+.edit-survey-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .edit-survey-layout {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  }
+}
+
+.edit-survey-cover-column {
+  min-width: 0;
+}

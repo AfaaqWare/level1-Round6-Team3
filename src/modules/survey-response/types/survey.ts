@@ -1,4 +1,8 @@
 import { SurveyQuestion } from "./question";
+
+export const SURVEY_STATUSES = ["draft", "published", "closed"] as const;
+export type SurveyStatus = (typeof SURVEY_STATUSES)[number];
+
 export interface Survey {
   id: string;
   userId: string;
@@ -6,7 +10,7 @@ export interface Survey {
   description: string;
   deadline: string;
   cover: string;
-  status: "draft" | "published" | "closed";
+  status: SurveyStatus;
   link: string | null;
   createdAt: string;
   updatedAt: string;
