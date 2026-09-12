@@ -878,6 +878,50 @@
       "chart": {
         "total": "Total"
       }
+    },
+
+    "mySurveys": {
+      "heading": {
+        "title": "My Surveys",
+        "subtitle": "Manage, Edit and track all your Survey"
+      },
+
+      "actions": {
+        "preview": "Preview",
+        "edit": "Edit",
+        "openBuilder": "Open Builder",
+        "viewAllQuestions": "View All Questions",
+        "viewResponses": "View Responses",
+        "delete": "Delete"
+      },
+
+      "survey": {
+        "deadline": "Deadline",
+        "questions": "Questions",
+        "createdBy": "Created by"
+      },
+
+      "overview": {
+        "title": "Overview",
+        "surveyId": "Survey ID",
+        "status": "Status",
+        "createdAt": "Created At",
+        "updatedAt": "Updated At",
+        "link": "Link",
+        "noPublishedLink": "No Published yet"
+      },
+
+      "questions": {
+        "title": "Question ({count})",
+        "recent": "Recent Questions",
+        "viewAll": "View all question",
+        "multipleChoice": "Multiple Choice",
+        "textArea": "Text Area"
+      },
+
+      "quickActions": {
+        "title": "Quick Actions"
+      }
     }
   },
   "cards": {
