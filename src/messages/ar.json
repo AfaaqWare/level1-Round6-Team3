@@ -861,6 +861,48 @@
         "total": "الاجمالي"
       }
     },
+
+    "mySurveys": {
+      "heading": {
+        "title": "استبياناتي",
+        "subtitle": "إدارة وتعديل وتتبع جميع استبياناتك"
+      },
+
+      "actions": {
+        "preview": "معاينة",
+        "edit": "تعديل",
+        "openBuilder": "فتح المنشئ",
+        "viewAllQuestions": "عرض جميع الأسئلة",
+        "viewResponses": "عرض الردود",
+        "delete": "حذف"
+      },
+
+      "survey": {
+        "deadline": "الموعد النهائي",
+        "questions": "الأسئلة",
+        "createdBy": "تم الإنشاء بواسطة"
+      },
+
+      "overview": {
+        "title": "نظرة عامة",
+        "surveyId": "معرّف الاستبيان",
+        "status": "الحالة",
+        "createdAt": "تاريخ الإنشاء",
+        "updatedAt": "آخر تحديث",
+        "link": "الرابط",
+        "noPublishedLink": "لا يوجد رابط منشور حتى الآن"
+      },
+
+      "questions": {
+        "title": "سؤال ({count})",
+        "recent": "أحدث الأسئلة",
+        "viewAll": "عرض جميع الأسئلة",
+        "multipleChoice": "اختيار من متعدد",
+        "textArea": "نص"
+      },
+
+      "quickActions": {
+        "title": "إجراءات سريعة"
     "surveys": {
       "meta": {
         "title": "استطلاعاتي - Afaaq Ware",

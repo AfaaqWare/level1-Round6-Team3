@@ -12,7 +12,8 @@ interface Props {
     | "orange"
     | "green"
     | "purple"
-    | "blue";
+    | "blue"
+  
   className?: string;
   children: React.ReactNode;
   isCenter?: boolean;
