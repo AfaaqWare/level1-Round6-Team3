@@ -14,6 +14,7 @@ import {
 } from "@/assets/icons/icons";
 import { formatDate } from "@/shared/utils/formatDate";
 import { formatRelativeTime } from "@/shared/utils/formatRelativeTime";
+import type { BadgeTone } from "@/shared/components/atoms/Badge";
 export const mockSurvey: Survey = {
   id: "survey-1",
 
@@ -140,3 +141,38 @@ export const surveyCardMetaFields = [
     }),
   },
 ] as const;
+
+export const RESPONSES_PREVIEW_ROW_LIMIT = 5;
+
+interface ResponsesPreviewContext {
+  survey: Survey;
+  responsesCount: number;
+}
+
+interface ResponsesPreviewBadge {
+  id: "showingRows" | "questions" | "responses";
+  tone: BadgeTone;
+  labelKey: string;
+  getValues: (ctx: ResponsesPreviewContext) => Record<string, number>;
+}
+
+export const responsesPreviewBadges: ResponsesPreviewBadge[] = [
+  {
+    id: "showingRows",
+    tone: "gray",
+    labelKey: "showingFirstRows",
+    getValues: () => ({ count: RESPONSES_PREVIEW_ROW_LIMIT }),
+  },
+  {
+    id: "questions",
+    tone: "green",
+    labelKey: "questionsCount",
+    getValues: ({ survey }) => ({ count: survey.questions?.length ?? 0 }),
+  },
+  {
+    id: "responses",
+    tone: "orange",
+    labelKey: "responsesCount",
+    getValues: ({ responsesCount }) => ({ count: responsesCount }),
+  },
+];

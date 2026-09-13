@@ -998,7 +998,14 @@
       "title": "تصدير الردود",
       "subtitle": "قم بتصدير كل ردود الاستبيان إلى ملف Excel.",
       "edit": "تعديل",
-      "shareSurvey": "مشاركة الاستبيان"
+      "shareSurvey": "مشاركة الاستبيان",
+      "responsesPreview": {
+        "title": "معاينة الردود",
+        "showingFirstRows": "عرض أول {count} صفوف",
+        "questionsCount": "الأسئلة : {count}",
+        "responsesCount": "الردود: {count}",
+        "infoBanner": "معاينة للبيانات التي سيتم تصديرها إلى Excel."
+      }
     },
 
     "surveyEdit": {

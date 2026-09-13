@@ -1016,7 +1016,14 @@
       "title": "Export Responses",
       "subtitle": "Export all survey responses to an Excel file.",
       "edit": "Edit",
-      "shareSurvey": "Share Survey"
+      "shareSurvey": "Share Survey",
+      "responsesPreview": {
+        "title": "Responses Preview",
+        "showingFirstRows": "Showing first {count} rows",
+        "questionsCount": "Question : {count}",
+        "responsesCount": "Responses: {count}",
+        "infoBanner": "A Preview of the data that will be exported to Excel."
+      }
     },
 
     "surveyEdit": {
