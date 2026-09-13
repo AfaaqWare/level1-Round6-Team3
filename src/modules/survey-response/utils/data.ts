@@ -6,7 +6,7 @@ import {
   Send,
   Link2,
   Trash2,
-  Share2,
+  PanelLeftOpen,
   ClipboardList,
   PieChart,
   Clock3,
@@ -83,7 +83,14 @@ export const surveyCardActions: SurveyCardAction[] = [
     muted: false,
     variant: "outline",
   },
-  { id: "share", labelKey: "share", icon: Share2, muted: false, variant: "primary" },
+  {
+    id: "details",
+    labelKey: "details",
+    icon: PanelLeftOpen,
+    hrefSuffix: "",
+    muted: false,
+    variant: "primary",
+  },
 ];
 
 interface SurveyCardMenuItem {

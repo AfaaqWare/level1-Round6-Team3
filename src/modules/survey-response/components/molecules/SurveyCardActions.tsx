@@ -9,14 +9,13 @@ import { surveyCardActions } from "../../utils/data";
 
 interface SurveyCardActionsProps {
   surveyId: string;
-  onShare: () => void;
 }
 
-export default function SurveyCardActions({ surveyId, onShare }: SurveyCardActionsProps) {
+export default function SurveyCardActions({ surveyId }: SurveyCardActionsProps) {
   const t = useTranslations("dashboard.surveys.card");
 
   return (
-    <div className="pointer-events-auto mt-2 flex w-full flex-wrap items-center gap-3">
+    <div className="mt-2 flex w-full flex-wrap items-center gap-3">
       {surveyCardActions.map(action => {
         const isPrimary = action.variant === "primary";
 
@@ -35,13 +34,12 @@ export default function SurveyCardActions({ surveyId, onShare }: SurveyCardActio
           </>
         );
 
-        if (!action.hrefSuffix) {
+        if (action.hrefSuffix === undefined) {
           return (
             <Button
               key={action.id}
               variant={action.variant}
               size="sm"
-              onClick={onShare}
               className={cn(buttonClassName, "flex-1")}
             >
               {buttonContent}
@@ -52,7 +50,7 @@ export default function SurveyCardActions({ surveyId, onShare }: SurveyCardActio
         return (
           <Link
             key={action.id}
-            href={`/dashboard/my-surveys/${surveyId}${action.hrefSuffix}`}
+            href={`/dashboard/survey/${surveyId}${action.hrefSuffix}`}
             className="flex-1"
           >
             <Button variant={action.variant} size="sm" className={buttonClassName}>

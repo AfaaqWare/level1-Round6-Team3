@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import Swal from "sweetalert2";
 import { cn } from "@/lib/cn";
@@ -100,17 +99,10 @@ export default function SurveyCard({ survey }: SurveyCardProps) {
   };
 
   return (
-    <article className="group relative h-full">
-      <Link
-        href={`/dashboard/my-surveys/${survey.id}`}
-        aria-label={survey.title}
-        tabIndex={-1}
-        className="absolute inset-0"
-      />
-
+    <article className="group relative h-full cursor-pointer">
       <div
         className={cn(
-          "ds-bg-card ds-border-card ds-rounded-2xl pointer-events-none relative flex h-full flex-col overflow-hidden",
+          "ds-bg-card ds-border-card ds-rounded-2xl relative flex h-full flex-col overflow-hidden",
           "transition-[transform,box-shadow] duration-200",
           "group-hover:-translate-y-1 group-hover:shadow-xl",
           "dark:group-hover:shadow-[0_8px_10px_-10px_var(--color-stats-teal)]"
@@ -127,14 +119,14 @@ export default function SurveyCard({ survey }: SurveyCardProps) {
           isDeleting={deleteMutation.isPending}
         />
 
-        <div className="pointer-events-none flex flex-1 flex-col p-4">
+        <div className="flex flex-1 flex-col p-4">
           <SurveyCardInfo survey={survey} />
 
           <SeperatorLink className="my-4 !bg-[var(--border-color-alt)]" />
 
           <SurveyCardMeta survey={survey} />
 
-          <SurveyCardActions surveyId={survey.id} onShare={() => void handleCopyLink()} />
+          <SurveyCardActions surveyId={survey.id} />
         </div>
       </div>
     </article>
