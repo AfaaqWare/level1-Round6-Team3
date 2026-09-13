@@ -990,6 +990,17 @@
       }
     },
 
+    "surveysExport": {
+      "meta": {
+        "title": "تصدير الردود - Afaaq Ware",
+        "description": "صدّر ردود استبيانك إلى ملف Excel"
+      },
+      "title": "تصدير الردود",
+      "subtitle": "قم بتصدير كل ردود الاستبيان إلى ملف Excel.",
+      "edit": "تعديل",
+      "shareSurvey": "مشاركة الاستبيان"
+    },
+
     "surveyEdit": {
       "meta": {
         "title": "تعديل الاستبيان - أفاق وير",

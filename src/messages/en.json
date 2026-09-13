@@ -1008,6 +1008,17 @@
       }
     },
 
+    "surveysExport": {
+      "meta": {
+        "title": "Export Responses - Afaaq Ware",
+        "description": "Export your survey responses to an Excel file"
+      },
+      "title": "Export Responses",
+      "subtitle": "Export all survey responses to an Excel file.",
+      "edit": "Edit",
+      "shareSurvey": "Share Survey"
+    },
+
     "surveyEdit": {
       "meta": {
         "title": "Edit Survey - Afaaq Ware",

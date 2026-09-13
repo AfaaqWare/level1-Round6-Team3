@@ -19,7 +19,7 @@ export default function SurveysPage() {
 
   const [sort, setSort] = useState<SurveysSortOrder>("newest");
 
-  const { data } = useGetAllSurveys();
+  const { data, isLoading } = useGetAllSurveys();
 
   const surveys = data?.data ?? [];
 
@@ -27,7 +27,7 @@ export default function SurveysPage() {
 
   return (
     <div>
-      {hasSurveys ? (
+      {hasSurveys || isLoading ? (
         <>
           <SurveysHeader />
 
