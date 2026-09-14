@@ -17,13 +17,13 @@ export default function AddQuestionDrawer({
 }: AddQuestionDrawerProps) {
   const [questionType, setQuestionType] = useState<"mcq" | "textarea">("mcq");
   const [questionText, setQuestionText] = useState("");
-  const [choices, setChoices] = useState<string[]>(["choice 1", "choice 2", "choice 3"]);
+  const [choices, setChoices] = useState<string[]>(["", "", ""]);
   const [isRequired, setIsRequired] = useState(true);
 
   if (!isOpen) return null;
 
   const handleAddChoice = () => {
-    setChoices(prev => [...prev, `choice ${prev.length + 1}`]);
+    setChoices(prev => [...prev, ""]);
   };
 
   const handleRemoveChoice = (index: number) => {
@@ -51,7 +51,7 @@ export default function AddQuestionDrawer({
 
     // Reset form
     setQuestionText("");
-    setChoices(["choice 1", "choice 2", "choice 3"]);
+    setChoices(["", "", ""]);
     setIsRequired(true);
   };
 
@@ -144,7 +144,7 @@ export default function AddQuestionDrawer({
           {questionType === "mcq" && (
             <div>
               <label className="mb-1.5 block text-xs font-medium text-gray-600 dark:text-gray-400">
-                choices
+                Choices
               </label>
               <div className="space-y-2">
                 {choices.map((choice, index) => (
@@ -153,7 +153,7 @@ export default function AddQuestionDrawer({
                       type="text"
                       value={choice}
                       onChange={e => handleChoiceChange(index, e.target.value)}
-                      placeholder={`choice ${index + 1}`}
+                      placeholder={`Choice ${index + 1}`}
                       className="w-full rounded-xl border border-[var(--border-color)] bg-[var(--color-form)] px-4 py-2 text-sm text-[var(--color-text-primary)] placeholder-gray-400 focus:border-[#00b7c1] focus:outline-none dark:border-gray-800 dark:bg-[#222325] dark:text-[var(--color-text-primary-dark)] dark:placeholder-gray-500"
                     />
                     {choices.length > 1 && (
