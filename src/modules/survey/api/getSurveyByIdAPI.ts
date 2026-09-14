@@ -12,6 +12,7 @@ export interface SurveyById {
   questions: [];
   link: string;
   cover: string;
+  userId: string;
 }
 
 

@@ -41,13 +41,8 @@ import {
   Languages,
   Pencil,
   Link,
-  Info,
-  Search,
-  Image as ImageIcon,
-  PanelLeftOpen,
-  MoreVertical,
-  Link2,
-  Share2,
+  Copy
+  
 } from "lucide-react";
 
 type IconProps = Omit<ComponentProps<typeof Icon>, "icon">;
@@ -105,11 +100,5 @@ export {
   Languages,
   Pencil,
   Link,
-  Info,
-  ImageIcon,
-  Search,
-  PanelLeftOpen,
-  MoreVertical,
-  Link2,
-  Share2,
+  Copy
 };
