@@ -8,6 +8,14 @@ class ApiClient {
     const res = await axiosInstance.post<T>(url, data);
     return res.data;
   }
+  async postForm<T>(url: string, data?: FormData): Promise<T> {
+    const res = await axiosInstance.post<T>(url, data, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
+    return res.data;
+  }
   async put<T>(url: string, data?: unknown): Promise<T> {
     const res = await axiosInstance.put<T>(url, data);
     return res.data;
