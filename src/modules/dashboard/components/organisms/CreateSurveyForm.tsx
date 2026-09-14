@@ -60,8 +60,14 @@ export default function CreateSurveyForm() {
       {
         onSuccess: (response) => {
           toast.success("Survey created successfully!");
-          if (response?.id) {
-            router.push(`/dashboard/add-question?surveyId=${response.id}`);
+          const surveyId =
+            response?.id ||
+            (response as { _id?: string })?._id ||
+            (response as { data?: { id?: string; _id?: string } })?.data?.id ||
+            (response as { data?: { id?: string; _id?: string } })?.data?._id;
+
+          if (surveyId) {
+            router.push(`/dashboard/my-surveys/${surveyId}/add-question`);
           } else {
             router.push("/dashboard/add-question");
           }

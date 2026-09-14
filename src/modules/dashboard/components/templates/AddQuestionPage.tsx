@@ -10,7 +10,7 @@ import {
   FileText,
   Plus,
 } from "lucide-react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useParams } from "next/navigation";
 import { toast } from "sonner";
 import AddQuestionCard, { QuestionItem } from "../molecules/AddQuestionCard";
 import AddQuestionDrawer from "../organisms/AddQuestionDrawer";
@@ -46,7 +46,9 @@ const INITIAL_QUESTIONS: QuestionItem[] = [
 
 export default function AddQuestionPage({ surveyIdProp }: { surveyIdProp?: string }) {
   const searchParams = useSearchParams();
-  const surveyId = surveyIdProp || searchParams.get("surveyId") || "";
+  const params = useParams();
+  const routeSurveyId = typeof params?.surveyId === "string" ? params.surveyId : "";
+  const surveyId = surveyIdProp || searchParams.get("surveyId") || routeSurveyId || "";
 
   const [localQuestions, setLocalQuestions] = useState<QuestionItem[]>(INITIAL_QUESTIONS);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
