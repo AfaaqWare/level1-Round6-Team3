@@ -26,6 +26,7 @@
     --color-bg-survyForm: #f6fbfc;
     --color-text-panel: #ffffff;
     --color-bg-disabled: #eff0f3;
+    --color-bg-table: #f8f9fb;
 
     /* Status Colors */
     --color-success: #16a34a;
@@ -81,7 +82,7 @@
     --color-text-faqcard-dark: #b2b3bd;
     --color-text-dash-dark: #aeaebc;
     --color-text-dash-secondary-dark: #dbdbdb;
-
+    --color-bg-table-dark: #181a1b;
     --border-color-dark: #2b3c3f;
     --border-color-card-dark: #2e2e2e;
     --color-primary-300-dark: #1e2021;
@@ -236,6 +237,7 @@
     --border-color-alt: var(--border-color-dark);
     --color-primary-200: #a0e4ef;
     --color-bg-survyForm: var(--color-bg-survyForm-dark);
+    --color-bg-table: var(--color-bg-table-dark);
     --color-status-draft: var(--color-status-draft-dark);
     --color-status-published: var(--color-status-published-dark);
     --color-status-closed: var(--color-status-closed-dark);

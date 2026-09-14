@@ -1023,6 +1023,26 @@
         "questionsCount": "Question : {count}",
         "responsesCount": "Responses: {count}",
         "infoBanner": "A Preview of the data that will be exported to Excel."
+      },
+      "responsesTable": {
+        "columns": {
+          "id": "ID",
+          "respondentName": "Respondent Name",
+          "respondentEmail": "Respondent Email",
+          "submittedAt": "Submitted At"
+        },
+        "noAnswer": "-"
+      },
+      "pagination": {
+        "nav": "Pagination",
+        "showing": "Showing {start} to {end} of {total}",
+        "responses": "Responses",
+        "first": "First page",
+        "previous": "Previous page",
+        "next": "Next page",
+        "last": "Last page",
+        "loadingMore": "Loading more responses...",
+        "endReached": "You've reached the end"
       }
     },
 

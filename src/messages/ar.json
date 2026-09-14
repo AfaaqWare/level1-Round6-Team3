@@ -1005,6 +1005,26 @@
         "questionsCount": "الأسئلة : {count}",
         "responsesCount": "الردود: {count}",
         "infoBanner": "معاينة للبيانات التي سيتم تصديرها إلى Excel."
+      },
+      "responsesTable": {
+        "columns": {
+          "id": "الرقم",
+          "respondentName": "اسم المستجيب",
+          "respondentEmail": "البريد الإلكتروني للمستجيب",
+          "submittedAt": "تاريخ الإرسال"
+        },
+        "noAnswer": "-"
+      },
+      "pagination": {
+        "nav": "ترقيم الصفحات",
+        "showing": "عرض {start} إلى {end} من أصل {total}",
+        "responses": "رد",
+        "first": "الصفحة الأولى",
+        "previous": "الصفحة السابقة",
+        "next": "الصفحة التالية",
+        "last": "الصفحة الأخيرة",
+        "loadingMore": "جاري تحميل المزيد من الردود...",
+        "endReached": "وصلت إلى النهاية"
       }
     },
 
