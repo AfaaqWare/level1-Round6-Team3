@@ -18,9 +18,7 @@ interface SurveysPageProps {
 
 export default function SurveysPage({ initialStatus = "all" }: SurveysPageProps) {
   const [status, setStatus] = useState<SurveyStatusFilter>(initialStatus);
-
   const [search, setSearch] = useState("");
-
   const [sort, setSort] = useState<SurveysSortOrder>("newest");
 
   const { data, isLoading } = useGetAllSurveys();
@@ -30,7 +28,6 @@ export default function SurveysPage({ initialStatus = "all" }: SurveysPageProps)
   }
 
   const surveys = data?.data ?? [];
-
   const hasSurveys = surveys.length > 0;
 
   return (

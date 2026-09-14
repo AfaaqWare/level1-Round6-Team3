@@ -20,12 +20,21 @@ export default function SurveysHeader() {
         </Text>
       </div>
 
-      <Link href="/dashboard/create-survey">
-        <Button variant="primaryWhite" size="md">
-          <Icon IconComponent={Plus} size="xs" color="primaryWhite" className="!font-medium" />
-          {t("createButton")}
-        </Button>
-      </Link>
+      <div className="flex items-center gap-3">
+        <Link href="/dashboard/add-question">
+          <Button variant="primary" size="md" className="dark:!text-white">
+            <Icon IconComponent={Plus} size="xs" color="white" className="!font-medium dark:!text-white" />
+            Add Question
+          </Button>
+        </Link>
+
+        <Link href="/dashboard/create-survey">
+          <Button variant="primaryWhite" size="md">
+            <Icon IconComponent={Plus} size="xs" color="primaryWhite" className="!font-medium" />
+            {t("createButton")}
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 }
