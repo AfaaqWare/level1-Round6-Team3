@@ -50,6 +50,7 @@ import {
   Share2,
   Settings,
   FileSpreadsheet,
+  Copy,
 } from "lucide-react";
 
 type IconProps = Omit<ComponentProps<typeof Icon>, "icon">;
@@ -116,4 +117,5 @@ export {
   Share2,
   Settings,
   FileSpreadsheet,
+  Copy
 };
