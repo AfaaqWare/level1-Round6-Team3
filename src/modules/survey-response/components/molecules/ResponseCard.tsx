@@ -50,7 +50,7 @@ export default function ResponseCard({ response, index, questions }: ResponseCar
 
       <div className="ds-border-muted flex flex-col gap-2 border-t pt-3">
         {questions.map((question, index) => (
-          <div key={question.qid}>
+          <div key={`${question.qid}-${index}`}>
             <Text size="xs" variant="secondary">
               {index + 1}. {question.questionText}
             </Text>

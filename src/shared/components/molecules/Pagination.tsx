@@ -77,13 +77,13 @@ export default function Pagination({
   const items = getPageItems(page, totalPages);
 
   return (
-    <div className="mt-6 flex flex-col items-center justify-between gap-4 sm:flex-row">
+    <div className="mt-6 flex flex-col flex-wrap items-center justify-between gap-4 sm:flex-row">
       <p className="ds-text-sm ds-text-secondary">
         {t("showing", { start, end, total })}{" "}
         <span className="ds-text-secondary ds-font-bold">{t(itemsLabelKey)}</span>
       </p>
 
-      <nav className="flex items-center gap-1.5" aria-label={t("nav")}>
+      <nav className="flex flex-wrap items-center gap-1.5" aria-label={t("nav")}>
         <PageButton
           onClick={() => onPageChange(1)}
           disabled={page <= 1}

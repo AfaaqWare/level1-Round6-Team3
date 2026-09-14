@@ -57,7 +57,7 @@ export default function ResponsesTable({ rows, questions }: ResponsesTableProps)
   return (
     <div className="mt-4">
       {isDesktop ? (
-        <div className="ds-bg ds-border-card [&_th]:ds-text-xs [&_th]:ds-text-secondary [&_td]:ds-text-xs overflow-hidden rounded-t-lg [&_table]:min-w-max [&_tbody_tr]:!border-[var(--border-color-card)] [&_tbody_tr]:transition-colors [&_tbody_tr:hover_td]:bg-[color-mix(in_srgb,var(--color-primary)_4%,var(--color-bg-card))] [&_tbody_tr:last-child]:!border-b-0 [&_td]:!px-4 [&_td]:!py-4 [&_td]:!font-semibold [&_th]:!px-4 [&_th]:!py-5 [&_th]:font-semibold [&_tr]:!border-b-5">
+        <div className="ds-bg ds-border-card [&_th]:ds-text-xs [&_th]:ds-text-secondary [&_td]:ds-text-xs overflow-hidden rounded-t-lg [&_table]:min-w-max [&_tbody_tr]:!border-[var(--border-color-card)] [&_tbody_tr]:transition-colors [&_tbody_tr:hover_td]:bg-[color-mix(in_srgb,var(--color-primary)_4%,var(--color-bg-card))] [&_tbody_tr:last-child]:!border-b-0 [&_td]:!px-4 [&_td]:!py-2 [&_td]:!font-semibold [&_th]:!px-4 [&_th]:!py-5 [&_th]:font-semibold [&_tr]:!border-b-5">
           <Table>
             <DataTableHeader
               className={cn("!ds-border-secondary !border-2 !bg-[var(--color-bg-table)]")}
@@ -101,8 +101,8 @@ export default function ResponsesTable({ rows, questions }: ResponsesTableProps)
                     </TableCell>
 
                     {/* Dynamic Questions */}
-                    {questions.map(question => (
-                      <TableCell key={question.qid}>
+                    {questions.map((question, questionIndex) => (
+                      <TableCell key={`${question.qid}-${questionIndex}`}>
                         <Text size="xs" className="!text-[var(--color-text-dash-secondary)]">
                           {response.answers[question.qid] || t("noAnswer")}
                         </Text>
@@ -139,18 +139,19 @@ export default function ResponsesTable({ rows, questions }: ResponsesTableProps)
           ))}
         </div>
       )}
-
-      <ResponsesTableFooter
-        isDesktop={isDesktop}
-        hasMore={hasMore}
-        sentinelRef={sentinelRef}
-        page={page}
-        totalPages={totalPages}
-        start={start}
-        end={end}
-        total={rows.length}
-        onPageChange={setPage}
-      />
+      <div className="p-3">
+        <ResponsesTableFooter
+          isDesktop={isDesktop}
+          hasMore={hasMore}
+          sentinelRef={sentinelRef}
+          page={page}
+          totalPages={totalPages}
+          start={start}
+          end={end}
+          total={rows.length}
+          onPageChange={setPage}
+        />
+      </div>
     </div>
   );
 }

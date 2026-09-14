@@ -1025,6 +1025,20 @@
         "last": "الصفحة الأخيرة",
         "loadingMore": "جاري تحميل المزيد من الردود...",
         "endReached": "وصلت إلى النهاية"
+      },
+      "exportSettings": {
+        "title": "إعدادات التصدير",
+        "subtitle": "اختر البيانات المطلوب تضمينها في ملف Excel",
+        "options": {
+          "respondentName": "تضمين اسم المستجيب",
+          "respondentEmail": "تضمين البريد الإلكتروني للمستجيب",
+          "submissionData": "تضمين بيانات الإرسال",
+          "answers": "تضمين الإجابات"
+        },
+        "fileNameLabel": "اسم الملف",
+        "infoBanner": "سيتم تصدير الملف بصيغة Excel (.xlsx)",
+        "exportButton": "تصدير إلى Excel",
+        "secureNote": "بياناتك آمنة وسرية"
       }
     },
 

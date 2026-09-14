@@ -1043,6 +1043,20 @@
         "last": "Last page",
         "loadingMore": "Loading more responses...",
         "endReached": "You've reached the end"
+      },
+      "exportSettings": {
+        "title": "Export Settings",
+        "subtitle": "Select data to include in the Excel file",
+        "options": {
+          "respondentName": "Include Respondent Name",
+          "respondentEmail": "Include Respondent Email",
+          "submissionData": "Include Submission Data",
+          "answers": "Include Answers"
+        },
+        "fileNameLabel": "File Name",
+        "infoBanner": "The file will be exported in Excel format (.xlsx)",
+        "exportButton": "Export to Excel",
+        "secureNote": "Your data is secure and confidential"
       }
     },
 

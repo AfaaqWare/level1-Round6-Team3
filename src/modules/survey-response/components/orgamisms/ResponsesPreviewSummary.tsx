@@ -34,7 +34,7 @@ export default function ResponsesPreviewSummary({
         </div>
       </div>
 
-      <div className="ds-rounded-md mt-4 flex items-center gap-2 bg-[color:var(--color-stats-gray-bg)]/90 px-4 py-4">
+      <div className="ds-border-card ds-rounded-sm mt-4 flex items-center gap-2 bg-[#f6faff] px-4 py-4 dark:bg-[#5C656B]">
         <Icon IconComponent={Info} size="sm" variant="teal" className="shrink-0" />
         <Text size="xs" variant="secondary">
           {t("infoBanner")}

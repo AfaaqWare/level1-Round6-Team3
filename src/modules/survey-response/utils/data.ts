@@ -176,3 +176,15 @@ export const responsesPreviewBadges: ResponsesPreviewBadge[] = [
     getValues: ({ responsesCount }) => ({ count: responsesCount }),
   },
 ];
+
+export interface ExportSettingOption {
+  id: "respondentName" | "respondentEmail" | "submissionData" | "answers";
+  labelKey: string;
+}
+
+export const exportSettingsOptions: ExportSettingOption[] = [
+  { id: "respondentName", labelKey: "respondentName" },
+  { id: "respondentEmail", labelKey: "respondentEmail" },
+  { id: "submissionData", labelKey: "submissionData" },
+  { id: "answers", labelKey: "answers" },
+];

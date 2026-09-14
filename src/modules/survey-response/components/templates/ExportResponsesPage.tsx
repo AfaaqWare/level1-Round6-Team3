@@ -6,6 +6,7 @@ import { useGetSurveyResponses } from "../../hooks/useGetSurveyResponses";
 import ExportResponsesHeader from "../orgamisms/ExportResponsesHeader";
 import ResponsesPreviewSummary from "../orgamisms/ResponsesPreviewSummary";
 import ResponsesTable from "../orgamisms/ResponsesTable";
+import ExportSettingsPanel from "../orgamisms/ExportSettingsPanel";
 
 interface ExportResponsesPageProps {
   surveyId: string;
@@ -48,12 +49,19 @@ export default function ExportResponsesPage({ surveyId }: ExportResponsesPagePro
   const rows = responsesResult?.data.rows ?? [];
 
   return (
-    <div className="w-full px-4 py-6 sm:px-6 lg:px-[30px]">
+    <div>
       <ExportResponsesHeader survey={survey} />
-      <div className="ds-bg-card">
-        <ResponsesPreviewSummary survey={survey} responsesCount={rows.length} />
 
-        <ResponsesTable rows={rows} questions={survey.questions} />
+      <div className="mt-4 flex flex-col gap-4 lg:flex-row lg:items-start">
+        <div className="ds-bg-card lg:min-w-0 lg:flex-1">
+          <ResponsesPreviewSummary survey={survey} responsesCount={rows.length} />
+
+          <ResponsesTable rows={rows} questions={survey.questions} />
+        </div>
+
+        <div className="lg:w-[340px] lg:shrink-0">
+          <ExportSettingsPanel defaultFileName={survey.title} />
+        </div>
       </div>
     </div>
   );
