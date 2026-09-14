@@ -22,8 +22,8 @@ export default function DataTableHeader({
   return (
     <TableHeader>
       <TableRow className={cn("!border-b-2 !border-[var(--border-color-card)]", className)}>
-        {columns.map(column => (
-          <TableHead key={column} className={headerStyles}>
+        {columns.map((column, index) => (
+          <TableHead key={`${column}-${index}`} className={headerStyles}>
             {isDynamicData ? column : t(column)}
           </TableHead>
         ))}

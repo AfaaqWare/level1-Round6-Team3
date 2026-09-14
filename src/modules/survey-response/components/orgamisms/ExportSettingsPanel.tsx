@@ -10,16 +10,21 @@ import Input from "@/shared/components/atoms/Input";
 import Button from "@/shared/components/atoms/Button";
 import { Settings, Info, FileSpreadsheet, Lock } from "@/assets/icons/icons";
 import { exportSettingsOptions } from "../../utils/data";
+import { exportResponsesToExcel } from "../../utils/exportResponsesToExcel";
 import { cn } from "@/lib/cn";
+import type { SurveyResponse } from "@/modules/responses/type/responses";
+import type { SurveyQuestion } from "../../types/question";
 
 interface ExportSettingsPanelProps {
   defaultFileName: string;
-  onExport?: (selectedOptions: Record<string, boolean>, fileName: string) => void;
+  rows: SurveyResponse[];
+  questions: SurveyQuestion[];
 }
 
 export default function ExportSettingsPanel({
   defaultFileName,
-  onExport,
+  rows,
+  questions,
 }: ExportSettingsPanelProps) {
   const t = useTranslations("dashboard.surveysExport.exportSettings");
 
@@ -30,6 +35,12 @@ export default function ExportSettingsPanel({
 
   const toggleOption = (id: string) => {
     setSelectedOptions(prev => ({ ...prev, [id]: !prev[id] }));
+  };
+
+  const hasRows = rows.length > 0;
+
+  const handleExport = () => {
+    exportResponsesToExcel({ rows, questions, selectedOptions, fileName });
   };
 
   return (
@@ -64,23 +75,19 @@ export default function ExportSettingsPanel({
         />
       </div>
 
-      <div className="ds-rounded-md my-6 flex items-center gap-2 bg-[#f6faff] px-4 py-4 dark:bg-[#5C656B]">
+      <div className="ds-rounded-md my-8 flex items-center gap-2 bg-[#f6faff] px-4 py-4 dark:bg-[#5C656B]">
         <Icon IconComponent={Info} size="sm" variant="teal" className="shrink-0" />
         <Text size="xs" variant="secondary">
           {t("infoBanner")}
         </Text>
       </div>
 
-      <Button
-        variant="primaryWhite"
-        isFullWidth
-        onClick={() => onExport?.(selectedOptions, fileName)}
-      >
-        <Icon IconComponent={FileSpreadsheet} size="sm" className="text-inherit" />
+      <Button variant="primaryWhite" isFullWidth disabled={!hasRows} onClick={handleExport}>
+        <Icon IconComponent={FileSpreadsheet} size="sm" className="!text-inherit" />
         {t("exportButton")}
       </Button>
 
-      <div className="mt-5 flex items-center justify-center gap-1.5">
+      <div className="mt-7 flex items-center justify-center gap-1.5">
         <Icon IconComponent={Lock} size="xs" variant="secondary" />
         <Text size="xs" variant="secondary">
           {t("secureNote")}

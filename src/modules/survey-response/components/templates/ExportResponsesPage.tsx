@@ -52,7 +52,7 @@ export default function ExportResponsesPage({ surveyId }: ExportResponsesPagePro
     <div>
       <ExportResponsesHeader survey={survey} />
 
-      <div className="mt-4 flex flex-col gap-4 lg:flex-row lg:items-start">
+      <div className="mt-10 flex flex-col gap-4 lg:flex-row lg:items-start">
         <div className="ds-bg-card lg:min-w-0 lg:flex-1">
           <ResponsesPreviewSummary survey={survey} responsesCount={rows.length} />
 
@@ -60,7 +60,11 @@ export default function ExportResponsesPage({ surveyId }: ExportResponsesPagePro
         </div>
 
         <div className="lg:w-[340px] lg:shrink-0">
-          <ExportSettingsPanel defaultFileName={survey.title} />
+          <ExportSettingsPanel
+            defaultFileName={survey.title}
+            rows={rows}
+            questions={survey.questions}
+          />
         </div>
       </div>
     </div>
