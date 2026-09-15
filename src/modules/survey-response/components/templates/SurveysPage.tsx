@@ -5,7 +5,6 @@ import { useState } from "react";
 import SurveysHeader from "../orgamisms/SurveysHeader";
 import SurveysToolbar from "../orgamisms/SurveysToolbar";
 import SurveysGrid from "../orgamisms/SurveysGrid";
-import NoSurvey from "../orgamisms/NoSurvey";
 
 import type { SurveyStatusFilter } from "../molecules/SurveyStatusTabs";
 import type { SurveysSortOrder } from "../molecules/SurveySortSelect";
