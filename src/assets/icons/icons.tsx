@@ -48,6 +48,8 @@ import {
   MoreVertical,
   Link2,
   Share2,
+  Settings,
+  FileSpreadsheet,
 } from "lucide-react";
 
 type IconProps = Omit<ComponentProps<typeof Icon>, "icon">;
@@ -112,4 +114,6 @@ export {
   MoreVertical,
   Link2,
   Share2,
+  Settings,
+  FileSpreadsheet,
 };

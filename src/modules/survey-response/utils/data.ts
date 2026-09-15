@@ -6,7 +6,7 @@ import {
   Send,
   Link2,
   Trash2,
-  Share2,
+  PanelLeftOpen,
   ClipboardList,
   PieChart,
   Clock3,
@@ -14,6 +14,7 @@ import {
 } from "@/assets/icons/icons";
 import { formatDate } from "@/shared/utils/formatDate";
 import { formatRelativeTime } from "@/shared/utils/formatRelativeTime";
+import type { BadgeTone } from "@/shared/components/atoms/Badge";
 export const mockSurvey: Survey = {
   id: "survey-1",
 
@@ -83,7 +84,14 @@ export const surveyCardActions: SurveyCardAction[] = [
     muted: false,
     variant: "outline",
   },
-  { id: "share", labelKey: "share", icon: Share2, muted: false, variant: "primary" },
+  {
+    id: "details",
+    labelKey: "details",
+    icon: PanelLeftOpen,
+    hrefSuffix: "",
+    muted: false,
+    variant: "primary",
+  },
 ];
 
 interface SurveyCardMenuItem {
@@ -133,3 +141,50 @@ export const surveyCardMetaFields = [
     }),
   },
 ] as const;
+
+export const RESPONSES_PREVIEW_ROW_LIMIT = 5;
+
+interface ResponsesPreviewContext {
+  survey: Survey;
+  responsesCount: number;
+}
+
+interface ResponsesPreviewBadge {
+  id: "showingRows" | "questions" | "responses";
+  tone: BadgeTone;
+  labelKey: string;
+  getValues: (ctx: ResponsesPreviewContext) => Record<string, number>;
+}
+
+export const responsesPreviewBadges: ResponsesPreviewBadge[] = [
+  {
+    id: "showingRows",
+    tone: "gray",
+    labelKey: "showingFirstRows",
+    getValues: () => ({ count: RESPONSES_PREVIEW_ROW_LIMIT }),
+  },
+  {
+    id: "questions",
+    tone: "green",
+    labelKey: "questionsCount",
+    getValues: ({ survey }) => ({ count: survey.questions?.length ?? 0 }),
+  },
+  {
+    id: "responses",
+    tone: "orange",
+    labelKey: "responsesCount",
+    getValues: ({ responsesCount }) => ({ count: responsesCount }),
+  },
+];
+
+export interface ExportSettingOption {
+  id: "respondentName" | "respondentEmail" | "submissionData" | "answers";
+  labelKey: string;
+}
+
+export const exportSettingsOptions: ExportSettingOption[] = [
+  { id: "respondentName", labelKey: "respondentName" },
+  { id: "respondentEmail", labelKey: "respondentEmail" },
+  { id: "submissionData", labelKey: "submissionData" },
+  { id: "answers", labelKey: "answers" },
+];

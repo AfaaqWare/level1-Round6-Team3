@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import useGetAllSurveys from "./useGetAllSurveys";
+
+import useGetAllResponses from "@/modules/responses/hooks/useGetAllResponses";
 import type { SurveyStatusFilter } from "../components/molecules/SurveyStatusTabs";
 import type { SurveysSortOrder } from "../components/molecules/SurveySortSelect";
 import type { Survey } from "../types/survey";
@@ -49,10 +51,27 @@ export default function useSurveysGridData({
   const [visibleCount, setVisibleCount] = useState(SURVEYS_GRID_PAGE_SIZE);
 
   const { data: result, isLoading, isError, refetch } = useGetAllSurveys(1, FETCH_ALL_PAGE_SIZE);
+  const { data: responsesResult } = useGetAllResponses();
+
+  const responsesCountBySurveyId = useMemo(() => {
+    const map = new Map<string, number>();
+    for (const response of responsesResult?.data ?? []) {
+      map.set(response.surveyId, (map.get(response.surveyId) ?? 0) + 1);
+    }
+    return map;
+  }, [responsesResult]);
+
+  const surveysWithResponseCounts = useMemo(() => {
+    const surveys = result?.data ?? [];
+    return surveys.map(survey => ({
+      ...survey,
+      responsesCount: responsesCountBySurveyId.get(survey.id) ?? 0,
+    }));
+  }, [result, responsesCountBySurveyId]);
 
   const filteredSurveys = useMemo(
-    () => filterAndSortSurveys(result?.data ?? [], status, search, sort),
-    [result, status, search, sort]
+    () => filterAndSortSurveys(surveysWithResponseCounts, status, search, sort),
+    [surveysWithResponseCounts, status, search, sort]
   );
 
   const totalPages = Math.max(1, Math.ceil(filteredSurveys.length / SURVEYS_GRID_PAGE_SIZE));
@@ -84,6 +103,7 @@ export default function useSurveysGridData({
   const end = Math.min(page * SURVEYS_GRID_PAGE_SIZE, filteredSurveys.length);
 
   return {
+    result,
     isLoading,
     isError,
     refetch,

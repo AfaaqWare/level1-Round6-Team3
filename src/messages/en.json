@@ -966,7 +966,7 @@
         "deadline": "Deadline: {date}",
         "preview": "Preview",
         "edit": "Edit",
-        "share": "Share",
+        "details": "Details",
         "menu": {
           "label": "Survey options",
           "preview": "Preview",
@@ -1005,6 +1005,58 @@
       "meta": {
         "title": "All Surveys - Afaaq Ware",
         "description": "View and manage all surveys in Survey Land"
+      }
+    },
+
+    "surveysExport": {
+      "meta": {
+        "title": "Export Responses - Afaaq Ware",
+        "description": "Export your survey responses to an Excel file"
+      },
+      "title": "Export Responses",
+      "subtitle": "Export all survey responses to an Excel file.",
+      "edit": "Edit",
+      "shareSurvey": "Share Survey",
+      "responsesPreview": {
+        "title": "Responses Preview",
+        "showingFirstRows": "Showing first {count} rows",
+        "questionsCount": "Question : {count}",
+        "responsesCount": "Responses: {count}",
+        "infoBanner": "A Preview of the data that will be exported to Excel."
+      },
+      "responsesTable": {
+        "columns": {
+          "id": "ID",
+          "respondentName": "Respondent Name",
+          "respondentEmail": "Respondent Email",
+          "submittedAt": "Submitted At"
+        },
+        "noAnswer": "-"
+      },
+      "pagination": {
+        "nav": "Pagination",
+        "showing": "Showing {start} to {end} of {total}",
+        "responses": "Responses",
+        "first": "First page",
+        "previous": "Previous page",
+        "next": "Next page",
+        "last": "Last page",
+        "loadingMore": "Loading more responses...",
+        "endReached": "You've reached the end"
+      },
+      "exportSettings": {
+        "title": "Export Settings",
+        "subtitle": "Select data to include in the Excel file",
+        "options": {
+          "respondentName": "Include Respondent Name",
+          "respondentEmail": "Include Respondent Email",
+          "submissionData": "Include Submission Data",
+          "answers": "Include Answers"
+        },
+        "fileNameLabel": "File Name",
+        "infoBanner": "The file will be exported in Excel format (.xlsx)",
+        "exportButton": "Export to Excel",
+        "secureNote": "Your data is secure and confidential"
       }
     },
 

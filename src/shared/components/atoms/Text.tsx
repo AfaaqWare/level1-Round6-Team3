@@ -13,7 +13,8 @@ interface Props {
     | "green"
     | "purple"
     | "blue"
-  
+    | "gray"
+
   className?: string;
   children: React.ReactNode;
   isCenter?: boolean;
@@ -44,6 +45,7 @@ export default function Text({
     green: "ds-text-green",
     purple: "ds-text-purple",
     blue: "ds-text-blue",
+    gray: "ds-text-gray",
   };
   return (
     <p className={cn(variants[variant], sizes[size], isCenter ? "text-center" : "", className)}>

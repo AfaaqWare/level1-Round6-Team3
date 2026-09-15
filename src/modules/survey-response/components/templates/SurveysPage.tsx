@@ -10,14 +10,11 @@ import NoSurvey from "../orgamisms/NoSurvey";
 import type { SurveyStatusFilter } from "../molecules/SurveyStatusTabs";
 import type { SurveysSortOrder } from "../molecules/SurveySortSelect";
 
+import NoSurvey from "../orgamisms/NoSurvey";
 import useGetAllSurveys from "../../hooks/useGetAllSurveys";
 
-interface SurveysPageProps {
-  initialStatus?: SurveyStatusFilter;
-}
-
-export default function SurveysPage({ initialStatus = "all" }: SurveysPageProps) {
-  const [status, setStatus] = useState<SurveyStatusFilter>(initialStatus);
+export default function SurveysPage() {
+  const [status, setStatus] = useState<SurveyStatusFilter>("all");
 
   const [search, setSearch] = useState("");
 
@@ -25,17 +22,13 @@ export default function SurveysPage({ initialStatus = "all" }: SurveysPageProps)
 
   const { data, isLoading } = useGetAllSurveys();
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
   const surveys = data?.data ?? [];
 
   const hasSurveys = surveys.length > 0;
 
   return (
     <div>
-      {hasSurveys ? (
+      {hasSurveys || isLoading ? (
         <>
           <SurveysHeader />
 

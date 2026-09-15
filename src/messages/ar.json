@@ -948,7 +948,7 @@
         "deadline": "الموعد النهائي: {date}",
         "preview": "معاينة",
         "edit": "تعديل",
-        "share": "مشاركة",
+        "details": "التفاصيل",
         "menu": {
           "label": "خيارات الاستبيان",
           "preview": "معاينة",
@@ -987,6 +987,58 @@
       "meta": {
         "title": "جميع الاستبيانات - Afaaq Ware",
         "description": "اعرض وأدر جميع الاستبيانات في Survey Land"
+      }
+    },
+
+    "surveysExport": {
+      "meta": {
+        "title": "تصدير الردود - Afaaq Ware",
+        "description": "صدّر ردود استبيانك إلى ملف Excel"
+      },
+      "title": "تصدير الردود",
+      "subtitle": "قم بتصدير كل ردود الاستبيان إلى ملف Excel.",
+      "edit": "تعديل",
+      "shareSurvey": "مشاركة الاستبيان",
+      "responsesPreview": {
+        "title": "معاينة الردود",
+        "showingFirstRows": "عرض أول {count} صفوف",
+        "questionsCount": "الأسئلة : {count}",
+        "responsesCount": "الردود: {count}",
+        "infoBanner": "معاينة للبيانات التي سيتم تصديرها إلى Excel."
+      },
+      "responsesTable": {
+        "columns": {
+          "id": "الرقم",
+          "respondentName": "اسم المستجيب",
+          "respondentEmail": "البريد الإلكتروني للمستجيب",
+          "submittedAt": "تاريخ الإرسال"
+        },
+        "noAnswer": "-"
+      },
+      "pagination": {
+        "nav": "ترقيم الصفحات",
+        "showing": "عرض {start} إلى {end} من أصل {total}",
+        "responses": "رد",
+        "first": "الصفحة الأولى",
+        "previous": "الصفحة السابقة",
+        "next": "الصفحة التالية",
+        "last": "الصفحة الأخيرة",
+        "loadingMore": "جاري تحميل المزيد من الردود...",
+        "endReached": "وصلت إلى النهاية"
+      },
+      "exportSettings": {
+        "title": "إعدادات التصدير",
+        "subtitle": "اختر البيانات المطلوب تضمينها في ملف Excel",
+        "options": {
+          "respondentName": "تضمين اسم المستجيب",
+          "respondentEmail": "تضمين البريد الإلكتروني للمستجيب",
+          "submissionData": "تضمين بيانات الإرسال",
+          "answers": "تضمين الإجابات"
+        },
+        "fileNameLabel": "اسم الملف",
+        "infoBanner": "سيتم تصدير الملف بصيغة Excel (.xlsx)",
+        "exportButton": "تصدير إلى Excel",
+        "secureNote": "بياناتك آمنة وسرية"
       }
     },
 

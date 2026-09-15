@@ -30,7 +30,7 @@ export default function SurveyCardCover({
   const t = useTranslations("dashboard.surveys.card");
 
   return (
-    <div className="ds-bg-form pointer-events-none relative aspect-16/9 w-full shrink-0">
+    <div className="ds-bg-form relative aspect-16/9 w-full shrink-0">
       <SurveyCardMenu
         surveyId={surveyId}
         onPublish={onPublish}
@@ -38,7 +38,7 @@ export default function SurveyCardCover({
         onDelete={onDelete}
         isPublishing={isPublishing}
         isDeleting={isDeleting}
-        className="pointer-events-auto absolute end-3 top-3 z-10"
+        className="absolute end-3 top-3 z-10"
       />
 
       {cover ? (
