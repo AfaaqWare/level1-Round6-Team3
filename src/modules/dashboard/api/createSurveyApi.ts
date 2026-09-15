@@ -11,5 +11,5 @@ export const createSurveyApi = (payload: CreateSurveyPayload): Promise<CreateSur
     formData.append("cover", payload.cover);
   }
 
-  return apiClient.patch<CreateSurveyResponse>("/surveys", formData);
+  return apiClient.postForm<CreateSurveyResponse>("/survey", formData);
 };

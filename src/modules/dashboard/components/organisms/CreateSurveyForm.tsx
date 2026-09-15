@@ -58,9 +58,19 @@ export default function CreateSurveyForm() {
         cover: coverFile ?? undefined,
       },
       {
-        onSuccess: () => {
+        onSuccess: (response) => {
           toast.success("Survey created successfully!");
-          router.push("/dashboard/my-surveys");
+          const surveyId =
+            response?.id ||
+            (response as { _id?: string })?._id ||
+            (response as { data?: { id?: string; _id?: string } })?.data?.id ||
+            (response as { data?: { id?: string; _id?: string } })?.data?._id;
+
+          if (surveyId) {
+            router.push(`/dashboard/my-surveys/${surveyId}/add-question`);
+          } else {
+            router.push("/dashboard/add-question");
+          }
         },
         onError: () => {
           toast.error("Failed to create survey. Please try again.");
