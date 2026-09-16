@@ -7,16 +7,11 @@ import {
 export const updateSurveyApi = (
   surveyId: string,
   payload: UpdateSurveyPayload
-): Promise<UpdateSurveyResponse> => {
-  const formData = new FormData();
-  formData.append("title", payload.title);
-  formData.append("description", payload.description);
-  formData.append("deadline", payload.deadline);
-  formData.append("status", payload.status);
-
-  if (payload.cover) {
-    formData.append("cover", payload.cover);
-  }
-
-  return apiClient.put<UpdateSurveyResponse>(`/survey/${surveyId}`, formData);
-};
+): Promise<UpdateSurveyResponse> =>
+  apiClient.put<UpdateSurveyResponse>(`/survey/${surveyId}`, {
+    title: payload.title,
+    description: payload.description,
+    deadline: payload.deadline,
+    status: payload.status,
+    ...(payload.cover ? { cover: payload.cover } : {}),
+  });
