@@ -62,9 +62,9 @@ export default function EditSurveyForm({ survey, coverFile }: EditSurveyFormProp
         payload: {
           title: data.title,
           description: data.description,
-          deadline: data.deadline,
+          deadline: new Date(data.deadline).toISOString(),
           status: data.status,
-          cover: coverFile ?? undefined,
+          cover: survey.cover ?? undefined,
         },
       },
       {
