@@ -34,7 +34,7 @@ export default function SurveyCardActions({ surveyId }: SurveyCardActionsProps) 
           </>
         );
 
-        if (action.hrefSuffix === undefined) {
+        if (!action.href && action.hrefSuffix === undefined) {
           return (
             <Button
               key={action.id}
@@ -47,12 +47,12 @@ export default function SurveyCardActions({ surveyId }: SurveyCardActionsProps) 
           );
         }
 
+        const href = action.href
+          ? action.href(surveyId)
+          : `/dashboard/survey/${surveyId}${action.hrefSuffix}`;
+
         return (
-          <Link
-            key={action.id}
-            href={`/dashboard/survey/${surveyId}${action.hrefSuffix}`}
-            className="flex-1"
-          >
+          <Link key={action.id} href={href} className="flex-1">
             <Button variant={action.variant} size="sm" className={buttonClassName}>
               {buttonContent}
             </Button>
