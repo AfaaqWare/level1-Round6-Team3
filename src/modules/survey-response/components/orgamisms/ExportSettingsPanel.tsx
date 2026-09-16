@@ -36,8 +36,7 @@ export default function ExportSettingsPanel({
   const toggleOption = (id: string) => {
     setSelectedOptions(prev => ({ ...prev, [id]: !prev[id] }));
   };
-
-  const hasRows = rows.length > 0;
+  const canExport = rows.length > 0 && Object.values(selectedOptions).some(Boolean);
 
   const handleExport = () => {
     exportResponsesToExcel({ rows, questions, selectedOptions, fileName });
@@ -82,7 +81,7 @@ export default function ExportSettingsPanel({
         </Text>
       </div>
 
-      <Button variant="primaryWhite" isFullWidth disabled={!hasRows} onClick={handleExport}>
+      <Button variant="primaryWhite" isFullWidth disabled={!canExport} onClick={handleExport}>
         <Icon IconComponent={FileSpreadsheet} size="sm" className="!text-inherit" />
         {t("exportButton")}
       </Button>
