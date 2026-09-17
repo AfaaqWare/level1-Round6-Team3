@@ -1115,6 +1115,15 @@
         "retry": "إعادة المحاولة",
         "notFound": "الاستبيان غير موجود."
       }
+    },
+    "responses": {
+      "detailsResponse": {
+        "header": {
+          "title": "تفاصيل الرد",
+          "description": "عرض التفاصيل الكاملة لهذا الرد",
+          "backToResponse": "العودة إلى صفحة الردود"
+        }
+      }
     }
   },
   "cards": {

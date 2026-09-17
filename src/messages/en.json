@@ -1133,6 +1133,15 @@
         "retry": "Retry",
         "notFound": "Survey not found."
       }
+    },
+    "responses": {
+      "detailsResponse": {
+        "header": {
+          "title": "Response Details",
+          "description": "View the complete details of this response",
+          "backToResponse": "Back to Responses page"
+        }
+      }
     }
   },
   "cards": {
