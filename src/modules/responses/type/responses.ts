@@ -11,6 +11,11 @@ export interface GetAllResponses {
   message: string;
   data: SurveyResponse[];
 }
+export interface GetResponseById {
+  success: boolean;
+  message: string;
+  data: SurveyResponse;
+}
 export interface RecentSurveyResponse extends SurveyResponse {
   surveyTitle: string;
 }
