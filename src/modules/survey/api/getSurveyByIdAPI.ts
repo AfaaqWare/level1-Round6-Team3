@@ -1,3 +1,4 @@
+import { SurveyQuestion } from "@/modules/survey-response/types/question";
 import apiClient from "@/services/ApiClient";
 
 export interface SurveyById {
@@ -9,11 +10,10 @@ export interface SurveyById {
   updatedAt: string;
   createdBy: string;
   deadline: string;
-  questions: [];
-  link: string;
-  cover: string;
+  questions: SurveyQuestion[];
+  link: string | null;
+  cover: string | null;
 }
-
 
 export const getSurveyByIdAPI = (id: string) => {
   return apiClient.get<SurveyById>(`/survey/${id}`);

@@ -20,16 +20,16 @@ const NoSurveyHeader = () => {
       <div className="flex flex-col items-start justify-start gap-1">
         <Title size="lg">
           {t("surveys.noSurveyHeader.title")}
-          {name}!
+          {" " + name}!
         </Title>
         <Text variant="disabled" className="mt-1">
           {t("surveys.noSurveyHeader.subtitlePart1")}
-          {name}
+          {" " + name + "! "}
           {t("surveys.noSurveyHeader.subtitlePart2")}
         </Text>
       </div>
 
-      <Link href="/dashboard/my-surveys/create">
+      <Link href="/dashboard/create-survey">
         <Button variant="primaryWhite" size="md">
           <Icon IconComponent={Plus} size="xs" color="primaryWhite" className="!font-medium" />
 

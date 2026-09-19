@@ -27,7 +27,7 @@ export default function RecentSurveysSection({
   return (
     <section className={cn("ds-bg-card ds-rounded-3xl ds-p-lg", "w-full", className)}>
       {/* ==================== Header ==================== */}
-      <SectionHeader title="recentSurveys" buttonLabel="viewAll" href="/surves" />
+      <SectionHeader title="recentSurveys" buttonLabel="viewAll" href="/surveys" />
 
       {/* ==================== Content ==================== */}
 

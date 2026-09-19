@@ -14,7 +14,7 @@ const NoSurvey = () => {
       <NoSurveyHeader />
       <Image src={empty1} alt="No Survey" />
       <p className="text-center text-gray-500">{t("surveys.noSurveyFooter.text")}</p>
-      <Link href="/dashboard/my-surveys/create">
+      <Link href="/dashboard/create-survey">
         <Button variant="primaryWhite" size="md">
           <Icon IconComponent={Plus} size="xs" color="primaryWhite" className="!font-medium" />
 
