@@ -1135,6 +1135,42 @@
       }
     },
     "responses": {
+      "title": "Responses",
+      "description": "View and manage all survey submissions",
+
+      "actions": {
+        "refresh": "Refresh",
+        "exportExcel": "Export Excel"
+      },
+
+      "cards": {
+        "totalResponses": {
+          "title": "Total Responses",
+          "text": "All time"
+        },
+        "uniqueSurveys": {
+          "title": "Unique Surveys",
+          "text": "All time"
+        },
+        "latestResponse": {
+          "title": "Latest Response"
+        },
+        "exportReady": {
+          "title": "Export Ready",
+          "text": "Download Excel"
+        }
+      },
+
+      "table": {
+        "id": "ID",
+        "respondent": "Respondent",
+        "email": "Email",
+        "surveyId": "Survey ID",
+        "answers": "Answers",
+        "submittedAt": "Submitted At",
+        "actions": "Actions"
+      },
+
       "detailsResponse": {
         "meta": {
           "title": "Response Details - Afaaq Ware",
