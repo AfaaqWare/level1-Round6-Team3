@@ -1117,6 +1117,42 @@
       }
     },
     "responses": {
+      "title": "الاستجابات",
+      "description": "عرض وإدارة جميع استجابات الاستبيانات",
+
+      "actions": {
+        "refresh": "تحديث",
+        "exportExcel": "تصدير إلى Excel"
+      },
+
+      "cards": {
+        "totalResponses": {
+          "title": "إجمالي الاستجابات",
+          "text": "منذ البداية"
+        },
+        "uniqueSurveys": {
+          "title": "الاستبيانات المختلفة",
+          "text": "منذ البداية"
+        },
+        "latestResponse": {
+          "title": "أحدث استجابة"
+        },
+        "exportReady": {
+          "title": "التصدير جاهز",
+          "text": "تحميل ملف Excel"
+        }
+      },
+
+      "table": {
+        "id": "المعرّف",
+        "respondent": "المستجيب",
+        "email": "البريد الإلكتروني",
+        "surveyId": "معرّف الاستبيان",
+        "answers": "الإجابات",
+        "submittedAt": "تاريخ الإرسال",
+        "actions": "الإجراءات"
+      },
+
       "detailsResponse": {
         "meta": {
           "title": "تفاصيل الرد - Afaaq Ware",
