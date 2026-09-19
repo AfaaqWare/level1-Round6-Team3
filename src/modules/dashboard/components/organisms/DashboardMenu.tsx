@@ -62,22 +62,22 @@ export default function DashboardMenu() {
           {
             label: "All Surveys",
             icon: <ClipboardList size={22} />,
-            href: "/dashboard/surveys",
+            href: "/dashboard/my-surveys",
           },
           {
             label: "Draft Surveys",
             icon: <FilePenLine size={22} />,
-            href: "/dashboard/surveys/drafts",
+            href: "/dashboard/my-surveys/drafts",
           },
           {
             label: "Published Surveys",
             icon: <Send size={22} />,
-            href: "/dashboard/surveys/published",
+            href: "/dashboard/my-surveys/published",
           },
           {
             label: "Closed Surveys",
             icon: <LockKeyhole size={22} />,
-            href: "/dashboard/surveys/closed",
+            href: "/dashboard/my-surveys/closed",
           },
         ]}
       />
