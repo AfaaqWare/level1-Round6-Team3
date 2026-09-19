@@ -1115,6 +1115,29 @@
         "retry": "إعادة المحاولة",
         "notFound": "الاستبيان غير موجود."
       }
+    },
+    "responses": {
+      "detailsResponse": {
+        "meta": {
+          "title": "تفاصيل الرد - Afaaq Ware",
+          "description": "عرض تفاصيل رد الاستبيان"
+        },
+        "header": {
+          "title": "تفاصيل الرد",
+          "description": "عرض التفاصيل الكاملة لهذا الرد",
+          "backToResponse": "العودة إلى صفحة الردود"
+        },
+        "responseInformation": {
+          "title": "معلومات الرد",
+          "fields": {
+            "responseId": "معرف الرد",
+            "surveyName": "استبيان",
+            "respondentName": "اسم المجيب",
+            "submittedAt": "تاريخ الارسال"
+          }
+        },
+        "surveyAnswers": { "title": "اجابات الاستبيان" }
+      }
     }
   },
   "cards": {

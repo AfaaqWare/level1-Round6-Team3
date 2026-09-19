@@ -12,6 +12,8 @@ type ChoiceQuestionFieldProps = {
   value: string[];
   required?: boolean;
   onChange: (value: string[]) => void;
+  readOnly?: boolean;
+  mode: "edit" | "view";
 };
 
 export default function ChoiceQuestionField({
@@ -21,13 +23,17 @@ export default function ChoiceQuestionField({
   choices,
   value,
   onChange,
+  readOnly,
+  mode = "edit",
 }: ChoiceQuestionFieldProps) {
   const toggleChoice = (choice: string) => {
     onChange(value.includes(choice) ? value.filter(item => item !== choice) : [...value, choice]);
   };
 
   return (
-    <fieldset className="border-b border-[var(--border-color-card)] py-5 last:border-b-0">
+    <fieldset
+      className={`${mode === "edit" ? "border-b border-[var(--border-color-card)] last:border-b-0" : "!border-b-0"} py-5`}
+    >
       <div className="flex gap-4 sm:gap-5">
         <QuestionNumber number={number} />
 
@@ -51,7 +57,8 @@ export default function ChoiceQuestionField({
                     value={choice}
                     type="checkbox"
                     checked={isSelected}
-                    onChange={() => toggleChoice(choice)}
+                    disabled={readOnly}
+                    onChange={readOnly ? undefined : () => toggleChoice(choice)}
                     className="sr-only"
                   />
 

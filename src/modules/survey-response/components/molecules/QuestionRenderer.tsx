@@ -1,4 +1,3 @@
-import ChoiceQuestionField from "./ChoiceQuestionField";
 import TextQuestionField from "./TextQuestionField";
 
 import { SurveyQuestion } from "../../types/question";
@@ -6,47 +5,49 @@ import RadioQuestionField from "./RadioQuestionField";
 
 type QuestionRendererProps = {
   question: SurveyQuestion;
-  answer: string | string[];
-  onChange: (value: string | string[]) => void;
+  answer?: string | string[];
+  onChange?: (value: string | string[]) => void;
+  number: number;
+  mode: "view" | "edit";
 };
 
-export default function QuestionRenderer({ question, answer, onChange }: QuestionRendererProps) {
+export default function QuestionRenderer({
+  question,
+  answer,
+  onChange,
+  mode = "edit",
+  number,
+}: QuestionRendererProps) {
+  const isViewMode = mode === "view";
+
   switch (question.type) {
-    case "text":
+    case "textarea":
       return (
         <TextQuestionField
-          id={question.id}
-          number={question.number}
-          question={question.question}
-          required={question.required}
-          maxLength={question.maxLength}
+          id={question.qid}
+          number={number}
+          question={question.questionText}
+          required={question.isRequired}
+          maxLength={500}
           value={typeof answer === "string" ? answer : ""}
-          onChange={value => onChange(value)}
+          onChange={value => onChange?.(value)}
+          readOnly={isViewMode}
+          mode="view"
         />
       );
 
-    case "checkbox":
-      return (
-        <ChoiceQuestionField
-          id={question.id}
-          number={question.number}
-          question={question.question}
-          required={question.required}
-          choices={question.choices}
-          value={Array.isArray(answer) ? answer : []}
-          onChange={value => onChange(value)}
-        />
-      );
-    case "radio":
+    case "mcq":
       return (
         <RadioQuestionField
-          id={question.id}
-          number={question.number}
-          question={question.question}
-          required={question.required}
-          choices={question.choices}
+          id={question.qid}
+          number={number}
+          question={question.questionText}
+          required={question.isRequired}
+          choices={question.choices ?? []}
           value={typeof answer === "string" ? answer : ""}
-          onChange={value => onChange(value)}
+          onChange={value => onChange?.(value)}
+          readOnly={isViewMode}
+          mode="view"
         />
       );
 

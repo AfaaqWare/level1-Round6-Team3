@@ -37,7 +37,7 @@ export default function SurveyResponseTemplate() {
 
   return (
     <PublicLayout>
-      <main className="ds-bg min-h-screen pt-10 sm:pt-14 lg:pt-16 ">
+      <main className="ds-bg min-h-screen pt-10 sm:pt-14 lg:pt-16">
         <div className="ds-container mx-auto max-w-[1232px]">
           <SurveyDetailsCard
             title={mockSurvey.title}

@@ -1133,6 +1133,29 @@
         "retry": "Retry",
         "notFound": "Survey not found."
       }
+    },
+    "responses": {
+      "detailsResponse": {
+        "meta": {
+          "title": "Response Details - Afaaq Ware",
+          "description": "View the details of a survey response"
+        },
+        "header": {
+          "title": "Response Details",
+          "description": "View the complete details of this response",
+          "backToResponse": "Back to Responses page"
+        },
+        "responseInformation": {
+          "title": "Response Information",
+          "fields": {
+            "responseId": "Response ID",
+            "surveyName": "Survey",
+            "submittedAt": "Submitted At",
+            "respondentName": "Respondent Name"
+          }
+        },
+        "surveyAnswers": { "title": "Survey Answers" }
+      }
     }
   },
   "cards": {

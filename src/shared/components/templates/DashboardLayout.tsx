@@ -15,11 +15,7 @@ import AdminSidebar from "@/modules/dashboard/components/organisms/AdminSidebar"
 import UserSidebar from "@/modules/dashboard/components/organisms/UserSidebar";
 import useGetProfile from "@/modules/auth/hooks/useGetProfile";
 
-const ADMIN_ROUTES = [
-  "/dashboard/users",
-  "/dashboard/roles",
-  "/dashboard/surveys",
-];
+const ADMIN_ROUTES = ["/dashboard/users", "/dashboard/roles", "/dashboard/my-surveys"];
 
 interface Props {
   children: React.ReactNode;
@@ -37,8 +33,7 @@ export default function DashboardLayout({ children }: Props) {
   };
 
   const isAdminRoute =
-    data &&
-    ADMIN_ROUTES.some(route => pathname === route || pathname.startsWith(`${route}/`));
+    data && ADMIN_ROUTES.some(route => pathname === route || pathname.startsWith(`${route}/`));
 
   useEffect(() => {
     if (data && !isAdmin && isAdminRoute) {
@@ -69,11 +64,7 @@ export default function DashboardLayout({ children }: Props) {
 
               <ThemeToggle />
 
-              <Icon
-                IconComponent={Bell}
-                size="lg"
-                className="ms-[24px] mt-[5px]"
-              />
+              <Icon IconComponent={Bell} size="lg" className="ms-[24px] mt-[5px]" />
             </div>
 
             {/* Mobile Button */}
