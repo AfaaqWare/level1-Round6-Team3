@@ -5,6 +5,7 @@ import { useSurvey } from "@/modules/survey-response/hooks/useSurvey";
 import useGetResponseById from "../../hooks/useGetResponseById";
 import DetailsResponseHeader from "../organismas/DetailsResponseHeader";
 import DetailsResponeInformation from "../molecules/DetailsResponeInformation";
+import DetailsResponseSurveyAnswers from "../molecules/DetailsResponseSurveyAnswers";
 
 interface DetailsResponsePageProps {
   responseId: string;
@@ -19,7 +20,6 @@ const DetailsResponsePage = ({ responseId }: DetailsResponsePageProps) => {
   } = useGetResponseById(responseId);
 
   const response = responseResult?.data;
-
   const {
     data: survey,
     isLoading: isSurveyLoading,
@@ -46,7 +46,7 @@ const DetailsResponsePage = ({ responseId }: DetailsResponsePageProps) => {
         {!isLoading && response && survey && (
           <div className="flex flex-col gap-4 lg:flex-row lg:items-start">
             <DetailsResponeInformation response={response} survey={survey} />
-            <div className="ds-bg-card lg:min-w-0 lg:flex-1"></div>
+            <DetailsResponseSurveyAnswers response={response} survey={survey} />
           </div>
         )}
 

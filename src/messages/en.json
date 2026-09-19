@@ -1153,7 +1153,8 @@
             "submittedAt": "Submitted At",
             "respondentName": "Respondent Name"
           }
-        }
+        },
+        "surveyAnswers": { "title": "Survey Answers" }
       }
     }
   },

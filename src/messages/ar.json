@@ -1135,7 +1135,8 @@
             "respondentName": "اسم المجيب",
             "submittedAt": "تاريخ الارسال"
           }
-        }
+        },
+        "surveyAnswers": { "title": "اجابات الاستبيان" }
       }
     }
   },
