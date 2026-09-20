@@ -26,6 +26,7 @@ export default function SidebarSection({ title, items }: SidebarSectionProps) {
             label={item.label}
             icon={item.icon}
             href={item.href}
+            active={item.isActive}
             danger={item.danger}
             onClick={item.onClick}
           />
