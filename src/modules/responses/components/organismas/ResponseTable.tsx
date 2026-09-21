@@ -48,7 +48,7 @@ function ResponseTable({ searchTerm }: { searchTerm: string }) {
         <>
           <Table className="mt-7">
             <TableHeader>
-              <TableRow>
+              <TableRow className="text-[#838493] ">
                 <TableCell>{t("table.id")}</TableCell>
                 <TableCell>{t("table.respondent")}</TableCell>
                 <TableCell>{t("table.email")}</TableCell>
@@ -60,19 +60,21 @@ function ResponseTable({ searchTerm }: { searchTerm: string }) {
             </TableHeader>
             <TableBody className="ds-bg-card">
               {pageResponses.map((response, index) => (
-                <TableRow key={response.id}>
+                <TableRow key={response.id} >
                   <TableCell>{index + 1}</TableCell>
-                  <TableCell>
-                    <User />
-                    {response.respondentName}
+                  <TableCell className="flex">
+                    <span  className="rounded-full bg-blue-100 p-3">
+                    <User className="h-3 w-3 ds-text-alt" />
+
+                    </span>
+                   <span className="ms-3 mt-2">{response.respondentName}</span> 
                   </TableCell>
                   <TableCell>{response.respondentEmail}</TableCell>
-                  <TableCell>{response.surveyId}</TableCell>
-                  <TableCell>Answers {Object.keys(response.answers).length}</TableCell>
-                  <TableCell>{response.submittedAt} </TableCell>
-                  <TableCell>
-                    {" "}
-                    <Eye /> <MoreVertical />{" "}
+                  <TableCell><span className="ds-text-alt border-2 border-sky-500 p-1 bg-blue-100">{response.surveyId}</span> </TableCell>
+                  <TableCell><span className="ds-text-alt border-2 border-sky-500 p-1 bg-blue-100">Answers {Object.keys(response.answers).length}</span></TableCell>
+                  <TableCell>{new Date(response.submittedAt).toLocaleString()} </TableCell>
+                  <TableCell className="flex ">
+                    <Eye className="border-1  border-gray-200 p-1 text-[#838493]" /> <MoreVertical className="border-1 border-gray-200 p-1 ms-2" />{" "}
                   </TableCell>
                 </TableRow>
               ))}

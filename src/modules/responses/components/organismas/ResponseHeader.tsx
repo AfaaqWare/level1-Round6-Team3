@@ -5,33 +5,16 @@ import Text from "@/shared/components/atoms/Text";
 import Title from "@/shared/components/atoms/Title";
 import React from "react";
 import useGetAllResponses from "@/modules/responses/hooks/useGetAllResponses";
-// import * as XLSX from "xlsx";
+
 import ExcelJS from "exceljs";
 import { useTranslations } from "next-intl";
+import { Eye , Download } from "@/assets/icons/icons";
+
 
 function ResponseHeader() {
   const t = useTranslations("dashboard.responses");
 
   const { data } = useGetAllResponses();
-
-  // const handleExport = () => {
-  //   const exportData = (data?.data ?? []).map((response, index) => ({
-  //     ID: index + 1,
-  //     Respondent: response.respondentName,
-  //     Email: response.respondentEmail,
-  //     "Survey ID": response.surveyId,
-  //     Answers: Object.keys(response.answers).length,
-  //     "Submitted At": response.submittedAt,
-  //   }));
-
-  //   const worksheet = XLSX.utils.json_to_sheet(exportData);
-
-  //   const workbook = XLSX.utils.book_new();
-
-  //   XLSX.utils.book_append_sheet(workbook, worksheet, "Responses");
-
-  //   XLSX.writeFile(workbook, "responses.xlsx");
-  // };
 
   const handleExport = async () => {
   const exportData = (data?.data ?? []).map((response, index) => ({
@@ -39,7 +22,11 @@ function ResponseHeader() {
     Respondent: response.respondentName,
     Email: response.respondentEmail,
     "Survey ID": response.surveyId,
-    Answers: Object.keys(response.answers).length,
+    Answers: Object.values(response.answers)
+      .map((answer) =>
+        typeof answer === "object" ? JSON.stringify(answer) : String(answer),
+      )
+      .join(" | "),
     "Submitted At": response.submittedAt,
   }));
 
@@ -77,9 +64,9 @@ function ResponseHeader() {
         <Text>{t("description")}</Text>
       </section>
 
-      <section>
-        <Button>{t("actions.refresh")}</Button>
-        <Button onClick={handleExport}>{t("actions.exportExcel")}</Button>
+      <section className="mt-3">
+        <Button className="mx-4 "><Eye /> {t("actions.refresh")}</Button>
+        <Button onClick={handleExport}><Download />{t("actions.exportExcel")}</Button>
       </section>
     </main>
   );
