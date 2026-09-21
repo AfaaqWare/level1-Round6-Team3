@@ -19,3 +19,9 @@ export const isValidURL = (value: string): boolean => {
     return false;
   }
 };
+
+export const isValidFullName = (name: string) => {
+  const parts = name.trim().split(/\s+/);
+
+  return parts.length >= 2 && parts.every(part => /^[\p{L}]+$/u.test(part));
+};

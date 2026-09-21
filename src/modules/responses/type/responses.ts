@@ -19,3 +19,10 @@ export interface GetResponseById {
 export interface RecentSurveyResponse extends SurveyResponse {
   surveyTitle: string;
 }
+
+export type SurveyAnswers = Record<string, string | string[]>;
+export interface SubmitSurveyPayload {
+  respondentEmail: string;
+  respondentName: string;
+  answers: SurveyAnswers;
+}

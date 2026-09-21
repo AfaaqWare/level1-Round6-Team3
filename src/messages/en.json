@@ -713,11 +713,14 @@
   },
 
   "surveyResponse": {
+    "responseDuration": "Take 5 - 7 minutes",
     "SurveyInformation": {
       "title": "Your Information",
       "fullName": "Full Name",
       "email": "Email Address",
-      "confidential": "Your information will be kept confidential."
+      "confidential": "Your information will be kept confidential.",
+      "nameError": "Please enter your full name",
+      "emailError": "Please enter a valid email"
     },
     "SurveySubmission": {
       "totalQuestions": "Total Questions",
@@ -726,7 +729,9 @@
     },
     "surveyQuestions": {
       "title": "Survey Questions"
-    }
+    },
+    "submitSuccess": "Your answers have been submitted successfully",
+    "submitError": "Failed to submit your answers. Please try again"
   },
 
   "dashboard": {
@@ -963,7 +968,7 @@
         "questionsCount": "{count} Questions",
         "responses": "{count} Responses",
         "updated": "Updated {time}",
-        "deadline": "Deadline: {date}",
+        "deadline": "Deadline {date}",
         "preview": "Preview",
         "edit": "Edit",
         "details": "Details",
@@ -1227,5 +1232,6 @@
     "empty": {
       "default": "No data available to display."
     }
-  }
+  },
+  "common": { "ok": "ok" }
 }
