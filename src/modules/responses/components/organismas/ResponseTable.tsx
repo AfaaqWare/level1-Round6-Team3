@@ -14,6 +14,8 @@ import Pagination from "@/shared/components/molecules/Pagination";
 
 import { useTranslations } from "next-intl";
 import { Eye, User, MoreVertical } from "@/assets/icons/icons";
+import Link from "next/link";
+
 
 const PAGE_SIZE = 10;
 function ResponseTable({ searchTerm }: { searchTerm: string }) {
@@ -73,8 +75,12 @@ function ResponseTable({ searchTerm }: { searchTerm: string }) {
                   <TableCell><span className="ds-text-alt border-2 border-sky-500 p-1 bg-blue-100">{response.surveyId}</span> </TableCell>
                   <TableCell><span className="ds-text-alt border-2 border-sky-500 p-1 bg-blue-100">Answers {Object.keys(response.answers).length}</span></TableCell>
                   <TableCell>{new Date(response.submittedAt).toLocaleString()} </TableCell>
+                  
                   <TableCell className="flex ">
-                    <Eye className="border-1  border-gray-200 p-1 text-[#838493]" /> <MoreVertical className="border-1 border-gray-200 p-1 ms-2" />{" "}
+                  <Link href={`/responses/${response.id}`} ><Eye className="border-1  border-gray-200 p-1 text-[#838493]" /> </Link> 
+                    
+                    
+                     <MoreVertical className="border-1 border-gray-200 p-1 ms-2" />{" "}
                   </TableCell>
                 </TableRow>
               ))}
