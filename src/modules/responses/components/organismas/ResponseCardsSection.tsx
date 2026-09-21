@@ -1,4 +1,4 @@
-import ResponseCard from "@/modules/all-responses/components/molecules/ResponseCard";
+import ResponseCard from "@/modules/responses/components/molecules/ResponseCard";
 import React from "react";
 import File from "@/assets/images/file.png";
 import Excel from "@/assets/images/excel.png";
@@ -10,7 +10,7 @@ function ResponseCardsSection() {
   const t = useTranslations("dashboard.responses");
 
   return (
-    <section className=" grid gap-6  mt-[44px] sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+    <section className="mt-[44px] grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
       <ResponseCard
         iconCard={File2}
         text1={t("cards.totalResponses.title")}

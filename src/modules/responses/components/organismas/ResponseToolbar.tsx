@@ -11,8 +11,8 @@ function ResponseToolbar({
   setSearchTerm: React.Dispatch<React.SetStateAction<string>>;
 }) {
   return (
-    <div className="ds-bg-card p-6 gap-10 grid mt-[20px] sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
-      <SearchInput  setSearchTerm={setSearchTerm}  />
+    <div className="ds-bg-card mt-[20px] grid gap-10 p-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+      <SearchInput setSearchTerm={setSearchTerm} />
       <SortDown />
       <DateRangePicker />
       <FilterButton />
