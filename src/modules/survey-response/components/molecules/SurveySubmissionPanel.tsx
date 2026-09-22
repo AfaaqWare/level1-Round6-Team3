@@ -7,11 +7,13 @@ import { useTranslations } from "next-intl";
 type SurveyFooterProps = {
   totalQuestions: number;
   requiredQuestions: number;
+  isSubmitDisabled: boolean;
 };
 
 export default function SurveySubmissionPanel({
   totalQuestions,
   requiredQuestions,
+  isSubmitDisabled,
 }: SurveyFooterProps) {
   const t = useTranslations("surveyResponse.SurveySubmission");
 
@@ -32,7 +34,7 @@ export default function SurveySubmissionPanel({
         />
       </div>
 
-      <Button type="submit" size="md">
+      <Button type="submit" size="md" disabled={isSubmitDisabled}>
         <Icon IconComponent={Send} variant="white" /> {t("submit")}
       </Button>
     </div>

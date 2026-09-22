@@ -16,14 +16,20 @@ import {
 import { group } from "@/assets/images/images";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useLogoutHandler } from "@/modules/auth/hooks/useLogoutHandler";
 import { cn } from "@/lib/cn";
+import { usePathname } from "next/navigation";
+import useSurveyStatus from "@/modules/survey-response/hooks/useSurveyStatus";
 
 export default function DashboardMenu() {
   const { handleLogout, isPending } = useLogoutHandler();
   const pathname = usePathname();
+
   const isDashboardActive = pathname === "/dashboard";
+
+  const { status, handleStatusChange } = useSurveyStatus();
+
+  const isSurveyPage = pathname.startsWith("/dashboard/my-surveys");
 
   return (
     <nav className="my-6 flex h-full w-full flex-1 flex-col gap-6 text-left">
@@ -62,26 +68,29 @@ export default function DashboardMenu() {
           {
             label: "All Surveys",
             icon: <ClipboardList size={22} />,
-            href: "/dashboard/my-surveys",
+            isActive: isSurveyPage && status === "all",
+            onClick: () => handleStatusChange("all"),
           },
           {
             label: "Draft Surveys",
             icon: <FilePenLine size={22} />,
-            href: "/dashboard/my-surveys/drafts",
+            isActive: isSurveyPage && status === "draft",
+            onClick: () => handleStatusChange("draft"),
           },
           {
             label: "Published Surveys",
             icon: <Send size={22} />,
-            href: "/dashboard/my-surveys/published",
+            isActive: isSurveyPage && status === "published",
+            onClick: () => handleStatusChange("published"),
           },
           {
             label: "Closed Surveys",
             icon: <LockKeyhole size={22} />,
-            href: "/dashboard/my-surveys/closed",
+            isActive: isSurveyPage && status === "closed",
+            onClick: () => handleStatusChange("closed"),
           },
         ]}
       />
-
       <SidebarSection
         title="Response Management"
         items={[

@@ -696,11 +696,14 @@
     "copyRight": " SurveyLand © 2026 . جميع الحقوق محفوظة."
   },
   "surveyResponse": {
+    "responseDuration": "يستغرق من 5 إلى 7 دقائق",
     "SurveyInformation": {
       "title": "بياناتك",
       "fullName": "الاسم بالكامل",
       "email": "البريد الإلكتروني",
-      "confidential": "سيتم الحفاظ على سرية بياناتك."
+      "confidential": "سيتم الحفاظ على سرية بياناتك.",
+      "nameError": "من فضلك ادخل اسمك بالكامل",
+      "emailError": "من فضلك ادخل بريد الكتروني صالح"
     },
     "SurveySubmission": {
       "totalQuestions": "إجمالي الأسئلة",
@@ -709,7 +712,9 @@
     },
     "surveyQuestions": {
       "title": "أسئلة الاستبيان"
-    }
+    },
+    "submitSuccess": "تم إرسال الإجابات بنجاح",
+    "submitError": "فشل إرسال الإجابات، يرجى المحاولة مرة أخرى"
   },
   "dashboard": {
     "editUserRole": {
@@ -945,7 +950,7 @@
         "questionsCount": "{count} أسئلة",
         "responses": "{count} ردود",
         "updated": "تم التحديث {time}",
-        "deadline": "الموعد النهائي: {date}",
+        "deadline": "الموعد النهائي {date}",
         "preview": "معاينة",
         "edit": "تعديل",
         "details": "التفاصيل",
@@ -1209,5 +1214,6 @@
     "empty": {
       "default": "لا توجد بيانات لعرضها."
     }
-  }
+  },
+  "common": { "ok": "حسنا" }
 }

@@ -1,5 +1,4 @@
 import TextQuestionField from "./TextQuestionField";
-
 import { SurveyQuestion } from "../../types/question";
 import RadioQuestionField from "./RadioQuestionField";
 

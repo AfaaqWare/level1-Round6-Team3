@@ -18,15 +18,7 @@ export interface Survey {
   questions: SurveyQuestion[];
   responsesCount?: number;
 }
-export interface SubmitSurveyPayload {
-  surveyId: string;
-  fullName: string;
-  email: string;
-  answers: {
-    questionId: string;
-    answer: string | string[];
-  }[];
-}
+
 export type GetAllSurveys = Survey[];
 export interface PaginatedSurveys {
   data: Survey[];
