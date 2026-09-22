@@ -1,6 +1,6 @@
 import React from "react";
 import Text from "@/shared/components/atoms/Text";
-import type { ResponseCardProps2 } from "@/modules/all-responses/types/allResponses";
+import type { ResponseCardProps2 } from "@/modules/responses/type/allResponses";
 import Image from "next/image";
 import { cn } from "@/lib/cn";
 

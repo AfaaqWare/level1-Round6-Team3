@@ -1,16 +1,12 @@
-
-import ResponsePageTemplate from '@/modules/all-responses/components/template/ResponsePageTemplate'
-import React from 'react'
-
+import ResponsePageTemplate from "@/modules/responses/components/templates/ResponsePageTemplate";
+import React from "react";
 
 function Page() {
-
-
   return (
     <main>
-      <ResponsePageTemplate/>
+      <ResponsePageTemplate />
     </main>
-  )
+  );
 }
 
-export default Page
+export default Page;
