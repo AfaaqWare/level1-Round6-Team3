@@ -48,7 +48,7 @@ export const quickActions = [
   {
     id: "view-responses",
     name: "viewResponses",
-    href: "/responses",
+    href: "/dashboard/all-responses",
     variant: "purple" as const,
     icon: "pieChart" as const,
   },

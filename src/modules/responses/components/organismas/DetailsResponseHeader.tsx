@@ -16,7 +16,7 @@ const DetailsResponseHeader = () => {
     >
       <Link
         className="ds-bg ds-border-color flex items-center gap-2 rounded-md border px-3 py-2 no-underline"
-        href="/dashboard/responses"
+        href="/dashboard/all-responses"
       >
         <ChevronLeft className="size-3 rtl:rotate-180" />
 
