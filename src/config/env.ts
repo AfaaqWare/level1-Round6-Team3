@@ -3,6 +3,8 @@
 export const ENV = {
   API_URL: process.env.NEXT_PUBLIC_API_URL || "https://survey.afaaqware.com/api",
 
+  SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+
   API_TIMEOUT: Number(process.env.NEXT_PUBLIC_API_TIMEOUT || 10000),
 
   APP_NAME: process.env.NEXT_PUBLIC_APP_NAME || "",
