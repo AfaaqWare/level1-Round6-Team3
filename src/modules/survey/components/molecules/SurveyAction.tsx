@@ -1,9 +1,13 @@
 import React from 'react'
 import Title from "@/shared/components/atoms/Title";
 import Button from "@/shared/components/atoms/Button";
-import { Pencil, Eye, Trash2 } from "@/assets/icons/icons";
+import { Pencil, Eye, Trash2 ,Link } from "@/assets/icons/icons";
 import { useTranslations } from "next-intl";
-function SurveyAction() {
+
+
+function SurveyAction({handlePublishLink}) {
+       
+
   const t = useTranslations("dashboard.mySurveys");
   return (
     <div className="ds-bg-card min-w-0 rounded-[15px] p-[18px] sm:p-[29px]">
@@ -17,12 +21,12 @@ function SurveyAction() {
              <span className="text-[10px]">{t("actions.edit")}</span> 
             </Button>
 
-            <Button size="md"  variant="outline" className="border-1 border-[#E7E8ED] justify-start">
-              <Eye size={13} />
-             <span className="text-[10px]"> {t("actions.preview")} </span>
+            <Button size="md"  variant="outline" className="border-1 border-[#E7E8ED] justify-start" onClick={handlePublishLink}>
+              <Link size={13} />
+             <span className="text-[10px]"> {t("actions.PublishLink")} </span>
             </Button>
 
-            <Button size="md"  variant="outline" className="border-1 border-[#E7E8ED] justify-start">
+            <Button size="md"  variant="outline" className="border-1 border-[#E7E8ED] justify-start" >
               <Eye  size={13}/>
              <span className="text-[10px]"> {t("actions.viewResponses")} </span>
             </Button>

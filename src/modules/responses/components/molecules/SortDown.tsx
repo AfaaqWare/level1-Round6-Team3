@@ -1,17 +1,21 @@
+import React from "react";
+import { ChevronDown } from "@/assets/icons/icons";
+import Button from "@/shared/components/atoms/Button";
 
-import React from 'react'
-
-import {ChevronDown} from "@/assets/icons/icons"
-
-
-function SortDown() {
+function SortDown({
+  getReverseData,
+  isReversedData,
+}: {
+  getReverseData: () => void;
+  isReversedData: boolean;
+}) {
   return (
-    <div className="flex justify-between">
-          <input placeholder="Newest First" />
-          <span>{<ChevronDown />}</span>
-
-    </div>
-  )
+    <Button onClick={getReverseData}  className="flex justify-between  h-12 w-full rounded-lg border ds-border-input ds-bg-form !text-gray-500">
+      {" "}
+      {isReversedData ? "Newest first" : "Oldest first"}
+      <ChevronDown />
+    </Button>
+  );
 }
 
-export default SortDown
+export default SortDown;

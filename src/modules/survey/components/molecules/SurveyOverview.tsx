@@ -4,7 +4,7 @@ import Title from "@/shared/components/atoms/Title";
 import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 import { useGetSurveyById } from "@/modules/survey/hooks/useGetSurveyById";
-function SurveyOverview() {
+function SurveyOverview({publicLink} : {publicLink:string}) {
 
       const t = useTranslations("dashboard.mySurveys");
   const params = useParams();
@@ -74,7 +74,7 @@ function SurveyOverview() {
                   <span className="shrink-0 text-[10px] text-[#636978]">{t("overview.link")}</span>
     
                   <span className="min-w-0 truncate text-[10px] text-[#636978]">
-                    {data?.link || t("overview.noPublishedLink")}
+                    {publicLink || t("overview.noPublishedLink")}
                   </span>
                 </div>
               </div>

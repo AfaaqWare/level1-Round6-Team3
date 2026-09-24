@@ -16,7 +16,7 @@ export interface AllResponsesResponse {
 export interface ResponseCardProps2 {
   iconCard: StaticImageData;
   text1: string;
-  text2: string;
+  text2: string | number;
   text3: string;
   bg:string;
 }
