@@ -1,11 +1,15 @@
 import React from 'react'
 import Title from "@/shared/components/atoms/Title";
 import Button from "@/shared/components/atoms/Button";
-import { Pencil, Eye, Trash2 ,Link } from "@/assets/icons/icons";
+import { Pencil, Eye, Trash2 ,Link  } from "@/assets/icons/icons";
 import { useTranslations } from "next-intl";
 
 
-function SurveyAction({handlePublishLink}) {
+function SurveyAction({
+  handlePublishLink,
+}: {
+  handlePublishLink: React.MouseEventHandler<HTMLButtonElement>;
+}) {
        
 
   const t = useTranslations("dashboard.mySurveys");
