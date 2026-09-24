@@ -18,6 +18,4 @@ export const ENV = {
   REFRESH_TOKEN_KEY: process.env.NEXT_PUBLIC_REFRESH_TOKEN_KEY || "refreshToken",
 
   DISABLE_DASHBOARD_PROTECTION: process.env.NEXT_PUBLIC_DISABLE_DASHBOARD_PROTECTION === "true",
-
-  SITE_URL:"localhost:3000"
 };
