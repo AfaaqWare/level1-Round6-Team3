@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState } from "react";
 
@@ -8,37 +8,34 @@ import SurveyAction from "../molecules/SurveyAction";
 
 import { useGetSurveyById } from "@/modules/survey/hooks/useGetSurveyById";
 import { useParams } from "next/navigation";
-import {publishSurveyLinkApi} from "@/modules/survey-response/api/publishSurveyLinkApi"
+import { publishSurveyLinkApi } from "@/modules/survey-response/api/publishSurveyLinkApi";
 function SurveyByIdBottomCards() {
-  const [publicLink , setPublicLink] = useState("")
+  const [publicLink, setPublicLink] = useState("");
 
- const params = useParams();
-  
+  const params = useParams();
+
   const { data } = useGetSurveyById(params.id as string);
 
-async function handlePublishLink() {
-  try {
-    const response = await publishSurveyLinkApi(params.id as string);
-setPublicLink(response.link)
-    console.log(response);
-  } catch (error) {
-    console.error(error);
+  async function handlePublishLink() {
+    try {
+      const response = await publishSurveyLinkApi(params.id as string);
+      setPublicLink(response.link ?? "");
+      console.log(response);
+    } catch (error) {
+      console.error(error);
+    }
   }
-}
-
 
   return (
     <section className="grid w-full grid-cols-1 items-start gap-8 xl:grid-cols-[1fr_1.2fr_0.8fr]">
-
       {/* ================= Overview ================= */}
-      <SurveyOverview publicLink={publicLink}  />
+      <SurveyOverview publicLink={publicLink} />
 
       {/* ================= Questions ================= */}
       <SurveyQuestions />
 
       {/* ================= Quick Actions ================= */}
       <SurveyAction handlePublishLink={handlePublishLink} />
-      
     </section>
   );
 }
