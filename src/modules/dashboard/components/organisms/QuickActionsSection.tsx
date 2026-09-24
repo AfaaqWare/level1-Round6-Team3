@@ -1,11 +1,18 @@
+"use client";
+
 import Title from "@/shared/components/atoms/Title";
 import { quickActions } from "../../utils/data";
 import QuickActionCard from "../molecules/QuickActionCard";
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/cn";
+import useGetProfile from "@/modules/auth/hooks/useGetProfile";
 
 export default function QuickActionsSection() {
   const t = useTranslations("dashboard.home.quickActions");
+  const { data } = useGetProfile();
+  const isAdmin = data?.role === "ADMIN";
+
+  const visibleActions = quickActions.filter(action => !action.adminOnly || isAdmin);
 
   return (
     <section className="ds-rounded-lg ds-bg-card w-full p-4 md:p-6 lg:p-10">
@@ -19,10 +26,11 @@ export default function QuickActionsSection() {
           "grid w-full gap-5",
           "grid-cols-1",
           "sm:grid-cols-2",
-          "lg:grid-cols-4"
+          "lg:grid-cols-3",
+          isAdmin && "lg:grid-cols-4"
         )}
       >
-        {quickActions.map(action => (
+        {visibleActions.map(action => (
           <QuickActionCard key={action.id} {...action} />
         ))}
       </div>

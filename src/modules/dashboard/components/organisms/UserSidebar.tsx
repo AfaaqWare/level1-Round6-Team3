@@ -26,7 +26,7 @@ const navItems: NavItem[] = [
   { label: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
   { label: "My Surveys", href: "/dashboard/my-surveys", icon: FolderOpen },
   { label: "Create Survey", href: "/dashboard/create-survey", icon: SquarePlus },
-  { label: "Responses", href: "/dashboard/responses", icon: ClipboardList },
+  { label: "Responses", href: "/dashboard/all-responses", icon: ClipboardList },
   { label: "Analytics", href: "/dashboard/analytics", icon: BarChart3 },
 ];
 

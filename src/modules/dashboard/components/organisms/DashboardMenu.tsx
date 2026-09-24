@@ -97,7 +97,7 @@ export default function DashboardMenu() {
           {
             label: "Responses",
             icon: <PieChart size={22} />,
-            href: "/dashboard/responses",
+            href: "/dashboard/all-responses",
           },
           {
             label: "Analytics",
