@@ -893,6 +893,7 @@
 
       "actions": {
         "preview": "Preview",
+        "PublishLink": "Publish Link",
         "edit": "Edit",
         "openBuilder": "Open Builder",
         "viewAllQuestions": "View All Questions",

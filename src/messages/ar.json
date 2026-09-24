@@ -875,6 +875,8 @@
 
       "actions": {
         "preview": "معاينة",
+        "PublishLink": "نشر الرابط",
+
         "edit": "تعديل",
         "openBuilder": "فتح المنشئ",
         "viewAllQuestions": "عرض جميع الأسئلة",
