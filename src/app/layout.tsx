@@ -5,6 +5,7 @@ import "./globals.css";
 import AppProviders from "@/providers/AppProviders";
 import { changeLocaleAction } from "@/i18n/locale";
 import { NextIntlClientProvider } from "next-intl";
+import { Toaster } from "sonner";
 import LocaleSwitcher from "@/shared/components/atoms/LocalSwitcher";
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,6 +42,8 @@ export default async function RootLayout({
             {children}
 
             <LocaleSwitcher changeLocaleAction={changeLocaleAction} />
+
+            <Toaster richColors position="top-center" />
           </AppProviders>
         </NextIntlClientProvider>
       </body>
