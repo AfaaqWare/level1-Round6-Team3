@@ -20,7 +20,6 @@ function SurveyByIdBottomCards() {
     try {
       const response = await publishSurveyLinkApi(params.id as string);
       setPublicLink(response.link ?? "");
-      console.log(response);
     } catch (error) {
       console.error(error);
     }
@@ -29,7 +28,7 @@ function SurveyByIdBottomCards() {
   return (
     <section className="grid w-full grid-cols-1 items-start gap-8 xl:grid-cols-[1fr_1.2fr_0.8fr]">
       {/* ================= Overview ================= */}
-      <SurveyOverview publicLink={publicLink} />
+      <SurveyOverview publicLink={publicLink || data?.link || ""} />
 
       {/* ================= Questions ================= */}
       <SurveyQuestions />

@@ -914,7 +914,9 @@
         "createdAt": "Created At",
         "updatedAt": "Updated At",
         "link": "Link",
-        "noPublishedLink": "No Published yet"
+        "noPublishedLink": "No Published yet",
+        "copySuccess": "Survey ID copied to clipboard",
+        "copyError": "Failed to copy Survey ID"
       },
 
       "questions": {

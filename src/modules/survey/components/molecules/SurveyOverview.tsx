@@ -1,14 +1,15 @@
-import React, { useState } from "react";
-import { Clock3, Link, Copy } from "@/assets/icons/icons";
-import Title from "@/shared/components/atoms/Title";
-import { useTranslations } from "next-intl";
-import { useParams } from "next/navigation";
-import { useGetSurveyById } from "@/modules/survey/hooks/useGetSurveyById";
-
 import { ENV } from "@/config/env";
+import { useTranslations, useLocale } from "next-intl";
+import { useParams } from "next/navigation";
+import { showToast } from "@/shared/utils/toast";
+import { Clock3, Link, Copy } from "@/assets/icons/icons";
+import { useGetSurveyById } from "@/modules/survey/hooks/useGetSurveyById";
+import Title from "@/shared/components/atoms/Title";
+
 function SurveyOverview({ publicLink }: { publicLink: string }) {
-  const [copyText, setCopyText] = useState(false);
+  
   const t = useTranslations("dashboard.mySurveys");
+  const locale = useLocale();
   const params = useParams();
 
   const { data } = useGetSurveyById(params.id as string);
@@ -73,26 +74,21 @@ function SurveyOverview({ publicLink }: { publicLink: string }) {
 
           <button
             className="flex w-75 justify-between"
-            onClick={() => {
-              if(!publicLink) return;
-              navigator.clipboard.writeText(`${ENV.SITE_URL}/survey/${publicLink}`);
-              setCopyText(true);
-              setTimeout(()=>setCopyText(false),1500)
+            onClick={async () => {
+              if (!publicLink) return;
+              try {
+                await navigator.clipboard.writeText(`${ENV.SITE_URL}/survey/${publicLink}`);
+                showToast({ type: "success", message: t("overview.copySuccess"), locale });
+              } catch {
+                showToast({ type: "error", message: t("overview.copyError"), locale });
+              }
             }}
           >
             <span className="min-w-0 truncate text-[10px] text-[#636978]">
               {publicLink ? ` ${ENV.SITE_URL}/survey/${publicLink}` : t("overview.noPublishedLink")}
             </span>
 
-            <div className="relative">
-              <Copy size={14} className="shrink-0 cursor-pointer text-[#636978]" />
-
-              {copyText && (
-                <span className="absolute right-0 bottom-5 rounded bg-black px-2 py-1 text-[10px] whitespace-nowrap text-white">
-                  Copied!
-                </span>
-              )}
-            </div>
+            <Copy size={14} className="shrink-0 cursor-pointer text-[#636978]" />
           </button>
         </div>
       </div>
