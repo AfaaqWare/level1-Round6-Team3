@@ -124,35 +124,36 @@ export default function UserSidebar({ collapsed, onToggleCollapse }: UserSidebar
         })}
       </nav>
 
-      <div className="sidebar-divider mt-auto" />
+      <div className="mt-auto">
+        <div className="sidebar-divider" />
+        {/* Others Section */}
+        <div className="sidebar-section-label">Others</div>
+        <nav className="sidebar-nav">
+          {othersItems.map(item => {
+            const IconComp = item.icon;
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`sidebar-nav-item ${isActive(item.href) ? "active" : ""}`}
+              >
+                <IconComp className="sidebar-nav-icon" />
+                <span>{item.label}</span>
+              </Link>
+            );
+          })}
 
-      {/* Others Section */}
-      <div className="sidebar-section-label">Others</div>
-      <nav className="sidebar-nav">
-        {othersItems.map(item => {
-          const IconComp = item.icon;
-          return (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={`sidebar-nav-item ${isActive(item.href) ? "active" : ""}`}
-            >
-              <IconComp className="sidebar-nav-icon" />
-              <span>{item.label}</span>
-            </Link>
-          );
-        })}
-
-        <button
-          className="sidebar-nav-item sidebar-logout"
-          onClick={handleLogout}
-          disabled={isPending}
-          type="button"
-        >
-          <LogOut className="sidebar-nav-icon" style={{ color: "#ef4444" }} />
-          <span>{isPending ? "Logging out..." : "Log out"}</span>
-        </button>
-      </nav>
+          <button
+            className="sidebar-nav-item sidebar-logout"
+            onClick={handleLogout}
+            disabled={isPending}
+            type="button"
+          >
+            <LogOut className="sidebar-nav-icon" style={{ color: "#ef4444" }} />
+            <span>{isPending ? "Logging out..." : "Log out"}</span>
+          </button>
+        </nav>
+      </div>
     </div>
   );
 }
