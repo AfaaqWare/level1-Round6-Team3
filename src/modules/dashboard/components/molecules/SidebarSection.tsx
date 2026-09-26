@@ -12,12 +12,13 @@ interface SidebarItem {
 interface SidebarSectionProps {
   title: string;
   items: SidebarItem[];
+  collapsed?: boolean;
 }
 
-export default function SidebarSection({ title, items }: SidebarSectionProps) {
+export default function SidebarSection({ title, items, collapsed = false }: SidebarSectionProps) {
   return (
-    <section className="flex flex-col gap-2">
-      <h3 className="px-4 text-sm font-medium text-gray-500">{title}</h3>
+    <section className={collapsed ? "flex flex-col items-center gap-2" : "flex flex-col gap-2"}>
+      {!collapsed && <h3 className="px-4 text-sm font-medium text-gray-500">{title}</h3>}
 
       <div className="flex flex-col gap-1">
         {items.map(item => (
@@ -29,6 +30,7 @@ export default function SidebarSection({ title, items }: SidebarSectionProps) {
             active={item.isActive}
             danger={item.danger}
             onClick={item.onClick}
+            collapsed={collapsed}
           />
         ))}
       </div>

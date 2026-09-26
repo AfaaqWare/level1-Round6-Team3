@@ -5,6 +5,7 @@ import useGetProfile from "@/modules/auth/hooks/useGetProfile";
 import ProfileForm from "@/modules/auth/components/organisms/ProfileForm";
 import ProfilePhotoSection from "@/modules/auth/components/organisms/ProfilePhotoSection";
 import UserSidebar from "@/modules/dashboard/components/organisms/UserSidebar";
+import DashboardNavbar from "@/shared/components/organisms/DashboardNavbar";
 import "@/styles/profile.css";
 
 function Page() {
@@ -32,38 +33,41 @@ function Page() {
   };
 
   return (
-    <div className="profile-settings-wrapper">
-      <aside className="profile-sidebar">
-        <UserSidebar />
-      </aside>
-      <main className="profile-main-content">
-        <div className="account-info-card">
-          <h1 className="account-info-title">Account Information</h1>
-          <p className="account-info-subtitle">
-            Update your profile details and manage your account settings
-          </p>
+    <div>
+      <DashboardNavbar />
+      <div className="profile-settings-wrapper">
+        <aside className="profile-sidebar">
+          <UserSidebar />
+        </aside>
+        <main className="profile-main-content">
+          <div className="account-info-card">
+            <h1 className="account-info-title">Account Information</h1>
+            <p className="account-info-subtitle">
+              Update your profile details and manage your account settings
+            </p>
 
-          <ProfilePhotoSection
-            currentImage={previewUrl}
-            userName={data?.name || ""}
-            onFileSelect={handleFileSelect}
-            onRemovePhoto={handleRemovePhoto}
-          />
+            <ProfilePhotoSection
+              currentImage={previewUrl}
+              userName={data?.name || ""}
+              onFileSelect={handleFileSelect}
+              onRemovePhoto={handleRemovePhoto}
+            />
 
-          <ProfileForm
-            initialData={
-              data
-                ? {
-                    name: data.name,
-                    email: data.email,
-                  }
-                : undefined
-            }
-            selectedImageFile={selectedFile}
-            onSaveSuccess={handleSaveSuccess}
-          />
-        </div>
-      </main>
+            <ProfileForm
+              initialData={
+                data
+                  ? {
+                      name: data.name,
+                      email: data.email,
+                    }
+                  : undefined
+              }
+              selectedImageFile={selectedFile}
+              onSaveSuccess={handleSaveSuccess}
+            />
+          </div>
+        </main>
+      </div>
     </div>
   );
 }
