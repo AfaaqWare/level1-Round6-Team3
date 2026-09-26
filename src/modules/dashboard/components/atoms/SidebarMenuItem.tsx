@@ -10,6 +10,7 @@ interface SidebarMenuItemProps {
   href?: string;
   active?: boolean;
   danger?: boolean;
+  collapsed?: boolean;
   onClick?: () => void;
 }
 
@@ -19,6 +20,7 @@ export default function SidebarMenuItem({
   href,
   active = false,
   danger = false,
+  collapsed = false,
   onClick,
 }: SidebarMenuItemProps) {
   const pathname = usePathname();
@@ -28,6 +30,7 @@ export default function SidebarMenuItem({
 
   const classes = cn(
     "flex w-full items-center gap-[var(--space-md)] rounded-[var(--radius-md)] px-[var(--space-md)] py-[var(--space-sm)] transition-all duration-[var(--motion-fast)]",
+    collapsed && "justify-center px-0",
     isActive &&
       "bg-[var(--color-primary-200)] text-[var(--color-primary)] dark:bg-[color-mix(in_srgb,var(--color-primary-200)_40%,transparent)]",
     !isActive &&
@@ -38,17 +41,17 @@ export default function SidebarMenuItem({
 
   if (href && href !== "#") {
     return (
-      <Link href={href} className={classes}>
+      <Link href={href} className={classes} title={collapsed ? label : undefined}>
         <span className="shrink-0">{icon}</span>
-        <span className="ds-text-base font-semibold whitespace-nowrap">{label}</span>
+        {!collapsed && <span className="ds-text-base font-semibold whitespace-nowrap">{label}</span>}
       </Link>
     );
   }
 
   return (
-    <button type="button" onClick={onClick} className={classes}>
+    <button type="button" onClick={onClick} className={classes} title={collapsed ? label : undefined}>
       <span className="shrink-0">{icon}</span>
-      <span className="ds-text-base font-semibold whitespace-nowrap">{label}</span>
+      {!collapsed && <span className="ds-text-base font-semibold whitespace-nowrap">{label}</span>}
     </button>
   );
 }

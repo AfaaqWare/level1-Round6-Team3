@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
@@ -8,11 +9,11 @@ import {
   FolderOpen,
   SquarePlus,
   ClipboardList,
-  BarChart3,
   User,
   LogOut,
-  ChevronDown,
+  IconLayoutSidebarLeftCollapse,
 } from "@/assets/icons/icons";
+import { cn } from "@/lib/cn";
 import useGetProfile from "@/modules/auth/hooks/useGetProfile";
 import { useLogoutHandler } from "@/modules/auth/hooks/useLogoutHandler";
 
@@ -22,17 +23,34 @@ interface NavItem {
   icon: typeof LayoutDashboard;
 }
 
+interface UserSidebarProps {
+  collapsed?: boolean;
+  onToggleCollapse?: () => void;
+}
+
 const navItems: NavItem[] = [
   { label: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
   { label: "My Surveys", href: "/dashboard/my-surveys", icon: FolderOpen },
   { label: "Create Survey", href: "/dashboard/create-survey", icon: SquarePlus },
   { label: "Responses", href: "/dashboard/all-responses", icon: ClipboardList },
-  { label: "Analytics", href: "/dashboard/analytics", icon: BarChart3 },
 ];
 
 const othersItems: NavItem[] = [{ label: "Profile", href: "/edit-profile", icon: User }];
 
-export default function UserSidebar() {
+export default function UserSidebar({ collapsed, onToggleCollapse }: UserSidebarProps) {
+  const [localCollapsed, setLocalCollapsed] = useState(false);
+
+  const isControlled = typeof onToggleCollapse === "function";
+  const isCollapsed = isControlled ? Boolean(collapsed) : localCollapsed;
+
+  const toggleCollapse = () => {
+    if (isControlled) {
+      onToggleCollapse();
+    } else {
+      setLocalCollapsed(c => !c);
+    }
+  };
+
   const pathname = usePathname();
   const { data, isLoading } = useGetProfile();
   const { handleLogout, isPending } = useLogoutHandler();
@@ -47,7 +65,7 @@ export default function UserSidebar() {
   const profileRole = data?.role || "User";
 
   return (
-    <div className="flex h-full w-full flex-col overflow-y-auto">
+    <div className={cn("flex h-full w-full flex-col overflow-y-auto", isCollapsed && "sidebar-collapsed")}>
       {/* Profile Section */}
       <div className="sidebar-profile-section">
         <div className="sidebar-profile-avatar">
@@ -78,7 +96,15 @@ export default function UserSidebar() {
           <div className="sidebar-profile-name">{profileName}</div>
           <div className="sidebar-profile-role">{profileRole}</div>
         </div>
-        <ChevronDown size={18} className="sidebar-chevron" />
+        <button
+          type="button"
+          onClick={toggleCollapse}
+          aria-label={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
+          title={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
+          className="cursor-pointer bg-transparent border-none p-0"
+        >
+          <IconLayoutSidebarLeftCollapse size={18} className="sidebar-chevron" />
+        </button>
       </div>
 
       {/* Main Navigation */}
