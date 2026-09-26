@@ -897,7 +897,9 @@
         "createdAt": "تاريخ الإنشاء",
         "updatedAt": "آخر تحديث",
         "link": "الرابط",
-        "noPublishedLink": "لا يوجد رابط منشور حتى الآن"
+        "noPublishedLink": "لا يوجد رابط منشور حتى الآن",
+        "copySuccess": "تم نسخ معرّف الاستبيان",
+        "copyError": "فشل نسخ معرّف الاستبيان"
       },
 
       "questions": {
