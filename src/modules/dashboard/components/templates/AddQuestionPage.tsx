@@ -18,47 +18,25 @@ import { useGetQuestions } from "../../hooks/useGetQuestions";
 import { useAddQuestion } from "../../hooks/useAddQuestion";
 import { useDeleteQuestion } from "../../hooks/useDeleteQuestion";
 
-const INITIAL_QUESTIONS: QuestionItem[] = [
-  {
-    id: "q-1",
-    number: 1,
-    title: "What's your favorite language?",
-    type: "mcq",
-    choices: ["JavaScript", "Python", "Go"],
-    required: true,
-  },
-  {
-    id: "q-2",
-    number: 2,
-    title: "Tell us about your experience with the training.",
-    type: "textarea",
-    required: true,
-  },
-  {
-    id: "q-3",
-    number: 3,
-    title: "ما مدى رضاك عن المحتوي ؟",
-    type: "mcq",
-    choices: ["ممتاز", "جيد", "ضعيف"],
-    required: true,
-  },
-];
-
 export default function AddQuestionPage({ surveyIdProp }: { surveyIdProp?: string }) {
   const searchParams = useSearchParams();
   const params = useParams();
-  const routeSurveyId = typeof params?.surveyId === "string" ? params.surveyId : "";
+  const routeSurveyId =
+    typeof params?.surveyId === "string"
+      ? params.surveyId
+      : typeof params?.id === "string"
+      ? params.id
+      : "";
   const surveyId = surveyIdProp || searchParams.get("surveyId") || routeSurveyId || "";
 
-  const [localQuestions, setLocalQuestions] = useState<QuestionItem[]>(INITIAL_QUESTIONS);
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(true);
 
-  const { data: apiQuestions, isLoading } = useGetQuestions(surveyId);
+  const { data: apiQuestions } = useGetQuestions(surveyId);
   const addQuestionMutation = useAddQuestion(surveyId);
   const deleteQuestionMutation = useDeleteQuestion(surveyId);
 
-  // Map API questions to QuestionItem structure if surveyId is present
-  const displayQuestions: QuestionItem[] = surveyId && apiQuestions
+  // Map API questions directly from backend response
+  const displayQuestions: QuestionItem[] = apiQuestions
     ? apiQuestions.map((q, idx) => ({
         id: q.id,
         number: idx + 1,
@@ -67,64 +45,50 @@ export default function AddQuestionPage({ surveyIdProp }: { surveyIdProp?: strin
         choices: q.choices,
         required: q.required,
       }))
-    : localQuestions;
+    : [];
 
   const handleAddQuestion = (newQ: Omit<QuestionItem, "id" | "number">) => {
-    if (surveyId) {
-      addQuestionMutation.mutate(
-        {
-          surveyId,
-          title: newQ.title,
-          type: newQ.type,
-          required: newQ.required ?? false,
-          choices: newQ.choices,
-        },
-        {
-          onSuccess: () => {
-            toast.success("Question added successfully!");
-            setIsDrawerOpen(false);
-          },
-          onError: () => {
-            toast.error("Failed to add question. Please try again.");
-          },
-        }
-      );
-    } else {
-      const nextItem: QuestionItem = {
-        ...newQ,
-        id: `q-${Date.now()}`,
-        number: localQuestions.length + 1,
-      };
-      setLocalQuestions(prev => [...prev, nextItem]);
-      toast.success("Question added!");
-      setIsDrawerOpen(false);
+    if (!surveyId) {
+      toast.error("No survey ID found. Please select a valid survey.");
+      return;
     }
+
+    addQuestionMutation.mutate(
+      {
+        surveyId,
+        title: newQ.title,
+        type: newQ.type,
+        required: newQ.required ?? false,
+        choices: newQ.choices,
+      },
+      {
+        onSuccess: () => {
+          toast.success("Question added successfully!");
+        },
+        onError: () => {
+          toast.error("Failed to add question. Please try again.");
+        },
+      }
+    );
   };
 
   const handleDeleteQuestion = (id: string) => {
-    if (surveyId) {
-      deleteQuestionMutation.mutate(
-        { surveyId, questionId: id },
-        {
-          onSuccess: () => {
-            toast.success("Question deleted successfully!");
-          },
-          onError: () => {
-            toast.error("Failed to delete question. Please try again.");
-          },
-        }
-      );
-    } else {
-      setLocalQuestions(prev =>
-        prev
-          .filter(q => q.id !== id)
-          .map((q, idx) => ({
-            ...q,
-            number: idx + 1,
-          }))
-      );
-      toast.success("Question deleted!");
+    if (!surveyId) {
+      toast.error("No survey ID found.");
+      return;
     }
+
+    deleteQuestionMutation.mutate(
+      { surveyId, questionId: id },
+      {
+        onSuccess: () => {
+          toast.success("Question deleted successfully!");
+        },
+        onError: () => {
+          toast.error("Failed to delete question. Please try again.");
+        },
+      }
+    );
   };
 
   return (
@@ -230,9 +194,7 @@ export default function AddQuestionPage({ surveyIdProp }: { surveyIdProp?: strin
 
           {/* Questions Cards */}
           <div className="space-y-4 pt-2">
-            {isLoading ? (
-              <p className="py-8 text-center text-sm text-gray-400">Loading questions...</p>
-            ) : displayQuestions.length === 0 ? (
+            {displayQuestions.length === 0 ? (
               <p className="py-8 text-center text-sm text-gray-400">No questions added yet.</p>
             ) : (
               displayQuestions.map(q => (
