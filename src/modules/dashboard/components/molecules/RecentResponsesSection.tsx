@@ -26,7 +26,7 @@ export default function RecentResponsesSection({
   return (
     <section className={cn("ds-bg-card ds-rounded-3xl ds-p-lg", "w-full", className)}>
       {/* ==================== Header ==================== */}
-      <SectionHeader title="recentResponses" buttonLabel="viewAll" href="/responses" />
+      <SectionHeader title="recentResponses" buttonLabel="viewAll" href="/dashboard/all-responses" />
 
       {/* ==================== Loading State ==================== */}
       {isLoading && (

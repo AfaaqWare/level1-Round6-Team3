@@ -2,13 +2,19 @@
 
 import DashboardProfileData from "../DashboardProfileData";
 import DashboardMenu from "./DashboardMenu";
+import { cn } from "@/lib/cn";
 
-export default function AdminSidebar() {
+interface AdminSidebarProps {
+  collapsed: boolean;
+  onToggleCollapse: () => void;
+}
+
+export default function AdminSidebar({ collapsed, onToggleCollapse }: AdminSidebarProps) {
   return (
-    <div className="flex h-full w-full flex-col px-4">
-      <DashboardProfileData />
+    <div className={cn("flex h-full w-full flex-col", collapsed ? "items-center px-2" : "px-4")}>
+      <DashboardProfileData collapsed={collapsed} onToggleCollapse={onToggleCollapse} />
 
-      <DashboardMenu />
+      <DashboardMenu collapsed={collapsed} />
     </div>
   );
 }

@@ -50,7 +50,11 @@ import {
   Share2,
   Settings,
   FileSpreadsheet,
+  Copy,
+  Funnel,
+
 } from "lucide-react";
+import { IconLayoutSidebarLeftCollapse } from "@tabler/icons-react";
 
 type IconProps = Omit<ComponentProps<typeof Icon>, "icon">;
 const FaFacebookF = (props: IconProps) => <Icon icon="fa-brands:facebook-f" {...props} />;
@@ -116,4 +120,7 @@ export {
   Share2,
   Settings,
   FileSpreadsheet,
+  Copy,
+  Funnel,
+  IconLayoutSidebarLeftCollapse,
 };

@@ -5,7 +5,7 @@ export interface UpdateSurveyPayload {
   description: string;
   deadline: string;
   status: SurveyStatus;
-  cover?: File;
+  cover?: string;
 }
 
 export interface UpdateSurveyMutationArgs {

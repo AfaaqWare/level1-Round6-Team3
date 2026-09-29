@@ -1,5 +1,4 @@
 import { CalendarDays, Clock3 } from "@/assets/icons/icons";
-
 import AppImage from "@/shared/components/atoms/Image";
 import Text from "@/shared/components/atoms/Text";
 import Title from "@/shared/components/atoms/Title";
@@ -24,17 +23,16 @@ export default function SurveyDetailsCard({
   return (
     <section className="ds-bg-card ds-rounded-xl mt-12 mb-16 px-5 py-8 sm:px-6">
       <div className="space-y-3.5">
-        <div className="ds-primary-200 ds-rounded-xl aspect-[3.31/1] min-h-full max-w-full overflow-hidden">
+        <div className="ds-primary-200 ds-rounded-xl overflow-hidden">
           <AppImage
             src={image}
             alt={`${title} cover image`}
             width={1162}
             height={351}
             priority
-            className="w-full [&_img]:h-auto [&_img]:w-full [&_img]:object-cover"
+            className="w-full [&_img]:h-[300px] [&_img]:w-full [&_img]:object-cover"
           />
         </div>
-
         <div className="space-y-2.5">
           <Title size="lg" className="normal-case">
             {title}

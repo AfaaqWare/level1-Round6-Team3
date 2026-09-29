@@ -713,11 +713,14 @@
   },
 
   "surveyResponse": {
+    "responseDuration": "Take 5 - 7 minutes",
     "SurveyInformation": {
       "title": "Your Information",
       "fullName": "Full Name",
       "email": "Email Address",
-      "confidential": "Your information will be kept confidential."
+      "confidential": "Your information will be kept confidential.",
+      "nameError": "Please enter your full name",
+      "emailError": "Please enter a valid email"
     },
     "SurveySubmission": {
       "totalQuestions": "Total Questions",
@@ -726,7 +729,9 @@
     },
     "surveyQuestions": {
       "title": "Survey Questions"
-    }
+    },
+    "submitSuccess": "Your answers have been submitted successfully",
+    "submitError": "Failed to submit your answers. Please try again"
   },
 
   "dashboard": {
@@ -888,6 +893,7 @@
 
       "actions": {
         "preview": "Preview",
+        "PublishLink": "Publish Link",
         "edit": "Edit",
         "openBuilder": "Open Builder",
         "viewAllQuestions": "View All Questions",
@@ -908,7 +914,9 @@
         "createdAt": "Created At",
         "updatedAt": "Updated At",
         "link": "Link",
-        "noPublishedLink": "No Published yet"
+        "noPublishedLink": "No Published yet",
+        "copySuccess": "Survey ID copied to clipboard",
+        "copyError": "Failed to copy Survey ID"
       },
 
       "questions": {
@@ -963,7 +971,7 @@
         "questionsCount": "{count} Questions",
         "responses": "{count} Responses",
         "updated": "Updated {time}",
-        "deadline": "Deadline: {date}",
+        "deadline": "Deadline {date}",
         "preview": "Preview",
         "edit": "Edit",
         "details": "Details",
@@ -1133,6 +1141,65 @@
         "retry": "Retry",
         "notFound": "Survey not found."
       }
+    },
+    "responses": {
+      "title": "Responses",
+      "description": "View and manage all survey submissions",
+
+      "actions": {
+        "refresh": "Refresh",
+        "exportExcel": "Export Excel"
+      },
+
+      "cards": {
+        "totalResponses": {
+          "title": "Total Responses",
+          "text": "All time"
+        },
+        "uniqueSurveys": {
+          "title": "Unique Surveys",
+          "text": "All time"
+        },
+        "latestResponse": {
+          "title": "Latest Response"
+        },
+        "exportReady": {
+          "title": "Export Ready",
+          "text": "Download Excel"
+        }
+      },
+
+      "table": {
+        "id": "ID",
+        "respondent": "Respondent",
+        "email": "Email",
+        "surveyId": "Survey ID",
+        "answers": "Answers",
+        "submittedAt": "Submitted At",
+        "actions": "Actions"
+      },
+
+      "detailsResponse": {
+        "meta": {
+          "title": "Response Details - Afaaq Ware",
+          "description": "View the details of a survey response"
+        },
+        "header": {
+          "title": "Response Details",
+          "description": "View the complete details of this response",
+          "backToResponse": "Back to Responses page"
+        },
+        "responseInformation": {
+          "title": "Response Information",
+          "fields": {
+            "responseId": "Response ID",
+            "surveyName": "Survey",
+            "submittedAt": "Submitted At",
+            "respondentName": "Respondent Name"
+          }
+        },
+        "surveyAnswers": { "title": "Survey Answers" }
+      }
     }
   },
   "cards": {
@@ -1168,5 +1235,6 @@
     "empty": {
       "default": "No data available to display."
     }
-  }
+  },
+  "common": { "ok": "ok" }
 }

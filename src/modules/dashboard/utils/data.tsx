@@ -37,6 +37,7 @@ export const quickActions = [
     href: "/surveys/create-survey",
     variant: "teal" as const,
     icon: "plus" as const,
+    adminOnly: false,
   },
   {
     id: "manage-users",
@@ -44,13 +45,15 @@ export const quickActions = [
     href: "dashboard/users",
     variant: "green" as const,
     icon: "users" as const,
+    adminOnly: true,
   },
   {
     id: "view-responses",
     name: "viewResponses",
-    href: "/responses",
+    href: "/dashboard/all-responses",
     variant: "purple" as const,
     icon: "pieChart" as const,
+    adminOnly: false,
   },
   {
     id: "export-reports",
@@ -58,6 +61,7 @@ export const quickActions = [
     href: "/reports",
     variant: "blue" as const,
     icon: "download" as const,
+    adminOnly: false,
   },
 ];
 export const theme = {

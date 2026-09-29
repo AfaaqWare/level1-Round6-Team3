@@ -12,6 +12,7 @@ import TextArea from "@/shared/components/atoms/TextArea";
 import Button from "@/shared/components/atoms/Button";
 import { showToast } from "@/shared/utils/toast";
 import { useUpdateSurvey } from "../../hooks/useUpdateSurvey";
+import { publishSurveyLinkApi } from "@/modules/survey-response/api/publishSurveyLinkApi";
 import {
   editSurveySchema,
   type EditSurveyFormData,
@@ -62,15 +63,22 @@ export default function EditSurveyForm({ survey, coverFile }: EditSurveyFormProp
         payload: {
           title: data.title,
           description: data.description,
-          deadline: data.deadline,
+          deadline: new Date(data.deadline).toISOString(),
           status: data.status,
-          cover: coverFile ?? undefined,
+          cover: survey.cover ?? undefined,
         },
       },
       {
-        onSuccess: () => {
+        onSuccess: async () => {
+          if (data.status === "published") {
+            try {
+              await publishSurveyLinkApi(survey.id);
+            } catch (error) {
+              console.error(error);
+            }
+          }
           showToast({ type: "success", message: t("toast.saveSuccess"), locale });
-          router.push("/dashboard/my-surveys");
+          router.back();
         },
         onError: () => {
           showToast({ type: "error", message: t("toast.saveError"), locale });

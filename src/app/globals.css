@@ -519,6 +519,35 @@
   background-color: var(--border-color-dark);
 }
 
+/* ========== Sidebar collapsed state ========== */
+.sidebar-collapsed .sidebar-profile-section {
+  justify-content: center;
+  gap: 4px;
+  padding: 0 8px 24px 8px;
+}
+
+.sidebar-collapsed .sidebar-profile-avatar {
+  width: 40px;
+  height: 40px;
+}
+
+.sidebar-collapsed .sidebar-profile-info {
+  display: none;
+}
+
+.sidebar-collapsed .sidebar-nav-item {
+  justify-content: center;
+  padding: 12px 8px;
+}
+
+.sidebar-collapsed .sidebar-nav-item span {
+  display: none;
+}
+
+.sidebar-collapsed .sidebar-section-label {
+  display: none;
+}
+
 input[type="password"]::-ms-reveal {
   display: none;
 }

@@ -10,6 +10,8 @@ type TextQuestionFieldProps = {
   maxLength: number;
   required?: boolean;
   onChange: (value: string) => void;
+  readOnly?: boolean;
+  mode: "view" | "edit";
 };
 
 export default function TextQuestionField({
@@ -18,17 +20,26 @@ export default function TextQuestionField({
   question,
   value,
   maxLength,
-  required = false,
+  required,
   onChange,
+  readOnly = false,
+  mode = "edit",
 }: TextQuestionFieldProps) {
   return (
-    <section className="border-b border-[var(--border-color-card)] py-5 last:border-b-0">
+    <section
+      className={`${mode === "edit" ? "border-b border-[var(--border-color-card)] last:border-b-0" : "!border-b-0"} py-5`}
+    >
       <div className="flex gap-4 sm:gap-5">
-        <QuestionNumber number={number} />
+        <QuestionNumber number={number} className={readOnly ? "dark:!text-white" : ""} />
 
         <div className="min-w-0 flex-1 space-y-3">
-          <label htmlFor={id} className="block">
+          <label htmlFor={id} className="inline-flex">
             <Text size="sm">{question}</Text>
+            {required && (
+              <span className="ml-1 text-red-500" aria-hidden="true">
+                *
+              </span>
+            )}
           </label>
 
           <TextArea
@@ -38,8 +49,13 @@ export default function TextQuestionField({
             maxLength={maxLength}
             required={required}
             rows={4}
-            onChange={event => onChange(event.target.value)}
-            className="ds-border-sm ds-bg-card resize-y font-[var(--font-heading)]"
+            onChange={readOnly ? undefined : event => onChange?.(event.target.value)}
+            disabled={readOnly}
+            className={
+              readOnly
+                ? "ds-border-sm ds-bg-card !cursor-default resize-none font-[var(--font-heading)] !text-black !caret-transparent dark:!text-white"
+                : "ds-border-sm ds-bg-card resize-y font-[var(--font-heading)]"
+            }
           />
 
           <Text

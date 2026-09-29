@@ -1,7 +1,7 @@
 import Text from "@/shared/components/atoms/Text";
 import QuestionNumber from "@/modules/survey-response/components/atoms/QuestionNumber";
 import { cn } from "@/lib/cn";
-
+import Input from "@/shared/components/atoms/Input";
 type RadioQuestionFieldProps = {
   id: string;
   number: number;
@@ -10,6 +10,8 @@ type RadioQuestionFieldProps = {
   value: string;
   required?: boolean;
   onChange: (value: string) => void;
+  readOnly: boolean;
+  mode: "edit" | "view";
 };
 
 export default function RadioQuestionField({
@@ -19,15 +21,25 @@ export default function RadioQuestionField({
   choices,
   value,
   onChange,
+  readOnly,
+  mode = "edit",
+  required,
 }: RadioQuestionFieldProps) {
   return (
-    <fieldset className="border-b border-[var(--border-color-card)] py-5 last:border-b-0">
+    <fieldset
+      className={`${mode === "edit" ? "border-b border-[var(--border-color-card)] last:border-b-0" : "!border-b-0"} py-5`}
+    >
       <div className="flex gap-4 sm:gap-5">
         <QuestionNumber number={number} />
 
         <div className="min-w-0 flex-1">
-          <legend className="mb-3">
+          <legend className="mb-3 inline-flex">
             <Text size="sm">{question}</Text>
+            {required && (
+              <span className="ml-1 text-red-500" aria-hidden="true">
+                *
+              </span>
+            )}
           </legend>
 
           <div className="space-y-2">
@@ -37,16 +49,18 @@ export default function RadioQuestionField({
               return (
                 <label
                   key={choice}
-                  className="ds-text-primary flex cursor-pointer items-center gap-2.5 text-sm font-[var(--font-heading)]"
+                  className={`${readOnly ? "ds-text-secondary cursor-default" : "ds-text-primary cursor-pointer"} flex items-center gap-2.5 text-sm font-[var(--font-heading)]`}
                 >
-                  <input
+                  <Input
                     id={`${id}-${choice}`}
                     name={id}
                     type="radio"
                     value={choice}
                     checked={isSelected}
-                    onChange={() => onChange(choice)}
+                    disabled={readOnly}
+                    onChange={readOnly ? undefined : () => onChange?.(choice)}
                     className="sr-only"
+                    required={required}
                   />
 
                   <span

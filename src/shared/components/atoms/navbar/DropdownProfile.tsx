@@ -21,7 +21,9 @@ export default function DropdownProfile() {
   return (
     <div className="group relative">
       <div className="flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2 transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-800">
-        <Image src={imag} alt={alt} width={40} height={40} className="rounded-full" />
+        <div className="size-10 shrink-0 overflow-hidden rounded-full">
+          <Image src={imag} alt={alt} width={40} height={40} className="size-full" />
+        </div>
 
         <Text className="font-semibold">{isLoading ? "Loading..." : data?.name}</Text>
 
@@ -32,7 +34,7 @@ export default function DropdownProfile() {
         />
       </div>
 
-      <div className="ds-bg invisible absolute right-0 z-50 mt-2 w-52 translate-y-2 rounded-xl border border-gray-200 opacity-0 shadow-xl transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 dark:border-gray-700">
+      <div className="ds-bg invisible absolute left-1/2 z-50 mt-2 w-52 -translate-x-1/2 translate-y-2 rounded-xl border border-gray-200 opacity-0 shadow-xl transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 dark:border-gray-800">
         <Link
           href="/edit-profile"
           className="flex w-full gap-2 px-4 py-3 text-left transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"

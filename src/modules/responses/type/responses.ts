@@ -11,6 +11,18 @@ export interface GetAllResponses {
   message: string;
   data: SurveyResponse[];
 }
+export interface GetResponseById {
+  success: boolean;
+  message: string;
+  data: SurveyResponse;
+}
 export interface RecentSurveyResponse extends SurveyResponse {
   surveyTitle: string;
+}
+
+export type SurveyAnswers = Record<string, string | string[]>;
+export interface SubmitSurveyPayload {
+  respondentEmail: string;
+  respondentName: string;
+  answers: SurveyAnswers;
 }

@@ -62,6 +62,7 @@ interface SurveyCardAction {
   id: string;
   labelKey: string;
   icon: typeof Eye;
+  href?: (surveyId: string) => string;
   hrefSuffix?: string;
   muted: boolean;
   variant: "outline" | "primary";
@@ -72,7 +73,7 @@ export const surveyCardActions: SurveyCardAction[] = [
     id: "preview",
     labelKey: "preview",
     icon: Eye,
-    hrefSuffix: "/preview",
+    href: surveyId => `/survey/${surveyId}`,
     muted: true,
     variant: "outline",
   },
@@ -80,7 +81,7 @@ export const surveyCardActions: SurveyCardAction[] = [
     id: "edit",
     labelKey: "edit",
     icon: Pencil,
-    hrefSuffix: "/edit",
+    href: surveyId => `/dashboard/my-surveys/${surveyId}/edit`,
     muted: false,
     variant: "outline",
   },
@@ -99,12 +100,13 @@ interface SurveyCardMenuItem {
   labelKey: string;
   icon: typeof Eye;
   kind: "link" | "action";
+  href?: (surveyId: string) => string;
   hrefSuffix?: string;
   danger?: boolean;
 }
 
 export const surveyCardMenuItems: SurveyCardMenuItem[] = [
-  { id: "preview", labelKey: "preview", icon: Eye, kind: "link", hrefSuffix: "/preview" },
+  { id: "preview", labelKey: "preview", icon: Eye, kind: "link", href: surveyId => `/survey/${surveyId}` },
   { id: "edit", labelKey: "edit", icon: Pencil, kind: "link", hrefSuffix: "/edit" },
   { id: "publish", labelKey: "publish", icon: Send, kind: "action" },
   { id: "copyLink", labelKey: "copyLink", icon: Link2, kind: "action" },

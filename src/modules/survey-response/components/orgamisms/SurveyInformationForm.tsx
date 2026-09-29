@@ -4,6 +4,8 @@ import Text from "@/shared/components/atoms/Text";
 import IconText from "../molecules/IconText";
 import Title from "@/shared/components/atoms/Title";
 import { useTranslations } from "next-intl";
+import { isEmail, isValidFullName } from "@/shared/utils/validators";
+
 type SurveyInformationFormProps = {
   fullName: string;
   email: string;
@@ -18,7 +20,13 @@ export default function SurveyInformationForm({
   onEmailChange,
 }: SurveyInformationFormProps) {
   const inputClassName = "!border-[var(--border-color)] mt-2";
+
   const t = useTranslations("surveyResponse.SurveyInformation");
+
+  const nameError = fullName.length > 0 && !isValidFullName(fullName) ? t("nameError") : undefined;
+
+  const emailError = email.length > 0 && !isEmail(email) ? t("emailError") : undefined;
+
   return (
     <section className="ds-bg-card ds-rounded-xl px-5 py-4 sm:px-6">
       <header className="mb-6">
@@ -39,6 +47,8 @@ export default function SurveyInformationForm({
           size="lg"
           className={inputClassName}
           onChange={event => onFullNameChange(event.target.value)}
+          state={nameError ? "error" : "default"}
+          errorMessage={nameError}
         />
 
         <Input
@@ -51,6 +61,8 @@ export default function SurveyInformationForm({
           size="lg"
           className={inputClassName}
           onChange={event => onEmailChange(event.target.value)}
+          state={emailError ? "error" : "default"}
+          errorMessage={emailError}
         />
       </div>
 

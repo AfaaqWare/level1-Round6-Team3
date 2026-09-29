@@ -69,7 +69,7 @@ export default function CreateSurveyForm() {
           if (surveyId) {
             router.push(`/dashboard/my-surveys/${surveyId}/add-question`);
           } else {
-            router.push("/dashboard/add-question");
+            router.push("/dashboard/my-surveys");
           }
         },
         onError: () => {

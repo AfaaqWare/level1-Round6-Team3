@@ -15,7 +15,7 @@ export default function SurveyCardActions({ surveyId }: SurveyCardActionsProps) 
   const t = useTranslations("dashboard.surveys.card");
 
   return (
-    <div className="mt-2 flex w-full flex-wrap items-center gap-3">
+    <div className="mt-2 flex w-full flex-wrap items-center gap-3 md:grid md:grid-cols-3">
       {surveyCardActions.map(action => {
         const isPrimary = action.variant === "primary";
 
@@ -29,12 +29,12 @@ export default function SurveyCardActions({ surveyId }: SurveyCardActionsProps) 
 
         const buttonContent = (
           <>
-            <Icon IconComponent={action.icon} size="xs" {...iconProps} className="!text-inherit" />
+            <Icon IconComponent={action.icon} size="xs" {...iconProps} className="!text-inherit shrink-0" />
             {t(action.labelKey)}
           </>
         );
 
-        if (action.hrefSuffix === undefined) {
+        if (!action.href && action.hrefSuffix === undefined) {
           return (
             <Button
               key={action.id}
@@ -47,12 +47,12 @@ export default function SurveyCardActions({ surveyId }: SurveyCardActionsProps) 
           );
         }
 
+        const href = action.href
+          ? action.href(surveyId)
+          : `/dashboard/survey/${surveyId}${action.hrefSuffix}`;
+
         return (
-          <Link
-            key={action.id}
-            href={`/dashboard/survey/${surveyId}${action.hrefSuffix}`}
-            className="flex-1"
-          >
+          <Link key={action.id} href={href} className="flex-1">
             <Button variant={action.variant} size="sm" className={buttonClassName}>
               {buttonContent}
             </Button>

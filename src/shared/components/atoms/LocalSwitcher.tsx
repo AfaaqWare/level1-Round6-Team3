@@ -37,7 +37,6 @@ export default function LocaleSwitcher({ changeLocaleAction }: Props) {
   const baseClasses = `
     fixed
     bottom-4
-    left-8
     w-14
     h-14
     rounded-full
@@ -60,7 +59,7 @@ export default function LocaleSwitcher({ changeLocaleAction }: Props) {
       type="button"
       onClick={handleLocaleChange}
       disabled={isPending}
-      className={cn(baseClasses)}
+      className={cn(baseClasses, locale === "en" ? "right-8" : "left-8")}
       aria-label={`Switch language to ${nextLabel}`}
       title={`Current language: ${label}. Switch to ${nextLabel}`}
     >
