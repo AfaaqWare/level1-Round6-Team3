@@ -1,4 +1,5 @@
 export const defaultSeo = {
-  title: "Green House Project",
-  description: "Smart greenhouse graduation project",
+  title: "Survey Land",
+  description:
+    "Survey Land is an online survey platform where you can build custom forms, share them by link or email, and collect and analyse responses.",
 };

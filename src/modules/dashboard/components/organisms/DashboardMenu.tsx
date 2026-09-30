@@ -9,7 +9,6 @@ import {
   Send,
   LockKeyhole,
   PieChart,
-  ChartNoAxesCombined,
   User,
   LogOut,
 } from "lucide-react";
@@ -105,12 +104,7 @@ export default function DashboardMenu({ collapsed }: DashboardMenuProps) {
           {
             label: "Responses",
             icon: <PieChart size={22} />,
-            href: "/dashboard/all-responses",
-          },
-          {
-            label: "Analytics",
-            icon: <ChartNoAxesCombined size={22} />,
-            href: "/dashboard/analytics",
+            href: "/dashboard/responses",
           },
         ]}
       />

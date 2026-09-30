@@ -8,7 +8,7 @@ interface ContactButtonProps {
 }
 const ContactButton = ({ label = "Send Message" }: ContactButtonProps) => {
   return (
-    <Button type="submit" variant="primaryWhite" isRounded={true} size="md" fullWidth={true} >
+    <Button type="submit" variant="primaryWhite" isRounded={true} size="md" isFullWidth={true} >
       <Icon color="primaryWhite" IconComponent={Send} size={32} /> 
       {label}
     </Button>

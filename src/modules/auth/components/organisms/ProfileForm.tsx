@@ -76,11 +76,14 @@ export default function ProfileForm({
         setPassword(""); // Clear password field after save
         onSaveSuccess();
       },
-      onError: (err: any) => {
+      onError: (error) => {
         Swal.fire({
           icon: "error",
           title: "Update Failed",
-          text: err?.response?.data?.message || err?.message || "Could not update profile.",
+          text:
+            (error as { response?: { data?: { message?: string } } })?.response?.data?.message ||
+            error?.message ||
+            "Could not update profile.",
           confirmButtonColor: "#ef4444",
         });
       },
