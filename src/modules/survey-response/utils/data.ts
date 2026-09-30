@@ -1,5 +1,4 @@
 import { Survey } from "../types/survey";
-import { responseHeroImage } from "@/assets/images/images";
 import {
   Eye,
   Pencil,
@@ -18,42 +17,49 @@ import type { BadgeTone } from "@/shared/components/atoms/Badge";
 export const mockSurvey: Survey = {
   id: "survey-1",
 
+  userId: "user-1",
+
   title: "Frontend Training Survey",
 
   description: "Help us improve the training experience.",
 
-  coverImage: responseHeroImage,
+  cover: "/images/responseHeroImg.jpg",
 
   deadline: "10 May 2026",
 
-  duration: "5 - 7 minutes",
+  status: "draft",
+
+  link: null,
+
+  createdAt: "2026-01-10T00:00:00.000Z",
+
+  updatedAt: "2026-01-10T00:00:00.000Z",
+
+  lastMilestone: 0,
 
   questions: [
     {
-      id: "q1",
-      number: 1,
-      type: "radio",
-      question: "What's your favorite language?",
-      required: true,
+      qid: "q1",
+      type: "mcq",
+      questionText: "What's your favorite language?",
+      isRequired: true,
       choices: ["JavaScript", "Python", "Go"],
     },
 
     {
-      id: "q2",
-      number: 2,
-      type: "text",
-      question: "ما اسمك ؟",
-      required: true,
-      maxLength: 500,
+      qid: "q2",
+      type: "textarea",
+      questionText: "ما اسمك ؟",
+      isRequired: true,
+      choices: null,
     },
 
     {
-      id: "q3",
-      number: 3,
-      type: "text",
-      question: "ما رأيك في التدريب ؟",
-      required: true,
-      maxLength: 500,
+      qid: "q3",
+      type: "textarea",
+      questionText: "ما رأيك في التدريب ؟",
+      isRequired: true,
+      choices: null,
     },
   ],
 };
